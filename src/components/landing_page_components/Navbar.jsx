@@ -9,8 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import { Container } from '@mui/material';
 import PrimaryBtn from '@/components/landing_page_components/PrimaryBtns/PrimaryBtn';
 import { IoIosMail, IoIosCall } from "react-icons/io";
-const Navbar = () => {
 
+const Navbar = () => {
     const menuItems = [
         { label: "Home", path: "/" },
         { label: "About", path: "/app" },
@@ -19,13 +19,13 @@ const Navbar = () => {
         { label: "CRM", path: "#" },
         { label: "Blog", path: "/blog" },
     ];
-    
+
     return (
         <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none', position:'absolute' }}>
             <Container sx={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <Toolbar disableGutters>
-                    {/* Left side: Logo */}
-                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}>
+                    {/* Left side: Logo, visible on larger screens only */}
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'flex-start' }}>
                         <IconButton edge="start" color="inherit" aria-label="logo">
                             <img src="/white-logo.png" alt="Logo" style={{ height: '20px' }} />
                         </IconButton>   
