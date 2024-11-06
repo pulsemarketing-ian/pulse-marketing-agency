@@ -1,63 +1,109 @@
-import React from 'react';
-import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import MenuItem from '@mui/material/MenuItem';
-import { Container } from '@mui/material';
-import PrimaryBtn from '@/components/landing_page_components/PrimaryBtns/PrimaryBtn';
-import { IoIosMail, IoIosCall } from "react-icons/io";
+'use client'
 
-const Navbar = () => {
-    const menuItems = [
-        { label: "Home", path: "/" },
-        { label: "About", path: "/app" },
-        { label: "Services", path: "/services" },
-        { label: "Portfolio", path: "/branding" },
-        { label: "CRM", path: "#" },
-        { label: "Blog", path: "/blog" },
-    ];
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { IoIosMail, IoIosCall } from "react-icons/io"
+import { FaBars, FaTimes } from "react-icons/fa"
 
-    return (
-        <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none', position:'absolute' }}>
-            <Container sx={{ maxWidth: '1200px', margin: '0 auto' }}>
-                <Toolbar disableGutters>
-                    {/* Left side: Logo, visible on larger screens only */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'flex-start' }}>
-                        <IconButton edge="start" color="inherit" aria-label="logo">
-                            <img src="/white-logo.png" alt="Logo" style={{ height: '20px' }} />
-                        </IconButton>   
-                    </Box>
+const menuItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/app" },
+  { label: "Services", path: "/services" },
+  { label: "Portfolio", path: "/branding" },
+  { label: "CRM", path: "#" },
+  { label: "Blog", path: "/blog" },
+]
 
-                    {/* Center: Navigation Items */}
-                    <Box sx={{ display: 'flex', justifyContent: 'center', flexGrow: 1 }}>
-                        {menuItems.map((item) => (
-                            <Link key={item.label} href={item.path} style={{ textDecoration: 'none' }}>
-                                <MenuItem sx={{ color: 'white' }}>
-                                    <Typography textAlign="center" sx={{ color: 'white', fontSize: '12px', fontFamily: 'Poppins, sans-serif' }}>
-                                        {item.label}
-                                    </Typography>
-                                </MenuItem>
-                            </Link>
-                        ))}
-                    </Box>
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
 
-                    {/* Right side: Buttons */}
-                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                        <PrimaryBtn text="Book" />
-                        <button className="bg-transparent hover:bg-my-blue-gradient hover:text-my-blue-gradient border text-[14px] p-2 rounded-2xl">
-                            <IoIosMail />
-                        </button>
-                        <button className="bg-transparent hover:bg-my-blue-gradient hover:text-my-blue-gradient border text-[14px] p-2 rounded-2xl">
-                            <IoIosCall />
-                        </button>
-                    </Box>
-                </Toolbar>
-            </Container>
-        </AppBar>
-    );
-};
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
 
-export default Navbar;
+  return (
+    <nav className="bg-transparent absolute w-full z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.path}
+                  className="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center md:ml-6">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Book
+              </button>
+              <button className="ml-3 bg-transparent hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full border border-white hover:border-transparent">
+                <IoIosMail />
+              </button>
+              <button className="ml-3 bg-transparent hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full border border-white hover:border-transparent">
+                <IoIosCall />
+              </button>
+            </div>
+          </div>
+          <div className="-mr-2 flex md:hidden">
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <FaTimes className="block h-6 w-6" />
+              ) : (
+                <FaBars className="block h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {menuItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.path}
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div className="pt-4 pb-3 border-t border-gray-700">
+            <div className="flex items-center px-5 space-x-3">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Book
+              </button>
+              <button className="bg-transparent hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full border border-white hover:border-transparent">
+                <IoIosMail />
+              </button>
+              <button className="bg-transparent hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full border border-white hover:border-transparent">
+                <IoIosCall />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  )
+}
