@@ -42,7 +42,7 @@ export const TabsOne = () => {
           <div className="w-[100%] items-center justify-center">
             {tabOne?.map((item) => (
               <>
-                <h3 className="poppins-medium text-[20px] text-[#50A2D4]">
+                <h3 key={item._id} className="poppins-medium text-[20px] text-[#50A2D4]">
                   {item?.name}
                 </h3>
                 <h1 className="poppins-medium text-4xl">{item?.header}</h1>
@@ -51,7 +51,7 @@ export const TabsOne = () => {
           </div>
           <div className="w-[100%]">
             {tabOne?.map((item) => (
-              <p className="poppins-light my-3 text-[14px] font-light">
+              <p key={item._id} className="poppins-light my-3 text-[14px] font-light">
                 {/* Discover a world of music with Monster Music! Stream your favorite songs, create custom playlists, and explore new tunes with ease. Enjoy high-quality sound and a user-friendly interface. Download now and unleash the music monster in you! */}
                 {item?.content}
               </p>
@@ -95,7 +95,7 @@ export const TabsTwo = () => {
           <div className="w-[100%] items-center justify-center">
             {tabTwo?.map((item) => (
               <>
-                <h3 className="poppins-medium text-[20px] text-[#50A2D4]">
+                <h3 key={item._id} className="poppins-medium text-[20px] text-[#50A2D4]">
                   {item?.name}
                 </h3>
                 <h1 className="poppins-medium text-4xl">{item?.header}</h1>
@@ -104,7 +104,7 @@ export const TabsTwo = () => {
           </div>
           <div className="w-[100%]">
             {tabTwo?.map((item) => (
-              <p className="poppins-light my-3 text-[14px] font-light">
+              <p key={item._id} className="poppins-light my-3 text-[14px] font-light">
                 {item?.content}
               </p>
             ))}
@@ -147,7 +147,7 @@ export const TabsThree = () => {
           <div className="w-[100%] items-center justify-center">
             {tabThree?.map((item) => (
               <>
-                <h3 className="poppins-medium text-[20px] text-[#50A2D4]">
+                <h3 key={item._id} className="poppins-medium text-[20px] text-[#50A2D4]">
                   {item?.name}
                 </h3>
                 <h1 className="poppins-medium text-4xl">{item?.header}</h1>
@@ -156,7 +156,7 @@ export const TabsThree = () => {
           </div>
           <div className="w-[100%]">
           {tabThree?.map((item) => (
-            <p className="poppins-light my-3 text-[14px] font-light">
+            <p key={item._id} className="poppins-light my-3 text-[14px] font-light">
               {item?.content}
             </p>
           ))}

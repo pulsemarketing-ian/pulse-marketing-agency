@@ -27,7 +27,7 @@ const AndriodSection = () => {
               Android App <br/>Development
               </h2>
               <p className="text-gray-300 leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.              </p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.              </p>
               <ul class="space-y-2 text-[13px] text-gray-300">
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Android app development consultation

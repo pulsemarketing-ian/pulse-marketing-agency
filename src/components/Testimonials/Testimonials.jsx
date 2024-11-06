@@ -37,7 +37,7 @@ const UpperTextTestimonials = () => {
           <div className=" w-[80%] md:w-[100%] text-center">
             <Reveal>
             {testiHeading?.map((item) => (
-              <h1 className="poppins-medium text-5xl ct-heading">
+              <h1 key={item._id} className="poppins-medium text-5xl ct-heading">
                 {/* Our clients are our biggest advocates. */}
                 {item?.content}
               </h1>
@@ -156,7 +156,7 @@ const Testimonial = () => {
           <Slider {...settings}>
             {/* testimonial one */}
             {testimonialOne?.map((item) => (
-            <div className="text-center">
+            <div key={item._id} className="text-center">
               {/* <h3 className=''>1</h3> */}
               <div className="flex justify-center">
                 <Image
@@ -192,7 +192,7 @@ const Testimonial = () => {
 
             {/* testimonial 2 */}
                {testimonialTwo?.map((item) => (
-            <div className="text-center">
+            <div key={item._id} className="text-center">
               {/* <h3 className=''>1</h3> */}
               <div className="flex justify-center">
                 <Image
@@ -228,7 +228,7 @@ const Testimonial = () => {
 
             {/* testimonial 3  */}
                 {testimonialThree?.map((item) => (
-            <div className="text-center">
+            <div key={item._id} className="text-center">
               {/* <h3 className=''>1</h3> */}
               <div className="flex justify-center">
                 <Image

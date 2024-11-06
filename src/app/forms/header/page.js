@@ -3,6 +3,7 @@ import DefaultLayout from '@/components/Layouts/DefaultLayout';
 import React, { useEffect, useState } from 'react';
 import { FireApi } from '../../../../utils/useRequest';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 const Page = () => {
     const [content, setContent] = useState('');
@@ -92,7 +93,7 @@ const Page = () => {
                             />
                             {imageURL && (
                                 <div className='mt-4'>
-                                    <img src={imageURL} alt="Logo Preview" className='w-32 h-32 object-cover' />
+                                    <Image width={100} height={100} src={imageURL} alt="Logo Preview" className='w-32 h-32 object-cover' />
                                 </div>
                             )}
                         </div>

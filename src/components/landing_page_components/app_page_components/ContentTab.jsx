@@ -50,7 +50,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
                 Welcome to the hub of digital innovation, where ideas evolve into functional, intuitive applications that redefine user experiences. Our application development services are driven by a passion for innovation and a commitment to delivering solutions that exceed expectations.
                 </p>
                 <p className="font-light text-[12px] mt-3">
-                iOS App Development for start-up MVP's to reinventing your existing app with a fresh look we are end-to-end iPhone and Android experts.                </p>
+                iOS App Development for start-up MVP to reinventing your existing app with a fresh look we are end-to-end iPhone and Android experts.                </p>
               </div>
             </div>
           </main>

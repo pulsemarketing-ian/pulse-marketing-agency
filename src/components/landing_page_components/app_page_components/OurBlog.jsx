@@ -10,7 +10,7 @@ const OurBlog = () => {
             <div className="flex justify-between items-baseline">
                 <div>
                     <p> <span class="text-cyan-500 mr-2">•</span> Our Blog</p>
-                    <h2 className="text-5xl font-medium leading-tight">What's New <br/>in Our Blogs</h2>
+                    <h2 className="text-5xl font-medium leading-tight">What is New <br/>in Our Blogs</h2>
                 </div>
                 <PrimaryBtn text={'View All Blogs'}/>
             </div>
@@ -22,7 +22,7 @@ const OurBlog = () => {
                         <div className="px-4 flex flex-col gap-3  mt-3">
                         <span className="bg-[#222020] border-white text-sm rounded-2xl px-4 w-[50%]">App Development</span>
                         <p>
-                        UAE's Rapid Rise in AI: Groundbreaking Developments Shaping the Future
+                        UAE is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
                         </p>
                         <ul>
                         <li className="list-disc">10 min read</li>
@@ -36,7 +36,7 @@ const OurBlog = () => {
                         <div className="px-4 flex flex-col gap-3 mt-3">
                         <span className="bg-[#222020] border-white text-sm rounded-2xl px-4 w-[50%]">App Development</span>
                         <p>
-                        UAE's Rapid Rise in AI: Groundbreaking Developments Shaping the Future
+                        UA is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
                         </p>
                         <ul>
                         <li className="list-disc">10 min read</li>
@@ -50,7 +50,7 @@ const OurBlog = () => {
                         <div className="px-4 flex flex-col gap-3  mt-3">
                         <span className="bg-[#222020] border-white text-sm rounded-2xl px-4 w-[45%]">App Development</span>
                         <p>
-                        UAE's Rapid Rise in AI: Groundbreaking Developments Shaping the Future
+                        UAE is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
                         </p>
                         <ul>
                         <li className="list-disc">10 min read</li>

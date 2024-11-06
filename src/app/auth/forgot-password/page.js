@@ -243,8 +243,8 @@ const SignIn = () => {
 
                 <div className="mt-6 text-center">
                   <p>
-                    Don't won't to forgot password?{" "}
-                    <Link href="/auth/signin" className="text-primary">
+                    Don&apos;t want to forget your password?
+                      <Link href="/auth/signin" className="text-primary">
                       Sign In
                     </Link>
                   </p>

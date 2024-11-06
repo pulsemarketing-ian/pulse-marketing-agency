@@ -211,7 +211,7 @@ const SignIn: React.FC = () => {
                 </div>
                 <div className="mt-6 text-center">
                   <p>
-                    Don't wanna forgot password?{" "}
+                    Don&apos;t wanna forgot password?{" "}
                     <Link href="/auth/signin" className="text-primary">
                       Sign In
                     </Link>

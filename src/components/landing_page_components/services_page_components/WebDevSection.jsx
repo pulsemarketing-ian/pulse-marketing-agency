@@ -41,7 +41,7 @@ const WebDevSection = () => {
             <div className="space-y-4 w-[40%]">
               <h2 className="text-3xl font-medium">Web Development</h2>
               <p className="text-gray-300 leading-relaxed">
-                Every decision we make needs to answer the million-dollar question: how will this benefit our partners' goals? We work to develop solutions, step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.
+                Every decision we make needs to answer the million-dollar question: how will this benefit our partners and goals? We work to develop solutions, step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.
               </p>
              <PrimaryBtn text={'Learn More'}/>
             </div>

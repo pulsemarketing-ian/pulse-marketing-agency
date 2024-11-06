@@ -67,7 +67,7 @@ const HeroSection = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium mb-1">What's your budget?</label>
+                            <label className="block text-sm font-medium mb-1">What is your budget?</label>
                             <div className="flex items-center">
                             <span className="text-sm mr-2">USD 5K</span>
                             <input

@@ -59,7 +59,7 @@ const Calender = () => {
             <div className="poppins-light w-[80%] py-4 text-[16px]">
               <Reveal>
                 {calendarData?.map((item) => (
-                  <p>{item?.content}</p>
+                  <p key={item._id}>{item?.content}</p>
                 ))}
               </Reveal>
             </div>
@@ -74,7 +74,7 @@ const Calender = () => {
                   <FaPhoneAlt />
                   <Reveal>
                     {calendarData?.map((item) => (
-                      <h3 className="poppins-light ml-3">{item?.section}</h3>
+                      <h3 key={item._id} className="poppins-light ml-3">{item?.section}</h3>
                     ))}
                   </Reveal>
                 </Link>
@@ -89,7 +89,7 @@ const Calender = () => {
                   <MdEmail className="text-xl" />
                   <Reveal>
                   {calendarData?.map((item) => (
-                    <h3 className="poppins-light ml-3">{item?.name}</h3>
+                    <h3 key={item._id} className="poppins-light ml-3">{item?.name}</h3>
                   ))}
                   </Reveal>
                 </Link>

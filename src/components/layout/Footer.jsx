@@ -62,7 +62,7 @@ const Footer = () => {
                 <Link className="flex items-center" href="tel:18443303141" target="_blank">
                 <FaPhoneAlt />
                 {footer?.map((item) => (
-                <h3 className="poppins-light ml-3  text-[14px]" >
+                <h3 key={item?._id} className="poppins-light ml-3  text-[14px]" >
                   {item?.name}
                 </h3>
                 ))}
@@ -72,7 +72,7 @@ const Footer = () => {
                 <Link className="flex items-center" href="mailto:hi@pulsemarketing.io" target="_blank">
                 <MdEmail className="text-xl" />
                 {footer?.map((item) => (
-                <h3 className="poppins-light ml-3 text-[14px]">
+                <h3 key={item?._id} className="poppins-light ml-3 text-[14px]">
                     {item?.header}
                 </h3>
                 ))}
@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
           <div>
               {footer?.map((item) => (
-            <h3 className="poppins-light text-[14px]">
+            <h3 key={item?._id}  className="poppins-light text-[14px]">
                 {item?.content}
               </h3>
               ))}

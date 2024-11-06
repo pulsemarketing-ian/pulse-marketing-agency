@@ -48,7 +48,7 @@ const Header = () => {
         {/* right side mail box  */}
         {headData &&
           headData.map((index) => (
-            <div className="hover:duration-600 my-3 flex cursor-pointer items-center justify-center rounded-3xl bg-[#50A2D4] px-3 py-1 text-white hover:bg-white hover:text-[#62c9d6] hover:transition-all hover:ease-in-out md:my-0 md:px-5 md:py-2">
+            <div key={index?._id}  className="hover:duration-600 my-3 flex cursor-pointer items-center justify-center rounded-3xl bg-[#50A2D4] px-3 py-1 text-white hover:bg-white hover:text-[#62c9d6] hover:transition-all hover:ease-in-out md:my-0 md:px-5 md:py-2">
               <IoIosMail className="mr-1 text-xl" />
               <p className="poppins-regular text-[11px] md:text-[15px]">
                 <Link href="mailto:hi@pulsemarketing.io">{index?.content}</Link>

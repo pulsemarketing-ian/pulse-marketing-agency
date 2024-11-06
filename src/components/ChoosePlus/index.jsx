@@ -102,7 +102,7 @@ export const SomethingGreat = () => {
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
               {getData.map((item) => (
-                <h1 className="poppins-medium ct-heading text-5xl">
+                <h1 key={item._id} className="poppins-medium ct-heading text-5xl">
                 {item.header}
               </h1>
               ))}
@@ -111,7 +111,7 @@ export const SomethingGreat = () => {
           <div className="poppins-light mt-6 w-[90%] font-light md:mt-0  md:w-[35%]">
             <Reveal>
             {getData.map((item) => (
-                <p >
+                <p  key={item._id}>
                 {item?.content}
               </p>
               ))}
@@ -153,7 +153,7 @@ function ChoosePlus() {
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
               {chooseUs.map((item) => (
-                <h1 className="poppins-medium ct-heading text-5xl">
+                <h1 key={item._id} className="poppins-medium ct-heading text-5xl">
                   {item.header}
                 </h1>
               ))}
@@ -162,7 +162,7 @@ function ChoosePlus() {
           <div className="poppins-light mt-6 w-[90%] font-light md:mt-0 md:w-[35%]">
             <Reveal>
               {chooseUs.map((item) => (
-                <p>
+                <p key={item._id}>
                  {item?.content}
                 </p>
               ))}

@@ -33,7 +33,7 @@ const TextScroller = () => {
     <div className="overflow-hidden whitespace-nowrap">
       <div className="inline-block animate-scroll ">
       {footerText?.map((item) => (
-        <span className="inline-block">{item?.content}</span>
+        <span key={item?._id} className="inline-block">{item?.content}</span>
       ))}
       </div>
     </div>

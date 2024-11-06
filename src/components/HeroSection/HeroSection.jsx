@@ -109,7 +109,7 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
           <div className="my-4 w-[90%] border-l-2 pl-3">
             <Reveal>
               {heroContent.map((item) => (
-                <p className="poppins-light">{item.content}</p>
+                <p key={item._id} className="poppins-light">{item.content}</p>
               ))}
             </Reveal>
           </div>
@@ -118,6 +118,7 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         <Reveal>
           {heroContent.map((item) => (
             <button
+              key={item._id}
               onClick={toggleForm}
               className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
             >
