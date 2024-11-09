@@ -1,0 +1,44 @@
+import React from 'react'
+
+const BusinessGoals = () => {
+  return (
+    <main className='w-[1200px] mx-auto py-16' style={{
+        backgroundImage:"url('/images/app_page_images/radial.png')",
+        backgroundSize:'contain',
+        backgroundRepeat:'no-repeat'
+    }}>
+            <h2 className='text-4xl font-bold tracking-wide text-center'>Reach business goals & generate customers <br/>by improving your website is ranking!</h2>
+
+            <div className='flex flex-nowrap justify-between items-center mt-8'>
+                    {/* card one  */}
+                    <div className='w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px]'>
+                        <h4>01</h4>
+                        <h3 className='text-xl font-bold tracking-wide'>Business & <br/>
+                        Competitor Research</h3>
+                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+
+                    {/* card otwo  */}
+                    <div className='w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px]'>
+                        <h4>02</h4>
+                        <h3 className='text-xl font-bold tracking-wide'>Strategy Planning & <br/>Prospecting</h3>
+                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                    {/* card three  */}
+                    <div className='w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px]'>
+                        <h4>03</h4>
+                        <h3 className='text-xl font-bold tracking-wide'>Building <br/>of Links</h3>
+                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                    {/* card one  */}
+                    <div className='w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px]'>
+                        <h4>04</h4>
+                        <h3 className='text-xl font-bold tracking-wide'>Monthly Progress <br/>Reporting</h3>
+                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+            </div>
+    </main>
+)
+}
+
+export default BusinessGoals

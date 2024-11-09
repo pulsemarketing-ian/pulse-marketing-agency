@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { IoIosMail, IoIosCall } from "react-icons/io"
@@ -12,8 +11,7 @@ const menuItems = [
   { label: "Portfolio", path: "/branding" },
   { label: "CRM", path: "#" },
   { label: "Blog", path: "/blog" },
-]
-
+];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 

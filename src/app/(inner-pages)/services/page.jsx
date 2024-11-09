@@ -10,7 +10,6 @@ import '../../global.css';
 
 const Services = () => {
   return (
-    <React.Fragment>
         <main className="theme_bg_color">
         <HeroSection/>
         <WebDevSection/>
@@ -20,7 +19,6 @@ const Services = () => {
         <AllInOneSection/>
         <Footer/>
         </main>
-    </React.Fragment>
   )
 }
 
