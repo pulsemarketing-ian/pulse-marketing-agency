@@ -40,6 +40,7 @@ const TechStack = () => {
         >
             {techImage.map((item, index) =>(
                 <Image
+                key={index}
                 src={item.img}
                 alt={'logos'}
                 width={90}

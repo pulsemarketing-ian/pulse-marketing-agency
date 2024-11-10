@@ -53,7 +53,7 @@ const WebDevSection = () => {
                 </Reveal>
                 <Reveal>
                   <p className="text-gray-300 leading-relaxed">
-                    Every decision we make needs to answer the million-dollar question: how will this benefit our partner's goal best? We work to develop solutions. Step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.           
+                    Every decision we make needs to answer the million dollar question: how will this benefit our partner is goal best? We work to develop solutions. Step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.           
                   </p>
                 </Reveal>
                 <Reveal>
