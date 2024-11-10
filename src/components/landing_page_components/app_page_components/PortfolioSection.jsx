@@ -1,7 +1,9 @@
+'use client'
 import Image from "next/image";
 import React from "react";
+import Slider from "react-slick";
 
-const PortfolioSection = () => {
+export default function PortfolioSection() { 
   const portfolioItems = [
     {
       id: 1,
@@ -17,7 +19,7 @@ const PortfolioSection = () => {
     },
     {
       id: 3,
-      image: "/images/app_page_images/slide3.png",
+      image: "/images/app_page_images/slide5.png",
       alt: "Social media app dark theme interface",
       className: "rotate-3",
     },
@@ -35,47 +37,84 @@ const PortfolioSection = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+
   return (
-    <React.Fragment>
-      <main className="relative w-full" style={{borderBottom:'4px solid #363445',}}>
+    <main className="relative w-full">
+      <div
+        style={{
+          backgroundImage: "url('/images/services_page_images/circle.png/')",
+          backgroundSize: "cover",
+          transform: "translateY(-50%)",
+        }}
+        className="h-[40vh] md:h-[80vh]"
+      />
+      <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
+        <div className="z-10 md:mt-8 text-center">
+          <h1 className="text-2xl md:text-4xl font-bold tracking-wide">Our Portfolio</h1>
+        </div>
+
         <div
           style={{
-            backgroundImage: "url('/images/services_page_images/circle.png/')",
-            backgroundSize: "cover",
-            height: "80vh",
-            transform: "translateY(-50%)",
+            backgroundImage: "url('/images/app_page_images/radial.png')",
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat'
           }}
-        />
-        <div className="absolute top-5 z-10 flex w-full flex-col items-center justify-center ">
-          <div className="z-10 mt-8 text-center">
-            <h1 className="text-6xl font-bold tracking-wide">Our Portfolio</h1>
-          </div>
-
-          <div
-            style={{
-              backgroundImage:"url('/images/app_page_images/radial.png)",
-              backgroundSize:'cover',
-            }}
-            className="mt-3 flex min-h-[300px] items-center justify-center overflow-hidden md:min-h-[350px]"
-          >
-            <div className="flex flex-nowrap items-center justify-center gap-4 px-4 md:gap-6 md:px-8">
-              {portfolioItems.map((item) => (
-                <div key={item.id} className={`w-[11rem]`}>
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    className="h-auto w-full rounded-2xl shadow-lg shadow-purple-500/20"
-                    width={120}
-                    height={120}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-[1200px] md:mx-auto md:translate-y-10 md:p-6"
+        >
+          <Slider {...settings}>
+            {portfolioItems.map((item) => (
+              <div key={item.id} className="px-2">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  className="h-auto w-full rounded-2xl shadow-lg"
+                  width={200}
+                  height={200}
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
-      </main>
-    </React.Fragment>
+      </div>
+    </main>
   );
-};
-
-export default PortfolioSection;
+}

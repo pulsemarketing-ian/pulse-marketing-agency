@@ -7,6 +7,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoMdArrowBack } from "react-icons/io";
+import { Reveal } from "@/utils/Reveal";
 
 export default function ContentTab({ tabImage, setTabImage }) {
   const [value, setValue] = React.useState("1");
@@ -42,15 +43,23 @@ export default function ContentTab({ tabImage, setTabImage }) {
           <main className="w-full">
             <div className="justify-between items-center">
               <div className="w-[100%] justify-center items-center">
+              <Reveal>
                 <h3 className="text-[#68D7D6] poppins-medium text-[20px]">01</h3>
+                </Reveal>
+                <Reveal>
                 <h1 className="poppins-medium text-4xl">Application Development</h1>
+                </Reveal>
               </div>
               <div className="w-[100%]">
-                <p className=" font-light text-[12px] my-3">
-                Welcome to the hub of digital innovation, where ideas evolve into functional, intuitive applications that redefine user experiences. Our application development services are driven by a passion for innovation and a commitment to delivering solutions that exceed expectations.
-                </p>
-                <p className="font-light text-[12px] mt-3">
-                iOS App Development for start-up MVP to reinventing your existing app with a fresh look we are end-to-end iPhone and Android experts.                </p>
+              <Reveal>
+                  <p className=" font-light text-[12px] my-3">
+                  Welcome to the hub of digital innovation, where ideas evolve into functional, intuitive applications that redefine user experiences. Our application development services are driven by a passion for innovation and a commitment to delivering solutions that exceed expectations.
+                  </p>
+                </Reveal>
+                <Reveal>
+                  <p className="font-light text-[12px] mt-3">
+                  iOS App Development for start-up MVP to reinventing your existing app with a fresh look we are end-to-end iPhone and Android experts.                </p>
+                </Reveal>
               </div>
             </div>
           </main>

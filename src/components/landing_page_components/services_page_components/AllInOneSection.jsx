@@ -1,5 +1,7 @@
+'use client';
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
+import { Reveal } from "@/utils/Reveal";
 
 const AllInOneSection = () => {
     return (
@@ -16,8 +18,12 @@ const AllInOneSection = () => {
         <div className="relative container mx-auto px-4 py-16">
             
         <div className="text-center z-10">
+        <Reveal>
             <p className="text-xl mb-2">We are experts in</p>
-            <h1 className="text-6xl font-bold tracking-wide">All-In-One CRO</h1>
+          </Reveal>
+          <Reveal>
+            <h1 className="text-2xl md:text-4xl font-bold tracking-wide">All-In-One CRO</h1>
+            </Reveal>
           </div>
           <div 
             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between"
@@ -30,29 +36,41 @@ const AllInOneSection = () => {
           >
             {/* Left Column */}
             <div className="space-y-6 lg:w-[40%]">
-              <h2 className="text-5xl font-medium leading-tight">
+            <Reveal>
+              <h2 className="text-2xl md:text-4xl font-medium leading-tight">
               Boost your  <br/> leads
               </h2>
+              </Reveal>
+              <Reveal>
               <p className="text-gray-300 leading-relaxed">
               Sending personalized messages with the press of a button! Let Us Get You Any International Mobile Number You Want… Pluse Marketing CRM is an all-in-one sales and marketing platform that automatically grows your business.
               </p>          
+              </Reveal>
+              <Reveal>
               <PrimaryBtn text="Learn More" />
+              </Reveal>
             </div>
   
           
   
             {/* Right Column */}
             <div className="space-y-6 lg:w-[30%]">
+            <Reveal>
               <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
               CRM & Lead Catch!
               </h3>
+            </Reveal>
               <ul className="space-y-2 text-gray-300">
+              <Reveal>
                 <li className="flex items-center gap-3">
                 Emails & Texts That Are <br/>Hard To Ignore.
                 </li>
+                </Reveal>
+                <Reveal>
                 <li className="flex items-center gap-3">
                 Smart And Hassel Free <br/>Business Line.
                 </li>
+                </Reveal>
               </ul>
             </div>
           </div>

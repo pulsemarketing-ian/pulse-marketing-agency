@@ -37,18 +37,19 @@ const PortfolioSection = () => {
 
   return (
     <React.Fragment>
-      <main className="relative w-full" style={{borderBottom:'4px solid #363445',}}>
+      <main className="relative w-full">
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",
             backgroundSize: "cover",
-            height: "80vh",
+            // height: "80vh",
             transform: "translateY(-50%)",
           }}
+          className="h-[60vh] md:h-[80vh]"
         />
-        <div className="absolute top-5 z-10 flex w-full flex-col items-center justify-center " >
+        <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center " >
           <div className="z-10 mt-8 text-center">
-            <h1 className="text-6xl font-bold tracking-wide">Our Portfolio</h1>
+            <h1 className="text-4xl font-bold tracking-wide">Our Portfolio</h1>
           </div>
 
           <div

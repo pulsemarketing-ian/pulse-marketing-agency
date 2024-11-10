@@ -1,6 +1,8 @@
+'use client';
 import React from 'react'
 import Navbar from '@/components/landing_page_components/Navbar'
 import Image from 'next/image'
+import { Reveal } from '@/utils/Reveal'
 const HeroSection = () => {
   return (
     <React.Fragment>
@@ -11,7 +13,7 @@ const HeroSection = () => {
             }}
             >
             <Navbar/>
-            <div className='h-[100vh] w-full flex justify-center items-center flex-col relative'>
+            <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>
                 {/* serive heading  */}
             <div className='flex items-center justify-between gap-1 mb-2'>
                 <Image
@@ -24,9 +26,11 @@ const HeroSection = () => {
             </div>
 
             {/* heading main  */}
-            <h2 className="text-5xl font-medium leading-tight text-center">
-            We create digital <br/>products that grow <br/>ambitious brands.
-            </h2>
+            <Reveal>
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center">
+                We create digital <br/>products that grow <br/>ambitious brands.
+                </h2>
+            </Reveal>
 
             <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn';
+import { Reveal } from '@/utils/Reveal';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -18,25 +19,35 @@ const FAQSection = () => {
   };
 
   return (
-    <div className=" text-white py-12 flex justify-between w-[1200px] mx-auto">
-            <div className="space-y-4 lg:w-[35%]">
-            <p className="uppercase text-sm"> <span class="text-cyan-500 mr-2">•</span>FAQs</p>
-        <h2 className="text-5xl font-medium leading-tight mb-4">Everything You <br/> Need to Know</h2>
+    <div className="text-white py-12 flex flex-col lg:flex-row lg:justify-between w-full px-6 md:px-0 md:w-[1200px] md:mx-auto gap-4">
+      {/* Left Column */}
+      <div className="space-y-4 lg:w-[35%] w-full">
+        <Reveal>
+        <p className="uppercase text-sm"> <span className="text-cyan-500 mr-2">•</span>FAQs</p>
+        </Reveal>
+        <Reveal>
+        <h2 className="text-xl md:text-4xl font-medium leading-tight mb-4">Everything You <br /> Need to Know</h2>
+        </Reveal>
+        <Reveal>
         <p className="text-gray-300 mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.
         </p>
-        <PrimaryBtn text={'View All FAQs'}/>
+        </Reveal>
+        <PrimaryBtn text={'View All FAQs'} />
       </div>
 
-      <div className="space-y-6 lg:w-[50%]"  style={{
-        backgroundImage:"url('/images/app_page_images/radial.png')",
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat'
+      {/* Right Column */}
+      <div className="space-y-6 lg:w-[50%] w-full" style={{
+        backgroundImage: "url('/images/app_page_images/radial.png')",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        padding: '10px', 
+        borderRadius: '8px'
       }}>
-      {faqs.map((faq, index) => (
+        {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-[#000000] rounded-lg font-medium shadow-md border-[0.5px] px-4 py-2 cursor-pointer"
+            className="bg-[#000000] rounded-lg font-medium shadow-md border-[0.5px] px-4 py-2 cursor-pointer transition-all duration-200 ease-in-out hover:shadow-lg"
             onClick={() => toggleFAQ(index)}
           >
             <div className="flex justify-between items-center">

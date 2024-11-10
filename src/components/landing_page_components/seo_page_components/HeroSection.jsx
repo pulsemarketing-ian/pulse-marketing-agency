@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import Navbar from '@/components/landing_page_components/Navbar'
 import Image from 'next/image'
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn'
+import { Reveal } from '@/utils/Reveal'
 const HeroSection = () => {
 
     const [budget, setBudget] = useState(5000);
@@ -15,9 +16,10 @@ const HeroSection = () => {
             }}
             >
             <Navbar/>
-            <div className='h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+            <div className='h-[60vh] md:h-[110vh] flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
                 {/* hero heading  */}
-                <div className="w-[45%] flex-col">
+                <div className="w-full md:w-[45%] px-6 md:px-0 flex-col">
+                        <Reveal>
                     <div className='flex items-center gap-1 mb-2 w-auto'>
                         <Image
                         src="/images/services_page_images/blue-dot.png"
@@ -27,15 +29,16 @@ const HeroSection = () => {
                         />
                         <p>search engine optimization</p>
                     </div>
+                        </Reveal>
 
                     {/* heading main  */}
-                    <h2 className="text-5xl font-medium leading-tight text-left">
+                    <h2 className="text-xl md:text-5xl font-bold leading-tight text-left">
                     Search Engine <br/>Optimization
                     </h2>
                 </div>
 
                     {/* hero form  */}
-                    <div className="w-[30%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 px-10 max-w-md translate-y-8 shadow-lg text-white">
+                    <div className=" w-full md:w-[40%] px-6 bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 md:px-10 max-w-md translate-y-8 shadow-lg text-white">
                         <h2 className="text-2xl font-bold mb-3">Have any questions?</h2>
                         
                         <form className="space-y-2">

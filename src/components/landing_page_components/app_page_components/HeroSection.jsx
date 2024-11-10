@@ -7,7 +7,6 @@ const HeroSection = () => {
     const [budget, setBudget] = useState(5000);
 
   return (
-    <React.Fragment>
         <main 
          style={{
              backgroundImage: "url('/images/app_page_images/app-hero.png')",
@@ -15,9 +14,9 @@ const HeroSection = () => {
             }}
             >
             <Navbar/>
-            <div className='h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+            <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
                 {/* hero heading  */}
-                <div className="w-[45%] flex-col">
+                <div className="w-full px-6 md:px-0 md:w-[45%] flex-col">
                     <div className='flex items-center gap-1 mb-2 w-auto'>
                         <Image
                         src="/images/services_page_images/blue-dot.png"
@@ -25,17 +24,17 @@ const HeroSection = () => {
                         width={20}
                         height={20}
                         />
-                        <p>Services</p>
+                        <p>Mobile App Development</p>
                     </div>
 
                     {/* heading main  */}
-                    <h2 className="text-5xl font-medium leading-tight text-left">
+                    <h2 className="text-2xl md:text-5xl font-bold leading-tight text-left">
                     Best App Development <br/> Company
                     </h2>
                 </div>
 
                     {/* hero form  */}
-                    <div className="w-[30%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 px-10 max-w-md translate-y-8 shadow-lg text-white">
+                    <div className="hidden md:block w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 px-10 max-w-md translate-y-8 shadow-lg text-white">
                         <h2 className="text-2xl font-bold mb-3">Have any questions?</h2>
                         
                         <form className="space-y-2">
@@ -104,7 +103,6 @@ const HeroSection = () => {
 
             </div>
         </main>
-    </React.Fragment>
   )
 }
 

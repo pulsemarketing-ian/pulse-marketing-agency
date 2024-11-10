@@ -10,7 +10,6 @@ import Footer from '@/components/layout/Footer';
 
 const page = () => {
   return (
-    <React.Fragment>
         <main className="theme_bg_color">
             <HeroSection/>
             <PortfolioSection/>
@@ -21,8 +20,6 @@ const page = () => {
             <OurBlog/>
             <Footer/>
         </main>
-    </React.Fragment>
-
   )
 }
 

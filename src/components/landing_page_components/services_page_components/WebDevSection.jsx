@@ -1,88 +1,108 @@
+'use client';
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
+import { Reveal } from "@/utils/Reveal";
 
 const WebDevSection = () => {
     return (
-      <main className="relative min-h-screen text-white overflow-hidden pb-10 z-20" 
-      style={{backgroundColor: '#040117',
-          borderBottom:'4px solid white',
-          borderRadius:'10px'
-
-      }}>
-        {/* Top Section with curved background */}
-        <div className="relative w-full h-[60vh] flex items-center justify-center">
-          {/* Curved glowing background */}
-          <div 
-            className="absolute bottom-0 left-1/2 w-[200%] aspect-[3/1]"
-            style={{
-              transform: 'translateX(-35%) translateY(25%)',
-              backgroundImage: `url('/images/services_page_images/circle.png')`,
-              // filter: 'blur(100px)',
-              borderRadius: '100%'
-            }}
-          />
-          
-          {/* Main heading */}
-          <div className="text-center z-10">
-            <p className="text-xl mb-2">We are experts in</p>
-            <h1 className="text-6xl font-bold tracking-wide">Development</h1>
-          </div>
-        </div>
-  
-        {/* Three Column Section */}
-        <div className="relative container mx-auto px-4 -mt-32">
-          <div 
-          style={{
-              backgroundImage: `url('/images/services_page_images/second-section-img.png')`,
-              backgroundSize:'cover',
-            }}
-            className="backdrop-blur-sm rounded-xl p-8 flex flex-row gap-8 items-center justify-between">
-            {/* Left Column */}
-            <div className="space-y-4 w-[40%]">
-              <h2 className="text-3xl font-medium">Web Development</h2>
-              <p className="text-gray-300 leading-relaxed">
-                Every decision we make needs to answer the million-dollar question: how will this benefit our partners and goals? We work to develop solutions, step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.
-              </p>
-             <PrimaryBtn text={'Learn More'}/>
-            </div>
-  
-  
-            {/* Right Column */}
-            <div className="space-y-6 w-auto">
-              <h3 className="text-xl font-semibold border-b-2 border-white">Tailored Solutions</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-2">
-                  Cutting-Edge Technology
-                </li>
-                <li className="flex items-center gap-2">
-                  User-Centric Design
-                </li>
-                <li className="flex items-center gap-2">
-                  SEO Optimization
-                </li>
-                <li className="flex items-center gap-2">
-                  Continuous Evolution
-                </li>
-                <li className="flex items-center gap-2">
-                  Elevate Your Online Presence
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        {/* Large Development Text Overlay */}
+      <main className="relative w-full pb-[30rem] md:pb-0">
+        {/* Background Image */}
         <div
-          className="absolute bottom-[-5%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
           style={{
-            WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
-            color: 'transparent'
+            backgroundImage: "url('/images/services_page_images/circle.png')",
+            backgroundSize: "cover",
+            transform: "translateY(-50%)",
+          }}
+          className="h-[20vh] md:h-[110vh]"
+        />
+        
+        {/* Content Section */}
+        <div className="translate-y-[-15%] md:translate-y-0 absolute md:top-15 z-10 flex w-full flex-col items-center justify-center"
+          style={{
+            backgroundColor: '#040117',
+            backgroundSize: 'cover',
+            borderBottom: '4px solid #363445',
           }}
         >
-        Development
-      </div>
+          <div className="z-10 text-center md:translate-y-[-40%]">
+          <Reveal>
+            <p>We are experts in</p>
+            </Reveal>
+
+            <Reveal>
+              <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Development</h1>
+            </Reveal>
+          </div>
+
+          {/* Main Content Section */}
+          <div className="relative container mx-auto px-4 md:pb-16 md:pt-6">
+            {/* Background Image with Hover Effect */}
+            <div 
+              className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
+              style={{
+                backgroundImage: `url('/images/services_page_images/second-section-img.png')`,
+                backgroundSize: 'cover',
+              }}
+            >
+              {/* Left Column */}
+              <div className="space-y-6 lg:w-[40%]">
+                <Reveal>
+                  <h2 className="text-2xl md:text-4xl font-medium leading-tight">
+                    Web <br /> Development
+                  </h2>
+                </Reveal>
+                <Reveal>
+                  <p className="text-gray-300 leading-relaxed">
+                    Every decision we make needs to answer the million-dollar question: how will this benefit our partner's goal best? We work to develop solutions. Step into our digital workshop, where innovative ideas converge with technical prowess to build bespoke online experiences.           
+                  </p>
+                </Reveal>
+                <Reveal>
+                  <PrimaryBtn text="Learn More" />
+                </Reveal>
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-6 lg:w-[30%]">
+                <Reveal>
+                <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
+                  Tailored Solutions
+                </h3>
+                </Reveal>
+                <ul className="space-y-2 text-gray-300">
+                <Reveal>
+                  <li className="flex items-center gap-3">Cutting-Edge Technology</li>
+                  </Reveal>
+                  <Reveal>
+                  <li className="flex items-center gap-3">User -Centric Design</li>
+                  </Reveal>
+                  <Reveal>
+                  <li className="flex items-center gap-3">SEO Optimization</li>
+                  </Reveal>
+                  <Reveal>
+                  <li className="flex items-center gap-3">Continuous Evolution</li>
+                  </Reveal>
+                </ul>
+              </div>
+            </div>
+        
+            {/* Background Text Overlay */}
+            <div
+              className="hidden md:block absolute pb-6 bottom-[-10%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+              style={{
+                WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
+                color: 'transparent'
+              }}
+            >
+              App Development
+            </div>
+          </div>
+
+          {/* Purple Glow Effects */}
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full filter blur-[100px] -z-10" />
+        </div>
       </main>
-    )
-  };
+    );
+};
 
 export default WebDevSection;

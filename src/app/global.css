@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
   color: #FFFFFF;
   /* background: #040015; */
   overflow-x: hidden;
@@ -701,9 +700,9 @@ overflow: hidden;
     display: none !important;
 }
 
-.flower-cursor {
+/* .flower-cursor {
     display: none !important;
-}
+} */
 
 .ct-padding{
   margin-top: 0 !important;
@@ -901,4 +900,35 @@ line-height: 18px!important;
   margin-bottom: 10px;
   font-size: 14px !important;
   color: #777777 !important;
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 0.7s forwards;
+}
+
+.animate-right {
+  animation: slideInRight 0.7s forwards;
 }

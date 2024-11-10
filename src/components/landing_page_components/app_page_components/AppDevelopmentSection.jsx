@@ -8,28 +8,37 @@ const AppDevelopmentSection = () => {
   const [tabImage, setTabImage] = React.useState(0);
 
   return (
-    <main className="py-6">
-        <div className='text-center w-full'>
-            <h2 className="text-4xl font-bold leading-tight my-8">
-              Leading the Way in Mobile <br/> App Development
-            </h2>
-        </div>
+    <main className="mt-30 md:mt-10 md:my-20">
+         <div className="flex justify-center mt-3">
+        <Reveal>
+          <h1 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full">
+            Leading the Way in Mobile <br/> App Development
+          </h1>
+        </Reveal>
+      </div>
+      
       <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between ">
         {/* project section left box  */}
         <div className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center ">
           {tabImage === 0 && (
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={500} height={500} />
+            </div>
           )}
           {tabImage === 1 && (
-            <Image src={"/images/app_page_images/app-hero.png"} alt="mob2" width={500} height={500} />
+              <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
+              <Image src={"/images/app_page_images/app-hero.png"} alt="mob2" width={500} height={500} />
+              </div>
           )}
           {tabImage === 2 && (
+              <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={500} height={500} />
+            </div>
           )}
         </div>
 
         {/* project section right box */}
-        <div className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-row justify-between relative ct-projects">
+        <div className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects">
           {/* tab box for project  */}
           <div className="w-[100%] md:w-[70%]">
             {/* top heading */}
@@ -58,7 +67,7 @@ const AppDevelopmentSection = () => {
             <ContentTab tabImage={tabImage} setTabImage={setTabImage} />
           </div>
 
-          <div className="w-[30%] absolute top-0 right-6">
+          <div className="w-full md:w-[30%] md:absolute md:top-0 md:right-6 mt-5 md:mt-0">
             {tabImage === 0 && (
               <div>
                 <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob" width={300} height={300} />

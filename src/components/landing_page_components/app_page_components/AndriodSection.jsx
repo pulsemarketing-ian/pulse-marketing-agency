@@ -1,3 +1,5 @@
+'use client';
+import { Reveal } from '@/utils/Reveal'
 import Image from 'next/image'
 import React from 'react'
 
@@ -23,52 +25,53 @@ const AndriodSection = () => {
           >
             {/* Left Column */}
             <div className="space-y-6 lg:w-[40%]">
-              <h2 className="text-5xl font-medium leading-tight">
-              Android App <br/>Development
-              </h2>
+              <Reveal>
+                <h2 className="text-2xl md:text-4xl font-medium leading-tight">
+                Android App <br/>Development
+                </h2>
+              </Reveal>
+              <Reveal>
               <p className="text-gray-300 leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.              </p>
+              </Reveal>
               <ul class="space-y-2 text-[13px] text-gray-300">
+              <Reveal>
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Android app development consultation
         </li>
+        </Reveal>
+
+        <Reveal>
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Android app UI/UX design
         </li>
+        </Reveal>
+
+        <Reveal>
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Custom Android app development
         </li>
+        </Reveal>
+
+        <Reveal>
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Android software testing
         </li>
+        </Reveal>
+
+        <Reveal>
         <li class="flex items-center">
             <span class="text-cyan-500 mr-2">•</span> Play store optimization & API integration
         </li>
+        </Reveal>
+
     </ul>
             </div>
   
           
   
             {/* Right Column */}
-            <div className="space-y-6 lg:w-[40%]">
-              {/* <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
-                Our Services
-              </h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-center gap-3">
-                  Flutter App Development
-                </li>
-                <li className="flex items-center gap-3">
-                  React Native Development
-                </li>
-                <li className="flex items-center gap-3">
-                  Native App Development
-                </li>
-                <li className="flex items-center gap-3">
-                  Maintenance Code Review
-                </li>
-              </ul> */}
-
+            <div className="space-y-6 lg:w-[40%] transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
                 src={'/images/app_page_images/fifth-sec.png'}
                 alt={'image'}

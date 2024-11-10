@@ -11,7 +11,6 @@ import Footer from '@/components/layout/Footer';
 
 const App = () => {
   return (
-    <React.Fragment>
         <main className="theme_bg_color">
             <HeroSection/>
             <PortfolioSection/>
@@ -23,7 +22,6 @@ const App = () => {
             <OurBlog/>
             <Footer/>
         </main>
-    </React.Fragment>
   )
 }
 
