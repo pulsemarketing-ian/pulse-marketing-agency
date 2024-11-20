@@ -9,8 +9,8 @@ import { Drawer } from "@mui/material";  // Using MUI Drawer
 import "../landing_page_components/PrimaryBtns/btn.css";
 
 const menuItems = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "Home", path: "/work-details" },
+  { label: "About", path: "/app" },
   {
     label: "Services",
     path: "/services",
@@ -58,9 +58,9 @@ const menuItems = [
       },
     ],
   },
-  { label: "Portfolio", path: "/portfolio" },
-  { label: "Terms", path: "/terms" },
-  { label: "Our Policy", path: "/policy" },
+  { label: "Portfolio", path: "/our-work" },
+  { label: "Terms", path: "/term-condition" },
+  { label: "Our Policy", path: "/privacy" },
 ];
 
 export default function Navbar() {
