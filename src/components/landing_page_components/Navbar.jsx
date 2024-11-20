@@ -212,7 +212,9 @@ export default function Navbar() {
           },
         }}
       >
-        <div className="flex flex-col p-4 space-y-4 item-center">
+        <div className="flex flex-col p-4 space-y-4 item-center" style={{display:'flex',
+          alignItems:'center'
+        }}>
           {menuItems.map((item) => (
             <div key={item.label}>
               <Link
