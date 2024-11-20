@@ -41,6 +41,7 @@ const TechStack = () => {
         >
             {techImage.map((item, index) =>(
                 <motion.div 
+                key={index}
                 initial={{
                     y: 300,
                     opacity: 0,
