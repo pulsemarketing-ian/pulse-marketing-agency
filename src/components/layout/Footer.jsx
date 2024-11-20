@@ -136,7 +136,7 @@ const Footer = () => {
 
   return (
     <>
-      <main className="w-full pb-12 ">
+      <main className="w-full pb-12 pt-12">
         <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
           <div>
           <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
+import {motion} from 'motion/react';
 
 const OurWorkSection = () => {
   return (
@@ -34,8 +35,25 @@ const OurWorkSection = () => {
 
           {/* inner content  */}
           <div className="mx-auto mt-6 flex flex-col md:flex-row w-full md:w-[90%] lg:w-[1200px] items-center justify-between overflow-hidden md:mb-12">
+
             {/* left box  */}
-            <div className="flex w-full md:w-[45%] flex-col gap-3 mb-8 md:mb-0">
+            <div
+                    initial={{
+                        x: -200,
+                        opacity:0
+                    }}
+                    whileInView={{
+                        x: 0,
+                        opacity:1
+                    }}
+                    transition={{
+                        delay: 0.1,
+                        duration: 0.5,
+                        ease: "easeInOut",
+                    }}
+                    viewport={{ once: false, amount: 0.2 }}
+                     className="flex w-full md:w-[45%] flex-col gap-3 mb-8 md:mb-0">
+
             <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
             <Image
                   src={"/images/our-work_page_images/img (1).png"}
@@ -71,9 +89,60 @@ const OurWorkSection = () => {
               </Reveal>
 
             </div>
+            {/* <div className="flex w-full md:w-[45%] flex-col gap-3 mb-8 md:mb-0">
+            <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+            <Image
+                  src={"/images/our-work_page_images/img (1).png"}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-2xl"
+                  alt="Project Image"
+                />
+              </div>
+              <Reveal>
+              <h4 className="text-xl font-semibold tracking-wide">
+                Project Name
+              </h4>
+              </Reveal>
+              <Reveal>
+
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="flex flex-wrap gap-4">
+                  {["Design", "Development", "SEO"].map((tag, index) => (
+                    <div key={index} className="flex items-center gap-1 mb-2 w-auto">
+                      <Image
+                        src="/images/services_page_images/blue-dot.png"
+                        alt="blue-dot"
+                        width={20}
+                        height={20}
+                      />
+                      <p>{tag}</p>
+                    </div>
+                  ))}
+                </div>
+                <PrimaryBtn text={"View Case Study"} />
+              </div>
+              </Reveal>
+
+            </div> */}
 
             {/* right box */}
-            <div className="flex w-full md:w-[45%] flex-col gap-4 md:mt-20">
+            <div 
+              initial={{
+                y: -400,
+                opacity:0
+            }}
+            whileInView={{
+                y: 0,
+                opacity:1
+            }}
+            transition={{
+                delay: 0.5,
+                duration: 0.5,
+                ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex w-full md:w-[45%] flex-col gap-4 md:mt-20">
             <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
             <Image
                   src={"/images/our-work_page_images/img (6).png"}

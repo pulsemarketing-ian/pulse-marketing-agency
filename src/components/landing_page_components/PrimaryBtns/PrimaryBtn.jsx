@@ -1,24 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './btn.css';
 
-const PrimaryBtn = ({text}) => {
+const PrimaryBtn = ({ text, icon }) => {
   return (
-    <React.Fragment>
-       <button 
-      //  className="bg-transparent border border-white text-[12px] px-4 rounded-2xl hover:bg-my-blue-gradient hover:text-my-blue-gradient"
-      style={{
-        backgroundColor: 'transparent',
-        border: '1px solid #fff',
-        color: '#fff',
-        padding: '2px 16px',
-        borderRadius: '15px',
-        cursor: 'pointer',
-        fontSize:'12px'
-      }}
-       >
-          {text}
-        </button>
-    </React.Fragment>
-  )
-}
+    <div className="fancy-btn-container">
+      <button className="fancy-btn">
+        {icon && <span className="icon">{icon}</span>}
+        {text && <span className="text">{text}</span>}
+      </button>
+    </div>
+  );
+};
 
-export default PrimaryBtn
+export default PrimaryBtn;

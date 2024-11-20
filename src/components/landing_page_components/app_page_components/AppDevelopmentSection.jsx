@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import ContentTab from "./ContentTab";
 import {Reveal} from '@/utils/Reveal';
+import {motion} from 'motion/react';
 
 const AppDevelopmentSection = () => {
   const [tabImage, setTabImage] = React.useState(0);
@@ -19,7 +20,21 @@ const AppDevelopmentSection = () => {
       
       <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between ">
         {/* project section left box  */}
-        <div className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center ">
+        <motion.div 
+                  initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center ">
           {tabImage === 0 && (
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={500} height={500} />
@@ -35,10 +50,24 @@ const AppDevelopmentSection = () => {
             <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={500} height={500} />
             </div>
           )}
-        </div>
+        </motion.div>
 
         {/* project section right box */}
-        <div className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects">
+        <motion.div 
+                  initial={{
+                    x: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects">
           {/* tab box for project  */}
           <div className="w-[100%] md:w-[70%]">
             {/* top heading */}
@@ -84,7 +113,7 @@ const AppDevelopmentSection = () => {
 
             
           </div>
-        </div>
+        </motion.div>
       </main>
     </main>
   );

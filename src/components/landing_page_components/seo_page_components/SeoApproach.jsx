@@ -43,9 +43,9 @@ const SeoApproach = () => {
                     />
                     </div>
 
-                    <div className="cards-seo md:flex gap-3 mt-8 hidden">
+                    <div className="cards-seo md:flex gap-3 mt-8 hidden md:mt-12">
 
-                        <div className="w-[22%] border-r-2 pr-3 gap-2 flex justify-between items-center">
+                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={30} height={30} src={'/images/seo_page_images/100.png'}/></div>
 
                             {/* card heading  */}
@@ -57,7 +57,7 @@ const SeoApproach = () => {
                             </Reveal>
                     </div>
 
-                        <div className="w-[22%] border-r-2 pr-3 gap-2 flex justify-between items-center">
+                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={20} height={20} src={'/images/seo_page_images/50.png'}/></div>
 
                             {/* card heading  */}
@@ -69,7 +69,7 @@ const SeoApproach = () => {
                             </Reveal>
                         </div>
 
-                        <div className="w-[22%] border-r-2 pr-3 gap-2 flex justify-between items-center">
+                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={30} height={30} src={'/images/seo_page_images/100.png'}/></div>
 
                             {/* card heading  */}

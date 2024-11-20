@@ -1,0 +1,52 @@
+.fancy-btn-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 40px;
+  width: auto;
+  overflow: hidden;
+}
+
+.fancy-btn {
+  position: relative;
+  background: #040117;
+  color: white;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.fancy-btn::before {
+  content: '';
+  background: conic-gradient(transparent 270deg, white, transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 200%;
+  z-index: -1;
+  animation: rotate 2s linear infinite;
+}
+
+.fancy-btn::after {
+  content: '';
+  background: #040117;
+  position: absolute;
+  inset: 2px;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}

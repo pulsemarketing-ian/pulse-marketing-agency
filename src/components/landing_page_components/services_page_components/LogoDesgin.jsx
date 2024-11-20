@@ -2,6 +2,7 @@
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
+import {motion} from 'motion/react';
 
 const LogoDesgin = () => {
     return (
@@ -36,7 +37,21 @@ const LogoDesgin = () => {
             }}
           >
             {/* Left Column */}
-            <div className="space-y-6 lg:w-[40%]">
+            <motion.div 
+             initial={{
+              x: -300,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[40%]">
             <Reveal>
                 <h2 className="text-2xl md:text-4xl font-medium leading-tight">
                 Digital <br/>
@@ -53,12 +68,24 @@ const LogoDesgin = () => {
               <Reveal>
               <PrimaryBtn text="Learn More" />
               </Reveal>
-            </div>
-  
-          
-  
+            </motion.div>
+    
             {/* Right Column */}
-            <div className="space-y-6 lg:w-[30%]">
+            <motion.div 
+             initial={{
+              x: 300,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[30%]">
             <Reveal>
               <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
               Packaging Design
@@ -84,7 +111,7 @@ const LogoDesgin = () => {
                   </li>
                   </Reveal>
               </ul>
-            </div>
+            </motion.div>
           </div>
        
         {/* Background Text Overlay */}

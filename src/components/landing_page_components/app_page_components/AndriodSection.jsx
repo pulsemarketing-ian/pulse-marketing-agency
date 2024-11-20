@@ -2,6 +2,7 @@
 import { Reveal } from '@/utils/Reveal'
 import Image from 'next/image'
 import React from 'react'
+import {motion} from 'motion/react';
 
 const AndriodSection = () => {
   return (
@@ -24,7 +25,21 @@ const AndriodSection = () => {
             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between"
           >
             {/* Left Column */}
-            <div className="space-y-6 lg:w-[40%]">
+            <motion.div 
+                  initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="space-y-6 lg:w-[40%]">
               <Reveal>
                 <h2 className="text-2xl md:text-4xl font-medium leading-tight">
                 Android App <br/>Development
@@ -66,19 +81,33 @@ const AndriodSection = () => {
         </Reveal>
 
     </ul>
-            </div>
+            </motion.div>
   
           
   
             {/* Right Column */}
-            <div className="space-y-6 lg:w-[40%] transform transition-transform duration-700 ease-in-out hover:scale-105">
+            <motion.div 
+                  initial={{
+                    scale: 0.1,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.3,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="space-y-6 lg:w-[40%] transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
                 src={'/images/app_page_images/fifth-sec.png'}
                 alt={'image'}
                 width={850}
                 height={850}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
   

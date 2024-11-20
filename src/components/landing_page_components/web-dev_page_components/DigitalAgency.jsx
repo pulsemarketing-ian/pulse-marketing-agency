@@ -5,6 +5,7 @@ import { MdArrowDropDown } from "react-icons/md";
 import Image from 'next/image'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Reveal } from '@/utils/Reveal';
+import {motion} from 'motion/react';
 
 const darkTheme = createTheme({
   palette: {
@@ -34,6 +35,22 @@ export default function DigitalAgency() {
 
           <Grid container spacing={2} alignItems="flex-start" sx={{mt: { xs: 0, md: 4 }}}>
             <Grid item xs={12} lg={5}>
+              <motion.div 
+                  initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}
+              >
               <Box
                 sx={{
                   position: 'relative',
@@ -54,9 +71,11 @@ export default function DigitalAgency() {
                   objectFit="cover"
                   />
               </Box>
+              </motion.div>
             </Grid>
-
+            
             <Grid item xs={12} lg={7} sx={{bgImage: 'url(/images/app_page_images/radial.png)'}}>
+            
               <Accordion sx={{bgcolor: 'transparent', color:'white', borderBottom:'1px solid white'}}>
                 <AccordionSummary expandIcon={<MdArrowDropDown style={{color:'white'}} />}>
                   <Typography variant="h6">Tailored Solutions</Typography>

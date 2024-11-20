@@ -1,10 +1,8 @@
 'use client'
-
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
+import {motion} from 'motion/react';
 
 export default function WorkingTechnologySlider() {
     const techSliderImage = [
@@ -65,10 +63,25 @@ export default function WorkingTechnologySlider() {
         <main className="max-w-[1200px] mx-auto py-6 px-4">
             <Slider {...settings}>
                 {techSliderImage.map((item, index) => (
-                    <div className="flex flex-col items-center justify-center px-2" key={index}>
+                    <motion.div 
+                    initial={{
+                      scale: 0.1,
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      scale: 1,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: 0.5,
+                      duration: 0.5,
+                      ease: "easeInOut",
+                    }}
+                    viewport={{ once: false, amount: 0.2 }} 
+                    className="flex flex-col items-center justify-center px-2" key={index}>
                         <Image src={item.image} alt={item.content} width={250} height={250} className="rounded-lg" />
                         <p className="text-start text-[14px] mt-3">{item.content}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </Slider>
         </main>

@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
+import Slider from './Slider';
 
 export default function PortfolioSection() { 
   const portfolioItems = [
@@ -100,19 +101,7 @@ export default function PortfolioSection() {
           }}
           className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-[1200px] md:mx-auto md:translate-y-10 md:p-6"
         >
-          <Slider {...settings}>
-            {portfolioItems.map((item) => (
-              <div key={item.id} className="px-2">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  className="h-auto w-full rounded-2xl shadow-lg"
-                  width={200}
-                  height={200}
-                />
-              </div>
-            ))}
-          </Slider>
+          <Slider/>
         </div>
       </div>
     </main>

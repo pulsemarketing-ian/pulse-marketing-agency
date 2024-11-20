@@ -3,6 +3,7 @@ import React from 'react';
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn';
 import Image from 'next/image';
 import { Reveal } from '@/utils/Reveal';
+import {motion} from 'motion/react';
 
 const OurBlog = () => {
   return (
@@ -29,7 +30,21 @@ const OurBlog = () => {
         {/* Blog Content */}
         <div className="flex flex-wrap justify-between my-4 gap-4">
           {/* Blog 1 */}
-          <div className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[28%]">
+          <motion.div 
+                initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}  className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[28%]">
           <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/blog-img (1).png"} alt="" width={300} height={300} className="rounded-lg" />
           </div>
@@ -48,10 +63,24 @@ const OurBlog = () => {
               </ul>
               </Reveal>
             </div>
-          </div>
+          </motion.div>
 
           {/* Blog 2 */}
-          <div className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[28%]">
+          <motion.div 
+                initial={{
+                    y: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}  className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[28%]">
           <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/blog-img (3).png"} alt="" width={300} height={300} className="rounded-lg" />
           </div>
@@ -70,10 +99,24 @@ const OurBlog = () => {
               </ul>
               </Reveal>
             </div>
-          </div>
+          </motion.div>
 
           {/* Blog 3 */}
-          <div className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[35%]">
+          <motion.div 
+                initial={{
+                    x: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}  className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[35%]">
           <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image src={"/images/app_page_images/blog-img (2).png"} alt="" width={430} height={430} className="rounded-lg" />
           </div>
@@ -92,7 +135,7 @@ const OurBlog = () => {
               </ul>
               </Reveal>
             </div>
-          </div>
+          </motion.div>
         </div>
       </main>
     </React.Fragment>

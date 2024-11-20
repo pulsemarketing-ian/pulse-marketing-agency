@@ -2,6 +2,7 @@
 import { Reveal } from '@/utils/Reveal'
 import Image from 'next/image'
 import React from 'react'
+import {motion} from 'motion/react';
 
 const TechStack = () => {
 
@@ -39,6 +40,21 @@ const TechStack = () => {
         }}
         >
             {techImage.map((item, index) =>(
+                <motion.div 
+                initial={{
+                    y: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}>
                 <Image
                 key={index}
                 src={item.img}
@@ -46,6 +62,7 @@ const TechStack = () => {
                 width={90}
                 height={90}
                 />
+                </motion.div>
             ))}
         </div>
     </main>

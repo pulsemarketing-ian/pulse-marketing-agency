@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 import Navbar from '@/components/landing_page_components/Navbar'
 import Image from 'next/image'
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn'
+import {motion} from 'motion/react';
+
 const HeroSection = () => {
     const [budget, setBudget] = useState(5000);
 
@@ -16,7 +18,21 @@ const HeroSection = () => {
             <Navbar/>
             <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
                 {/* hero heading  */}
-                <div className="w-full px-6 md:px-0 md:w-[45%] flex-col">
+                <motion.div 
+                  initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="w-full px-6 md:px-0 md:w-[45%] flex-col">
                     <div className='flex items-center gap-1 mb-2 w-auto'>
                         <Image
                         src="/images/services_page_images/blue-dot.png"
@@ -31,10 +47,24 @@ const HeroSection = () => {
                     <h2 className="text-2xl md:text-5xl font-bold leading-tight text-left">
                     Best App Development <br/> Company
                     </h2>
-                </div>
+                </motion.div>
 
                     {/* hero form  */}
-                    <div className="hidden md:block w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 px-10 max-w-md translate-y-8 shadow-lg text-white">
+                    <motion.div 
+                      initial={{
+                        scale: 0.1,
+                        opacity: 0,
+                      }}
+                      whileInView={{
+                        scale: 1,
+                        opacity: 1,
+                      }}
+                      transition={{
+                        delay: 0.5,
+                        duration: 0.5,
+                        ease: "easeInOut",
+                      }}
+                      viewport={{ once: false, amount: 0.2 }} className="hidden md:block w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl py-5 px-10 max-w-md translate-y-8 shadow-lg text-white  h-[70%] overflow-auto">
                         <h2 className="text-2xl font-bold mb-3">Have any questions?</h2>
                         
                         <form className="space-y-2">
@@ -90,7 +120,7 @@ const HeroSection = () => {
                         </div>
                             <PrimaryBtn text={'Submit'}/>
                         </form>
-                    </div>
+                    </motion.div>
 
             {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image

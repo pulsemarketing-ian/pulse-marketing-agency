@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn';
 import { Reveal } from '@/utils/Reveal';
+import {motion} from 'motion/react';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -21,7 +22,21 @@ const FAQSection = () => {
   return (
     <div className="text-white py-12 flex flex-col lg:flex-row lg:justify-between w-full px-6 md:px-0 md:w-[1200px] md:mx-auto gap-4">
       {/* Left Column */}
-      <div className="space-y-4 lg:w-[35%] w-full">
+      <motion.div 
+                initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}  className="space-y-4 lg:w-[35%] w-full">
         <Reveal>
         <p className="uppercase text-sm"> <span className="text-cyan-500 mr-2">•</span>FAQs</p>
         </Reveal>
@@ -34,10 +49,24 @@ const FAQSection = () => {
         </p>
         </Reveal>
         <PrimaryBtn text={'View All FAQs'} />
-      </div>
+      </motion.div>
 
       {/* Right Column */}
-      <div className="space-y-6 lg:w-[50%] w-full" style={{
+      <motion.div 
+                initial={{
+                    x: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[50%] w-full" style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -61,7 +90,7 @@ const FAQSection = () => {
             )}
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

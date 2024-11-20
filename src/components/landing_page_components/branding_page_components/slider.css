@@ -1,0 +1,33 @@
+
+*:focus {
+    outline: 0;
+  }
+  
+  html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  body {
+      background-color: #000000;
+  }
+  
+  .carousel {
+      height: 700px;
+      perspective: 600px;
+      transform: translateY(40px);
+      display: flex;
+      width: 100%;
+  }
+  
+  .carousel .carousel-item {
+      cursor: grab;
+      width: 400px;
+  }
+  
+  .carousel .carousel-item:active {
+      cursor: grabbing;
+  }
+  
+  .carousel .carousel-item img {
+      width: 100%;
+  }

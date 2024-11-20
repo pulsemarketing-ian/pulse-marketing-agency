@@ -1,6 +1,7 @@
 'use client';
 import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image';
+import {motion} from 'motion/react';
 
 export default function VideoBenefitSection() {
   return (
@@ -12,7 +13,21 @@ export default function VideoBenefitSection() {
     }}>
       <div className="md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 item-center">
         {/* Left Content */}
-        <div>
+        <motion.div
+         initial={{
+          y: -300,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: false, amount: 0.2 }} >
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
               Animated Explainer <br/>Video Benefits
@@ -27,7 +42,7 @@ export default function VideoBenefitSection() {
               height={500}
               />
           </div>
-        </div>
+        </motion.div>
 
       <div className='text-white text-[14px] translate-y-[40%]'>
       <Reveal>
@@ -42,7 +57,22 @@ export default function VideoBenefitSection() {
         </Reveal>
       </div>
         {/* Right Content - Image */}
-        <div className="relative flex justify-center items-center mt-32 md:mt-0">
+        <motion.div 
+         initial={{
+          y: 300,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: false, amount: 0.2 }} 
+        className="relative flex justify-center items-center mt-32 md:mt-0">
           <div className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-700 ease-in-out hover:scale-105">
             <Image
           src={'/images/video_page_images/benefit-img (2).png'}
@@ -52,7 +82,7 @@ export default function VideoBenefitSection() {
               className="rounded-lg"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

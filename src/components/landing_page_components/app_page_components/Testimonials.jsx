@@ -70,27 +70,37 @@ export default function Testimonials() {
       </div>
 
       <Slider {...settings}>
-        {/* Testimonial Cards */}
         {[1, 2, 1, 2].map((_, index) => (
-          <div key={index}  className="flex gap-3 flex-wrap">
-          <div className="bg-[#28282B] rounded-2xl p-6 text-center shadow-lg mx-2"> 
-            <div className="relative w-auto h-auto rounded-lg overflow-hidden mb-4">
-              <Image src={`/images/app_page_images/client (${_}).png`} width={1000} height={1000} alt={`Client ${index + 1}`} className="w-full h-full object-contain" />
-              {/* Play Icon */}
-              <div className="flex absolute bottom-0 items-center justify-center space-x-2">
-                <div className="rounded-full bg-white w-8 h-8 flex items-center justify-center text-cyan-500">
-                  <MdPlayArrow />
+          <div key={index} className="group flex gap-3 flex-wrap">
+            <div className="bg-[#28282B] rounded-2xl p-6 text-center shadow-lg mx-2 relative">
+              <div className="relative w-auto h-auto rounded-lg overflow-hidden mb-4">
+                {/* Image */}
+                <Image
+                  src={`/images/app_page_images/client (${_}).png`}
+                  width={1000}
+                  height={1000}
+                  alt={`Client ${index + 1}`}
+                  className=" relative first-line:w-full h-full object-contain group-hover:opacity-0 transition-opacity duration-300"
+                />
+                {/* Icon */}
+                <div className="bg-blue-500 w-10 h-10 flex items-center justify-center rounded-full absolute bottom-0 left-[12%]  transform -translate-x-1/2 z-96 shadow-lg border-4">
+                  <MdPlayArrow className="text-white text-2xl" />
+                </div>
+                {/* Dummy Text on Hover */}
+                <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">
+                  <p className="text-black font-light text-[12px] text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua.
+                  </p>
                 </div>
               </div>
+              <div className="flex justify-between w-full items-center">
+                <Image src={'/images/app_page_images/circle.png'} width={70} height={50} />
+                <p className="text-sm text-white">Name</p>
+              </div>
             </div>
-            <div className="flex justify-between w-full items-center">
-              <Image src={'/images/app_page_images/circle.png'} width={70} height={50} />
-              <p className="text-sm text-white">Name</p>
-            </div>
-          </div>
           </div>
         ))}
       </Slider>
     </div>
   );
-};
+}

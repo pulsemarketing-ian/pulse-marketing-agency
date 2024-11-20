@@ -2,11 +2,12 @@
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
+import {motion} from 'motion/react';
 
 const AppDevSection = () => {
     return (
          <main 
-         className="relative pb-6 text-white overflow-hidden" 
+         className="relative pb-6 md:pb-[15vh] text-white overflow-hidden md:translate-y-[-30%]" 
          style={{
              backgroundColor: '#040117',
              backgroundSize:'cover',
@@ -15,7 +16,7 @@ const AppDevSection = () => {
         >
   
         {/* Main Content Section */}
-        <div className="relative container mx-auto px-4 py-16">
+        <div className="relative container mx-auto px-4 py-16 md:py-0">
           <div 
             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
             style={{
@@ -24,7 +25,22 @@ const AppDevSection = () => {
             }}
           >
             {/* Left Column */}
-            <div className="space-y-6 lg:w-[40%]">
+            <motion.div 
+             initial={{
+              x: -300,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }} 
+            className="space-y-6 lg:w-[40%]">
               <Reveal>
                 <h2 className="text-2xl md:text-4xl font-medium leading-tight">
                   Application Development
@@ -38,12 +54,24 @@ const AppDevSection = () => {
               <Reveal>
                 <PrimaryBtn text="Learn More" />
               </Reveal>
-            </div>
-  
-          
+            </motion.div>
   
             {/* Right Column */}
-            <div className="space-y-6 lg:w-[30%]">
+            <motion.div 
+             initial={{
+              x: 300,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[30%]">
             <Reveal>
               <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
                 Our Services
@@ -71,7 +99,7 @@ const AppDevSection = () => {
                 </li>
                 </Reveal>
               </ul>
-            </div>
+            </motion.div>
           </div>
        
         {/* Background Text Overlay */}
@@ -89,8 +117,8 @@ const AppDevSection = () => {
        
   
         {/* Purple Glow Effects */}
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full filter blur-[100px] -z-10" />
+        {/* <div className="absolute top-1/2 left-1/4 w-96 h-[60vh] bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-auto bg-pink-600/20 rounded-full filter blur-[100px] -z-10" /> */}
       </main>
     )
   };

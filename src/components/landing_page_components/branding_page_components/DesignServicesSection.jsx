@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Tab, Tabs } from "@mui/material";
 import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
+import {motion} from 'motion/react';
 
 export default function DesignServicesSection() {
   const [activeTab, setActiveTab] = useState(0);
@@ -132,7 +133,21 @@ export default function DesignServicesSection() {
         }}
       >
         {tabContent[activeTab].items.map((item, index) => (
-          <div key={index} className="overflow-hidden rounded-lg p-4 shadow-lg">
+          <motion.div 
+          initial={{
+            y: 300,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          viewport={{ once: false, amount: 0.2 }} key={index} className="overflow-hidden rounded-lg p-4 shadow-lg">
             <div className="relative mb-4 h-48 w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
                 src={item.image}
@@ -148,7 +163,7 @@ export default function DesignServicesSection() {
             <Reveal>
             <p className="text-[13px] text-gray-300">{item.description}</p>
             </Reveal>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

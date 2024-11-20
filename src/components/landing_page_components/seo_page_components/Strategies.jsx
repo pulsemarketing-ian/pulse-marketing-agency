@@ -2,11 +2,26 @@
 import { Reveal } from '@/utils/Reveal'
 import Image from 'next/image'
 import React from 'react'
+import {motion} from 'motion/react';
 
 const Strategies = () => {
   return (
     <main className="w-full px-4 md:px-0 md:w-[1200px] mx-auto py-10 flex flex-wrap justify-between "  >
-        <div className="flex flex-col gap-4 md:w-[48%]">
+        <motion.div  
+                    initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="flex flex-col gap-4 md:w-[48%]">
           <Reveal>
           <h2 className="text-xl md:text-4xl font-bold tracking-wide">We implement the latest<br/> SEO strategies and <br/>marketing techniques</h2>
           </Reveal>
@@ -20,15 +35,29 @@ const Strategies = () => {
             </Reveal>
 
             <Image src="/images/seo_page_images/sm.png" width={200} height={200} alt="seo-strategies"/>
-        </div>
+        </motion.div>
 
-        <div className="w-full md:w-[48%] flex justify-items-end justify-end mt-8 md:mt-0"  style={{
+        <motion.div  
+                    initial={{
+                    x: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="w-full md:w-[48%] flex justify-items-end justify-end mt-8 md:mt-0"  style={{
             backgroundImage:"url('/images/app_page_images/radial.png')",
             backgroundSize:'contain',
             backgroundRepeat:'no-repeat'
         }}>
             <Image src={'/images/seo_page_images/strategy.png'} width={450} height={450} className="rounded-3xl"/>
-        </div>
+        </motion.div>
     </main>
   )
 }

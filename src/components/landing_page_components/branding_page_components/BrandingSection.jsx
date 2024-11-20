@@ -1,15 +1,30 @@
 'use client'
 import { Reveal } from '@/utils/Reveal';
 import Image from 'next/image';
+import {motion} from 'motion/react';
 
 export default function BrandingSection() {
   return (
-    <section className="text-white md:py-16 pb-16 md:pb-0 md:w-[1200px] md:mx-auto px-6 md:px-0">
+    <section className="text-white md:py-16 md:pt-[-20px] pb-16 md:pb-0 md:w-[1200px] md:mx-auto px-6 md:px-0">
       <div className="md:container mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Text Content */}
-        <div className="md:w-1/2 space-y-4">
+        <motion.div 
+                  initial={{
+                    x: -300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="md:w-1/2 space-y-4">
         <Reveal>
-          <h2 className="text-5xl font-medium leading-tight">Logo Design <br/>& Branding</h2>
+          <h2 className="text-4xl font-medium leading-tight">Logo Design <br/>& Branding</h2>
         </Reveal>
         <Reveal>
           <p className="text-gray-300 text-[13px]">
@@ -27,10 +42,24 @@ export default function BrandingSection() {
             resonate with audiences.
           </p>
           </Reveal>
-        </div>
+        </motion.div>
 
         {/* Image Content */}
-        <div className="md:w-1/2 w-full flex justify-center" 
+        <motion.div 
+                  initial={{
+                    x: 300,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }} className="md:w-1/2 w-full flex justify-center" 
             style={{
                 backgroundImage:"url('/images/app_page_images/radial.png')",
                 backgroundSize:'cover',
@@ -46,7 +75,7 @@ export default function BrandingSection() {
               className="rounded-lg"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
