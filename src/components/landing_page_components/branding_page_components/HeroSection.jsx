@@ -19,7 +19,7 @@ const   HeroSection = () => {
             }}
             >
             <Navbar/>
-            <div className='h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+            <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
                 {/* hero heading  */}
                 <motion.div 
                   initial={{
@@ -51,7 +51,7 @@ const   HeroSection = () => {
                     {/* heading main  */}
                     <Reveal>
                         <h2 className="text-2xl md:text-5xl font-bold leading-tight text-left">
-                        full-service branding <br/>Agency with a difference
+                        Full-Service Branding <br/>Agency With A Difference
                         </h2>
                     </Reveal>
                 </motion.div>
@@ -72,9 +72,8 @@ const   HeroSection = () => {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='w-full md:w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-6 md:p-10 max-w-md shadow-lg text-white h-[70%] overflow-auto'
-                  >
-            <HeroForm/>
+                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white '>
+                  <HeroForm/>
                    </motion.div>
 
             {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>

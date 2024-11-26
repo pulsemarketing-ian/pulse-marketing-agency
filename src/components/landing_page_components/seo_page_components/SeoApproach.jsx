@@ -14,7 +14,7 @@ const SeoApproach = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[50vh] md:h-[95vh]"
+          className="h-[50vh] md:h-[100vh]"
         />
         <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center " 
          style={{
@@ -22,9 +22,9 @@ const SeoApproach = () => {
             backgroundSize:'contain',
             backgroundRepeat:'no-repeat'
             }}>
-          <div className="z-10 md:mt-8 text-center">
+          <div className="z-10 text-center">
             <Reveal>
-              <h1 className="text-xl md:text-4xl font-bold tracking-wide">Our Approach to SEO</h1>
+              <h1 className="text-xl md:text-5xl font-bold tracking-wide">Our Approach to SEO</h1>
             </Reveal>
           </div>
 
@@ -34,7 +34,7 @@ const SeoApproach = () => {
           >
                 {/* left box  */}
                 <div className=" w-full md:w-[55%] flex md:flex-col" >
-                <div className="relative h-[200px] mb-16 md:mb-0 w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[300px]">
+                <div className="relative h-[200px] mb-16 md:mb-0 w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[360px]">
                     <Image
                     layout="fill"
                     objectFit="cover"
@@ -45,7 +45,7 @@ const SeoApproach = () => {
 
                     <div className="cards-seo md:flex gap-3 mt-8 hidden md:mt-12">
 
-                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
+                        <div className="w-[33%] border-r border-gray-2 pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={30} height={30} src={'/images/seo_page_images/100.png'}/></div>
 
                             {/* card heading  */}
@@ -57,7 +57,7 @@ const SeoApproach = () => {
                             </Reveal>
                     </div>
 
-                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
+                        <div className="w-[33%] border-r border-gray-2 pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={20} height={20} src={'/images/seo_page_images/50.png'}/></div>
 
                             {/* card heading  */}
@@ -69,7 +69,7 @@ const SeoApproach = () => {
                             </Reveal>
                         </div>
 
-                        <div className="w-[28%] border-r-2 pr-3 gap-2 flex justify-around items-center">
+                        <div className="w-[33%] pr-3 gap-2 flex justify-around items-center">
                             <div ><Image width={30} height={30} src={'/images/seo_page_images/100.png'}/></div>
 
                             {/* card heading  */}

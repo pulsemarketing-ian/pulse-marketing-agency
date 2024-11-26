@@ -14,13 +14,13 @@ const HeroSection = () => {
     <React.Fragment>
         <main 
          style={{
-             backgroundImage: "url('/images/our-work_page_images/our-work.png')",
+             backgroundImage: "url('/images/video_page_images/video-photo.png')",
              backgroundSize: "cover",
             }}
             >
             <Navbar/>
-            <div className='h-[100vh] flex justify-between items-center flex-row relative px-6 md:px-0 md:w-[1200px] md:mx-auto'>
-                {/* hero heading  */}
+            <div className='flex justify-between items-center flex-row relative px-6 md:px-0 md:w-[1200px] md:mx-auto md:h-[100vh]' >
+
                 <motion.div 
                   initial={{
                     x: -300,
@@ -72,8 +72,7 @@ const HeroSection = () => {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='w-full md:w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-6 md:p-10 max-w-md shadow-lg text-white h-[70%] overflow-auto'
-                  >
+                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white '>
                   <HeroForm/>
                   </motion.div>
             </div>

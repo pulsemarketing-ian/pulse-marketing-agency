@@ -7,7 +7,7 @@ import {motion} from 'motion/react';
 const AllInOneSection = () => {
     return (
          <main 
-          className="relative pb-6 text-white overflow-hidden" 
+          className="relative pb-6 text-white overflow-hidden md:translate-y-[-10%]" 
            style={{
              backgroundColor: '#040117',
              backgroundSize:'cover',
@@ -18,16 +18,14 @@ const AllInOneSection = () => {
         {/* Main Content Section */}
         <div className="relative container mx-auto px-4 py-16">
             
-        <div className="text-center z-10">
-        <Reveal>
+        <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
+            <Reveal>
             <p className="text-xl mb-2">We are experts in</p>
-          </Reveal>
-          <Reveal>
-            <h1 className="text-2xl md:text-4xl font-bold tracking-wide">All-In-One CRO</h1>
+            <h1 className="text-2xl md:text-5xl font-bold tracking-wide">All-In-One CRO</h1>
             </Reveal>
           </div>
           <div 
-            className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between"
+            className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
             style={{
             backgroundImage: `url('/images/services_page_images/sixsection-img.png')`,
             backgroundSize:'cover',
@@ -36,21 +34,7 @@ const AllInOneSection = () => {
             }}
           >
             {/* Left Column */}
-            <motion.div 
-             initial={{
-              x: -300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[40%]">
+            <div className="space-y-6 w-full md:w-[40%]">
             <Reveal>
               <h2 className="text-2xl md:text-4xl font-medium leading-tight">
               Boost your  <br/> leads
@@ -64,24 +48,10 @@ const AllInOneSection = () => {
               <Reveal>
               <PrimaryBtn text="Learn More" />
               </Reveal>
-            </motion.div>
+            </div>
   
             {/* Right Column */}
-            <motion.div 
-             initial={{
-              x: 300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[30%]">
+            <div className="space-y-6 w-full md:w-auto">
             <Reveal>
               <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
               CRM & Lead Catch!
@@ -99,7 +69,7 @@ const AllInOneSection = () => {
                 </li>
                 </Reveal>
               </ul>
-            </motion.div>
+            </div>
           </div>
        
         {/* Background Text Overlay */}

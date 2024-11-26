@@ -14,8 +14,11 @@ const HeroSection = () => {
             >
             <Navbar/>
             <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>
+
+        <div className='translate-y-[-4rem] flex-col item-center'>
+
                 {/* serive heading  */}
-            <div className='flex items-center justify-between gap-1 mb-2'>
+            <div className='flex items-center gap-1 mb-2 justify-center'>
                 <Image
                 src="/images/services_page_images/blue-dot.png"
                 alt="blue-dot"
@@ -27,10 +30,12 @@ const HeroSection = () => {
 
             {/* heading main  */}
             <Reveal>
-                <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center">
-                We create digital <br/>products that grow <br/>ambitious brands.
+                <h2 className="text-3xl md:text-5xl font-bold text-center"
+                    style={{ lineHeight: '1.2' }}>
+                We Create Digital <br/>Products That Grow <br/> Ambitious Brands.
                 </h2>
             </Reveal>
+            </div>
 
             <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image

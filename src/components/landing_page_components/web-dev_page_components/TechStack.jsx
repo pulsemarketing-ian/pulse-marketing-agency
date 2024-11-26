@@ -21,7 +21,7 @@ const TechStack = () => {
     <main className='px-14 py-10'>
              <div className="flex flex-col items-center justify-center w-full">
                 <Reveal>
-                    <h2 className="text-2xl md:text-5xl font-bold tracking-wide text-center">
+                    <h2 className="text-2xl md:text-5xl font-bold tracking-wide text-center md:pb-3">
                     Web Development <br/>Technology Stack
                     </h2>
                 </Reveal>

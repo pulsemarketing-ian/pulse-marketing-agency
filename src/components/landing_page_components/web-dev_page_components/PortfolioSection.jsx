@@ -13,7 +13,7 @@ export default function PortfolioSection() {
           backgroundSize: "cover",
           transform: "translateY(-50%)",
         }}
-        className="h-[40vh] md:h-[80vh]"
+        className="h-[40vh] md:h-[70vh]"
       />
       <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
         <div className="z-10 mt-8 text-center">
@@ -28,7 +28,7 @@ export default function PortfolioSection() {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
-          className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-[1200px] md:mx-auto md:translate-y-10 md:p-6"
+          className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
         >
           {/* aksdnsdalksmdklsamd */}
           <Slider/>

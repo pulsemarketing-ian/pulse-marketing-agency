@@ -14,16 +14,16 @@ const HeroForm = () => {
   return (
     <>
       <div className="w-full">
-          <h2 className="text-2xl font-bold mb-6">Have any questions?</h2>
+          <h2 className="text-2xl font-bold mb-3">Have any questions?</h2>
 
-          <form className="space-y-4">
+          <form className="space-y-0">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-1">Your name*</label>
               <input
                 type="text"
                 id="name"
                 placeholder="John Doe"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -33,7 +33,7 @@ const HeroForm = () => {
                 type="email"
                 id="email"
                 placeholder="Your email"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -43,7 +43,7 @@ const HeroForm = () => {
                 type="tel"
                 id="phone"
                 placeholder="Your number"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -59,11 +59,11 @@ const HeroForm = () => {
                   step="1000"
                   value={budget}
                   onChange={handleBudgetChange}
-                  className="flex-grow appearance-none bg-gray-300 h-2 rounded-full outline-none"
+                  className="flex-grow appearance-none bg-gray-300 h-1 rounded-full outline-none"
                 />
                 <span className="text-sm ml-2">USD 100K+</span>
               </div>
-              <p className="text-sm mt-1">Selected budget: USD {budget.toLocaleString()}</p>
+              {/* <p className="text-sm mt-1">Selected budget: USD {budget.toLocaleString()}</p> */}
             </div>
 
             <div>
@@ -71,7 +71,7 @@ const HeroForm = () => {
               <textarea
                 id="project"
                 placeholder="Type Here"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 resize-none h-24"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500 resize-none h-16"
               ></textarea>
             </div>
             <PrimaryBtn text={'Submit'} />

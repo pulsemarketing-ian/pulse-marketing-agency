@@ -10,10 +10,12 @@ const BusinessGoals = () => {
         backgroundImage:"url('/images/app_page_images/radial.png')",
         backgroundSize:'contain',
         backgroundRepeat:'no-repeat'
-    }}>            
+    }}>       
+      <div className='w-full mx-auto flex items-center justify-center text-center'>
         <Reveal>
-            <h2 className='text-xl md:text-4xl font-bold tracking-wide text-left'>Reach business goals & generate customers <br/>by improving your website is ranking!</h2>
+            <h2 className='text-xl md:text-4xl font-bold tracking-wide text-center mb-3'>Reach business goals & generate customers <br/>by improving your website is ranking!</h2>
         </Reveal>
+        </div>     
 
             <div className='flex flex-wrap px-4 md:px-0 gap-3 md:gap-0 justify-between items-center mt-8'>
                     {/* card one  */}

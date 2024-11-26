@@ -76,12 +76,12 @@ const FAQSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-[#000000] rounded-lg font-medium shadow-md border-[0.5px] px-4 py-2 cursor-pointer transition-all duration-200 ease-in-out hover:shadow-lg"
+            className="bg-[#02020e] rounded-lg font-medium shadow-md border-[0.5px] px-4 py-2 cursor-pointer transition-all duration-200 ease-in-out hover:shadow-lg"
             onClick={() => toggleFAQ(index)}
           >
             <div className="flex justify-between items-center">
               <p className="text-white font-semibold">{faq}</p>
-              <span className="text-cyan-500 text-xl">{activeIndex === index ? '-' : '+'}</span>
+              <span className="text-white text-xl">{activeIndex === index ? '-' : '+'}</span>
             </div>
             {activeIndex === index && (
               <p className="text-gray-400 mt-2 text-sm">

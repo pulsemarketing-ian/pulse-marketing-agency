@@ -7,7 +7,7 @@ import {motion} from 'motion/react';
 const SEOSection = () => {
     return (
          <main 
-         className="relative pb-8 text-white overflow-hidden" 
+         className="relative pb-8 text-white overflow-hidden md:translate-y-[-13%]" 
          style={{
              backgroundColor: '#040117',
              backgroundSize:'cover',
@@ -18,14 +18,12 @@ const SEOSection = () => {
         {/* Main Content Section */}
         <div className="relative container mx-auto px-4 py-16">
             
-        <div className="text-center z-10">
-        <Reveal>
-            <p className="text-xl mb-2">We are experts in</p>
-          </Reveal>
-          <Reveal>
-            <h1 className="text-2xl md:text-4xl font-bold tracking-wide">Search Engine Optimization</h1>
+              <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
+              <Reveal>
+                <p className="text-xl mb-2">We are experts in</p>
+                <h1 className="text-2xl md:text-5xl font-bold tracking-wide pb-2">Search Engine Optimization</h1>
             </Reveal>
-          </div>
+              </div>
           <div 
             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
             style={{
@@ -36,21 +34,7 @@ const SEOSection = () => {
             }}
           >
             {/* Left Column */}
-            <motion.div 
-             initial={{
-              x: -300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[40%]">
+            <div className="space-y-6 w-full md:w-[40%]">
               <Reveal>
                 <h2 className="text-2xl md:text-4xl font-medium leading-tight">
                 Developing <br/> SEO Strategy  <br/>And Plan
@@ -61,26 +45,12 @@ const SEOSection = () => {
               Our team of talented graphic designers will work with you through the whole process to create a stunning marketing piece that you will love. From logos, business cards, brochures, to signs and everything in between we have you covered for all of your design needs.              </p>
               </Reveal>
               <PrimaryBtn text="Learn More" />
-            </motion.div>
+            </div>
   
           
   
             {/* Right Column */}
-            <motion.div 
-             initial={{
-              x: 300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[30%]">
+            <div  className="space-y-6 w-full md:w-auto">
             <Reveal>
                 <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
                 Business Assessment
@@ -98,7 +68,7 @@ const SEOSection = () => {
                 </li>
                 </Reveal>
               </ul>
-            </motion.div>
+            </div>
           </div>
        
         {/* Background Text Overlay */}

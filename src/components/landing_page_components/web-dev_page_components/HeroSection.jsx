@@ -9,8 +9,6 @@ import {motion} from 'motion/react';
 
 const HeroSection = () => {
 
-    const [budget, setBudget] = useState(5000);
-
   return (
         <main 
          style={{
@@ -75,10 +73,9 @@ const HeroSection = () => {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='w-full md:w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-6 md:p-10 max-w-md shadow-lg text-white  h-[70%] overflow-auto'
-                  >
-            <HeroForm/>
-                   </motion.div>
+                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white '>
+                  <HeroForm/>
+                  </motion.div>
 
             {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image

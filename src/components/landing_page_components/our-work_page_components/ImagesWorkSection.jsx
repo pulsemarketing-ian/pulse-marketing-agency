@@ -4,6 +4,7 @@ import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const ImagesWorkSection = () => {
   return (
@@ -28,13 +29,15 @@ const ImagesWorkSection = () => {
           className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[45%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+          <Link href={'/work-details'}>
             <Image
               src={"/images/our-work_page_images/img (2).png"}
               layout="fill"
               objectFit="cover"
               className="rounded-2xl"
               alt="Project Image"
-            />
+              />
+              </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -83,13 +86,15 @@ const ImagesWorkSection = () => {
           className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[45%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+          <Link href={'/work-details'}>
             <Image
               src={"/images/our-work_page_images/img (4).png"}
               layout="fill"
               objectFit="cover"
               className="rounded-2xl"
               alt="Project Image"
-            />
+              />
+              </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -141,13 +146,15 @@ const ImagesWorkSection = () => {
           className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[45%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+          <Link href={'/work-details'}>
             <Image
               src={"/images/our-work_page_images/img (2).png"}
               layout="fill"
               objectFit="cover"
               className="rounded-2xl"
               alt="Project Image"
-            />
+              />
+          </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -196,13 +203,15 @@ const ImagesWorkSection = () => {
           className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[45%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+          <Link href={'/work-details'}>
             <Image
               src={"/images/our-work_page_images/img (4).png"}
               layout="fill"
               objectFit="cover"
               className="rounded-2xl"
               alt="Project Image"
-            />
+              />
+            </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">

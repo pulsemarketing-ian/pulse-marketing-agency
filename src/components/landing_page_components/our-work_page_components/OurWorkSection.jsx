@@ -4,6 +4,7 @@ import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import {motion} from 'motion/react';
+import Link from "next/link";
 
 const OurWorkSection = () => {
   return (
@@ -55,13 +56,15 @@ const OurWorkSection = () => {
                      className="flex w-full md:w-[45%] flex-col gap-3 mb-8 md:mb-0">
 
             <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
-            <Image
-                  src={"/images/our-work_page_images/img (1).png"}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-2xl"
-                  alt="Project Image"
-                />
+              <Link href={'/work-details'}>
+                  <Image
+                      src={"/images/our-work_page_images/img (1).png"}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-2xl"
+                      alt="Project Image"
+                    />
+                </Link>
               </div>
               <Reveal>
               <h4 className="text-xl font-semibold tracking-wide">
@@ -144,6 +147,7 @@ const OurWorkSection = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="flex w-full md:w-[45%] flex-col gap-4 md:mt-20">
             <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
+            <Link href={'/work-details'}>
             <Image
                   src={"/images/our-work_page_images/img (6).png"}
                   layout="fill"
@@ -151,6 +155,8 @@ const OurWorkSection = () => {
                   className="rounded-2xl"
                   alt="Project Image"
                 />
+            </Link>
+
               </div>
               <h4 className="text-xl font-semibold tracking-wide">
                 Project Name

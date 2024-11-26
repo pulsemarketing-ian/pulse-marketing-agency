@@ -131,6 +131,11 @@ import { MdEmail } from "react-icons/md";
 // import logo from '/images/services_page_images/Mask group (1).png'
 import TextScroller from "./TextScroller";
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FiInstagram } from "react-icons/fi";
+import { IoLogoYoutube } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
 
@@ -160,6 +165,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="lg:w-[90%] px-8 lg:px-0 mx-auto flex gap-4 mt-3 items-center text-xl cursor-pointer">
+        <FaXTwitter /> <FaFacebookF /> <FiInstagram /> <IoLogoYoutube />  <FaLinkedin />
         </div>
 
         <div className="flex items-center W-[100%] justify-center poppins-medium text-[4rem] lg:text-[100px] text-center overflow-hidden whitespace-nowrap text-transparent border-text w-full py-0 lg:py-2">

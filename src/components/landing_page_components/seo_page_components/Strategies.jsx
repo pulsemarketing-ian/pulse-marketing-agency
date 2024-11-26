@@ -6,7 +6,12 @@ import {motion} from 'motion/react';
 
 const Strategies = () => {
   return (
-    <main className="w-full px-4 md:px-0 md:w-[1200px] mx-auto py-10 flex flex-wrap justify-between "  >
+    <main className="w-full px-4 md:px-0 md:w-[1200px] mx-auto py-10 flex flex-wrap justify-between " 
+    style={{
+      backgroundImage: "url('/images/app_page_images/radial.png')",
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat'
+    }} >
         <motion.div  
                     initial={{
                     x: -300,
@@ -23,7 +28,7 @@ const Strategies = () => {
                   }}
                   viewport={{ once: false, amount: 0.2 }} className="flex flex-col gap-4 md:w-[48%]">
           <Reveal>
-          <h2 className="text-xl md:text-4xl font-bold tracking-wide">We implement the latest<br/> SEO strategies and <br/>marketing techniques</h2>
+          <h2 className="text-xl md:text-4xl font-bold tracking-wide mb-3">We implement the latest<br/> SEO strategies and <br/>marketing techniques</h2>
           </Reveal>
           <Reveal>
             <h4 className='text-md font-light text-[#0EB1CF] tracking-wide'>SEO Experts at your service</h4>
@@ -51,11 +56,8 @@ const Strategies = () => {
                     duration: 0.5,
                     ease: "easeInOut",
                   }}
-                  viewport={{ once: false, amount: 0.2 }} className="w-full md:w-[48%] flex justify-items-end justify-end mt-8 md:mt-0"  style={{
-            backgroundImage:"url('/images/app_page_images/radial.png')",
-            backgroundSize:'contain',
-            backgroundRepeat:'no-repeat'
-        }}>
+                  viewport={{ once: false, amount: 0.2 }} className="w-full md:w-[48%] flex justify-items-end justify-end mt-8 md:mt-0" 
+                  >
             <Image src={'/images/seo_page_images/strategy.png'} width={450} height={450} className="rounded-3xl"/>
         </motion.div>
     </main>

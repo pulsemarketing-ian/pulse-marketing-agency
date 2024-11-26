@@ -9,14 +9,14 @@ import {motion} from 'motion/react';
 export default function HeroSection() {
   return (
     <main 
-      className="bg-cover bg-center min-h-screen"
       style={{
         backgroundImage: "url('/images/seo_page_images/seo-hero.png')",
+        backgroundSize: "cover",
       }}
     >
       <Navbar />
-      <div className='container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row justify-between items-center'>
-        {/* hero heading */}
+      <div className='h-[80vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+      {/* hero heading */}
         <motion.div 
                   initial={{
                     x: -300,
@@ -65,10 +65,9 @@ export default function HeroSection() {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='w-full md:w-[40%] bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-6 md:p-10 max-w-md shadow-lg text-white  h-[70%] overflow-auto'
-                  >
-            <HeroForm/>
-        </motion.div>
+                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white mt-[-10%]'>
+                  <HeroForm/>
+                  </motion.div>
       </div>
     </main>
   )

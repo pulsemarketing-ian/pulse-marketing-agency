@@ -16,34 +16,19 @@ const AppDevSection = () => {
         >
   
         {/* Main Content Section */}
-        <div className="relative container mx-auto px-4 py-16 md:py-0">
-          <div 
-            className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
-            style={{
+        <div className=" container mx-auto px-4 py-16">
+        <div 
+             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105 md:translate-y-22"
+             style={{
             backgroundImage: `url('/images/services_page_images/third-section-img.png')`,
             backgroundSize:'cover',
             }}
           >
             {/* Left Column */}
-            <motion.div 
-             initial={{
-              x: -300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }} 
-            className="space-y-6 lg:w-[40%]">
+            <div className="space-y-6 lg:w-[40%]">
               <Reveal>
                 <h2 className="text-2xl md:text-4xl font-medium leading-tight">
-                  Application Development
+                  Application <br/>Development
                 </h2>
               </Reveal>
               <Reveal>
@@ -54,24 +39,11 @@ const AppDevSection = () => {
               <Reveal>
                 <PrimaryBtn text="Learn More" />
               </Reveal>
-            </motion.div>
+            </div>
   
             {/* Right Column */}
-            <motion.div 
-             initial={{
-              x: 300,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[30%]">
+            <div className="space-y-6 lg:w-auto"
+            >
             <Reveal>
               <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
                 Our Services
@@ -99,12 +71,12 @@ const AppDevSection = () => {
                 </li>
                 </Reveal>
               </ul>
-            </motion.div>
+            </div>
           </div>
        
         {/* Background Text Overlay */}
         <div
-          className="absolute bottom-[-10%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+          className="absolute bottom-0 left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
           style={{
             WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
             color: 'transparent'

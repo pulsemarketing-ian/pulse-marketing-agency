@@ -25,7 +25,7 @@ export default function Slider() {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-4">
+    <div className="w-full">
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
@@ -49,7 +49,7 @@ export default function Slider() {
         {images.map((image, index) => (
           <SwiperSlide
             key={index}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center gap-5"
             style={{
               width: '300px',
             }}
@@ -60,7 +60,7 @@ export default function Slider() {
               className="rounded-lg shadow-lg"
               style={{
                 width: '300px',
-                height: '200px',
+                height: '300px',
                 objectFit: 'cover',
               }}
             />

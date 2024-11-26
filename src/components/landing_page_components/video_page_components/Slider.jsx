@@ -24,7 +24,7 @@ export default function Slider() {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-4">
+    <div className="w-full">
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
@@ -56,10 +56,10 @@ export default function Slider() {
             <img
               src={image}
               alt={`Portfolio Image ${index + 1}`}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg m-3"
               style={{
                 width: '300px',
-                height: '200px',
+                height: '300px',
                 objectFit: 'cover',
               }}
             />
