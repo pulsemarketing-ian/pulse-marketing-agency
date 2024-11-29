@@ -15,13 +15,12 @@ const HeroSection = () => {
   const handleTabChange = (index) => {
     if (index >= 0 && index < industries.length) {
       setActiveTab(index);
-
       imageSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     } else {
       console.warn("Invalid tab index:", index);
     }
   };
-  
+
   const industries = [
     {
       name: "Real Estate",
@@ -81,7 +80,7 @@ const HeroSection = () => {
         }}
       >
         <Navbar />
-        <div className="relative mx-auto flex h-[60vh] w-[1200px] flex-row items-center justify-between md:h-[100vh]">
+        <div className="relative mx-auto flex h-[80vh] w-[1200px] flex-row items-center justify-between md:h-[100vh]">
           <div className="w-[100%] flex-col px-6 md:px-0 absolute z-20">
             <div className="mb-2 flex w-auto items-center gap-1">
               <Image
@@ -93,25 +92,29 @@ const HeroSection = () => {
               <p>Our Portfolio</p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex-col md:flex-row flex-wrap items-center gap-6 justify-center md:justify-start">
+              <div>
               <Reveal>
                 <h2 className="w-auto text-xl font-bold leading-tight text-white md:text-5xl">
                   Explore All Industries
                 </h2>
               </Reveal>
+              </div>
 
-          
-              {industries.map((industry, index) => (
-                <h4
-                  key={index}
-                  className={`w-auto cursor-pointer text-lg font-medium leading-tight md:text-3xl ${
-                    activeTab === index ? "text-white" : "text-[#7C7C7C]"
-                  }`}
-                  onClick={() => handleTabChange(index)}
-                >
-                  {industry.name}
-                </h4>
-              ))}
+              <div className="md:flex flex-wrap my-8 md:mb-0 gap-10 md:gap-6 overflow-x-auto">
+  {industries.map((industry, index) => (
+    <h4
+      key={index}
+      className={`w-auto cursor-pointer text-lg font-medium leading-tight md:text-3xl ${
+        activeTab === index ? "text-white" : "text-[#7C7C7C]"
+      } flex-shrink-0`} // Prevent shrinking on smaller screens
+      onClick={() => handleTabChange(index)}
+    >
+      {industry.name}
+    </h4>
+  ))}
+</div>
+
             </div>
           </div>
         </div>
