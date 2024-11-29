@@ -44,15 +44,10 @@ export default function VideoBenefitSection() {
           </div>
         </motion.div>
 
-      <div className='text-white text-[14px] translate-y-[40%]'>
+      <div className='text-white text-[16px] translate-y-[25%]'>
       <Reveal>
         <p className='mb-6'>
-        Our animators connect you with your prospects and turn them into sales-ready leads. We are not just bragging; we have our work to speak for us!
-        </p>
-        </Reveal>
-        <Reveal>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Animated explainer videos are a powerful tool for simplifying complex ideas and conveying your message clearly. At Pulse, we create engaging, visually appealing videos that capture attention and enhance understanding. These videos effectively explain products, services, or concepts in a concise and memorable way. They increase engagement, improve conversion rates, and boost brand awareness. Animated explainer videos help you connect with your audience, build trust, and drive action, all while standing out in a competitive digital landscape.
         </p>
         </Reveal>
       </div>

@@ -3,6 +3,7 @@ import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import {motion} from 'motion/react';
+import Link from "next/link";
 
 const AppDevSection = () => {
     return (
@@ -37,7 +38,9 @@ const AppDevSection = () => {
                 </p>
               </Reveal>
               <Reveal>
+              <Link href={"/app"}>
                 <PrimaryBtn text="Learn More" />
+              </Link>
               </Reveal>
             </div>
   

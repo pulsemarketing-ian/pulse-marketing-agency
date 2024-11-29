@@ -17,73 +17,46 @@ export default function DesignServicesSection() {
       title: "Logo Design",
       items: [
         {
-          image: "/images/branding_page_images/brand-itendity (3).png",
+          image: "/images/branding_page_images/portfolio (1).png",
           title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+            "Logos That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
-          image: "/images/branding_page_images/brand-itendity (2).png",
+          image: "/images/branding_page_images/portfolio (2).png",
           title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+            "Logos That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
-          image: "/images/branding_page_images/brand-itendity (1).png",
-          title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-      ],
-    },
-    {
-      title: "Brochure Design",
-      items: [
-        {
-          image: "/images/branding_page_images/brand-itendity (1).png",
-          title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/brand-itendity (3).png",
-          title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/brand-itendity (2).png",
-          title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+          image: "/images/branding_page_images/portfolio (3).png",
+          title:"Logos That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
       ],
     },
     {
-      title: "Packaging Design",
+      title: "Branding Design",
       items: [
         {
-          image: "/images/branding_page_images/brand-itendity (3).png",
+          image: "/images/branding_page_images/portfolio (1).jpg",
           title:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
-          image: "/images/branding_page_images/brand-itendity (2).png",
+          image: "/images/branding_page_images/portfolio (3).jpg",
           title:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
-          image: "/images/branding_page_images/brand-itendity (1).png",
+          image: "/images/branding_page_images/portfolio (2).jpg",
           title:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
           description:

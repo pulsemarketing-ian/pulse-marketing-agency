@@ -27,7 +27,7 @@ export default function BrandingSection() {
           <h2 className="text-4xl font-medium leading-tight">Logo Design <br/>& Branding</h2>
         </Reveal>
         <Reveal>
-          <p className="text-gray-300 text-[13px]">
+          <p className="text-gray-300 text-[15px]">
             Our team of talented graphic designers will work with you through the whole process
             to create a stunning marketing piece that you will love. From logos, business cards,
             brochures, to signs and everything in between, we have you covered for all of your
@@ -35,7 +35,7 @@ export default function BrandingSection() {
           </p>
           </Reveal>
           <Reveal>
-          <p className="text-gray-300 text-[13px]">
+          <p className="text-gray-300 text-[15px]">
             Enter the realm where brands come to life, identities are forged, and stories are told
             through visual narratives. Our logo and branding services are more than just design;
             they are a strategic blend of creativity and psychology, carving unique identities that

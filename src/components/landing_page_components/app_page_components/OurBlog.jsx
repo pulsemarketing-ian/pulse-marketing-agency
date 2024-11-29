@@ -7,7 +7,6 @@ import { motion } from 'motion/react';
 
 const OurBlog = () => {
   return (
-    <React.Fragment>
       <main className="max-w-[1200px] mx-auto py-6 px-4">
         {/* Top Heading */}
         <div className="flex flex-col lg:flex-row justify-between items-baseline gap-5 md:gap-0">
@@ -18,7 +17,7 @@ const OurBlog = () => {
               </p>
             </Reveal>
             <Reveal>
-              <h2 className="text-xl md:text-4xl font-medium leading-tight">
+              <h2 className="text-xl md:text-4xl font-medium leading-tight mb-2">
                 What is New <br /> in Our Blogs
               </h2>
             </Reveal>
@@ -48,7 +47,7 @@ const OurBlog = () => {
           >
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
-                src={'/images/app_page_images/blog-img (1).png'}
+                src={'/images/app_page_images/blog-images (1).png'}
                 alt=""
                 width={350}
                 height={350}
@@ -57,11 +56,11 @@ const OurBlog = () => {
             </div>
             <div className="flex flex-col gap-3 mt-3">
               <Reveal>
-                <div className="bg-[#1d1a2e] border-white text-sm rounded-3xl px-4 py-1">App Development</div>
+                <h2 className='text-xl'>How to Use Social Media to Boost Your..</h2>
               </Reveal>
               <Reveal>
                 <p>
-                  UAE is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
+                As a business owner or marketer, you may wonder if paid advertising is worth the investment.
                 </p>
               </Reveal>
               <Reveal>
@@ -92,7 +91,7 @@ const OurBlog = () => {
           >
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
-                src={'/images/app_page_images/blog-img (3).png'}
+                src={'/images/app_page_images/blog-images (2).png'}
                 alt=""
                 width={350}
                 height={350}
@@ -101,11 +100,11 @@ const OurBlog = () => {
             </div>
             <div className="flex flex-col gap-3 mt-3">
               <Reveal>
-                <div className="bg-[#1d1a2e] border-white text-sm rounded-3xl px-4 py-1">Branding</div>
+                <h2 className='text-xl'>The Role of AI in Marketing</h2>
               </Reveal>
               <Reveal>
                 <p>
-                  UAE is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
+                As a business owner or marketer, you may wonder if paid advertising is worth the investment.
                 </p>
               </Reveal>
               <Reveal>
@@ -136,7 +135,7 @@ const OurBlog = () => {
           >
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image
-                src={'/images/app_page_images/blog-img (2).png'}
+                src={'/images/app_page_images/blog-images (3).png'}
                 alt=""
                 width={350}
                 height={350}
@@ -145,12 +144,11 @@ const OurBlog = () => {
             </div>
             <div className=" flex flex-col gap-3 mt-3">
               <Reveal>
-                <div className="bg-[#1d1a2e] border-white text-sm rounded-3xl px-4 py-1">Branding</div>
+                  <h2 className='text-xl'>How To Create Compelling Marketing</h2>
               </Reveal>
               <Reveal>
                 <p>
-                  UAE is Rapid Rise in AI: Groundbreaking Developments Shaping the Future
-                </p>
+                In today is competitive world, creating compelling marketing copy is essential to attract and retain customers.                </p>
               </Reveal>
               <Reveal>
                 <ul>
@@ -161,7 +159,6 @@ const OurBlog = () => {
           </motion.div>
         </div>
       </main>
-    </React.Fragment>
   );
 };
 

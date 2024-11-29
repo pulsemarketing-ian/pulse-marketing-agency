@@ -10,13 +10,14 @@ import "../landing_page_components/PrimaryBtns/btn.css";
 
 const menuItems = [
   { label: "Home", path: "/work-details" },
-  { label: "About", path: "/app" },
+  { label: "About", path: "/about-us" },
   {
+    
     label: "Services",
     path: "/services",
     categories: [
       {
-        title: "Development",
+        title: "Services We're Offering",
         items: [
           { name: "Web Development", desc: "Custom websites and applications", path: "/web-development" },
           { name: "SEO", desc: "Search Engine Optimization", path: "/seo" },
@@ -25,18 +26,19 @@ const menuItems = [
         ],
       },
       {
-        title: "Marketing",
-        items: [{ name: "Digital Marketing", desc: "Online marketing strategies", path: "*" }],
+        title: "Why Choose Us",
+        items: [{ name: "", desc: "Empowering brands with a comprehensive digital suite—from immersive 3D web development, SEO excellence, and captivating photos Videography for distinctive logo design and online reputation management, and bespoke application development, crafting a holistic online presence that drives engagement and success.",  }],
       },
       {
-        title: "Design",
-        items: [{ name: "Graphic Design", desc: "Creative design solutions", path: "*" }],
+        title: "What we serve",
+        items: [{ name: "", desc: "Our highly skilled team applies the latest marketing strategies to meet our clients goals, including increasing brand awareness, lead generation and sales growth.We stand for fostering enduring relationships with our clients. By understanding their unique needs, we tailor strategies to achieve specific goals and ensure optimal results.Thanks for considering Pulse Marketing Inc. for your marketing needs. We are committed to helping you reach your goals and propelling your business forward.", path: "*" }],
       },
     ],
   },
+  { label: "App", path: "/app" },
   { label: "Portfolio", path: "/our-work" },
-  { label: "Terms", path: "/term-condition" },
-  { label: "Our Policy", path: "/privacy" },
+  // { label: "Terms", path: "/term-condition" },
+  // { label: "Our Policy", path: "/privacy" },
 ];
 
 export default function Navbar() {
@@ -98,45 +100,42 @@ export default function Navbar() {
                 </Link>
 
 
-{item.categories && activeMenu === item.label && (
-  <div
-    className="absolute left-[150%] right-0 top-full mt-2 w-screen -translate-x-1/2 bg-[#030017]/80 shadow-md backdrop-blur-sm"
-    style={{
-      transition: "transform 0.3s ease-in-out",
-    }}
-  >
-    <div className="relative w-full">
-      <div className="mx-auto max-w-7xl p-8">
-        <div className="grid grid-cols-3 gap-12">
-          {item.categories.map((category) => (
-            <div key={category.title} className="space-y-4">
-              <h3 className="border-b border-white/10 pb-2 text-lg font-semibold">
-                {category.title}
-              </h3>
-              <div className="grid gap-4">
-                {category.items.map((subItem, index) => (
-                  <Link
-                    key={subItem.name || index}
-                    href={subItem.path || "#"}
-                    className="group block rounded-lg p-3 transition-colors hover:bg-white/10"
-                  >
-                    <div className="font-medium transition-colors group-hover:text-blue-400">
-                      {subItem.name}
-                    </div>
-                    <div className="text-sm text-gray-400">{subItem.desc}</div>
-                  </Link>
-                ))}
+          {item.categories && activeMenu === item.label && (
+            <div
+              className="absolute left-[50%] right-0 top-full mt-0 w-screen -translate-x-1/2 bg-[#030017]/80 shadow-md backdrop-blur-sm"
+              style={{
+                transition: "transform 0.3s ease-in-out",
+              }}
+            >
+              <div className="relative w-full">
+                <div className="mx-auto max-w-7xl p-8">
+                  <div className="grid grid-cols-3 gap-12">
+                    {item.categories.map((category) => (
+                      <div key={category.title} className="space-y-4">
+                        <h3 className="border-b border-white/10 pb-2 text-lg font-semibold">
+                          {category.title}
+                        </h3>
+                        <div className="grid gap-4">
+                          {category.items.map((subItem, index) => (
+                            <Link
+                              key={subItem.name || index}
+                              href={subItem.path || "#"}
+                              className="group block rounded-lg p-3 transition-colors hover:bg-white/10"
+                            >
+                              <div className="font-medium transition-colors group-hover:text-blue-400">
+                                {subItem.name}
+                              </div>
+                              <div className="text-sm text-gray-400">{subItem.desc}</div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-)}
-
-
-
+          )}
               </div>
             ))}
           </div>

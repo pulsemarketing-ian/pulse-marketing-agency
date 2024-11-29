@@ -5,6 +5,7 @@ import React from 'react'
 import {motion} from 'motion/react';
 
 const Strategies = () => {
+  
   return (
     <main className="w-full px-4 md:px-0 md:w-[1200px] mx-auto py-10 flex flex-wrap justify-between " 
     style={{
@@ -27,16 +28,21 @@ const Strategies = () => {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }} className="flex flex-col gap-4 md:w-[48%]">
-          <Reveal>
-          <h2 className="text-xl md:text-4xl font-bold tracking-wide mb-3">We implement the latest<br/> SEO strategies and <br/>marketing techniques</h2>
-          </Reveal>
-          <Reveal>
-            <h4 className='text-md font-light text-[#0EB1CF] tracking-wide'>SEO Experts at your service</h4>
+          <Reveal> 
+            
+          <h2 className="text-xl md:text-4xl font-bold tracking-wide mb-3"><span className='text-[4rem] mr-2 text-blue-400'>6</span>Reasons Why Business Choose
+          Pulse Marketing <br/> SEO Services:</h2>
           </Reveal>
 
           <Reveal>
-            <p className="text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-            <p className="text-sm">but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <ul className='list-disc list-inside'>
+            <li className="text-lg">Better Results</li>
+            <li className="text-lg">Increase Conversions</li>
+            <li className="text-lg">Securing Great ROI</li>
+            <li className="text-lg">Performance</li>
+            <li className="text-lg">Money-back Guarantee</li>
+            <li className="text-lg">Analytics and Reporting</li>
+            </ul>
             </Reveal>
 
             <Image src="/images/seo_page_images/sm.png" width={200} height={200} alt="seo-strategies"/>

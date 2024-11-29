@@ -26,7 +26,7 @@ const TechStack = () => {
                     </h2>
                 </Reveal>
                 <Reveal>
-                    <p className="text-center text-[13px] my-4">
+                    <p className="text-center text-[16px] my-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     <br/>minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>

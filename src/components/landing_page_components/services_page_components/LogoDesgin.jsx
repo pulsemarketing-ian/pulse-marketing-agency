@@ -3,6 +3,7 @@ import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const LogoDesgin = () => {
   return (
@@ -42,7 +43,9 @@ const LogoDesgin = () => {
               Our team of talented graphic designers will work with you through the whole process to create a stunning marketing piece that you will love. From logos, business cards, brochures, to signs and everything in between we have you covered for all of your design needs.              </p>
               </Reveal>
               <Reveal>
+              <Link href={"/branding"}>
               <PrimaryBtn text="Learn More" />
+              </Link>
               </Reveal>
             </div>
     

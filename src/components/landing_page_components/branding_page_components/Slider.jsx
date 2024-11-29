@@ -11,17 +11,18 @@ import 'swiper/css/autoplay';
 
 export default function Slider() {
   const images = [
-    '/images/branding_page_images/slider (1).png',
-    '/images/branding_page_images/slider (2).png',
-    '/images/branding_page_images/slider (3).png',
-    '/images/branding_page_images/slider (4).png',
-    '/images/branding_page_images/slider (5).png',
-    '/images/branding_page_images/slider (1).png',
-    '/images/branding_page_images/slider (2).png',
-    '/images/branding_page_images/slider (3).png',
-    '/images/branding_page_images/slider (4).png',
-    '/images/branding_page_images/slider (5).png',
-    '/images/branding_page_images/slider (1).png',
+    '/images/branding_page_images/portfolio (1).jpg',
+    '/images/branding_page_images/portfolio (1).png',
+    '/images/branding_page_images/portfolio (2).jpg',
+    '/images/branding_page_images/portfolio (2).png',
+    '/images/branding_page_images/portfolio (3).jpg',
+    '/images/branding_page_images/portfolio (3).png',
+    '/images/branding_page_images/portfolio (1).jpg',
+    '/images/branding_page_images/portfolio (1).png',
+    '/images/branding_page_images/portfolio (2).jpg',
+    '/images/branding_page_images/portfolio (2).png',
+    '/images/branding_page_images/portfolio (3).jpg',
+    '/images/branding_page_images/portfolio (3).png',
   ];
 
   return (
