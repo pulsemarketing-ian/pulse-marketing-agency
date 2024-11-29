@@ -15,7 +15,7 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className="relative md:mx-auto  flex md:w-[1200px] flex-col-reverse md:flex-row items-center justify-between h-[80vh] md:h-[100vh]">
+      <div className=" md:mx-auto  flex md:w-[1200px] flex-col-reverse md:flex-row items-center justify-between h-[70vh] md:h-[100vh]">
         {/* hero heading  */}
         <motion.div 
          initial={{
@@ -77,7 +77,7 @@ const HeroSection = () => {
           ease: "easeInOut",
       }}
       viewport={{ once: false, amount: 0.2 }}
-       className="w-full md:w-[50%] md:translate-y-10 flex-col lg:flex px-6 md:px-0 translate-y-25 items-end justify-end">
+       className="w-full md:w-[50%] md:translate-y-10 flex-col lg:flex px-6 md:px-0 translate-y-25 items-end justify-end mt-[7rem]">
           <Image
             src={"/images/about_page_images/about.jpg"}
             width={500}

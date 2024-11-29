@@ -16,7 +16,7 @@ const LogoDesgin = () => {
       }}
     >
       {/* Main Content Section */}
-      <div className="relative container mx-auto px-4 py-16 md:pb-16 pt-0">
+      <div className="relative container mx-auto px-4 py-16 md:pb-16 pt-0 mt-[4rem] md:mt-0">
             
       <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
           <Reveal>
@@ -79,7 +79,7 @@ const LogoDesgin = () => {
           </div>
        
         <div
-          className="absolute bottom-[-10%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+          className="absolute bottom-[-10%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden hidden md:block"
           style={{
             WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
             color: 'transparent'

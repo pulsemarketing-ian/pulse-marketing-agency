@@ -17,7 +17,7 @@ const OurBlog = () => {
               </p>
             </Reveal>
             <Reveal>
-              <h2 className="text-xl md:text-4xl font-medium leading-tight mb-2">
+              <h2 className="text-2xl md:text-4xl font-medium leading-tight mb-2">
                 What is New <br /> in Our Blogs
               </h2>
             </Reveal>

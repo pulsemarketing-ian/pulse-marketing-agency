@@ -82,7 +82,7 @@ const HeroSection = () => {
       >
         <Navbar />
         <div className="relative mx-auto flex h-[60vh] w-[1200px] flex-row items-center justify-between md:h-[100vh]">
-          <div className="w-[100%] flex-col px-6 md:px-0">
+          <div className="w-[100%] flex-col px-6 md:px-0 absolute z-20">
             <div className="mb-2 flex w-auto items-center gap-1">
               <Image
                 src="/images/services_page_images/blue-dot.png"
@@ -100,6 +100,7 @@ const HeroSection = () => {
                 </h2>
               </Reveal>
 
+          
               {industries.map((industry, index) => (
                 <h4
                   key={index}
@@ -124,7 +125,7 @@ const HeroSection = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[30vh] md:h-[95vh]"
+          className="h-[50vh] md:h-[95vh]"
         />
         <div
           className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:top-12 md:px-0"

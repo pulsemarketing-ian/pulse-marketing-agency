@@ -66,7 +66,7 @@ export default function Testimonials() {
         <p className="uppercase text-sm font-light text-cyan-500">
           <span className="text-cyan-500 mr-2">•</span>Client Testimonials & Reviews
         </p>
-        <h2 className="text-xl md:text-4xl font-medium leading-tight">
+        <h2 className="text-2xl md:text-4xl font-medium leading-tight">
           What Our Happy <br /> Clients Say About Us
         </h2>
       </div>

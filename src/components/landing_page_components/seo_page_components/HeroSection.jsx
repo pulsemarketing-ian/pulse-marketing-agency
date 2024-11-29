@@ -15,7 +15,7 @@ export default function HeroSection() {
       }}
     >
       <Navbar />
-      <div className='h-[80vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+      <div className='h-[80vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto px-4 md:px-0'>
       {/* hero heading */}
         <motion.div 
                   initial={{
@@ -65,7 +65,7 @@ export default function HeroSection() {
                     ease: "easeInOut",
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white mt-[-10%]'>
+                  className='w-full md:w-[40%] bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-6 md:px-8 md:py-3 max-w-md shadow-xl text-white md:mt-10 border-1 border-white mt-[-10%] absolute right-0 z-20'>
                   <HeroForm/>
                   </motion.div>
       </div>

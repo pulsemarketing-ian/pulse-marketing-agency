@@ -19,7 +19,7 @@ const AppDevSection = () => {
         {/* Main Content Section */}
         <div className=" container mx-auto px-4 py-16">
         <div 
-             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105 md:translate-y-22"
+             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105 md:translate-y-22 mt-[5rem] md:mt-0"
              style={{
             backgroundImage: `url('/images/services_page_images/third-section-img.png')`,
             backgroundSize:'cover',
@@ -79,7 +79,7 @@ const AppDevSection = () => {
        
         {/* Background Text Overlay */}
         <div
-          className="absolute bottom-0 left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+          className="absolute bottom-0 left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden hidden md:block"
           style={{
             WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
             color: 'transparent'

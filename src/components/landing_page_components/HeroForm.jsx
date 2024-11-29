@@ -63,8 +63,9 @@ const HeroForm = () => {
                 />
                 <span className="text-sm ml-2">USD 100K+</span>
               </div>
-              {/* <p className="text-sm mt-1">Selected budget: USD {budget.toLocaleString()}</p> */}
+              <p className="text-sm my-1">Selected budget: USD {budget.toLocaleString()}</p>
             </div>
+            
 
             <div>
               <label htmlFor="project" className="block text-sm font-medium mb-1">Tell us about the project</label>

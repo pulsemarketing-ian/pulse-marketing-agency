@@ -41,7 +41,7 @@ const FAQSection = () => {
         <p className="uppercase text-sm"> <span className="text-cyan-500 mr-2">•</span>FAQs</p>
         </Reveal>
         <Reveal>
-        <h2 className="text-xl md:text-4xl font-medium leading-tight mb-4">Everything You <br /> Need to Know</h2>
+        <h2 className="text-2xl md:text-4xl font-medium leading-tight mb-4">Everything You <br /> Need to Know</h2>
         </Reveal>
         <Reveal>
         <p className="text-gray-300 mb-6">

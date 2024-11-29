@@ -5,14 +5,15 @@ import { IoIosMail, IoIosCall } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import PrimaryBtn from "./PrimaryBtns/PrimaryBtn";
-import { Drawer } from "@mui/material";
+import { Drawer, IconButton } from "@mui/material";
+import { IoClose } from "react-icons/io5";
+
 import "../landing_page_components/PrimaryBtns/btn.css";
 
 const menuItems = [
   { label: "Home", path: "/work-details" },
   { label: "About", path: "/about-us" },
   {
-    
     label: "Services",
     path: "/services",
     categories: [
@@ -25,20 +26,10 @@ const menuItems = [
           { name: "Video Photo", desc: "Content management systems", path: "/video-photo" },
         ],
       },
-      {
-        title: "Why Choose Us",
-        items: [{ name: "", desc: "Empowering brands with a comprehensive digital suite—from immersive 3D web development, SEO excellence, and captivating photos Videography for distinctive logo design and online reputation management, and bespoke application development, crafting a holistic online presence that drives engagement and success.",  }],
-      },
-      {
-        title: "What we serve",
-        items: [{ name: "", desc: "Our highly skilled team applies the latest marketing strategies to meet our clients goals, including increasing brand awareness, lead generation and sales growth.We stand for fostering enduring relationships with our clients. By understanding their unique needs, we tailor strategies to achieve specific goals and ensure optimal results.Thanks for considering Pulse Marketing Inc. for your marketing needs. We are committed to helping you reach your goals and propelling your business forward.", path: "*" }],
-      },
     ],
   },
   { label: "App", path: "/app" },
   { label: "Portfolio", path: "/our-work" },
-  // { label: "Terms", path: "/term-condition" },
-  // { label: "Our Policy", path: "/privacy" },
 ];
 
 export default function Navbar() {
@@ -78,12 +69,84 @@ export default function Navbar() {
             <img src="/white-logo.png" alt="Logo" className="h-8" />
           </Link>
 
+          {/* Mobile Drawer Menu */}
           <div className="lg:hidden">
             <div onClick={() => toggleDrawer(true)}>
               <FiMenu className="h-6 w-6" />
             </div>
+            <Drawer anchor="right" open={openDrawer} onClose={() => toggleDrawer(false)}>
+  <div className="p-4 w-[300px] flex flex-col h-full bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg">
+    {/* Drawer Header */}
+    <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+      <h3 className="text-lg font-bold uppercase tracking-wide">Menu</h3>
+      <IconButton onClick={() => toggleDrawer(false)}>
+        <IoClose size={24} style={{ color: "white" }}/>
+      </IconButton>
+    </div>
+
+    {/* Menu Items */}
+    <div className="mt-6 space-y-6">
+      {menuItems.map((item) => (
+        <div key={item.label}>
+          {/* Parent Link */}
+          <Link
+            href={item.path}
+            onClick={() => toggleDrawer(false)}
+            className="block text-lg font-medium tracking-wide p-3 rounded-lg bg-gray-800/70 hover:bg-blue-600/70 transition duration-200"
+          >
+            {item.label}
+          </Link>
+
+          {/* Subcategories */}
+          {item.categories && (
+            <div className="ml-4 mt-3 space-y-4 border-l-2 border-gray-700 pl-4">
+              {item.categories.map((category) => (
+                <div key={category.title}>
+                  <h4 className="text-md font-semibold text-blue-400">{category.title}</h4>
+                  <div className="space-y-2 mt-2">
+                    {category.items.map((subItem, index) => (
+                      <Link
+                        key={subItem.name || index}
+                        href={subItem.path || "#"}
+                        onClick={() => toggleDrawer(false)}
+                        className="block text-sm text-gray-400 hover:text-blue-300 transition duration-200"
+                      >
+                        {subItem.name || subItem.desc}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    {/* Footer Section */}
+    <div className="mt-auto pt-6 border-t border-gray-700">
+      <div className="text-center">
+        <h4 className="text-sm font-semibold text-gray-400">Need Help?</h4>
+        <a
+          href="mailto:hi@pulsemarketing.io"
+          className="block mt-2 text-blue-400 hover:text-blue-300 underline transition"
+        >
+          hi@pulsemarketing.io
+        </a>
+        <a
+          href="tel:18443303141"
+          className="block mt-2 text-blue-400 hover:text-blue-300 underline transition"
+        >
+          +1-844-330-3141
+        </a>
+      </div>
+    </div>
+  </div>
+</Drawer>
+
           </div>
 
+          {/* Desktop Menu */}
           <div className="hidden items-center space-x-8 px-8 lg:flex">
             {menuItems.map((item) => (
               <div
@@ -98,44 +161,6 @@ export default function Navbar() {
                     {item.categories && <MdArrowDropDown className="h-5 w-5" />}
                   </div>
                 </Link>
-
-
-          {item.categories && activeMenu === item.label && (
-            <div
-              className="absolute left-[50%] right-0 top-full mt-0 w-screen -translate-x-1/2 bg-[#030017]/80 shadow-md backdrop-blur-sm"
-              style={{
-                transition: "transform 0.3s ease-in-out",
-              }}
-            >
-              <div className="relative w-full">
-                <div className="mx-auto max-w-7xl p-8">
-                  <div className="grid grid-cols-3 gap-12">
-                    {item.categories.map((category) => (
-                      <div key={category.title} className="space-y-4">
-                        <h3 className="border-b border-white/10 pb-2 text-lg font-semibold">
-                          {category.title}
-                        </h3>
-                        <div className="grid gap-4">
-                          {category.items.map((subItem, index) => (
-                            <Link
-                              key={subItem.name || index}
-                              href={subItem.path || "#"}
-                              className="group block rounded-lg p-3 transition-colors hover:bg-white/10"
-                            >
-                              <div className="font-medium transition-colors group-hover:text-blue-400">
-                                {subItem.name}
-                              </div>
-                              <div className="text-sm text-gray-400">{subItem.desc}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
               </div>
             ))}
           </div>
