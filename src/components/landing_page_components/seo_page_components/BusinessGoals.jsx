@@ -58,7 +58,7 @@ const BusinessGoals = () => {
                   viewport={{ once: false, amount: 0.2 }} className='w-full md:w-[32%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] md:min-h-[240px]'>
                         <h4>02</h4>
                         <h3 className='text-xl font-bold tracking-wide'>Target Customer</h3>
-                        <p className='text-sm'>At Pulse, we analyze your target customers' behavior, demographics, and preferences to craft a tailored SEO strategy. This ensures your website reaches the right audience, driving conversions and business growth</p>
+                        <p className='text-sm'>At Pulse, we analyze your target customers behavior, demographics, and preferences to craft a tailored SEO strategy. This ensures your website reaches the right audience, driving conversions and business growth</p>
                     </motion.div>
 
                     {/* card three  */}
@@ -79,7 +79,7 @@ const BusinessGoals = () => {
                   viewport={{ once: false, amount: 0.2 }} className='w-full md:w-[32%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] md:min-h-[240px]'>
                         <h4>03</h4>
                         <h3 className='text-xl font-bold tracking-wide'>Competitor Analysis</h3>
-                        <p className='text-sm'>At Pulse, we conduct a thorough competitor analysis to understand your market landscape. By identifying your competitors' strengths and weaknesses, we create an SEO strategy that gives you a competitive edge and drives better results.</p>
+                        <p className='text-sm'>At Pulse, we conduct a thorough competitor analysis to understand your market landscape. By identifying your competitors strengths and weaknesses, we create an SEO strategy that gives you a competitive edge and drives better results.</p>
                     </motion.div>
             </div>
     </main>

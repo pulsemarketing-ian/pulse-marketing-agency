@@ -61,7 +61,7 @@ const AboutText = () => {
         >
           <h2 className="mb-3 text-2xl font-bold">Why We Rock</h2>
           <p>
-          Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm with years of experience serving over 8,000 clients from various industries. We've successfully completed more than 25,000 projects, offering comprehensive services from AI consulting, website and app development, ORM, branding, to digital marketing and more.
+          Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm with years of experience serving over 8,000 clients from various industries. We have successfully completed more than 25,000 projects, offering comprehensive services from AI consulting, website and app development, ORM, branding, to digital marketing and more.
 
         Our highly skilled team applies the latest marketing strategies to meet our clients goals, including increasing brand awareness, lead generation and sales growth.
 
