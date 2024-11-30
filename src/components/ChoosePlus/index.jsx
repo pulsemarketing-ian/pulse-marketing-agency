@@ -272,7 +272,7 @@ function ChoosePlus() {
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
               <h1 className="poppins-medium text-5xl ct-heading">
-                Let's Build <br /> Something Great!
+                Lets Build <br /> Something Great!
               </h1>
             </Reveal>
           </div>
