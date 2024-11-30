@@ -11,17 +11,18 @@ import 'swiper/css/autoplay';
 
 export default function Slider() {
   const images = [
-    '/images/app_page_images/slide1.png',
-    '/images/app_page_images/slide2.png',
-    '/images/app_page_images/slide3.png',
-    '/images/app_page_images/slide5.png',
-    '/images/app_page_images/slide4.png',
-    '/images/app_page_images/slide3.png',
-    '/images/app_page_images/slide5.png',
-    '/images/app_page_images/slide4.png',
-    '/images/app_page_images/slide3.png',
-    '/images/app_page_images/slide2.png',
-    '/images/app_page_images/slide1.png',
+    { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
+    { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
+    { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
+    { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
+    { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
+    { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
+    { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
+    { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
   ];
 
   return (
@@ -32,7 +33,7 @@ export default function Slider() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView="auto"
-        loop={true} // Enable infinite looping
+        loop={true}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
@@ -54,16 +55,18 @@ export default function Slider() {
               width: '300px',
             }}
           >
-            <img
-              src={image}
-              alt={`Portfolio Image ${index + 1}`}
-              className="flex gap-4 rounded-lg shadow-lg m-3"
-              style={{
-                width: '300px',
-                height: '300px',
-                objectFit: 'cover',
-              }}
-            />
+            <a href={image.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={image.src}
+                alt={`Portfolio Image ${index + 1}`}
+                className="flex gap-4 rounded-lg shadow-lg m-3"
+                style={{
+                  width: '300px',
+                  height: '300px',
+                  objectFit: 'cover',
+                }}
+              />
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

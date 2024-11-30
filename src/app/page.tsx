@@ -16,19 +16,19 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 2000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowModal(true);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
   return (
     <div style={{ background: 'linear-gradient(90deg, #120B33 0%, #030015 100%)' }}>
    
       <CustomCursor/>
       <ContentWrapper />
-      {showModal && <WebsiteAuditForm />}
+      {/* {showModal && <WebsiteAuditForm />} */}
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
     </div>
   );

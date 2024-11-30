@@ -11,28 +11,29 @@ import 'swiper/css/autoplay';
 
 export default function Slider() {
   const images = [
-    '/images/web-dev_page_images/1.png',
-    '/images/web-dev_page_images/2.png',
-    '/images/web-dev_page_images/3.png',
-    '/images/web-dev_page_images/5.png',
-    '/images/web-dev_page_images/6.png',
-    '/images/web-dev_page_images/3.png',
-    '/images/web-dev_page_images/5.png',
-    '/images/web-dev_page_images/6.png',
-    '/images/web-dev_page_images/3.png',
-    '/images/web-dev_page_images/5.png',
-    '/images/web-dev_page_images/6.png',
+    { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
+    { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
+    { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
+    { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
+    { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
+    { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
+    { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
+    { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
   ];
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         slidesPerView="auto"
-        loop={true} // Enable infinite looping
+        loop={true}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
@@ -49,21 +50,23 @@ export default function Slider() {
         {images.map((image, index) => (
           <SwiperSlide
             key={index}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center "
             style={{
               width: '300px',
             }}
           >
-            <img
-              src={image}
-              alt={`Portfolio Image ${index + 1}`}
-              className="rounded-lg shadow-lg m-3"
-              style={{
-                width: '300px',
-                height: '300px',
-                objectFit: 'cover',
-              }}
-            />
+            <a href={image.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={image.src}
+                alt={`Portfolio Image ${index + 1}`}
+                className="flex gap-4 rounded-lg shadow-lg m-3"
+                style={{
+                  width: '300px',
+                  height: '300px',
+                  objectFit: 'cover',
+                }}
+              />
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

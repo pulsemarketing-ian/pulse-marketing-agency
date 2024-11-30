@@ -21,7 +21,7 @@ const page = () => {
         <Services/>
         <TakeSteps/>
         <Testimonials/>
-        <FaqSection/>
+        {/* <FaqSection/> */}
         <OurBlog/>
         <Footer/>
     </main>

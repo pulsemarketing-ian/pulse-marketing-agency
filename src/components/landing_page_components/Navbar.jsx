@@ -9,7 +9,7 @@ import { Drawer } from "@mui/material";
 import { IoClose } from "react-icons/io5";
 
 const menuItems = [
-  { label: "Home", path: "/work-details" },
+  { label: "Home", path: "/" },
   { label: "About", path: "/about-us" },
   {
     label: "Services",
@@ -92,8 +92,8 @@ export default function Navbar() {
 
                 {/* Dropdown for mega menu */}
                 {item.categories && activeMenu === item.label && (
-                  <div className="absolute left-[-50%] transform -translate-x-[40%] w-screen bg-gradient-to-r from-[#040117] to-black shadow-2xl py-10 px-6 text-white z-50 bg-opacity-10">
-                    <div className="grid grid-cols-3 gap-8 max-w-[1210px] mx-auto">
+                  <div className="absolute left-[-50%] transform -translate-x-[42%] w-screen bg-gradient-to-r from-[#040117] to-black shadow-2xl py-10 px-6 text-white z-50 bg-opacity-10">
+                    <div className="grid grid-cols-3 gap-8 max-w-[1210px] mx-auto pl-6">
                       {item.categories.map((category, index) => (
                         <div key={index}>
                           <h4 className="text-lg font-semibold mb-4">{category.title}</h4>
@@ -101,7 +101,7 @@ export default function Navbar() {
                             <Link
                               key={subItem.name}
                               href={subItem.path}
-                              className="block mb-2 hover:text-blue-400"
+                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3 pl-4"
                             >
                               <h5 className="font-medium">{subItem.name}</h5>
                               <p className="text-sm text-gray-300">{subItem.desc}</p>

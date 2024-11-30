@@ -10,7 +10,7 @@ const AboutUs = () => {
         <HeroSection/>
         <AboutText/>
         <Testimonial/>
-        <FaqSection/>
+        {/* <FaqSection/> */}
         <Footer/>
     </main>
   )

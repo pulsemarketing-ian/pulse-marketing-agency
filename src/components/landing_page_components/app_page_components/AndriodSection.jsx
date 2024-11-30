@@ -47,7 +47,8 @@ const AndriodSection = () => {
               </Reveal>
               <Reveal>
               <p className="text-gray-300 leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.              </p>
+              We are the most sought-after destination for iOS development services in Canada. At our native iOS app development company, we use advanced tools and the latest technologies to build highly functional applications for businesses worldwide. From Flutter app development to Swift app development, you name it, and we will deliver quality results. Contact our team of experts to learn more about each technology we use and understand which one will be best suited for your app development process.
+             </p>
               </Reveal>
               <ul class="space-y-2 text-[13px] text-gray-300">
               <Reveal>

@@ -16,7 +16,7 @@ const Branding = () => {
             <BrandingSection/>
             <DesignServicesSection/>
             <Testimonials/>
-            <FaqSection/>
+            {/* <FaqSection/> */}
             <OurBlog/>
             <Footer/>
         </main>
