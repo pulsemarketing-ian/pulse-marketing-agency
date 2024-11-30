@@ -1,12 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { IoIosMail, IoIosCall } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
-import { FiMenu } from "react-icons/fi"; // Add the FiMenu import for the hamburger icon
+import { FiMenu } from "react-icons/fi"; 
 import PrimaryBtn from "./PrimaryBtns/PrimaryBtn";
 import { Drawer } from "@mui/material";
 import { IoClose } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
 
 const menuItems = [
   { label: "Home", path: "/" },
@@ -59,6 +60,37 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  const [showForm, setShowForm] = useState(false);  
+  const calendlyContainerRef = useRef(null);
+
+  const toggleForm = () => {
+    setShowForm(!showForm); 
+  };
+
+  useEffect(() => {
+    if (showForm) {
+      const container = calendlyContainerRef.current;
+
+      if (container) {
+        container.innerHTML = "";
+
+        const div = document.createElement("div");
+        div.className = "calendly-inline-widget";
+        div.dataset.url = "https://calendly.com/ianpslater/20min";
+        div.style.minWidth = "500px";
+        div.style.height = "1200px";
+        container.appendChild(div);
+
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        container.appendChild(script);
+      }
+    }
+  }, [showForm]);  
+
   return (
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all ${
@@ -101,7 +133,7 @@ export default function Navbar() {
                             <Link
                               key={subItem.name}
                               href={subItem.path}
-                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3 pl-4"
+                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3"
                             >
                               <h5 className="font-medium">{subItem.name}</h5>
                               <p className="text-sm text-gray-300">{subItem.desc}</p>
@@ -161,6 +193,7 @@ export default function Navbar() {
                         ))}
                       </div>
                     )}
+                    
                   </div>
                 ))}
               </div>
@@ -169,7 +202,7 @@ export default function Navbar() {
 
           {/* Contact Icons */}
           <div className="hidden space-x-4 lg:flex">
-            <PrimaryBtn text={"Book"} />
+            <PrimaryBtn text={"Book"} onClick={toggleForm} />
             <a href="mailto:hi@pulsemarketing.io" className="rounded-full p-2 border hover:bg-white/10">
               <IoIosMail className="h-4 w-4" />
             </a>
@@ -177,6 +210,25 @@ export default function Navbar() {
               <IoIosCall className="h-4 w-4" />
             </a>
           </div>
+
+
+          {showForm && (
+        <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50">
+          <div className="bg-white relative p-4 rounded-lg w-full md:w-[80%] lg:w-[60%]">
+            <div
+              onClick={toggleForm}
+               className="absolute top-2 right-3 font-bold text-2xl cursor-pointer px-2 text-blue-500  "
+            >
+              <IoCloseSharp
+              
+              />
+            </div>
+
+            <h2 className="text-xl mb-4">Schedule Your Meeting</h2>
+            <div className="h-[60vh] overflow-auto" ref={calendlyContainerRef}></div>  
+          </div>
+        </div>
+      )}
         </div>
       </div>
     </nav>

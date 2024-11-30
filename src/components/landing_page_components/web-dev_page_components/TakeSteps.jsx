@@ -1,10 +1,26 @@
 'use client'
 import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {motion} from 'motion/react';
 
 const TakeSteps = () => {
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Check screen size
+  useEffect(() => {
+    const updateMedia = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    updateMedia(); // Run on mount
+    window.addEventListener("resize", updateMedia);
+
+    return () => window.removeEventListener("resize", updateMedia);
+  }, []);
+
+
   return (
     <main
       className="mx-14 py-16"
@@ -38,21 +54,9 @@ const TakeSteps = () => {
 
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
             {/* card one  */}
-            <motion.div 
-                initial={{
-                    y: -300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    y: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+            <div 
+                         className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105"
+            >
               <h3 className="text-xl font-bold tracking-wide">
                 Planning & Strategy
               </h3>
@@ -96,25 +100,12 @@ const TakeSteps = () => {
                   </div>
                 </div>
               </p>
-            </motion.div>
+            </div>
 
             {/* card otwo  */}
-            <motion.div 
-                initial={{
-                    x: 300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
-              <h3 className="text-xl font-bold tracking-wide">
+            <div 
+  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+                <h3 className="text-xl font-bold tracking-wide">
                 Development Stage
               </h3>
               <p className="text-sm">
@@ -157,24 +148,10 @@ const TakeSteps = () => {
                   </div>
                 </div>
               </p>
-            </motion.div>
+            </div>
 
             {/* card three  */}
-            <motion.div 
-                initial={{
-                    y: 300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    y: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.3,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+            <div className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
               <h3 className="text-xl font-bold tracking-wide">
                 Quality Assurance
               </h3>
@@ -218,24 +195,10 @@ const TakeSteps = () => {
                   </div>
                 </div>
               </p>
-            </motion.div>
+            </div>
 
             {/* card one  */}
-            <motion.div 
-                initial={{
-                    x: 300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+            <div className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
               <h3 className="text-xl font-bold tracking-wide">Deployment</h3>
               <p className="text-sm">
                 <div className="flex flex-col ">
@@ -277,7 +240,7 @@ const TakeSteps = () => {
                   </div>
                 </div>
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

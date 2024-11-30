@@ -77,7 +77,7 @@ export default function Testimonials() {
           <div key={index} className="group flex gap-3 flex-wrap">
             <div className="bg-[#1c192c] rounded-2xl p-6 text-center shadow-lg mx-2 relative">
               {/* Image */}
-              <div className="relative w-full h-[200px] md:h-[400px] flex items-center justify-center rounded-lg overflow-hidden mb-4">
+              <div className="relative w-full h-[400px] flex items-center justify-center rounded-lg overflow-hidden mb-4">
                 <Image src={'/white-logo.png'} width={100} height={100} alt="Logo" />
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">

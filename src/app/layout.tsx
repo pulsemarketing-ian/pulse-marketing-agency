@@ -8,6 +8,7 @@ import Loader from "@/components/common/Loader";
 import { Inter } from "next/font/google";
 // import "./global.css";
 import CustomCursor from '@/utils/CustomCursor'
+import Head from "next/head";
 
 export default function RootLayout({
   children,
@@ -51,6 +52,7 @@ export default function RootLayout({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="600" />{" "}
+          <title>Sales-Focused Marketing</title>
     </head>
 
       <body suppressHydrationWarning={true} >
