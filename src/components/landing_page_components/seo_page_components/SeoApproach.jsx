@@ -93,7 +93,7 @@ const SeoApproach = () => {
                             <h4 className="text-xl text-center md:text-3xl font-bold tracking-wide">Train Me Consultino</h4>
                           </Reveal>
                           <Reveal>
-                          <p>Unlock the full potential of your online presence with Pulse Marketing's expert SEO services. Our dedicated team crafts personalized strategies to improve your search engine rankings, drive organic traffic, and enhance your digital visibility. From advanced keyword research to cutting-edge optimization techniques, we provide comprehensive solutions tailored to your business needs. <br/>Partner with us to stay ahead in the competitive digital landscape and achieve measurable results. Elevate your brand today with Pulse Marketing!
+                          <p>Unlock the full potential of your online presence with Pulse Marketing is expert SEO services. Our dedicated team crafts personalized strategies to improve your search engine rankings, drive organic traffic, and enhance your digital visibility. From advanced keyword research to cutting-edge optimization techniques, we provide comprehensive solutions tailored to your business needs. <br/>Partner with us to stay ahead in the competitive digital landscape and achieve measurable results. Elevate your brand today with Pulse Marketing!
                           .</p>
                           </Reveal>
                 </div>
