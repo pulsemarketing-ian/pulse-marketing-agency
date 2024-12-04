@@ -46,9 +46,8 @@ const TakeSteps = () => {
           </h2>
           </Reveal>
           <Reveal>
-          <p className="text-left text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br/>
-            eiusmod tempor incididunt ut labore et dolore.
+          <p className="text-left text-[15px]">
+          Our streamlined development process ensures smooth execution from start to finish.
           </p>
           </Reveal>
 

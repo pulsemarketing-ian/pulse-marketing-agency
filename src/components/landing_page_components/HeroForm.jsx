@@ -22,7 +22,7 @@ const HeroForm = () => {
               <input
                 type="text"
                 id="name"
-                placeholder="John Doe"
+                // placeholder="John Doe"
                 className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
@@ -32,7 +32,7 @@ const HeroForm = () => {
               <input
                 type="email"
                 id="email"
-                placeholder="Your email"
+                // placeholder="Your email"
                 className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
@@ -42,7 +42,7 @@ const HeroForm = () => {
               <input
                 type="tel"
                 id="phone"
-                placeholder="Your number"
+                // placeholder="Your number"
                 className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>

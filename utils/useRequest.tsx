@@ -1,4 +1,4 @@
-export const baseURL = `http://localhost:3001`;
+export const baseURL = `https://pulse-marketing-drab.vercel.app`;
 
 export const FireApi = async (endpoint:any, method:any, data = null) => {
     const token = localStorage.getItem("user-visited");

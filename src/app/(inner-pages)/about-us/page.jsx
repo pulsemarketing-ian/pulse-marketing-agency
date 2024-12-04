@@ -4,12 +4,14 @@ import AboutText from '../../../components/landing_page_components/about_page_co
 import Testimonial from '@/components/landing_page_components/app_page_components/Testimonials';
 import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
 import Footer from '@/components/layout/Footer';
+import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 const AboutUs = () => {
   return (
     <main className="theme_bg_color">
         <HeroSection/>
         <AboutText/>
         <Testimonial/>
+        <OurBlog/>
         {/* <FaqSection/> */}
         <Footer/>
     </main>

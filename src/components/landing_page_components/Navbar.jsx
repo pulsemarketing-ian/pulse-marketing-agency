@@ -97,7 +97,7 @@ export default function Navbar() {
         isScrolled ? "bg-black/70 shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1210px] mx-auto">
+      <div className="max-w-[1300px] mx-auto">
         <div className="flex items-center justify-between h-16 px-4">
           <Link href="/" className="flex items-center space-x-2">
             <img src="/white-logo.png" alt="Logo" className="h-8" />

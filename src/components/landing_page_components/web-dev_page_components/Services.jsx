@@ -32,7 +32,7 @@ const Services = () => {
                   }}
                   viewport={{ once: false, amount: 0.2 }}  className='w-full md:w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] transform transition-transform duration-700 ease-in-out hover:scale-105'>
                         <h3 className='text-xl font-bold tracking-wide'>Website Deisgn<br/>and Development</h3>
-                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s.</p>
+                        <p className='text-sm'>We design and develop custom, responsive websites that are visually appealing, user-friendly, and aligned with your business goals, using the latest technologies.</p>
                     </motion.div>
 
                     {/* card otwo  */}
@@ -52,7 +52,7 @@ const Services = () => {
                   }}
                   viewport={{ once: false, amount: 0.2 }}  className='w-full md:w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] transform transition-transform duration-700 ease-in-out hover:scale-105'>
                         <h3 className='text-xl font-bold tracking-wide'>Annual Mantinence <br/>Service</h3>
-                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s.</p>
+                        <p className='text-sm'>Our annual maintenance packages include regular updates, security patches, and performance checks to ensure your website remains secure and up-to-date throughout the year.</p>
                     </motion.div>
                     {/* card three  */}
                     <motion.div 
@@ -71,7 +71,7 @@ const Services = () => {
                   }}
                   viewport={{ once: false, amount: 0.2 }} className='w-full md:w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] transform transition-transform duration-700 ease-in-out hover:scale-105'>
                         <h3 className='text-xl font-bold tracking-wide'>Website <br/>Maintenance</h3>
-                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s.</p>
+                        <p className='text-sm'>We provide ongoing website maintenance, including content updates, bug fixes, and performance improvements, ensuring your site operates smoothly and efficiently.</p>
                     </motion.div>
                     {/* card four  */}
                     <motion.div 
@@ -91,7 +91,8 @@ const Services = () => {
                   viewport={{ once: false, amount: 0.2 }} 
                    className='w-full md:w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[50px] transform transition-transform duration-700 ease-in-out hover:scale-105'>
                         <h3 className='text-xl font-bold tracking-wide'>Hosting and <br/>Administration</h3>
-                        <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s.</p>
+                        <p className='text-sm'> We offer reliable hosting services with 24/7 monitoring, server management, and domain registration to ensure your website is security, speed, and uptime are always optimal.
+                        </p>
                     </motion.div>
             </div>
     </main>

@@ -1,9 +1,13 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import { FireApi } from '../../../../utils/useRequest';
+import { toast } from 'react-toastify';
 
 export default function Testimonials() {
+
+  const [testimonials, setTestimonials] = useState([]);
   const settings = {
     dots: true,
     infinite: true,
@@ -29,28 +33,47 @@ export default function Testimonials() {
     ],
   };
 
-  const testimonialDetails = [
-    {
-      name:"Waldo Villeda",
-      role:"Owner- F45 Fitness",
-      para:"Pulse Marketing is a highly skilled and results-driven marketing agency. They have helped us build a strong digital presence and increase our online visibility through effective SEO and PPC campaigns. Their team is responsive, proactive, and always willing to go the extra mile to ensure our success. We highly recommend Pulse Marketing to any business looking to improve their online marketing efforts."
-    },
-    {
-      name:"Peter Szaly",
-      role:"Owner- Brilliant Electric",
-      para:"I have been working with Pulse Marketing for several years now, and I can confidently say that they are the best in the business. Their team is dedicated, creative, and always willing to listen to our needs and concerns. They have helped  us build a strong brand identity and establish ourselves as leaders in our industry. I highly recommend Pulse Marketing to any business looking for a top-notch marketing agenc",
-    },
-    {
-      name:"Paul Schipizky",
-      role:"Owner- Brilliant ...",
-      para:"This team has been instrumental in our business growth. Pulse has helped us establish a strong social media presence and build relationships with our audience through engaging content and effective community management. They are highly skilled, professional, and always willing to go the extra mile. We highly recommend Pulse Marketing to any business looking to improve their social media marketing efforts."
-    },
-    {
-      name:"Johnny Bananas",
-      role:"MTV Studios ...",
-      para:"Truly exceeded our expectations with their website development services. From the initial consultation to the final launch, their team exhibited a remarkable level of professionalism,  creativity expertise. We are thrilled with the end result and have received numerous compliments on the website's design and functionality. We wholeheartedly endorse Pulse Marketing for their exceptional website development services."
+  // const testimonialDetails = [
+  //   {
+  //     name:"Waldo Villeda",
+  //     role:"Owner- F45 Fitness",
+  //     para:"Pulse Marketing is a highly skilled and results-driven marketing agency. They have helped us build a strong digital presence and increase our online visibility through effective SEO and PPC campaigns. Their team is responsive, proactive, and always willing to go the extra mile to ensure our success. We highly recommend Pulse Marketing to any business looking to improve their online marketing efforts."
+  //   },
+  //   {
+  //     name:"Peter Szaly",
+  //     role:"Owner- Brilliant Electric",
+  //     para:"I have been working with Pulse Marketing for several years now, and I can confidently say that they are the best in the business. Their team is dedicated, creative, and always willing to listen to our needs and concerns. They have helped  us build a strong brand identity and establish ourselves as leaders in our industry. I highly recommend Pulse Marketing to any business looking for a top-notch marketing agenc",
+  //   },
+  //   {
+  //     name:"Paul Schipizky",
+  //     role:"Owner- Brilliant ...",
+  //     para:"This team has been instrumental in our business growth. Pulse has helped us establish a strong social media presence and build relationships with our audience through engaging content and effective community management. They are highly skilled, professional, and always willing to go the extra mile. We highly recommend Pulse Marketing to any business looking to improve their social media marketing efforts."
+  //   },
+  //   {
+  //     name:"Johnny Bananas",
+  //     role:"MTV Studios ...",
+  //     para:"Truly exceeded our expectations with their website development services. From the initial consultation to the final launch, their team exhibited a remarkable level of professionalism,  creativity expertise. We are thrilled with the end result and have received numerous compliments on the website's design and functionality. We wholeheartedly endorse Pulse Marketing for their exceptional website development services."
+  //   }
+  // ];
+
+  const GettingTestimonials = async () => {
+    try {
+        const res = await FireApi('component/read/?page=674f05d56fb5f6230e019d44', "GET");
+        if (res.status === true) {
+           console.log(res, 'testimonials data');
+           setTestimonials(res?.data?.components);
+        } else {
+            toast.error('Failed to fetch data.');
+        }
+    } catch (error) {
+        toast.error('Error fetching data: ' + error.message);
     }
-  ];
+};
+
+useEffect(() => {
+  GettingTestimonials();
+}, [])
+
 
   return (
     <div
@@ -73,7 +96,7 @@ export default function Testimonials() {
 
       {/* Slider */}
       <Slider {...settings}>
-        {testimonialDetails.map((testimonial, index) => (
+        {testimonials.map((testimonial, index) => (
           <div key={index} className="group flex gap-3 flex-wrap">
             <div className="bg-[#1c192c] rounded-2xl p-6 text-center shadow-lg mx-2 relative">
               {/* Image */}
@@ -82,7 +105,7 @@ export default function Testimonials() {
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">
                   <p className="text-black font-medium text-[14px] text-center">
-                    {testimonial.para}
+                    {testimonial.content}
                   </p>
                 </div>
               </div>
@@ -94,7 +117,7 @@ export default function Testimonials() {
                   height={50}
                   alt="Circle"
                 /> */}
-                <p className='text-[12px]'>{testimonial.role}</p>
+                <p className='text-[12px]'>{testimonial.header}</p>
                 <p className="text-[16px] text-white">{testimonial.name}</p>
               </div>
             </div>

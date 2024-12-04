@@ -30,7 +30,7 @@ const SeoApproach = () => {
 
             {/* inner content  */}
           <div
-            className="mt-6 flex-col md:flex lg:flex-row px-6 md:px-0  md:w-[1200px] md:mx-auto md:items-center md:justify-between overflow-hidden "
+            className="mt-6 flex-col md:flex lg:flex-row px-6 md:px-0  md:w-[1200px] md:mx-auto  md:justify-between overflow-hidden "
           >
                 {/* left box  */}
                 <div className=" w-full md:w-[55%] flex md:flex-col" >
@@ -83,7 +83,7 @@ const SeoApproach = () => {
                 </div>
                 </div>
 
-                <div className="w-full md:w-[40%] flex flex-col gap-4" 
+                <div className="w-full md:w-[40%] flex flex-col gap-4 md:" 
             style={{
               backgroundImage:"url('/images/app_page_images/radial.png)",
               backgroundSize:'contain',
@@ -93,10 +93,8 @@ const SeoApproach = () => {
                             <h4 className="text-xl text-center md:text-3xl font-bold tracking-wide">Train Me Consultino</h4>
                           </Reveal>
                           <Reveal>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                          </Reveal>
-                          <Reveal>
-                          <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+                          <p>Unlock the full potential of your online presence with Pulse Marketing's expert SEO services. Our dedicated team crafts personalized strategies to improve your search engine rankings, drive organic traffic, and enhance your digital visibility. From advanced keyword research to cutting-edge optimization techniques, we provide comprehensive solutions tailored to your business needs. <br/>Partner with us to stay ahead in the competitive digital landscape and achieve measurable results. Elevate your brand today with Pulse Marketing!
+                          .</p>
                           </Reveal>
                 </div>
           </div>

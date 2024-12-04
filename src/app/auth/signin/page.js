@@ -3,11 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
-// export const metadata: Metadata = {
-//   title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-//   description: "This is Next.js Signin Page TailAdmin Dashboard Template",
-// };
+import { baseURL } from "../../../../utils/useRequest";
 
 const SignIn = () => {
 
@@ -19,7 +15,7 @@ const SignIn = () => {
   const handleSignin = async(e) => {
     e.preventDefault();
     try{
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch(`${baseURL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -289,7 +285,7 @@ const SignIn = () => {
                   />
                 </div>
 
-                <button className="flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-50">
+                {/* <button className="flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-50">
                   <span>
                     <svg
                       width="20"
@@ -324,11 +320,11 @@ const SignIn = () => {
                     </svg>
                   </span>
                   Sign in with Google
-                </button>
+                </button> */}
 
                 <div className="mt-6 text-center">
                   <p>
-                    Don’t have any account?{" "}
+                    Dont have any account?{" "}
                     <Link href="/auth/signup" className="text-primary">
                       Sign Up
                     </Link>

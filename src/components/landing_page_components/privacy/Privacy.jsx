@@ -26,14 +26,15 @@ const Privacy = () => {
               backgroundSize:'contain',
               backgroundRepeat:'no-repeat'
             }}
-            className="mt-4 flex flex-col gap-3 items-center justify-center text-center w-full md:w-[70%] mx-auto px-6 md:px-0"
+            className="mt-4 flex flex-col gap-3 items-center justify-center text-center w-full md:w-[70%] mx-auto px-6 md:px-0 md:mt-8"
           >
             <Reveal>
-                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>We value your trust and are committed to protecting your personal information. When you engage with our services—be it logo design, digital marketing, web development, or any other offering—we collect only the necessary data to deliver a seamless experience. This includes your name, contact information, and project details.</p>
+
             </Reveal>
-            
+                <p>Your data is never shared with unauthorized third parties. Any third-party tools we use, such as analytics or payment gateways, are secure and comply with industry standards.
+                If you have any questions or wish to update or delete your information, you can contact us at [your contact     email].</p>
             <Reveal>
-                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </Reveal>
           </div>
         </div>

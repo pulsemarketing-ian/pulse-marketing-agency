@@ -70,8 +70,8 @@ export default function DesignServicesSection() {
     <section className=" px-0 py-16 text-white md:mx-auto md:w-[1200px] md:px-0 ">
       <div className="mb-8 px-6 text-start md:px-0">
         <Reveal>
-        <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-          Custom design services tailored to <br />
+        <h2 className="text-2xl font-medium leading-tight md:text-4xl md:w-[70%] lg:w-[60%]">
+          Custom design services tailored to 
           your unique brand identity.
         </h2>
         </Reveal>

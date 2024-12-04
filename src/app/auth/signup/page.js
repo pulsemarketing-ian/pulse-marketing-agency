@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { useRouter } from "next/navigation";
+import { baseURL } from "../../../../utils/useRequest";
 // export const metadata: Metadata = {
 //   title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
 //   description: "This is Next.js SignUp Page TailAdmin Dashboard Template",
@@ -17,14 +18,13 @@ const SignUp = () => {
 
   const router = useRouter();
   const handleNavigation = () => {
-    // Navigate to the desired pathname
     router.push('/auth/signin'); 
   }
 
   const handleSignup = async(e) => {
     e.preventDefault();
     try{
-      const res = await fetch("http://localhost:3001/sign-up", {
+      const res = await fetch(`${baseURL}/sign-up`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,13 +33,13 @@ const SignUp = () => {
       });
 
       const data = await res.json();
-
-    if(res?.ok){
-      console.log(res);
+      console.log(data);
+    // if(res?.ok){
+    //   console.log(res);
       handleNavigation()
-    }else{
-      console.log('an error occured');
-    }
+    // }else{
+    //   console.log('an error occured');
+    // }
     }catch(err){
       console.log(err);
     }
@@ -323,7 +323,7 @@ const SignUp = () => {
                   />
                 </div>
 
-                <button 
+                {/* <button 
                 type="submit"
                 className="flex w-full items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-50">
                   <span>
@@ -360,7 +360,7 @@ const SignUp = () => {
                     </svg>
                   </span>
                   Sign up with Google
-                </button>
+                </button> */}
 
                 <div className="mt-6 text-center">
                   <p>

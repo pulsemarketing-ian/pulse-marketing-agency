@@ -14,7 +14,7 @@ const WorkDetails = () => {
         <CommuteCounts/>
         <InnerPages/>
         <Testimonial/>
-        <FaqSection/>
+        {/* <FaqSection/> */}
         <Footer/>
     </main>
   )

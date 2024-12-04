@@ -7,9 +7,9 @@ const OtherContent = () => {
     {
       heading: "Cookies",
       content:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s, when an unknown printer took a galley of type andscrambled it to make a type specimen book. It has survived not only fivecenturies, but also the leap into electronic typesetting, remainingessentially unchanged.",
+        " Our website uses cookies to enhance your browsing experience and to analyze website traffic. These cookies help us.",
       content2:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "You can control or disable cookies through your browser settings. However, doing so may impact the functionality of certain features on our site.",
     },
    
   ];
@@ -24,7 +24,7 @@ const OtherContent = () => {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
-          className="mx-auto flex md:w-[70%] px-6 md:px-0 flex-col items-center justify-center gap-3 text-center pb-16"
+          className="mx-auto flex md:w-[70%] px-6 md:px-0 flex-col items-center justify-center gap-3 text-center py-16 "
         >
           {" "}
           <Reveal>
