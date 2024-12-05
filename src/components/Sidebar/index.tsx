@@ -71,6 +71,9 @@ const menuGroups = [
         ),
         label: "Portfolio",
         route: "/admin/portfolio",
+        children: [
+          { label: "Add Inner Page", route:"/admin/portfolio/inner-portfolio" },
+        ]
       },
       {
         icon: (

@@ -8,6 +8,7 @@ import PrimaryBtn from "./PrimaryBtns/PrimaryBtn";
 import { Drawer } from "@mui/material";
 import { IoClose } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
+import Image from "next/image";
 
 const menuItems = [
   { label: "Home", path: "/" },
@@ -126,21 +127,84 @@ export default function Navbar() {
                 {item.categories && activeMenu === item.label && (
                   <div className="absolute left-[-50%] transform -translate-x-[42%] w-screen bg-gradient-to-r from-[#040117] to-black shadow-2xl py-10 px-6 text-white z-50 bg-opacity-10">
                     <div className="grid grid-cols-3 gap-8 max-w-[1210px] mx-auto pl-6">
-                      {item.categories.map((category, index) => (
-                        <div key={index}>
-                          <h4 className="text-lg font-semibold mb-4">{category.title}</h4>
-                          {category.items.map((subItem) => (
+                        <div>
+                          <h4 className="text-lg font-semibold mb-4">What Can We Do</h4>
                             <Link
-                              key={subItem.name}
-                              href={subItem.path}
+                              href={'/web-development'}
                               className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3"
                             >
-                              <h5 className="font-medium">{subItem.name}</h5>
-                              <p className="text-sm text-gray-300">{subItem.desc}</p>
+                              <h5 className="font-medium">Web Development</h5>
+                              <p className="text-sm text-gray-300">Custom websites and applications</p>
                             </Link>
-                          ))}
+
+                            <Link
+                              href={'/seo'}
+                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3"
+                            >
+                              <h5 className="font-medium">SEO</h5>
+                              <p className="text-sm text-gray-300">Search Engine Optimization</p>
+                            </Link>
+
+                            <Link
+                              href={'/branding'}
+                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3"
+                            >
+                              <h5 className="font-medium">Branding</h5>
+                              <p className="text-sm text-gray-300">Online store solutions</p>
+                            </Link>
+
+                            <Link
+                              href={'/video-photo'}
+                              className="block mb-2 hover:text-blue-400 hover:bg-black/20 rounded-lg py-3"
+                            >
+                              <h5 className="font-medium">Video Photo</h5>
+                              <p className="text-sm text-gray-300">Content management systems</p>
+                            </Link>
+                          {/* ))} */}
                         </div>
-                      ))}
+
+                        <div className=" flex flex-wrap gap-4">
+                          
+                          <Link href={'https://www.oneupstudio.it/'}>
+                            <Image 
+                            src={'/images/one.webp'}
+                            width={400}
+                            height={400}
+                            />
+                            </Link>
+
+                            <Link href={'https://admireamaze.debijenkorf.nl/'}>
+                            <Image 
+                            src={'/images/two.webp'}
+                            width={400}
+                            height={400}
+                            />
+                            </Link>
+
+
+
+                        </div>
+
+                        <div className=" flex flex-wrap gap-4">
+                          <Link href={'https://www.bienvillecapital.com/'}>
+                            <Image 
+                            src={'/images/three.webp'}
+                            width={400}
+                            height={400}
+                            />
+                            </Link>
+
+                            <Link href={'https://www.clouarchitects.com/'}>
+                            <Image 
+                            src={'/images/four.webp'}
+                            width={400}
+                            height={400}
+                            />
+                            </Link>
+
+
+
+                        </div>
                     </div>
                   </div>
                 )}

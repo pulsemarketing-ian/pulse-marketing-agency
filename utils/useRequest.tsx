@@ -1,15 +1,18 @@
 export const baseURL = `https://pulse-marketing-drab.vercel.app`;
 
-export const FireApi = async (endpoint:any, method:any, data = null) => {
-    const token = localStorage.getItem("user-visited");
+ export const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVlOWNmM2M2YTY0YTVhN2ZhNzVkYSIsImVtYWlsIjoic3VwZXJfYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzMzMzEwODc3fQ.JCcxl8LwCawTGAZQryB6KcNNbbprBE81G08VtrDCyLk";
 
+
+export const FireApi = async (endpoint:any, method:any, data = null) => {
+    // const token = localStorage.getItem("user-visited");
+   
     const headers = {
         "Content-Type": "application/json",
-        // "Authorization": `Bearer ${token}`
+        "Authorization": `Bearer ${token}`
     };
 
     const options = {
-        method: method,
+        method: method, 
         headers, 
         body: data ? JSON.stringify(data) : null
     };
