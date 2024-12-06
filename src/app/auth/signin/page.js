@@ -41,21 +41,21 @@ const SignIn = () => {
     <React.Fragment>
       {/* <Breadcrumb pageName="Sign In" /> */}
     {/* <section className="h-[100vh] w-[100%] flex items-center justify-center"> */}
-      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark h-[100vh]">
         <div className="flex flex-wrap items-center">
           <div className="hidden w-full xl:block xl:w-1/2">
-            <div className="px-26 py-17.5 text-center">
-              <Link className="mb-5.5 inline-block" href="/">
+            <div className="px-26 py-17.5 text-center flex items-center justify-center">
+              {/* <Link className="mb-5.5 inline-block" href="/">
                 <Image
                   className="hidden dark:block"
-                  src={"/images/logo/logo.svg"}
+                  src={"/white-logo.png"}
                   alt="Logo"
                   width={176}
                   height={32}
                 />
                 <Image
                   className="dark:hidden"
-                  src={"/images/logo/logo-dark.svg"}
+                  src={"/white-logo.svg"}
                   alt="Logo"
                   width={176}
                   height={32}
@@ -188,7 +188,13 @@ const SignIn = () => {
                     fill="#1C2434"
                   />
                 </svg>
-              </span>
+              </span> */}
+
+              <Image
+              src={'/logo-img.jpg'}
+              width={200}
+              height={200}
+              />
             </div>
           </div>
 

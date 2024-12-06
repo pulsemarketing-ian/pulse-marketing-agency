@@ -111,12 +111,6 @@ useEffect(() => {
               </div>
               {/* Name and Circle */}
               <div className="flex justify-between w-full items-center">
-                {/* <Image
-                  src={'/images/app_page_images/circle.png'}
-                  width={70}
-                  height={50}
-                  alt="Circle"
-                /> */}
                 <p className='text-[12px]'>{testimonial.header}</p>
                 <p className="text-[16px] text-white">{testimonial.name}</p>
               </div>

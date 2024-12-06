@@ -105,7 +105,7 @@ const Header = (props: {
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
             {/* <!-- Dark Mode Toggler --> */}
-            <DarkModeSwitcher />
+            {/* <DarkModeSwitcher /> */}
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Notification Menu Area --> */}
@@ -118,7 +118,15 @@ const Header = (props: {
           </ul>
 
           {/* <!-- User Area --> */}
-          <DropdownUser />
+          {/* <DropdownUser /> */}
+          <Image
+          src={'/logo-img.jpg'}
+          alt="Logo"
+          width={40}
+          height={40}
+          className="rounded-full"
+          />
+          {/* <h2 className="text-2xl font-bold">Pulse</h2> */}
           {/* <!-- User Area --> */}
         </div>
       </div>

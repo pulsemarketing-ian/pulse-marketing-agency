@@ -125,7 +125,7 @@ export default function Navbar() {
 
                 {/* Dropdown for mega menu */}
                 {item.categories && activeMenu === item.label && (
-                  <div className="absolute left-[-50%] transform -translate-x-[42%] w-screen bg-gradient-to-r from-[#040117] to-black shadow-2xl py-10 px-6 text-white z-50 bg-opacity-10">
+                  <div className="hidden md:absolute left-[-50%] transform -translate-x-[42%] w-screen bg-gradient-to-r from-[#040117] to-black shadow-2xl py-10 px-6 text-white z-50 bg-opacity-10">
                     <div className="grid grid-cols-3 gap-8 max-w-[1210px] mx-auto pl-6">
                         <div>
                           <h4 className="text-lg font-semibold mb-4">What Can We Do</h4>
@@ -163,48 +163,54 @@ export default function Navbar() {
                           {/* ))} */}
                         </div>
 
-                        <div className=" flex flex-wrap gap-4">
-                          
-                          <Link href={'https://www.oneupstudio.it/'}>
-                            <Image 
-                            src={'/images/one.webp'}
-                            width={400}
-                            height={400}
-                            />
-                            </Link>
+                        <div className="flex flex-wrap gap-4">
+  <div className="relative w-[400px] h-[160px]">
+    <Link href={'/web-development'}>
+      <Image
+        src={'/images/web-dev_page_images/hero.png'}
+        alt="Web Development"
+        layout="fill"
+        objectFit="cover"
+      />
+    </Link>
+  </div>
 
-                            <Link href={'https://admireamaze.debijenkorf.nl/'}>
-                            <Image 
-                            src={'/images/two.webp'}
-                            width={400}
-                            height={400}
-                            />
-                            </Link>
+  <div className="relative w-[400px] h-[160px]">
+    <Link href={'/seo'}>
+      <Image
+        src={'/images/seo_page_images/seo-hero.png'}
+        alt="SEO"
+        layout="fill"
+        objectFit="cover"
+      />
+    </Link>
+  </div>
+</div>
 
+<div className="flex flex-wrap gap-4">
+  <div className="relative w-[400px] h-[160px]">
+    <Link href={'/app'}>
+      <Image
+        src={'/images/app_page_images/third-sec.png'}
+        alt="App Development"
+        layout="fill"
+        objectFit="cover"
+      />
+    </Link>
+  </div>
 
+  <div className="relative w-[400px] h-[160px]">
+    <Link href={'/branding'}>
+      <Image
+        src={'/images/branding_page_images/branding.png'}
+        alt="Branding"
+        layout="fill"
+        objectFit="cover"
+      />
+    </Link>
+  </div>
+</div>
 
-                        </div>
-
-                        <div className=" flex flex-wrap gap-4">
-                          <Link href={'https://www.bienvillecapital.com/'}>
-                            <Image 
-                            src={'/images/three.webp'}
-                            width={400}
-                            height={400}
-                            />
-                            </Link>
-
-                            <Link href={'https://www.clouarchitects.com/'}>
-                            <Image 
-                            src={'/images/four.webp'}
-                            width={400}
-                            height={400}
-                            />
-                            </Link>
-
-
-
-                        </div>
                     </div>
                   </div>
                 )}

@@ -232,6 +232,14 @@ input[type="search"]::-webkit-search-cancel-button {
     @apply appearance-none;
 }
 
+.content-style h2 {
+    @apply text-3xl font-bold mb-4 ; 
+  }
+  
+  .content-style p {
+    @apply text-base leading-relaxed mb-6;  
+  }
+
 .custom-input-date::-webkit-calendar-picker-indicator {
     background-position: center;
     background-repeat: no-repeat;
