@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import { baseURL, FireApi, token } from "../../../../../utils/useRequest";
 import { Box, Modal } from "@mui/material";
 
-const page = () => {
+const Page = () => {
   const [selectedPage, setSelectedPage] = useState("");
   const [pages, setPages] = useState([]);
   const [readComponents, setReadComponents] = useState([]);
@@ -437,4 +437,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
