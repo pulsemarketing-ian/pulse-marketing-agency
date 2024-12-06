@@ -101,7 +101,6 @@ const Portfolio = () => {
     }
   };
 
-  console.log(editCompProfileId, "hjhjhj");
   const getComponentProfileById = async () => {
     try {
       const res = await FireApi(`component/read/${editCompProfileId}`, "GET");

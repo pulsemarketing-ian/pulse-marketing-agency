@@ -105,7 +105,7 @@ const BlogPage = () => {
 
             <Reveal>
               <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
-              Step into a world of meaningful stories and transformative ideas. This blog uncovers 7 key aspects of life, work, and creativity, offering you the tools and motivation to succeed. Whether you're here to learn, reflect, or find new inspiration, each post is designed to spark your curiosity and empower you to grow.
+              Step into a world of meaningful stories and transformative ideas. This blog uncovers 7 key aspects of life, work, and creativity, offering you the tools and motivation to succeed. Whether you are here to learn, reflect, or find new inspiration, each post is designed to spark your curiosity and empower you to grow.
               </p>
             </Reveal>
           </div>
