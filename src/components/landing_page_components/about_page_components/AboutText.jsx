@@ -177,7 +177,7 @@ const AboutText = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="flex h-full w-full justify-end rounded-2xl md:w-[48%] "
+          className="md:flex h-full w-full justify-end rounded-2xl md:w-[48%] hidden"
         >
           <Image
             src={"/images/work-details/about-project.png"}

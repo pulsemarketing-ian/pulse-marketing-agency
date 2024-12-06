@@ -26,18 +26,18 @@ const menuItems = [
           { name: "Video Photo", desc: "Content management systems", path: "/video-photo" },
         ],
       },
-      {
-        title: "Lorem ipsum?",
-        items: [
-          { name: "", desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.", path: "*" },
-        ],
-      },
-      {
-        title: "Lorem ipsum",
-        items: [
-          { name: "", desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.", path: "*" },
-        ],
-      },
+      // {
+      //   title: "Lorem ipsum?",
+      //   items: [
+      //     { name: "", desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.", path: "*" },
+      //   ],
+      // },
+      // {
+      //   title: "Lorem ipsum",
+      //   items: [
+      //     { name: "", desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.", path: "*" },
+      //   ],
+      // },
     ],
   },
   { label: "App", path: "/app" },
@@ -51,6 +51,12 @@ export default function Navbar() {
 
   const toggleDrawer = (open) => {
     setOpenDrawer(open);
+  };
+
+  const [openSubmenu, setOpenSubmenu] = useState(null);
+
+  const handleSubmenuToggle = (index) => {
+    setOpenSubmenu((prevIndex) => (prevIndex === index ? null : index));
   };
 
   useEffect(() => {
@@ -220,55 +226,64 @@ export default function Navbar() {
 
           {/* Drawer (Mobile menu) */}
           <Drawer anchor="right" open={openDrawer} onClose={() => toggleDrawer(false)}>
-            <div className="p-4 w-[300px] flex flex-col h-auto bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg">
-              <div className="flex justify-between items-center border-b border-gray-700 pb-3">
-                <h3 className="text-lg font-bold uppercase tracking-wide">Menu</h3>
-                <div onClick={() => toggleDrawer(false)}>
-                  <IoClose size={24} style={{ color: "white" }} />
-                </div>
+      <div className="p-4 w-[300px] flex flex-col h-[100vh] bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg">
+        <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+          <h3 className="text-lg font-bold uppercase tracking-wide">Menu</h3>
+          <div onClick={() => toggleDrawer(false)}>
+            <IoClose size={24} style={{ color: "white" }} />
+          </div>
+        </div>
+
+        {/* Menu items in the mobile drawer */}
+        <div className="mt-6 space-y-6">
+          {menuItems.map((item, index) => (
+            <div key={item.label}>
+              <div
+                className={`block text-lg font-medium tracking-wide p-3 rounded-lg bg-gray-800/70 hover:bg-blue-600/70 transition duration-200 cursor-pointer ${
+                  item.categories ? "flex justify-between items-center" : ""
+                }`}
+                onClick={() =>
+                  item.categories ? handleSubmenuToggle(index) : toggleDrawer(false)
+                }
+              >
+                <Link href={item.path}>{item.label}</Link>
+                {item.categories && (
+                  <span className="ml-2">
+                    {openSubmenu === index ? "-" : "+"}
+                  </span>
+                )}
               </div>
 
-              {/* Menu items in the mobile drawer */}
-              <div className="mt-6 space-y-6">
-                {menuItems.map((item) => (
-                  <div key={item.label}>
-                    <Link
-                      href={item.path}
-                      onClick={() => toggleDrawer(false)}
-                      className="block text-lg font-medium tracking-wide p-3 rounded-lg bg-gray-800/70 hover:bg-blue-600/70 transition duration-200"
-                    >
-                      {item.label}
-                    </Link>
-
-                    {/* Subcategories for 'Services' */}
-                    {item.label === "Services" && item.categories && (
-                      <div className="mt-4 space-y-6">
-                        {item.categories.map((category, index) => (
-                          <div key={index}>
-                            <h4 className="text-md font-semibold text-blue-400 mb-2">{category.title}</h4>
-                            <div className="space-y-2 pl-4">
-                              {category.items.map((subItem) => (
-                                <Link
-                                  key={subItem.name}
-                                  href={subItem.path}
-                                  onClick={() => toggleDrawer(false)}
-                                  className="block text-sm text-gray-400 hover:text-blue-300 transition duration-200"
-                                >
-                                  <h5 className="font-medium">{subItem.name}</h5>
-                                  <p className="text-xs">{subItem.desc}</p>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
+              {/* Subcategories dropdown */}
+              {item.categories && openSubmenu === index && (
+                <div className="mt-4 space-y-6 pl-4">
+                  {item.categories.map((category) => (
+                    <div key={category.title}>
+                      <h4 className="text-md font-semibold text-blue-400 mb-2">
+                        {category.title}
+                      </h4>
+                      <div className="space-y-2 pl-4">
+                        {category.items.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.path}
+                            onClick={() => toggleDrawer(false)}
+                            className="block text-sm text-gray-400 hover:text-blue-300 transition duration-200"
+                          >
+                            <h5 className="font-medium">{subItem.name}</h5>
+                            <p className="text-xs">{subItem.desc}</p>
+                          </Link>
                         ))}
                       </div>
-                    )}
-                    
-                  </div>
-                ))}
-              </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          </Drawer>
+          ))}
+        </div>
+      </div>
+    </Drawer>
 
           {/* Contact Icons */}
           <div className="hidden space-x-4 lg:flex">

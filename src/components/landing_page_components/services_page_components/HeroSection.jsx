@@ -37,14 +37,14 @@ const HeroSection = () => {
             </Reveal>
             </div>
 
-            <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
+            {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image
                 src={'/images/services_page_images/inbox.png'}
                 alt="inbox"
                 width={15}
                 height={15}
                 />
-            </div>
+            </div> */}
 
             </div>
         </main>

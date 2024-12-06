@@ -16,7 +16,7 @@ const Services = () => {
         <AppDevSection/>
         <LogoDesgin/>
         <SEOSection/>
-        <AllInOneSection/>
+        {/* <AllInOneSection/> */}
         <Footer/>
         </main>
   )

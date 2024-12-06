@@ -1,82 +1,54 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-// import Slider from "react-slick";
-import Slider from './Slider';
+import Slider from "react-slick";
 
 export default function PortfolioSection() { 
   const portfolioItems = [
-    {
-      id: 1,
-      image: "/images/app_page_images/slide1.png",
-      alt: "Fitness app interface showing workout tracking features",
-      className: "-rotate-12 translate-y-4",
-    },
-    {
-      id: 2,
-      image: "/images/app_page_images/slide2.png",
-      alt: "Health tracking app showing daily statistics",
-      className: "-rotate-6 translate-y-2",
-    },
-    {
-      id: 3,
-      image: "/images/app_page_images/slide5.png",
-      alt: "Social media app dark theme interface",
-      className: "rotate-3",
-    },
-    {
-      id: 4,
-      image: "/images/app_page_images/slide4.png",
-      alt: "Property listing app showing modern interface",
-      className: "rotate-12 translate-y-6",
-    },
-    {
-      id: 5,
-      image: "/images/app_page_images/slide5.png",
-      alt: "Food delivery app showing restaurant listings",
-      className: "rotate-[20deg] translate-y-4",
-    },
+    { image: "/images/app_page_images/app-img (1).webp" },
+    { image: "/images/app_page_images/app-img (2).webp" },
+    { image: "/images/app_page_images/app-img (3).webp" },
+    { image: "/images/app_page_images/app-img (4).webp" },
+    { image: "/images/app_page_images/app-img (5).webp" },
+    { image: "/images/app_page_images/app-img (6).webp" },
+    { image: "/images/app_page_images/app-img (7).webp" },
+    { image: "/images/app_page_images/app-img (8).webp" },
+    { image: "/images/app_page_images/app-img (9).webp" },
+    { image: "/images/app_page_images/app-img (10).webp" },
+    { image: "/images/app_page_images/app-img (11).webp" },
+    { image: "/images/app_page_images/app-img (12).webp" },
   ];
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
+    dots: true, 
+    infinite: true, 
+    speed: 500, 
+    slidesToShow: 4, 
+    slidesToScroll: 1, 
+    arrows: false, 
+    autoplay: true, 
+    autoplaySpeed: 3000, 
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1024, 
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
+        breakpoint: 768, 
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 480, 
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
   };
-
 
   return (
     <main className="relative w-full">
@@ -88,20 +60,29 @@ export default function PortfolioSection() {
         }}
         className="h-[40vh] md:h-[80vh]"
       />
-      <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
+      <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center">
         <div className="z-10 md:mt-8 text-center">
           <h1 className="text-2xl md:text-4xl font-bold tracking-wide">Our Portfolio</h1>
         </div>
 
-        <div
-          style={{
-            backgroundImage: "url('/images/app_page_images/radial.png')",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat'
-          }}
-          className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
-        >
-          <Slider/>
+        {/* app portfolio images */}
+        <div className="w-full px-4 md:px-0 md:max-w-[1000px] md:mx-auto mt-12 pl-6 pb-4 md:pl-14 md:pb-16">
+          <Slider {...settings}>
+            {portfolioItems.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center min-h-[150px]" 
+              >
+                <Image
+                  src={item.image}
+                  alt={`app portfolio ${index + 1}`}
+                  width={170}
+                  height={150}
+                  className="rounded-lg"
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </main>

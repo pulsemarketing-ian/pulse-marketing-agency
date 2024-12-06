@@ -366,7 +366,7 @@ const Testimonial = () => {
               {/* <h3 className=''>1</h3> */}
               <div className="flex justify-center">
                 <Image
-                  src={"/tetimonial.jpeg.webp"}
+                  src={"/logo-img.jpg"}
                   alt="asdsad"
                   width={50}
                   height={50}
@@ -402,7 +402,7 @@ const Testimonial = () => {
             <div className="text-center">
               <div className="flex justify-center">
                 <Image
-                  src={"/tetimonial.jpeg.webp"}
+                  src={"/logo-img.jpg"}
                   alt="asdsad"
                   width={50}
                   height={50}
@@ -440,7 +440,7 @@ const Testimonial = () => {
             <div className="text-center">
               <div className="flex justify-center">
                 <Image
-                  src={"/tetimonial.jpeg.webp"}
+                  src={"/logo-img.jpg"}
                   alt="asdsad"
                   width={50}
                   height={50}

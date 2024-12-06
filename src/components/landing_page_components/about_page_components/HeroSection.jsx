@@ -54,14 +54,14 @@ const HeroSection = () => {
             </Reveal>
           </div>
 
-          <div className="absolute bottom-[4.5rem] md:bottom-6 right-6 z-10 rounded-full bg-my-blue-gradient p-3">
+          {/* <div className="absolute bottom-[4.5rem] md:bottom-6 right-6 z-10 rounded-full bg-my-blue-gradient p-3">
             <Image
               src={"/images/services_page_images/inbox.png"}
               alt="inbox"
               width={15}
               height={15}
             />
-          </div>
+          </div> */}
         </div>
       </main>
 

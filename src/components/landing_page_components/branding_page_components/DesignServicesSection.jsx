@@ -44,21 +44,21 @@ export default function DesignServicesSection() {
         {
           image: "/images/branding_page_images/portfolio (1).jpg",
           title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+            "Branding Design That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
           image: "/images/branding_page_images/portfolio (3).jpg",
           title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+          "Branding Design That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
         {
           image: "/images/branding_page_images/portfolio (2).jpg",
           title:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+          "Branding Design That Speak, Brands That Resonate.",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
         },
@@ -134,7 +134,7 @@ export default function DesignServicesSection() {
             <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
             </Reveal>
             <Reveal>
-            <p className="text-[13px] text-gray-300">{item.description}</p>
+            {/* <p className="text-[13px] text-gray-300">{item.description}</p> */}
             </Reveal>
           </motion.div>
         ))}

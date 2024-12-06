@@ -55,12 +55,13 @@ const OurBlog = () => {
             </p>
           </Reveal>
           <Reveal>
-            <h2 className="text-2xl md:text-4xl font-medium leading-tight mb-2">
+            <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-2">
               What is New <br /> in Our Blogs
             </h2>
           </Reveal>
         </div>
-        <Link href="/blog">
+
+        <Link href="/blog" className='mt-3'>
         <PrimaryBtn text={'View All Blogs'} />
         </Link>
       </div>
@@ -84,7 +85,7 @@ const OurBlog = () => {
             </div>
             <div className="flex flex-col gap-3 mt-3">
               <Reveal>
-                <h2 className="text-xl">
+                <h2 className="text-xl font-semibold mt-2">
                   {item?.name?.split(' ').slice(0, 5).join(' ')}...
                 </h2>
               </Reveal>

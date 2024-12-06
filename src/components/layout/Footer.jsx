@@ -1,204 +1,132 @@
-// "use client"
-// import Image from "next/image";
-// import React,{useState, useEffect} from "react";
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { MdEmail } from "react-icons/md";
-// import logo from '/public/pulse-logo.svg'
-// import TextScroller from "./TextScroller";
-// import Link from "next/link";
-// import { FireApi } from "../../../utils/useRequest";
-
-// const Footer = () => {
-//   // const settings = {
-//   //   dots: false, 
-//   //   infinite: true,
-//   //   slidesToShow: 1,
-//   //   slidesToScroll: 1,
-//   //   autoplay: true,
-//   //   speed: 7000,
-//   //   autoplaySpeed: 2000,
-//   //   cssEase: "linear",
-//   // };
-
-//   const [footer, setFooter] = useState([]);
-
-//   const FooterDetails = async () => {
-//     try {
-//       const res = await FireApi(
-//         "component/read/?section=footer-details",
-//         "GET",
-//       );
-//       console.log("Response:", res);
-
-//       if (res.status === true) {
-//         setFooter(res?.data?.components);
-//       } else {
-//         console.log("An error occurred");
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//     }
-//   };
-
-//   useEffect(() => {
-//     FooterDetails();
-//   }, []);
-
-//   return (
-//     <>
-//       <main className="w-full pb-12 ">
-//         <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
-//           <div>
-//             <Image 
-//             src={`/${footer?.pictures}`} 
-//             width={150} 
-//             height={150}
-//              alt="Logo" />
-//           </div>
-
-//           <div>
-//             <div className="md:flex mt-3 md:mt-0">
-//               <div className="flex items-center md:border-r-2 pr-6 mr-6">
-//                 <Link className="flex items-center" href="tel:18443303141" target="_blank">
-//                 <FaPhoneAlt />
-//                 {footer?.map((item) => (
-//                 <h3 key={item?._id} className="poppins-light ml-3  text-[14px]" >
-//                   {item?.name}
-//                 </h3>
-//                 ))}
-//                 </Link>
-//               </div>
-//               <div className="flex items-center">
-//                 <Link className="flex items-center" href="mailto:hi@pulsemarketing.io" target="_blank">
-//                 <MdEmail className="text-xl" />
-//                 {footer?.map((item) => (
-//                 <h3 key={item?._id} className="poppins-light ml-3 text-[14px]">
-//                     {item?.header}
-//                 </h3>
-//                 ))}
-//                 </Link>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="flex items-center W-[100%] justify-center poppins-medium text-[4rem] lg:text-[100px] text-center overflow-hidden whitespace-nowrap text-transparent border-text w-full py-0 lg:py-2">
-//          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!
-//           Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!"/>
-//         </div>
-
-    
-//         <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
-//           <div>
-//               {footer?.map((item) => (
-//             <h3 key={item?._id}  className="poppins-light text-[14px]">
-//                 {item?.content}
-//               </h3>
-//               ))}
-//           </div>
-//           <div className="flex md:flex mt-3 md:mt-0">
-//             <div className="flex items-center md:border-r-2 pr-6 mr-6">
-//               <Link href={'https://pulsemarketing.io/privacy'} target="_blank">
-//               <h3 className="poppins-light text-[14px] ">Privacy Policy</h3>
-//               </Link>
-//             </div>
-//             <div className="flex items-center">
-//               <Link href={'https://pulsemarketing.io/terms-and-conditions/'} target="_blank">
-//               <h3 className="poppins-light text-[14px] ">Terms & Conditions</h3>
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       </main>
-//       <style jsx>{`
-//         .border-text {
-//           -webkit-text-stroke: 2px #62c9d6; 
-//           text-stroke: 2px black; 
-//         }
-//       `}</style>
-//     </>
-//   );
-// };
-
-// export default Footer;
-
-
 'use client';
 import Image from "next/image";
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-// import logo from '/images/services_page_images/Mask group (1).png'
 import TextScroller from "./TextScroller";
 import Link from "next/link";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa6";
+import { FaXTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoYoutube } from "react-icons/io5";
-import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
-
   return (
     <>
-      <main className="w-full pb-12 pt-12">
-        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
-          <div>
-          <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
+      <main className="w-full pb-12 pt-12 text-white">
+        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+
+          {/* Logo & About Section */}
+          <div className="flex flex-col gap-4 items-start md:min-h-[250px]">
+            <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
+            <p className="text-sm leading-relaxed">
+              Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm with years
+              of experience in the field serving 8,000+ clients from various industries.
+              We have successfully completed more than 25,000 projects.
+            </p>
           </div>
 
-          <div>
-            <div className="md:flex mt-3 md:mt-0">
-              <div className="flex items-center md:border-r-2 pr-6 mr-6">
-                <Link className="flex items-center" href="tel:18443303141" target="_blank">
+          {/* Quick Links */}
+          <div className="flex flex-col gap-4 md:min-h-[250px]">
+            <h1 className="font-medium text-xl">Quick Links</h1>
+            {[
+              { name: "Home", link: "/" },
+              { name: "About", link: "/about" },
+              { name: "App", link: "/app" },
+              { name: "Portfolio", link: "/portfolio" },
+              { name: "Blog", link: "/blog" },
+            ].map((item, index) => (
+              <Link key={index} href={item.link} className="group flex items-center gap-2">
+                <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
+                <span className="relative hover:underline-animation">{item.name}</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Services */}
+          <div className="flex flex-col gap-4 md:min-h-[250px]">
+            <h1 className="font-medium text-xl">Services</h1>
+            {[
+              { name: "Web Development", link: "/web-development" },
+              { name: "App Development", link: "/app-development" },
+              { name: "SEO", link: "/seo" },
+              { name: "Branding", link: "/branding" },
+            ].map((service, index) => (
+              <Link key={index} href={service.link} className="group flex items-center gap-2">
+                <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
+                <span className="relative hover:underline-animation">{service.name}</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col gap-4 md:min-h-[250px]">
+            <h1 className="font-medium text-xl">Contact</h1>
+            <div className="flex items-center gap-2">
+              <Link href="tel:18443303141" target="_blank" className="flex items-center">
                 <FaPhoneAlt />
-                <h3 className="poppins-light ml-3  text-[14px]" >18443303141
-                </h3>
-                </Link>
-              </div>
-              <div className="flex items-center">
-                <Link className="flex items-center" href="mailto:hi@pulsemarketing.io" target="_blank">
-                <MdEmail className="text-xl" />
-                <h3 className="poppins-light ml-3 text-[14px]">hi@pulsemarketing.io
-                </h3>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="lg:w-[90%] px-8 lg:px-0 mx-auto flex gap-4 mt-3 items-center text-xl cursor-pointer">
-        <FaXTwitter /> <FaFacebookF /> <FiInstagram /> <IoLogoYoutube />  <FaLinkedin />
-        </div>
-
-        <div className="flex items-center W-[100%] justify-center poppins-medium text-[4rem] lg:text-[100px] text-center overflow-hidden whitespace-nowrap text-transparent border-text w-full py-0 lg:py-2">
-         <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!
-          Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!"/>
-        </div>
-
-    
-        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto md:flex justify-between items-center">
-          <div>
-            <h3 className="poppins-light text-[14px]">© 2024 Pulse Marketing Inc. All rights reserved.</h3>
-          </div>
-          <div className="flex md:flex mt-3 md:mt-0">
-            <div className="flex items-center md:border-r-2 pr-6 mr-6">
-              <Link href={'/privacy'} target="_blank">
-              <h3 className="poppins-light text-[14px] ">Privacy Policy</h3>
+                <span className="ml-3 text-sm">18443303141</span>
               </Link>
             </div>
-            <div className="flex items-center">
-              <Link href={'/term-condition'} target="_blank">
-              <h3 className="poppins-light text-[14px] ">Terms & Conditions</h3>
+            <div className="flex items-center gap-2">
+              <Link href="mailto:hi@pulsemarketing.io" target="_blank" className="flex items-center">
+                <MdEmail />
+                <span className="ml-3 text-sm">hi@pulsemarketing.io</span>
               </Link>
             </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="flex flex-col gap-4 md:min-h-[250px]">
+            <h1 className="font-medium text-xl">Follow Us</h1>
+            <div className="flex gap-4 mt-3 items-center text-xl cursor-pointer">
+              <FaXTwitter />
+              <FaFacebookF />
+              <FiInstagram />
+              <IoLogoYoutube />
+              <FaLinkedin />
+            </div>
+          </div>
+
+        </div>
+
+          {/* Text Scroller */}
+          <div className="flex items-center justify-center text-transparent border-text w-full py-4 text-center overflow-hidden whitespace-nowrap text-[4rem] lg:text-[100px]">
+          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <h3 className="text-md">© 2024 Pulse Marketing Inc. All rights reserved.</h3>
+          <div className="flex gap-6 text-md">
+            <Link href="/privacy" target="_blank">
+              Privacy Policy
+            </Link>
+            <Link href="/term-condition" target="_blank">
+              Terms & Conditions
+            </Link>
           </div>
         </div>
       </main>
+
+      {/* Styles for hover underline animation */}
       <style jsx>{`
-        .border-text {
-          -webkit-text-stroke: 2px #62c9d6; 
-          text-stroke: 2px black; 
+        .hover:underline-animation::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 0;
+          height: 2px;
+          background-color: #62c9d6;
+          transition: width 0.3s ease-in-out;
+        }
+
+        .hover:underline-animation:hover::after {
+          width: 100%;
+        }
+         .border-text {
+          -webkit-text-stroke: 2px #62c9d6;
+          text-stroke: 2px black;
         }
       `}</style>
     </>
