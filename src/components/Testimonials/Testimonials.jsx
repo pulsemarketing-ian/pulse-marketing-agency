@@ -359,7 +359,7 @@ const Testimonial = () => {
     <>
       <main className="w-full lg:w-[75%] m-auto py-20 md:pt-0 md:px-10 testimonial">
         <UpperTextTestimonials />
-        <div className="slider-container w-[80%] lg:w-[75%] py-0 pt-5 md:pt-0 md:py-20 m-auto  shadow-lg   rounded-3xl ">
+        <div className="slider-container w-[80%] lg:w-[75%] py-0 pt-5  md:pt-10 m-auto  shadow-lg   rounded-3xl ">
           <Slider {...settings}> 
             {/* testimonial one */}
             <div className="text-center">
