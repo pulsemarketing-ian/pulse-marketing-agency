@@ -37,9 +37,10 @@ const WorkDetails = () => {
 
 
   const [innerContent, setInnerContent] = React.useState([]);
+  const portfolioComponentId = localStorage.getItem('portfolioId');
+
   const getInnerPageData = async () => {
     try {
-      const portfolioComponentId = localStorage.getItem('portfolioId');
       const res = await FireApi(`component/read/${portfolioComponentId}`, 'GET');
       // console.log(res?.data?.component?.child_components, 'setInnerContent');
       setInnerContent(res?.data?.component?.child_components || []);
@@ -50,7 +51,7 @@ const WorkDetails = () => {
 
   React.useEffect(() => {
     getInnerPageData();
-  }, []);
+  }, [portfolioComponentId]);
 
   const visitWebsite = localStorage.getItem('visit-website');
 

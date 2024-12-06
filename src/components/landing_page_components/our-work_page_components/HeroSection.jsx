@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
 import Link from "next/link";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
+import Tabs from '../../MyTabs/Tabs';
+import Footer from "@/components/layout/Footer";
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -80,8 +82,8 @@ const HeroSection = () => {
         }}
       >
         <Navbar />
-        <div className="relative mx-auto flex h-[80vh] w-[1200px] flex-row items-center justify-between md:h-[100vh]">
-          <div className="w-[100%] flex-col px-6 md:px-0 absolute z-20">
+        <div className="relative mx-auto flex h-[80vh] max-w-[1200px] flex-row items-center justify-center md:h-[100vh]">
+          {/* <div className="w-[100%] flex-col px-6 md:px-0 absolute z-20">
             <div className="mb-2 flex w-auto items-center gap-1">
               <Image
                 src="/images/services_page_images/blue-dot.png"
@@ -116,19 +118,48 @@ const HeroSection = () => {
 </div>
 
             </div>
+          </div> */}
+
+<div className="z-10 flex flex-col items-center md:translate-y-[-4rem]">
+            {/* Service heading */}
+            <div className="mb-2 flex items-center justify-center gap-1">
+              <Image
+                src="/images/services_page_images/blue-dot.png"
+                alt="blue-dot"
+                width={20}
+                height={20}
+              />
+              <p>Our Portfolio</p>
+            </div>
+
+            {/* Heading main */}
+            <Reveal>
+              <h2
+                className="text-3xl font-bold capitalize text-white md:text-5xl text-center"
+                style={{ lineHeight: "1.2" }}
+              >
+                Explore All Industries
+              </h2>
+            </Reveal>
+
+            <Reveal>
+              <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
+              Explore our portfolio, where creativity meets innovation. As a top designing agency, we create stunning, user-friendly designs that bring your ideas to life and elevate your brand.
+              </p>
+            </Reveal>
           </div>
         </div>
       </main>
 
       {/* Images Section */}
-      <main className="relative mb-20 w-full" ref={imageSectionRef}>
+      <main className="relative mb-20 w-full z-0" ref={imageSectionRef}>
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",
             backgroundSize: "cover",
-            transform: "translateY(-50%)",
+            // transform: "translateY(-50%)",
           }}
-          className="h-[50vh] md:h-[95vh]"
+          className="h-[30vh] md:h-[60vh] transform translate-y-[-50%] md:translate-y-[-100%]"
         />
         <div
           className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:top-12 md:px-0"
@@ -138,7 +169,7 @@ const HeroSection = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 text-center">
+          <div className="z-10 text-center transform translate-y-[12vh] md:translate-y-0">
             <Reveal>
               <h1 className="text-xl font-bold tracking-wide md:text-4xl">
                 Our Work Your Inspiration
@@ -146,7 +177,7 @@ const HeroSection = () => {
             </Reveal>
           </div>
 
-          <div className="mx-auto mt-6 flex w-full flex-col items-center justify-between overflow-hidden md:mb-12 md:mt-22 md:w-[90%] md:flex-row lg:w-[1200px]">
+          {/* <div className="mx-auto mt-6 flex w-full flex-col items-center justify-between overflow-hidden md:mb-12 md:mt-22 md:w-[90%] md:flex-row lg:w-[1200px]">
             {industries[activeTab].images.map((image, index) => (
               <div className="w-full" key={index}>
                 <div className="relative mb-8 h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[400px] md:w-[95%]">
@@ -193,9 +224,16 @@ const HeroSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
+
+      <div className="mt-[-22%] z-30 relative">
+      <Tabs/>
+      </div>
+
+      <Footer />
+
     </>
   );
 };

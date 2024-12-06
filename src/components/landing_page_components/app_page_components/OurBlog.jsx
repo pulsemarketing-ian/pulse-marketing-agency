@@ -6,13 +6,14 @@ import { Reveal } from '@/utils/Reveal';
 import Pagination from '@mui/material/Pagination';
 import { FireApi } from '../../../../utils/useRequest';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const OurBlog = () => {
   const router = useRouter();
 
   const [blogComponent, setBlogComponent] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(1);
-  const blogsPerPage = 6; 
+  const blogsPerPage = 3; 
 
   const getComponentData = async () => {
     try {
@@ -59,7 +60,9 @@ const OurBlog = () => {
             </h2>
           </Reveal>
         </div>
+        <Link href="/blog">
         <PrimaryBtn text={'View All Blogs'} />
+        </Link>
       </div>
 
       {/* Blog Content */}
@@ -96,14 +99,14 @@ const OurBlog = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center mt-6">
+      {/* <div className="flex justify-center mt-6">
         <Pagination
           count={Math.ceil(blogComponent.length / blogsPerPage)} 
           page={currentPage}
           onChange={handlePageChange}
           color="primary"
         />
-      </div>
+      </div> */}
     </main>
   );
 };

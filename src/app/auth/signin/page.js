@@ -28,12 +28,14 @@ const SignIn = () => {
       if(data.status === true){
       console.log(data);
       localStorage.setItem('user-visited', data?.data?.token);
-      router.push('/admin')
+      router.push('/admin/portfolio');
     }else{
       console.log('an error occured');
+      alert(data.message);
     }
     }catch(err){
       console.log(err);
+      
     }
   };
 

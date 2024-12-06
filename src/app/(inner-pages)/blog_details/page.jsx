@@ -38,13 +38,14 @@ const Page = () => {
           style={{
             backgroundImage: `url(${blogInner?.component?.pictures})`,
             backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Overlay div */}
           <div className="absolute inset-0 bg-black opacity-50"></div>
 
           <Navbar />
-          <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative overflow-visible'>
+          <div className='h-[100vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>
             <div className='translate-y-[-4rem] flex-col item-center'>
               {/* Service heading */}
               <div className='flex items-center gap-1 mb-2 justify-center'>
@@ -90,15 +91,16 @@ const Page = () => {
 
           </div>
         </main>
-  
-        <main className="relative w-full pb-32 md:pb-0">
+        
+        {/* circle image and section text  */}
+        <main className="relative w-full pb-32 md:pb-0 z-30">
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",
             backgroundSize: "cover",
-            transform: "translateY(-50%)",
+            // transform: "translateY(-100%)",
           }}
-          className="h-[50vh] md:h-[100vh]"
+          className="h-[50vh] md:h-[100vh] transform translate-y-[-50%] md:translate-y-[-60%]"
         />
         <div
           className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 theme_bg_color"
@@ -110,87 +112,29 @@ const Page = () => {
         >
           <div className="z-10 text-center md:-mt-4">
             <Reveal>
-              <p className="mb-2 text-[16px]  tracking-wide md:text-md md:w-[60%] md:mx-auto ">
+              <p className="mb-2 text-[16px]  tracking-wide md:text-md md:w-[60%] md:mx-auto translate-y-[4vh]">
                 {blogInner?.component?.section}
               </p>
             </Reveal>
           </div>
 
-          {/* inner content  */}
-          {/* <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row "> */}
-            {/* left box  */}
-            {/* <motion.div
-              initial={{
-                x: -300,
-                opacity: 0,
-              }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                delay: 0.5,
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              viewport={{ once: false, amount: 0.2 }}
-              className="h-[100%] w-full rounded-2xl bg-[#120E28] p-10 md:w-[48%] "
-            >
-              <h2 className="mb-3 text-2xl font-bold">Why We Rock</h2>
-              <p>
-                Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm
-                with years of experience serving over 8,000 clients from various
-                industries. We have successfully completed more than 25,000
-                projects, offering comprehensive services from AI consulting,
-                website and app development, ORM, branding, to digital marketing
-                and more. Our highly skilled team applies the latest marketing
-                strategies to meet our clients goals, including increasing brand
-                awareness, lead generation and sales growth. Thanks for
-                considering Pulse Marketing Inc. for your marketing needs. We
-                are committed to helping you reach your goals and propelling
-                your business forward.
-              </p>
-            </motion.div> */}
+        
 
-            {/* right box  */}
-            {/* <motion.div
-              initial={{
-                x: 300,
-                opacity: 0,
-              }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                delay: 0.5,
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              viewport={{ once: false, amount: 0.2 }}
-              className="flex h-full w-full justify-end rounded-2xl md:w-[48%] "
-            >
-              <Image
-                src={"/images/work-details/about-project.png"}
-                alt="about-project"
-                width={550}
-                height={550}
-              />
-            </motion.div> */}
-          {/* </div> */}
-
-          <div className='md:w-[1200px] w-full mx-4'>
-              <div
-                dangerouslySetInnerHTML={{ __html: blogInner?.component?.content }}
-                className="content-style " 
-              />
-          </div>
+        
 
         </div>
         </main>
 
-      </main>
+          {/* main content  */}
+        <div className='max-w-[1200px] mx-auto -mt-[26%]'>
+              <div
+                dangerouslySetInnerHTML={{ __html: blogInner?.component?.content }}
+                className="content-style px-4 " 
+              />
+          </div>
+
       <Footer/>
+      </main>
 
  
     </>

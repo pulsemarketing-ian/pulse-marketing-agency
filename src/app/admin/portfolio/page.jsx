@@ -72,7 +72,7 @@ const Portfolio = () => {
 
       if (response.status >= 200 && response.status < 300) {
         const data = await response.json();
-        alert("Form submitted successfully:", data);
+        alert("Your form has been Added successfully:", data);
         setSelectedPage("");
         setName("");
         setSectionKey("");
@@ -81,9 +81,10 @@ const Portfolio = () => {
         setPictures([]);
       } else {
         console.log("Error submitting form:", response.error);
+        alert("Something Went Wrong! Please try again.");
       }
     } catch (err) {
-      alert("Error submitting form:", err.message);
+      alert("Something Went Wrong! Please try again:", err.message);
       // console.log('Error submitting form:', err);
     }
   };

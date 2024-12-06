@@ -10,9 +10,9 @@ const page = () => {
         <HeroSection/>
         {/* <OurWorkSection/>
         <ImagesWorkSection/> */}
-              <div className="relative z-0 mt-[24rem] md:mt-0">
+              {/* <div className="relative z-0 mt-[24rem] md:mt-0">
                 <Footer/>
-              </div>
+              </div> */}
     </main>
 )
 }
