@@ -17,9 +17,10 @@ const   HeroSection = () => {
              backgroundImage: "url('/images/branding_page_images/branding-hero.png')",
              backgroundSize: "cover",
             }}
+            className='md:pb-[200px]'
             >
             <Navbar/>
-            <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto'>
+            <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[60px]'>
                 {/* hero heading  */}
                 <motion.div 
                   initial={{

@@ -16,52 +16,35 @@ export default function DesignServicesSection() {
     {
       title: "Logo Design",
       items: [
-        {
-          image: "/images/branding_page_images/portfolio (1).png",
-          title:
-            "Logos That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/portfolio (2).png",
-          title:
-            "Logos That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/portfolio (3).png",
-          title:"Logos That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
+        { image: "/images/branding_page_images/logo (1).png" },
+        { image: "/images/branding_page_images/logo (2).png" },
+        { image: "/images/branding_page_images/logo (3).png"},
+        { image: "/images/branding_page_images/logo (4).png" },
+        { image: "/images/branding_page_images/logo (5).png" },
+        { image: "/images/branding_page_images/logo (6).png"},
+        { image: "/images/branding_page_images/logo (7).png" },
+        { image: "/images/branding_page_images/logo (8).png" },
+        { image: "/images/branding_page_images/logo (9).png"},
+        { image: "/images/branding_page_images/logo (10).png"},
+        { image: "/images/branding_page_images/logo (11).png"},
+        { image: "/images/branding_page_images/logo (12).png"},
       ],
     },
     {
       title: "Branding Design",
       items: [
-        {
-          image: "/images/branding_page_images/portfolio (1).jpg",
-          title:
-            "Branding Design That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/portfolio (3).jpg",
-          title:
-          "Branding Design That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
-        {
-          image: "/images/branding_page_images/portfolio (2).jpg",
-          title:
-          "Branding Design That Speak, Brands That Resonate.",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        },
+        { image: "/images/branding_page_images/branding (1).jpg" },
+        { image: "/images/branding_page_images/branding (2).jpg" },
+        { image: "/images/branding_page_images/branding (3).jpg"},
+        { image: "/images/branding_page_images/branding (4).jpg" },
+        { image: "/images/branding_page_images/branding (5).jpg" },
+        { image: "/images/branding_page_images/branding (6).jpg"},
+        { image: "/images/branding_page_images/branding (7).jpg" },
+        { image: "/images/branding_page_images/branding (8).jpg" },
+        { image: "/images/branding_page_images/branding (9).jpg"},
+        { image: "/images/branding_page_images/branding (10).jpg"},
+        { image: "/images/branding_page_images/portfolio (1).jpg"},
+        { image: "/images/branding_page_images/portfolio (3).jpg"},
       ],
     },
   ];
@@ -98,47 +81,45 @@ export default function DesignServicesSection() {
 
       {/* Tab Content */}
       <div
-        className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3"
-        style={{
-          backgroundImage: "url('/images/app_page_images/radial.png')",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {tabContent[activeTab].items.map((item, index) => (
-          <motion.div 
-          initial={{
-            y: 300,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          transition={{
-            delay: 0.5,
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: false, amount: 0.2 }} key={index} className="overflow-hidden rounded-lg p-4 shadow-lg">
-            <div className="relative mb-4 h-48 w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
-              <Image
-                src={item.image}
-                alt={item.title}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-            <Reveal>
-            <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
-            </Reveal>
-            <Reveal>
-            {/* <p className="text-[13px] text-gray-300">{item.description}</p> */}
-            </Reveal>
-          </motion.div>
-        ))}
+  className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
+  style={{
+    backgroundImage: "url('/images/app_page_images/radial.png')",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {tabContent[activeTab].items.map((item, index) => (
+    <motion.div 
+      initial={{
+        y: 300,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.5,
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+      viewport={{ once: false, amount: 0.2 }} 
+      key={index} 
+      className="overflow-hidden rounded-lg p-2 "
+    >
+      <div className="relative mb-4 h-20 md:h-52 w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
+        <Image
+          src={item.image}
+          alt={item.title || `Image ${index + 1}`}
+          layout="fill"
+          objectFit="contain"
+          className="rounded-lg"
+        />
       </div>
+    </motion.div>
+  ))}
+</div>
+
     </section>
   );
 }

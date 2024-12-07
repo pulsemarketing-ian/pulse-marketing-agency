@@ -2,73 +2,66 @@
 import Image from "next/image";
 import React from "react";
 import ContentTab from "./ContentTab";
-import {Reveal} from '@/utils/Reveal';
-import {motion} from 'motion/react';
+import { Reveal } from '@/utils/Reveal';
+import { motion } from 'framer-motion';
 
 const AppDevelopmentSection = () => {
   const [tabImage, setTabImage] = React.useState(0);
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 768;
 
   return (
-    <main className="mt-30 md:mt-10 md:my-20">
-         <div className="flex justify-center mt-3">
+    <main className="mt-50 md:mt-10 md:my-20">
+      <div className="flex justify-center mt-3">
         <Reveal>
           <h1 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full">
-            Leading the Way in Mobile <br/> App Development
+            Leading the Way in Mobile <br /> App Development
           </h1>
         </Reveal>
       </div>
-      
-      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between ">
-        {/* project section left box  */}
-        <motion.div 
-                  initial={{
-                    x: -300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }} className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center ">
+
+      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between">
+        {/* Left Box */}
+        <motion.div
+          initial={isDesktop ? { x: -300, opacity: 0 } : false}
+          whileInView={isDesktop ? { x: 0, opacity: 1 } : false}
+          transition={
+            isDesktop
+              ? { delay: 0.5, duration: 0.5, ease: "easeInOut" }
+              : {}
+          }
+          viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
+          className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center"
+        >
           {tabImage === 0 && (
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
-            <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={500} height={500} />
+              <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={500} height={500} />
             </div>
           )}
           {tabImage === 1 && (
-              <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
               <Image src={"/images/app_page_images/app-hero.png"} alt="mob2" width={500} height={500} />
-              </div>
+            </div>
           )}
           {tabImage === 2 && (
-              <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
-            <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={500} height={500} />
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
+              <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={500} height={500} />
             </div>
           )}
         </motion.div>
 
-        {/* project section right box */}
-        <motion.div 
-                  initial={{
-                    x: 300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }} className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects">
-          {/* tab box for project  */}
+        {/* Right Box */}
+        <motion.div
+          initial={isDesktop ? { x: 300, opacity: 0 } : false}
+          whileInView={isDesktop ? { x: 0, opacity: 1 } : false}
+          transition={
+            isDesktop
+              ? { delay: 0.5, duration: 0.5, ease: "easeInOut" }
+              : {}
+          }
+          viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
+          className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects"
+        >
+          {/* Tab Section */}
           <div className="w-[100%] md:w-[70%]">
             <ContentTab tabImage={tabImage} setTabImage={setTabImage} />
           </div>
@@ -85,8 +78,6 @@ const AppDevelopmentSection = () => {
             {tabImage === 2 && (
               <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob5" width={300} height={300} />
             )}
-
-            
           </div>
         </motion.div>
       </main>

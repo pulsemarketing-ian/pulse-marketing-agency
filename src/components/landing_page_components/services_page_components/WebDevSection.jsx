@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const WebDevSection = () => {
     return (
-      <main className="relative w-full pb-[30rem] md:pb-0">
+      <main className="relative w-full pb-[30rem] md:pb-0 -mt-[100px]">
         {/* Background Image */}
         <div
           style={{

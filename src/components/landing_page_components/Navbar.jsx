@@ -238,6 +238,7 @@ export default function Navbar() {
         <div className="mt-6 space-y-6">
           {menuItems.map((item, index) => (
             <div key={item.label}>
+              <Link href={item.path}>
               <div
                 className={`block text-lg font-medium tracking-wide p-3 rounded-lg bg-gray-800/70 hover:bg-blue-600/70 transition duration-200 cursor-pointer ${
                   item.categories ? "flex justify-between items-center" : ""
@@ -246,13 +247,14 @@ export default function Navbar() {
                   item.categories ? handleSubmenuToggle(index) : toggleDrawer(false)
                 }
               >
-                <Link href={item.path}>{item.label}</Link>
+                {item.label}
                 {item.categories && (
                   <span className="ml-2">
                     {openSubmenu === index ? "-" : "+"}
                   </span>
                 )}
               </div>
+              </Link>
 
               {/* Subcategories dropdown */}
               {item.categories && openSubmenu === index && (

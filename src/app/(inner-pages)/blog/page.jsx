@@ -238,7 +238,7 @@ const BlogPage = () => {
             >
               <Reveal>
                 <h2 className="text-xl font-bold line-clamp-2">
-                  {item?.name?.split(' ').slice(0, 5).join(' ')}...
+                  {item?.name?.split(' ').slice(0, 4).join(' ')}...
                 </h2>
               </Reveal>
               <Reveal>

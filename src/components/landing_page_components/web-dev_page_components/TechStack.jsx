@@ -32,7 +32,7 @@ const TechStack = () => {
                     </p>
                 </Reveal>
             </div>
-        <div className="flex flex-wrap place-items-center justify-between mx-auto mt-10"
+        <div className="flex flex-wrap  gap-2 place-items-center justify-between mx-auto mt-10"
         style={{
             backgroundImage:"url('/images/app_page_images/radial.png')",
             backgroundSize:'contain',
@@ -55,7 +55,9 @@ const TechStack = () => {
                     duration: 0.5,
                     ease: "easeInOut",
                   }}
-                  viewport={{ once: false, amount: 0.2 }}>
+                  viewport={{ once: false, amount: 0.2 }}
+                  className='flex-grow basis-[calc(33.333%-10px)] md:basis-0'
+                  >
                 <Image
                 key={index}
                 src={item.img}

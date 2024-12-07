@@ -13,6 +13,7 @@ export default function HeroSection() {
         backgroundImage: "url('/images/seo_page_images/seo-hero.png')",
         backgroundSize: "cover",
       }}
+      className='md:pb-[150px]'
     >
       <Navbar />
       <div className='h-[80vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto px-4 md:px-0'>

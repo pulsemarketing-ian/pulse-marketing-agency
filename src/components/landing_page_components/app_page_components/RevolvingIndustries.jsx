@@ -54,7 +54,7 @@ const ChooseCardsSlider = () => {
    >
       <Slider {...settings}>
         {MySliderArr.map((item, index) => (
-          <div key={index} className="flex justify-between w-auto h-auto gap-3">
+          <div key={index} className="flex justify-between w-auto h-auto gap-3 m-4">
               <Image
                 src={item.image}
                 alt={`Slide ${index + 1}`}
@@ -62,7 +62,7 @@ const ChooseCardsSlider = () => {
                 height={250}
                 className="filter-invert relative"
                 />
-              <div className='absolute bg-custom-gradient rounded-md bottom-[12px] translate-x-[17vw] text-xl py-1 px-2 z-20]'>
+              <div className='absolute bg-custom-gradient rounded-md bottom-[12px] translate-x-[17vw] text-xl py-1 px-2 z-20] hidden md:block'>
                 <FaArrowRight className=' text-[10px]'/>
                 </div>
               {/* <div className='absolute bottom-[-20px] z-30'><p>Lorem ipsum dolor sit.</p></div> */}

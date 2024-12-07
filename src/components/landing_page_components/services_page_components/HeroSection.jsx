@@ -11,6 +11,7 @@ const HeroSection = () => {
              backgroundImage: "url('/images/services_page_images/hero-img.png')",
              backgroundSize: "cover",
             }}
+            className='pb-[100px]'
             >
             <Navbar/>
             <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>

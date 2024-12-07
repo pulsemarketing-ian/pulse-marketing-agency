@@ -71,7 +71,7 @@ const OurBlog = () => {
         {currentBlogs.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[30%] cursor-pointer"
+            className="flex flex-col space-y-2 w-full sm:w-[45%] md:w-[30%] lg:w-[30%] cursor-pointer mb-6 md:mb-0"
             onClick={() => handleBlogClick(item?._id)}
           >
             <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
@@ -86,7 +86,7 @@ const OurBlog = () => {
             <div className="flex flex-col gap-3 mt-3">
               <Reveal>
                 <h2 className="text-xl font-semibold mt-2">
-                  {item?.name?.split(' ').slice(0, 5).join(' ')}...
+                  {item?.name?.split(' ').slice(0, 4).join(' ')}...
                 </h2>
               </Reveal>
               <Reveal>

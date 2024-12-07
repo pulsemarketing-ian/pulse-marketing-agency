@@ -99,14 +99,14 @@ const AboutText = () => {
 
 
     
-    <main className="relative w-full pb-32 md:pb-0">
+    <main className="relative w-full pb-32 md:pb-0 -mt-[100px]">
     <div
       style={{
         backgroundImage: "url('/images/services_page_images/circle.png/')",
         backgroundSize: "cover",
-        transform: "translateY(-50%)",
+        // transform: "translateY(-50%)",
       }}
-      className="h-[50vh] md:h-[100vh]"
+      className="h-[50vh] md:h-[100vh] transform translate-y-[-65%]"
     />
     <div
       className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
@@ -126,23 +126,9 @@ const AboutText = () => {
       </div>
 
       {/* inner content  */}
-      <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row ">
+      <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row mb-4 md:mb-0">
         {/* left box  */}
-        <motion.div
-          initial={{
-            x: -300,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            delay: 0.5,
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: false, amount: 0.2 }}
+        <div
           className="h-[100%] w-full rounded-2xl bg-[#120E28] p-10 md:w-[48%] "
         >
           <h2 className="mb-3 text-2xl font-bold">Why We Rock</h2>
@@ -159,25 +145,11 @@ const AboutText = () => {
             are committed to helping you reach your goals and propelling
             your business forward.
           </p>
-        </motion.div>
+        </div>
 
         {/* right box  */}
-        <motion.div
-          initial={{
-            x: 300,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            delay: 0.5,
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: false, amount: 0.2 }}
-          className="md:flex h-full w-full justify-end rounded-2xl md:w-[48%] hidden"
+        <div
+          className="md:flex h-full w-full justify-end rounded-2xl md:w-[48%] hidden "
         >
           <Image
             src={"/images/work-details/about-project.png"}
@@ -185,7 +157,7 @@ const AboutText = () => {
             width={550}
             height={550}
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   </main>

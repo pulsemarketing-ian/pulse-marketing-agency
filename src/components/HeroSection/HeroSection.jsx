@@ -561,14 +561,14 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
               </>
       )}
       
-      <div
+      {/* <div
         onClick={toggleForm}
         className="absolute bottom-0 right-0 w-[30%] -translate-y-16"
       >
         <div className="bg-[#50A2D4] px-6 rounded-tl-[40px] py-3 flex items-center justify-end get-mv-btbn">
           <h3 className="poppins-light text-white text-lg">Get in touch</h3>
         </div>
-      </div>
+      </div> */}
     </div>
       </main>
     </>

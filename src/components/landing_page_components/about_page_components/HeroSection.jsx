@@ -15,16 +15,16 @@ const HeroSection = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="relative"
+        className="relative pb-[150px]"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
 
         <Navbar />
-        <div className="relative flex h-[75vh] w-full flex-col items-center justify-center md:h-[100vh]">
-          <div className="z-10 flex flex-col items-center md:translate-y-[-4rem]">
+        <div className="relative flex h-[75vh] w-full flex-col items-center justify-center md:h-[120vh]">
+          <div className="z-10 flex flex-col items-center translate-y-[-2rem] md:translate-y-[-4rem]">
             {/* Service heading */}
-            <div className="mb-2 flex items-center justify-center gap-1">
+            <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">
               <Image
                 src="/images/services_page_images/blue-dot.png"
                 alt="blue-dot"
@@ -37,7 +37,7 @@ const HeroSection = () => {
             {/* Heading main */}
             <Reveal>
               <h2
-                className="text-3xl font-bold capitalize text-white md:text-5xl"
+                className="text-3xl font-bold capitalize text-white md:text-5xl pb-2"
                 style={{ lineHeight: "1.2" }}
               >
                 Empowering Your <br />
@@ -63,6 +63,7 @@ const HeroSection = () => {
             />
           </div> */}
         </div>
+        
       </main>
 
     </>

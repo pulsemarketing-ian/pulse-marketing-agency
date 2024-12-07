@@ -15,21 +15,25 @@ export default function Slider() {
   const [currentVideo, setCurrentVideo] = useState('');
 
   const images = [
-    { src: '/images/video_page_images/portoflio(7).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(5).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(6).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(8).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(9).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(7).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(5).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(6).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(8).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(9).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(7).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(5).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(6).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(8).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
-    { src: '/images/video_page_images/portoflio(9).png', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (1).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (2).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (3).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (4).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (5).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (6).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (7).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (8).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (9).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (1).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (2).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (3).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (4).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (5).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (6).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (7).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (8).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+    { src: '/images/video_page_images/video (9).webp', video: 'https://www.youtube.com/watch?v=5aCdZz_Zj4s' },
+
   ];
 
   const handleOpen = (video) => {

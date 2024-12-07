@@ -3,8 +3,8 @@ import Slider from './Slider'
 const PortfolioSection = () => {
 
   return (
-    <React.Fragment>
-      <main className="relative w-full">
+    <React.Fragment> 
+      <main className="relative w-full md:-mt-[100px]">
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",

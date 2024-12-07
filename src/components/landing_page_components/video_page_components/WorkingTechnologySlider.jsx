@@ -7,21 +7,29 @@ import {motion} from 'motion/react';
 export default function WorkingTechnologySlider() {
     const techSliderImage = [
         {
-            image: '/images/video_page_images/slider-img (2).png',
-            content: 'Explainer Videos'
+            image: '/images/video_page_images/portfolio (1).webp',
         },
         {
-            image: '/images/video_page_images/slider-img (3).png',
-            content: 'Product Promotions'
+            image: '/images/video_page_images/portfolio (2).webp',
         },
         {
-            image: '/images/video_page_images/slider-img (4).png',
-            content: 'Whiteboard Animation'
+            image: '/images/video_page_images/portfolio (3).webp',
         },
         {
-            image: '/images/video_page_images/slider-img (1).png',
-            content: 'Video Editing'
-        }
+            image: '/images/video_page_images/portfolio (4).webp',
+        },
+        {
+            image: '/images/video_page_images/portfolio (5).webp',
+        },
+        {
+            image: '/images/video_page_images/portfolio (6).webp',
+        },
+        {
+            image: '/images/video_page_images/portfolio (7).webp',
+        },
+        {
+            image: '/images/video_page_images/portfolio (8).webp',
+        },
     ]
 
     const settings = {
@@ -61,6 +69,7 @@ export default function WorkingTechnologySlider() {
 
     return (
         <main className="max-w-[1200px] mx-auto py-6 px-4">
+            <h2 className='text-4xl font-bold text-center '>Product Photography</h2>
             <Slider {...settings}>
                 {techSliderImage.map((item, index) => (
                     <motion.div 
@@ -78,7 +87,7 @@ export default function WorkingTechnologySlider() {
                       ease: "easeInOut",
                     }}
                     viewport={{ once: false, amount: 0.2 }} 
-                    className="flex flex-col items-center justify-center px-2" key={index}>
+                    className="flex flex-col items-center justify-center px-2 mt-10" key={index}>
                         <Image src={item.image} alt={item.content} width={250} height={250} className="rounded-lg" />
                         <p className="text-start text-[14px] mt-3">{item.content}</p>
                     </motion.div>

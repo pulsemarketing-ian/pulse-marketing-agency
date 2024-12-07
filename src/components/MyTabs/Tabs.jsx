@@ -87,7 +87,7 @@ export default function Tabs() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
       {tabContent.map((item, index) => (
         <div key={index} className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[100%]">
-          <div className="relative h-[200px] w-full md:h-[300px]">
+          <div className="relative h-[200px] w-full md:h-[300px] md:mb-4">
             {/* <Link href={item?.section}> */}
               <Image
                 src={item?.pictures[0]}
@@ -105,7 +105,7 @@ export default function Tabs() {
             </h4>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
               <div className="flex flex-wrap gap-4">
                 {["Design", "Development", "SEO"].map((tag, index) => (
                   <div

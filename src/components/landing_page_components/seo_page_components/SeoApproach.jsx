@@ -7,7 +7,7 @@ const SeoApproach = () => {
 
   return (
     <React.Fragment>
-      <main className="relative w-full pb-32 md:pb-0">
+      <main className="relative w-full pb-32 md:pb-0 md:-mt-[100px]">
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",

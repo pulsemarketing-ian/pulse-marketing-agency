@@ -13,10 +13,10 @@ const Footer = () => {
   return (
     <>
       <main className="w-full pb-12 pt-12 text-white">
-        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto flex flex-wrap justify-between md:justify-none gap-8">
 
           {/* Logo & About Section */}
-          <div className="flex flex-col gap-4 items-start md:min-h-[250px]">
+          <div className="flex flex-col gap-4 items-start md:min-h-[250px] md:w-[20%]">
             <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
               Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm with years
@@ -47,9 +47,10 @@ const Footer = () => {
             <h1 className="font-medium text-xl">Services</h1>
             {[
               { name: "Web Development", link: "/web-development" },
-              { name: "App Development", link: "/app-development" },
+              { name: "App Development", link: "/app" },
               { name: "SEO", link: "/seo" },
               { name: "Branding", link: "/branding" },
+              { name: "Video Photo", link: "/video-photo" },
             ].map((service, index) => (
               <Link key={index} href={service.link} className="group flex items-center gap-2">
                 <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
