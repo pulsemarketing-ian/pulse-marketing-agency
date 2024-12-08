@@ -11,22 +11,22 @@ const HeroSection = () => {
              backgroundImage: "url('/images/services_page_images/hero-img.png')",
              backgroundSize: "cover",
             }}
-            className='pb-[100px]'
+            className='md:pb-[150px]'
             >
             <Navbar/>
             <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>
 
-        <div className='translate-y-[-4rem] flex-col item-center'>
+        <div className=' translate-y-0 md:translate-y-[-1rem] flex-col item-center'>
 
                 {/* serive heading  */}
-            <div className='flex items-center gap-1 mb-2 justify-center'>
-                <Image
+                <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">
+              <Image
                 src="/images/services_page_images/blue-dot.png"
                 alt="blue-dot"
                 width={20}
                 height={20}
-                />
-            <p>Services</p>
+              />
+              <p>Services</p>
             </div>
 
             {/* heading main  */}

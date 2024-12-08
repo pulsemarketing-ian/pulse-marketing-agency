@@ -10,7 +10,9 @@ const AboutUs = () => {
     <main className="theme_bg_color">
         <HeroSection/>
         <AboutText/>
+        <div className='mt-32 md:mt-0'>
         <Testimonial/>
+        </div>
         <OurBlog/>
         {/* <FaqSection/> */}
         <Footer/>

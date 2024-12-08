@@ -106,13 +106,13 @@ const AboutText = () => {
         backgroundSize: "cover",
         // transform: "translateY(-50%)",
       }}
-      className="h-[50vh] md:h-[100vh] transform translate-y-[-65%]"
+      className="h-[50vh] md:h-[100vh] transform md:translate-y-[-65%] translate-y-[-50%]"
     />
     <div
-      className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
+      className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center md:top-0 bg-[#040117] md:bg-transparent"
       style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >

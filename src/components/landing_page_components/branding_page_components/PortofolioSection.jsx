@@ -72,7 +72,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <main className="relative w-full md:mt-[-100px]">
+    <main className="relative w-full m:mt-[-100px]">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
         }}
         className="h-[55vh] md:h-[80vh]"
       />
-      <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
+      <div className="absolute -top-20 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
         <div className="z-10 mt-8 text-center">
           <Reveal>
             <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1>

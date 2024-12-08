@@ -20,7 +20,7 @@ const   HeroSection = () => {
             className='md:pb-[200px]'
             >
             <Navbar/>
-            <div className='h-[85vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[60px]'>
+            <div className='h-[75vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[60px]'>
                 {/* hero heading  */}
                 <motion.div 
                   initial={{
@@ -36,7 +36,7 @@ const   HeroSection = () => {
                     duration: 0.5,
                     ease: "easeInOut",
                   }}
-                  viewport={{ once: false, amount: 0.2 }} className="w-[45%] flex-col px-8 md:px-0">
+                  viewport={{ once: false, amount: 0.2 }} className="w-[45%] flex-col px-8 md:px-0  -mt-18 md:mt-0">
                     <div className='flex items-center gap-1 mb-2 w-auto'>
                         <Image
                         src="/images/services_page_images/blue-dot.png"

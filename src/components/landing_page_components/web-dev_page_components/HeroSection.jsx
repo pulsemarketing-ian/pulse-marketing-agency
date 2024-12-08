@@ -18,7 +18,7 @@ const HeroSection = () => {
             className='pb-[150px]'
             >
             <Navbar/>
-            <div className='h-[80vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[50px]'>
+            <div className='h-[60vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[50px]'>
                 {/* hero heading  */}
                 <motion.div 
                   initial={{

@@ -16,7 +16,7 @@ export default function HeroSection() {
       className='md:pb-[150px]'
     >
       <Navbar />
-      <div className='h-[80vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto px-4 md:px-0'>
+      <div className='h-[70vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto px-4 md:px-0'>
       {/* hero heading */}
         <motion.div 
                   initial={{
