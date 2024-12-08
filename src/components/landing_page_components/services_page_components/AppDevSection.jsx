@@ -19,7 +19,7 @@ const AppDevSection = () => {
         {/* Main Content Section */}
         <div className=" container mx-auto px-4 py-16">
         <div 
-             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105 md:translate-y-22 mt-[5rem] md:mt-0"
+             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105 md:translate-y-22 mt-[10rem] md:mt-0"
              style={{
             backgroundImage: `url('/images/services_page_images/third-section-img.png')`,
             backgroundSize:'cover',
