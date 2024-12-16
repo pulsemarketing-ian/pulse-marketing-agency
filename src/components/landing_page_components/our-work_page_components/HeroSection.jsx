@@ -163,7 +163,7 @@ const HeroSection = () => {
           className="h-[30vh] md:h-[70vh] transform translate-y-[-50%] md:translate-y-[-100%]"
         />
         <div
-          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:-top-50 md:px-0"
+          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:-top-14 md:px-0"
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "contain",
@@ -229,7 +229,7 @@ const HeroSection = () => {
         </div>
       </main>
 
-      <div className="mt-[-22%] z-30 relative md:translate-y-[-8rem]">
+      <div className="mt-[-22%] z-30 relative md:translate-y-[-10rem]">
       <Tabs/>
       </div>
 
