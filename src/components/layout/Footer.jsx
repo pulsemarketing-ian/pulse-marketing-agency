@@ -30,9 +30,9 @@ const Footer = () => {
             <h1 className="font-medium text-xl">Quick Links</h1>
             {[
               { name: "Home", link: "/" },
-              { name: "About", link: "/about" },
+              { name: "About", link: "/about-us" },
               { name: "App", link: "/app" },
-              { name: "Portfolio", link: "/portfolio" },
+              { name: "Portfolio", link: "/our-work" },
               { name: "Blog", link: "/blog" },
             ].map((item, index) => (
               <Link key={index} href={item.link} className="group flex items-center gap-2">

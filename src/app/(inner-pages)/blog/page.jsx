@@ -73,7 +73,7 @@ const BlogPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="relative"
+        className="relative md:pb-[200px]"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -110,26 +110,26 @@ const BlogPage = () => {
             </Reveal>
           </div>
 
-          <div className="absolute bottom-[4.5rem] md:bottom-6 right-6 z-10 rounded-full bg-my-blue-gradient p-3">
+          {/* <div className="absolute bottom-[4.5rem] md:bottom-6 right-6 z-10 rounded-full bg-my-blue-gradient p-3">
             <Image
               src={"/images/services_page_images/inbox.png"}
               alt="inbox"
               width={15}
               height={15}
             />
-          </div>
+          </div> */}
         </div>
          </main>
 
         {/* blog section  */}
-         <main className="relative w-full pb-32 md:pb-0">
+         <main className="relative pb-32 md:pb-0 md:-mt-[250px] w-full">
     <div
       style={{
         backgroundImage: "url('/images/services_page_images/circle.png/')",
         backgroundSize: "cover",
         // transform: "translateY(-100%)",
       }}
-      className="h-[50vh] md:h-[57vh] transform translate-y-[-40%] md:translate-y-[-100%]"
+      className="h-[50vh] md:h-[80vh] transform translate-y-[-43%] md:translate-y-[-50%]"
     />
     <div
       className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
@@ -139,7 +139,7 @@ const BlogPage = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="z-10 text-center md:-mt-4">
+      <div className="z-10 text-center md:mt-16">
         <Reveal>
           <h1 className="mb-2 text-xl font-bold tracking-wide md:text-5xl">
           Your Weekly Dose of  <br />
@@ -147,74 +147,10 @@ const BlogPage = () => {
           </h1>
         </Reveal>
       </div>
-
-      {/* inner content  */}
-      {/* <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row ">
-        left box 
-        <motion.div
-          initial={{
-            x: -300,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            delay: 0.5,
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: false, amount: 0.2 }}
-          className="h-[100%] w-full rounded-2xl bg-[#120E28] p-10 md:w-[48%] "
-        >
-          <h2 className="mb-3 text-2xl font-bold">Why We Rock</h2>
-          <p>
-            Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm
-            with years of experience serving over 8,000 clients from various
-            industries. We have successfully completed more than 25,000
-            projects, offering comprehensive services from AI consulting,
-            website and app development, ORM, branding, to digital marketing
-            and more. Our highly skilled team applies the latest marketing
-            strategies to meet our clients goals, including increasing brand
-            awareness, lead generation and sales growth. Thanks for
-            considering Pulse Marketing Inc. for your marketing needs. We
-            are committed to helping you reach your goals and propelling
-            your business forward.
-          </p>
-        </motion.div>
-
-        right box 
-        <motion.div
-          initial={{
-            x: 300,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            delay: 0.5,
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: false, amount: 0.2 }}
-          className="flex h-full w-full justify-end rounded-2xl md:w-[48%] "
-        >
-          <Image
-            src={"/images/work-details/about-project.png"}
-            alt="about-project"
-            width={550}
-            height={550}
-          />
-        </motion.div>
-      </div> */}
-      
     </div>
         </main>
 
-        <div className="flex flex-wrap justify-between my-4 md:my-0 gap-4 max-w-[1200px] mx-auto pt-6 px-4 transform translate-y-[-10%] md:translate-y-[-15%]">
+        <div className="flex flex-wrap justify-between my-4 md:my-0 gap-4 max-w-[1200px] mx-auto pt-6 px-4 transform translate-y-[-10%] md:translate-y-[-20%]">
         {currentBlogs.map((item, index) => (
           <div
             key={index}
@@ -252,8 +188,6 @@ const BlogPage = () => {
             </div>
           </div>
         ))}
-
-
       </div>
 
       {/* pagination  */}

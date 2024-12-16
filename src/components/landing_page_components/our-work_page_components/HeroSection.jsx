@@ -80,6 +80,7 @@ const HeroSection = () => {
           backgroundImage: "url('/images/our-work_page_images/our-work.png')",
           backgroundSize: "cover",
         }}
+        className=" md:pb-[150px]"
       >
         <Navbar />
         <div className="relative mx-auto flex h-[80vh] max-w-[1200px] flex-row items-center justify-center md:h-[100vh]">
@@ -120,7 +121,7 @@ const HeroSection = () => {
             </div>
           </div> */}
 
-<div className="z-10 flex flex-col items-center md:translate-y-[-4rem]">
+        <div className="z-10 flex flex-col items-center md:translate-y-[-55px]">
             {/* Service heading */}
             <div className="mb-2 flex items-center justify-center gap-1">
               <Image
@@ -152,17 +153,17 @@ const HeroSection = () => {
       </main>
 
       {/* Images Section */}
-      <main className="relative mb-20 w-full z-0" ref={imageSectionRef}>
+      <main className="relative mb-20 w-full z-0 md:-mt-[0px]" ref={imageSectionRef}>
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",
             backgroundSize: "cover",
             // transform: "translateY(-50%)",
           }}
-          className="h-[30vh] md:h-[60vh] transform translate-y-[-50%] md:translate-y-[-100%]"
+          className="h-[30vh] md:h-[70vh] transform translate-y-[-50%] md:translate-y-[-100%]"
         />
         <div
-          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:top-12 md:px-0"
+          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center px-4 md:-top-50 md:px-0"
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "contain",
@@ -228,7 +229,7 @@ const HeroSection = () => {
         </div>
       </main>
 
-      <div className="mt-[-22%] z-30 relative">
+      <div className="mt-[-22%] z-30 relative md:translate-y-[-8rem]">
       <Tabs/>
       </div>
 
