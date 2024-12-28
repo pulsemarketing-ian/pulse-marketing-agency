@@ -34,7 +34,7 @@ const Page = () => {
       <main className="theme_bg_color">
         <main 
           key={blogInner._id}
-          className="relative"
+          className="relative md:pb-[250px]"
           style={{
             backgroundImage: `url(${blogInner?.component?.pictures})`,
             backgroundSize: "cover",
@@ -61,7 +61,7 @@ const Page = () => {
               {/* Heading main */}
               <Reveal>
                 <h2
-                  className="text-3xl md:text-5xl font-bold text-center text-white" // Text color set to white
+                  className="text-3xl md:text-5xl font-bold text-center text-white"
                   style={{ lineHeight: '1.2' }}
                 >
                   {blogInner?.component?.name
@@ -80,15 +80,7 @@ const Page = () => {
               </Reveal>
             </div>
 
-            <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
-              <Image
-                src={'/images/services_page_images/inbox.png'}
-                alt="inbox"
-                width={15}
-                height={15}
-              />
-            </div>
-
+         
           </div>
         </main>
         
@@ -100,10 +92,10 @@ const Page = () => {
             backgroundSize: "cover",
             // transform: "translateY(-100%)",
           }}
-          className="h-[50vh] md:h-[100vh] transform translate-y-[-50%] md:translate-y-[-60%]"
+          className="h-[42vh] md:h-[40rem] transform translate-y-[-50%] md:translate-y-[-60%]  md:mt-[-180px]"
         />
         <div
-          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 theme_bg_color"
+          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "contain",
