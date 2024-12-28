@@ -16,7 +16,7 @@ const page = () => {
             <VideoBenefitSection/>
             <WorkingTechnologySlider/>
             <Testimonials/>
-            {/* <FaqSection/> */}
+            <FaqSection/>
             <OurBlog/>
             <Footer/>
         </main>

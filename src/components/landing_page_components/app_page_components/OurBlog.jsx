@@ -45,7 +45,7 @@ const OurBlog = () => {
   const currentBlogs = blogComponent.slice(indexOfFirstBlog, indexOfLastBlog);
 
   return (
-    <main className="max-w-[1200px] mx-auto py-6 px-4">
+    <main className="max-w-[1200px] mx-auto py-6 px-6 md:px-0">
       {/* Top Heading */}
       <div className="flex flex-col lg:flex-row justify-between items-baseline gap-5 md:gap-0">
         <div className="flex-col gap-3">
@@ -55,7 +55,7 @@ const OurBlog = () => {
             </p>
           </Reveal>
           <Reveal>
-            <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-2">
+            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-2">
               What is New <br /> in Our Blogs
             </h2>
           </Reveal>

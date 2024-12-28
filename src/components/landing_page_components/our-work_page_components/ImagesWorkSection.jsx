@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const ImagesWorkSection = () => {
   return (
-    <main className="mx-auto mb-10 mt-[400px] px-4 md:mb-0 md:mt-0 md:px-0 lg:mt-0 ">
+    <main className="mx-auto mb-10 mt-[400px] px-4 md:mb-0 md:mt-0 md:px-0 lg:mt-50 xl:mt-0">
       <div className="mx-auto mt-6 flex w-full flex-col items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]">
         {/* Left Box */}
         <motion.div
@@ -26,18 +26,18 @@ const ImagesWorkSection = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[45%]"
+          className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[48%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
-          <Link href={'/work-details'}>
-            <Image
-              src={"/images/our-work_page_images/img (2).png"}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-              alt="Project Image"
+            <Link href={"/www.google.com"}>
+              <Image
+                src={"/images/our-work_page_images/img (2).png"}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+                alt="Project Image"
               />
-              </Link>
+            </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -62,7 +62,12 @@ const ImagesWorkSection = () => {
                   </div>
                 ))}
               </div>
-              <PrimaryBtn text={"View Case Study"} />
+              <PrimaryBtn
+                text="View Site"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
+              />
             </div>
           </Reveal>
         </motion.div>
@@ -83,18 +88,18 @@ const ImagesWorkSection = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[45%]"
+          className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[49%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
-          <Link href={'/work-details'}>
-            <Image
-              src={"/images/our-work_page_images/img (4).png"}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-              alt="Project Image"
+            <Link href={"/www.google.com"}>
+              <Image
+                src={"/images/our-work_page_images/img (4).png"}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+                alt="Project Image"
               />
-              </Link>
+            </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -118,15 +123,19 @@ const ImagesWorkSection = () => {
                     <p>{tag}</p>
                   </div>
                 ))}
+                <PrimaryBtn
+                  text="View Site"
+                  onClick={() => {
+                    window.open("https://www.google.com/", "_blank");
+                  }}
+                />
               </div>
             </Reveal>
-
-            <PrimaryBtn text={"View Case Study"} />
           </div>
         </motion.div>
       </div>
 
-      <div className="mx-auto mt-6 flex w-full flex-col items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]">
+      <div className="mx-auto  flex w-full flex-col items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]">
         {/* Left Box */}
         <motion.div
           initial={{
@@ -143,18 +152,18 @@ const ImagesWorkSection = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[45%]"
+          className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[48%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
-          <Link href={'/work-details'}>
-            <Image
-              src={"/images/our-work_page_images/img (2).png"}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-              alt="Project Image"
+            <Link href={"/www.google.com"}>
+              <Image
+                src={"/images/our-work_page_images/img (2).png"}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+                alt="Project Image"
               />
-          </Link>
+            </Link>
           </div>
           <Reveal>
             <h4 className="text-xl font-semibold tracking-wide">
@@ -179,7 +188,12 @@ const ImagesWorkSection = () => {
                   </div>
                 ))}
               </div>
-              <PrimaryBtn text={"View Case Study"} />
+              <PrimaryBtn
+                text="View Site"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
+              />
             </div>
           </Reveal>
         </motion.div>
@@ -200,16 +214,16 @@ const ImagesWorkSection = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[45%]"
+          className="animate-right flex w-full flex-col gap-4 md:mt-20 md:w-[49%]"
         >
           <div className="relative h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[400px]">
-          <Link href={'/work-details'}>
-            <Image
-              src={"/images/our-work_page_images/img (4).png"}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-              alt="Project Image"
+            <Link href={"/www.google.com"}>
+              <Image
+                src={"/images/our-work_page_images/img (4).png"}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+                alt="Project Image"
               />
             </Link>
           </div>
@@ -236,8 +250,13 @@ const ImagesWorkSection = () => {
                     <p>{tag}</p>
                   </div>
                 ))}
+                <PrimaryBtn
+                  text="View Site"
+                  onClick={() => {
+                    window.open("https://www.google.com/", "_blank");
+                  }}
+                />
               </div>
-              <PrimaryBtn text={"View Case Study"} />
             </div>
           </Reveal>
         </motion.div>

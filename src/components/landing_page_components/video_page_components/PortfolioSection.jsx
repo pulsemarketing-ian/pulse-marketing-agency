@@ -12,7 +12,7 @@ const PortfolioSection = () => {
             // height: "80vh",
             transform: "translateY(-50%)",
           }}
-          className="h-[60vh] md:h-[80vh]"
+          className="h-[50vh] md:h-[40rem]"
         />
         <div className="absolute -top-20 md:top-5 z-10 flex w-full flex-col items-center justify-center " >
           <div className="z-10 mt-8 text-center">

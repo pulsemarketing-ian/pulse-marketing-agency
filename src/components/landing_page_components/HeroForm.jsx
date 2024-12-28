@@ -23,7 +23,7 @@ const HeroForm = () => {
                 type="text"
                 id="name"
                 // placeholder="John Doe"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500 text-white"
               />
             </div>
 
@@ -33,7 +33,7 @@ const HeroForm = () => {
                 type="email"
                 id="email"
                 // placeholder="Your email"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500 text-white"
               />
             </div>
 
@@ -42,8 +42,7 @@ const HeroForm = () => {
               <input
                 type="tel"
                 id="phone"
-                // placeholder="Your number"
-                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-transparent border border-gray-300 rounded-xl px-3 py-1 outline-none focus:ring-2 focus:ring-purple-500 text-white"
               />
             </div>
 

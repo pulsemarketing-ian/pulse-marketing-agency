@@ -24,7 +24,7 @@ export default function Home() {
   //   return () => clearTimeout(timer);
   // }, []);
   return (
-    <div style={{ background: 'linear-gradient(90deg, #120B33 0%, #030015 100%)' }}>
+    <div style={{ background: '#040117' }}>
    
       <CustomCursor/>
       <ContentWrapper />

@@ -1,11 +1,12 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn';
 import { Reveal } from '@/utils/Reveal';
-import {motion} from 'motion/react';
+import { motion } from 'motion/react';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const faqs = [
     "There are many variations of passages of Lorem Ipsum",
@@ -15,6 +16,14 @@ const FAQSection = () => {
     "There are many variations of passages of Lorem Ipsum",
   ];
 
+  useEffect(() => {
+    // Check if the window width is for desktop
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    handleResize(); // Check on component mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -22,57 +31,42 @@ const FAQSection = () => {
   return (
     <div className="text-white py-12 flex flex-col lg:flex-row lg:justify-between w-full px-6 md:px-0 md:w-[1200px] md:mx-auto gap-4">
       {/* Left Column */}
-      <motion.div 
-                initial={{
-                    x: -300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="space-y-4 lg:w-[35%] w-full">
+      <motion.div
+        initial={isDesktop ? { x: -300, opacity: 0 } : {}}
+        whileInView={isDesktop ? { x: 0, opacity: 1 } : {}}
+        transition={isDesktop ? { delay: 0.5, duration: 0.5, ease: "easeInOut" } : {}}
+        viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
+        className="space-y-4 lg:w-[35%] w-full"
+      >
         <Reveal>
-        <p className="uppercase text-sm"> <span className="text-cyan-500 mr-2">•</span>FAQs</p>
+          <p className="uppercase text-sm"> <span className="text-cyan-500 mr-2">•</span>FAQs</p>
         </Reveal>
         <Reveal>
-        <h2 className="text-2xl md:text-4xl font-medium leading-tight mb-4">Everything You <br /> Need to Know</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-4">Everything You <br /> Need to Know</h2>
         </Reveal>
         <Reveal>
-        <p className="text-gray-300 mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.
-        </p>
+          <p className="text-gray-300 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.
+          </p>
         </Reveal>
         <PrimaryBtn text={'View All FAQs'} />
       </motion.div>
 
       {/* Right Column */}
-      <motion.div 
-                initial={{
-                    x: 300,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  viewport={{ once: false, amount: 0.2 }}  className="space-y-6 lg:w-[50%] w-full" style={{
-        backgroundImage: "url('/images/app_page_images/radial.png')",
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        padding: '10px', 
-        borderRadius: '8px'
-      }}>
+      <motion.div
+        initial={isDesktop ? { x: 300, opacity: 0 } : {}}
+        whileInView={isDesktop ? { x: 0, opacity: 1 } : {}}
+        transition={isDesktop ? { delay: 0.5, duration: 0.5, ease: "easeInOut" } : {}}
+        viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
+        className="space-y-6 lg:w-[50%] w-full"
+        style={{
+          backgroundImage: "url('/images/app_page_images/radial.png')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          padding: '10px',
+          borderRadius: '8px'
+        }}
+      >
         {faqs.map((faq, index) => (
           <div
             key={index}

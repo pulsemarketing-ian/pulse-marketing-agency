@@ -15,7 +15,7 @@ const WebDevSection = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[20vh] md:h-[110vh]"
+          className="h-[20vh] md:h-[44rem]"
         />
         
         {/* Content Section */}
@@ -26,13 +26,13 @@ const WebDevSection = () => {
             borderBottom: '4px solid #363445',
           }}
         >
-          <div className="z-10 text-center mt-10 md:mt-0 md:translate-y-[-30%]">
+          <div className="z-10 text-center mt-10 md:mt-0 md:translate-y-[-30%] text-lg">
           {/* <Reveal> */}
             <p>We are experts in</p>
             {/* </Reveal> */}
 
             <Reveal>
-              <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Development</h1>
+              <h1 className="text-2xl md:text-6xl pb-7 font-bold tracking-wide">Development</h1>
             </Reveal>
           </div>
 
@@ -40,7 +40,7 @@ const WebDevSection = () => {
           <div className="relative container mx-auto px-4 py-16">
           {/* Background Image with Hover Effect */}
             <div 
-             className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
+             className="p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
              style={{
                 backgroundImage: `url('/images/services_page_images/second-section-img.png')`,
                 backgroundSize: 'cover',

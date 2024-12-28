@@ -14,7 +14,7 @@ const SeoApproach = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[50vh] md:h-[100vh]"
+          className="h-[50vh] md:h-[42rem]"
         />
         <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center " 
          style={{
@@ -30,7 +30,7 @@ const SeoApproach = () => {
 
             {/* inner content  */}
           <div
-            className="mt-6 flex-col md:flex lg:flex-row px-6 md:px-0  md:w-[1200px] md:mx-auto  md:justify-between overflow-hidden "
+            className="mt-6 flex-col md:flex lg:flex-row px-6 md:px-0  md:w-[1200px] md:mx-auto  md:justify-between overflow-hidden items-center md:mt-10"
           >
                 {/* left box  */}
                 <div className=" w-full md:w-[55%] flex md:flex-col" >

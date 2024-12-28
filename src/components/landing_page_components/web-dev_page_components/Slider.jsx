@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
@@ -9,67 +7,72 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/autoplay';
 
-export default function Slider() {
+export default function PortfolioSlider() {
   const images = [
     { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
     { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
     { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
-    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/' },
     { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
     { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
     { src: '/images/app_page_images/img (1).webp', link: 'https://studio9p.com/en/' },
     { src: '/images/app_page_images/img (2).webp', link: 'https://www.clouarchitects.com/' },
     { src: '/images/app_page_images/img (3).webp', link: 'https://rumblestudios.tv/' },
-    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/'},
+    { src: '/images/app_page_images/img (4).webp', link: 'https://www.oneupstudio.it/' },
     { src: '/images/app_page_images/img (5).webp', link: 'https://petertarka.com/' },
     { src: '/images/app_page_images/img (6).webp', link: 'https://www.steelwavellc.com/' },
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen relative overflow-hidden py-16">
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         slidesPerView="auto"
+        initialSlide={2}
         loop={true}
         coverflowEffect={{
-          rotate: 30,
+          rotate: 0,
           stretch: 0,
-          depth: 200,
-          modifier: 1,
+          depth: 100,
+          modifier: 2,
           slideShadows: false,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
-        className="w-full h-[400px] md:h-[250px]"
+        className="w-full -mt-10"
       >
-        {images.map((image, index) => (
-          <SwiperSlide
-            key={index}
-            className="flex justify-center items-center "
-            style={{
-              width: '300px',
-            }}
-          >
-            <a href={image.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={image.src}
-                alt={`Portfolio Image ${index + 1}`}
-                className="flex gap-4 rounded-lg shadow-lg m-3"
-                style={{
-                  width: '300px',
-                  height: '300px',
-                  objectFit: 'cover',
-                }}
-              />
-            </a>
+        {images.map((item, index) => (
+          <SwiperSlide key={index} className="w-[280px] md:w-[370px] mx-5">
+            <div className="relative group">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="relative overflow-hidden rounded-xl transition-all duration-300 transform group-hover:scale-[1.02]">
+                  <img
+                    src={item.src}
+                    alt={item.link}
+                    className="w-full h-[250px] md:h-[360px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </a>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <style jsx global>{`
+        .swiper-slide {
+          transition: all 0.3s ease;
+        }
+        .swiper-slide-active {
+          transform: scale(1.1);
+          z-index: 2;
+        }
+      `}</style>
     </div>
   );
 }

@@ -79,12 +79,12 @@ export default function PortfolioSection() {
           backgroundSize: "cover",
           transform: "translateY(-50%)",
         }}
-        className="h-[55vh] md:h-[80vh]"
+        className="h-[38vh] md:h-[38rem]"
       />
       <div className="absolute -top-20 md:top-5 z-10 flex w-full flex-col items-center justify-center ">
         <div className="z-10 mt-8 text-center">
           <Reveal>
-            <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1>
+            <h1 className="text-2xl md:text-5xl font-bold tracking-wide mt-12 md:mt-0">Our Portfolio</h1>
           </Reveal>
         </div>
 
@@ -96,19 +96,6 @@ export default function PortfolioSection() {
           }}
           className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
         >
-          {/* <Slider {...settings}>
-            {portfolioItems.map((item) => (
-              <div key={item.id} className="px-2">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  className="h-auto w-full rounded-2xl shadow-lg "
-                  width={200}
-                  height={200}
-                />
-              </div>
-            ))}
-          </Slider> */}
 
           <Slider/>
         </div>

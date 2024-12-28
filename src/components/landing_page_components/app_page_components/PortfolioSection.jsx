@@ -58,11 +58,11 @@ export default function PortfolioSection() {
           backgroundSize: "cover",
           transform: "translateY(-50%)",
         }}
-        className="h-[40vh] md:h-[80vh]"
+        className="h-[40vh] md:h-[34rem]"
       />
       <div className="absolute top-0 md:top-5 z-10 flex w-full flex-col items-center justify-center">
         <div className="z-10 md:mt-8 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold tracking-wide">Our Portfolio</h1>
+          <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1>
         </div>
 
         {/* app portfolio images */}

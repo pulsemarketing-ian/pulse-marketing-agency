@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       <main className="w-full pb-12 pt-12 text-white">
-        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto flex flex-wrap justify-between md:justify-none gap-8">
+        <div className="w-full px-8 lg:px-0 lg:w-[88%] mx-auto flex flex-wrap justify-between md:justify-none gap-8">
 
           {/* Logo & About Section */}
           <div className="flex flex-col gap-4 items-start md:min-h-[250px] md:w-[20%]">
@@ -91,12 +91,14 @@ const Footer = () => {
         </div>
 
           {/* Text Scroller */}
-          <div className="flex items-center justify-center text-transparent border-text w-full py-4 text-center overflow-hidden whitespace-nowrap text-[4rem] lg:text-[100px]">
-          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
+          <div className="flex items-center W-[100%] justify-center poppins-medium text-[4rem] lg:text-[100px] text-center overflow-hidden whitespace-nowrap text-transparent border-text w-full py-0 lg:py-2">
+         <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!
+          Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!"/>
         </div>
 
+
         {/* Footer Bottom */}
-        <div className="w-full px-8 lg:px-0 lg:w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="w-full px-8 lg:px-0 lg:w-[88%] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <h3 className="text-md">© 2024 Pulse Marketing Inc. All rights reserved.</h3>
           <div className="flex gap-6 text-md">
             <Link href="/privacy" target="_blank">

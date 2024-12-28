@@ -14,7 +14,7 @@ const AboutUs = () => {
         <Testimonial/>
         </div>
         <OurBlog/>
-        {/* <FaqSection/> */}
+        <FaqSection/>
         <Footer/>
     </main>
   )

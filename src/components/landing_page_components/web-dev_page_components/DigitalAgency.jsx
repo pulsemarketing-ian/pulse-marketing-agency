@@ -23,7 +23,7 @@ const darkTheme = createTheme({
 });
 
 export default function DigitalAgency() {
-  const [expanded, setExpanded] = useState("panel1"); // Default panel1 open
+  const [expanded, setExpanded] = useState("panel1"); 
 
   const handleAccordionChange = (panel) => (_, isExpanded) => {
     setExpanded(isExpanded ? panel : false);

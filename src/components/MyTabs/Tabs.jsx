@@ -58,10 +58,12 @@ export default function Tabs() {
   };
 
   const handlePortfolioClick = (id, section) => {
-     localStorage.setItem('portfolioId', id);
-     router.push(`/work-details`);
-     const currentWebLink = localStorage.setItem('visit-website', section);
-     console.log(currentWebLink);
+    //  localStorage.setItem('portfolioId', id);
+    //  router.push(`www.google.com`, _blank);
+    window.open('https://www.google.com', '_blank');
+
+    //  const currentWebLink = localStorage.setItem('visit-website', section);
+    //  console.log(currentWebLink);
   };
 
   
@@ -122,7 +124,7 @@ export default function Tabs() {
                   </div>
                 ))}
               </div>
-              <PrimaryBtn text={"View Case Study"} onClick={() => handlePortfolioClick(item?._id, item?.section )}/>
+              <PrimaryBtn text={"View Site"} onClick={() => handlePortfolioClick()}/>
             </div>
           </Reveal>
         </div>
