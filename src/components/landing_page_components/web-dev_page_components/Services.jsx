@@ -46,6 +46,7 @@ const Services = () => {
           },
         ].map((card, index) => (
           <div
+            key={index}
             className="w-full md:w-[24%] rounded-2xl border border-1 gap-3 bg-white bg-opacity-10 backdrop-blur-md p-5 flex flex-col min-h-[220px] transform transition-transform duration-700 ease-in-out hover:scale-105"
           >
             <h3 className="text-xl font-bold tracking-wide">{card.title}</h3>
