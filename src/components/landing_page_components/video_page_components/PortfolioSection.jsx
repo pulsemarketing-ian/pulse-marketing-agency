@@ -14,7 +14,7 @@ const PortfolioSection = () => {
           }}
           className="h-[50vh] md:h-[40rem]"
         />
-        <div className="absolute -top-20 md:top-5 z-10 flex w-full flex-col items-center justify-center " >
+        <div className="absolute -top-20 md:top-12 z-10 flex w-full flex-col items-center justify-center " >
           <div className="z-10 mt-8 text-center">
             <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1>
           </div>

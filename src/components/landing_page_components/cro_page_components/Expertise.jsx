@@ -124,9 +124,9 @@ const Expertise = () => {
                     }}
                     viewport={{ once: false, amount: 0.2 }} 
                     className="flex flex-col items-center justify-center px-2 mt-10" key={index}>
-                        <Image src={item.image} alt={item.content} width={300} height={250} className="rounded-lg" />
-                        <h3 className="text-start font-medium text-xl mt-3">{item.title}</h3>
-                        <p className="text-start text-[14px] mt-3">{item.content.slice(0, 70) + '..'}</p>
+                        <Image src={item.image} alt={item.content} width={400} height={250} className="rounded-lg" />
+                        <h3 className="text-start font-semibold text-2xl mt-3">{item.title}</h3>
+                        <p className="text-start text-[16px] mt-3">{item.content.slice(0, 70) + '..'}</p>
                     </motion.div>
                 ))}
             </Slider>

@@ -86,15 +86,18 @@ import 'swiper/css/autoplay';
 
 export default function PortfolioSlider() {
   const images = [
-    { src: '/images/branding_page_images/portfolio (1).jpg'},
-    { src: '/images/branding_page_images/portfolio (2).jpg'},
-    { src: '/images/branding_page_images/portfolio (3).jpg'},
-    { src: '/images/branding_page_images/portfolio (1).jpg'},
-    { src: '/images/branding_page_images/portfolio (2).jpg'},
-    { src: '/images/branding_page_images/portfolio (3).jpg'},
-    { src: '/images/branding_page_images/portfolio (1).jpg'},
-    { src: '/images/branding_page_images/portfolio (2).jpg'},
-    { src: '/images/branding_page_images/portfolio (3).jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-01.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-02.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-03.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-04.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-05.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-06.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-07.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-08.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-09.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-10.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-11.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-12.jpg'},
   ];
 
   return (

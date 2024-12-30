@@ -8,8 +8,7 @@ const page = () => {
   return (
     <main className='theme_bg_color'>
         <HeroSection/>
-        {/* <OurWorkSection/> */}
-        <ImagesWorkSection/>
+        {/* <ImagesWorkSection/> */}
               <div className="relative z-0">
                 <Footer/>
               </div>

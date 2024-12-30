@@ -1,23 +1,37 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import PrimaryBtn from '../PrimaryBtns/PrimaryBtn';
 import { Reveal } from '@/utils/Reveal';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
   const faqs = [
-    "There are many variations of passages of Lorem Ipsum",
-    "There are many variations of passages of Lorem Ipsum",
-    "There are many variations of passages of Lorem Ipsum",
-    "There are many variations of passages of Lorem Ipsum",
-    "There are many variations of passages of Lorem Ipsum",
+    {
+      question: "What makes Pulse Agency different from other IT service providers?",
+      answer: "At Pulse Agency, we combine creativity, technical expertise, and client-focused solutions to deliver exceptional results. Our team ensures every project is customized to meet your unique needs, from web development to branding and beyond. We prioritize transparency, quality, and timely delivery, ensuring your satisfaction at every step.",
+    },
+    {
+      question: "How does Pulse handle web development projects?",
+      answer: "We follow a structured approach to web development, starting with understanding your business goals and audience. Our process includes detailed planning, custom design, and development using the latest technologies. We ensure your website is responsive, fast, and optimized for SEO and user experience.",
+    },
+    {
+      question: "Can you help improve my website's ranking on search engines?",
+      answer: "Absolutely! Our SEO experts use proven strategies, including keyword optimization, technical audits, and content enhancements, to improve your website's visibility on search engines. We aim to drive organic traffic, improve your rankings, and increase conversions.",
+    },
+    {
+      question: "How does your branding process work?",
+      answer: "Our branding process begins with a deep understanding of your business, values, and target audience. We create a cohesive brand identity, including logo design, color schemes, and messaging, to ensure your brand stands out in the competitive market. We collaborate closely with you to achieve a look and feel that aligns with your vision.",
+    },
+    {
+      question: "What can I expect from your photo & video and mobile app development services?",
+      answer: "Our photo and video services capture your brand's essence through professional visuals that resonate with your audience. For mobile app development, we design user-friendly, high-performance apps tailored to your business needs, whether for Android, iOS, or cross-platform solutions.",
+    }
   ];
 
   useEffect(() => {
-    // Check if the window width is for desktop
     const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
     handleResize(); // Check on component mount
     window.addEventListener('resize', handleResize);
@@ -46,10 +60,9 @@ const FAQSection = () => {
         </Reveal>
         <Reveal>
           <p className="text-gray-300 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.
+          Have questions about how we can help your business grow? Check out our FAQs for clear insights into our services and processes.
           </p>
         </Reveal>
-        <PrimaryBtn text={'View All FAQs'} />
       </motion.div>
 
       {/* Right Column */}
@@ -74,12 +87,12 @@ const FAQSection = () => {
             onClick={() => toggleFAQ(index)}
           >
             <div className="flex justify-between items-center">
-              <p className="text-white font-semibold">{faq}</p>
+              <p className="text-white font-semibold">{faq.question}</p>
               <span className="text-white text-xl">{activeIndex === index ? '-' : '+'}</span>
             </div>
             {activeIndex === index && (
               <p className="text-gray-400 mt-2 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                {faq.answer}
               </p>
             )}
           </div>

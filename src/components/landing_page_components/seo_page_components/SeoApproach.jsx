@@ -16,13 +16,13 @@ const SeoApproach = () => {
           }}
           className="h-[50vh] md:h-[42rem]"
         />
-        <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center " 
+        <div className="absolute top-0 md:top-15 z-10 flex w-full flex-col items-center justify-center " 
          style={{
             backgroundImage:"url('/images/app_page_images/radial.png')",
             backgroundSize:'contain',
             backgroundRepeat:'no-repeat'
             }}>
-          <div className="z-10 text-center">
+          <div className="z-10  text-center">
             <Reveal>
               <h1 className="text-xl md:text-5xl font-bold tracking-wide">Our Approach to SEO</h1>
             </Reveal>

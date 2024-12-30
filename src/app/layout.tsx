@@ -7,8 +7,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import { Inter } from "next/font/google";
 // import "./global.css";
-import CustomCursor from '@/utils/CustomCursor'
-import Head from "next/head";
+import './global.css';
 
 export default function RootLayout({
   children,

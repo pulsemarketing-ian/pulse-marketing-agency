@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -8,8 +7,10 @@ export const Reveal = ({ children, width = "fit-content" }) => {
     const slideControls = useAnimation();
 
     const onInView = useCallback(() => {
-        mainControls.start("visible");
-        slideControls.start("visible");
+        if (ref.current) {
+            mainControls.start("visible");
+            slideControls.start("visible");
+        }
     }, [mainControls, slideControls]);
 
     useEffect(() => {
@@ -19,7 +20,7 @@ export const Reveal = ({ children, width = "fit-content" }) => {
                     onInView();
                 }
             },
-            { once: true }
+            { threshold: 0.1, once: true } 
         );
 
         if (ref.current) {

@@ -16,8 +16,8 @@ const SecondSection = () => {
       className="h-[42vh] md:h-[34rem] transform md:translate-y-[-65%] translate-y-[-63%]"
     />
     <div
-      className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center md:top-0 bg-[#040117] md:bg-transparent">
-      <div className="z-10 text-center md:-mt-4">
+      className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center md:top-5 bg-[#040117] md:bg-transparent">
+      <div className="z-10 text-center md:-mt-2">
         <Reveal>
           <h1 className="mb-3 text-xl font-bold tracking-wide md:text-4xl xl:pt-10">
           Boost Your E-Commerce Sales  <br />

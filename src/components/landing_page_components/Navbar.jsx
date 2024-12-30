@@ -139,7 +139,7 @@ export default function Navbar() {
                   href={item.path}
                   className="flex items-center space-x-1 hover:text-blue-400"
                 >
-                  <span>{item.label}</span>
+                  <span className="text-[18px]">{item.label}</span>
                   {item.categories && <MdArrowDropDown className="h-5 w-5" />}
                 </Link>
 

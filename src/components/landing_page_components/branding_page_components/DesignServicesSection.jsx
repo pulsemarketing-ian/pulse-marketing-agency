@@ -16,36 +16,39 @@ export default function DesignServicesSection() {
     {
       title: "Logo Design",
       items: [
-        { image: "/images/branding_page_images/logo (1).png" },
-        { image: "/images/branding_page_images/logo (2).png" },
-        { image: "/images/branding_page_images/logo (3).png"},
-        { image: "/images/branding_page_images/logo-update (1).png" },
-        { image: "/images/branding_page_images/logo (5).png" },
-        { image: "/images/branding_page_images/logo (6).png"},
-        { image: "/images/branding_page_images/logo (7).png" },
-        { image: "/images/branding_page_images/logo-update (2).png" },
-        { image: "/images/branding_page_images/logo-update (3).png" },
-        { image: "/images/branding_page_images/logo-update (4).png" },
-        { image: "/images/branding_page_images/logo-update (5).png" },
-        { image: "/images/branding_page_images/logo-update (6).png" },
-        // { image: "/images/branding_page_images/logo (12).png"},
+        { image: "/images/branding_page_images/logo portfolio-01.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-02.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-03.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-04.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-05.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-06.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-07.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-08.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-09.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-10.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-11.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-12.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-13.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-14.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-15.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-16.jpg" },
       ],
     },
     {
       title: "Branding Design",
       items: [
-        { image: "/images/branding_page_images/branding (1).jpg" },
-        { image: "/images/branding_page_images/branding (2).jpg" },
-        { image: "/images/branding_page_images/branding (3).jpg"},
-        { image: "/images/branding_page_images/branding (4).jpg" },
-        { image: "/images/branding_page_images/branding (5).jpg" },
-        { image: "/images/branding_page_images/branding (6).jpg"},
-        { image: "/images/branding_page_images/branding (7).jpg" },
-        { image: "/images/branding_page_images/branding (8).jpg" },
-        { image: "/images/branding_page_images/branding (9).jpg"},
-        { image: "/images/branding_page_images/branding (10).jpg"},
-        { image: "/images/branding_page_images/portfolio (1).jpg"},
-        { image: "/images/branding_page_images/portfolio (3).jpg"},
+        { image: "/images/branding_page_images/businesscard portfolio-01.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-02.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-03.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-04.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-05.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-06.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-07.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-08.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-09.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-10.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-11.jpg" },
+        { image: "/images/branding_page_images/businesscard portfolio-12.jpg" },
       ],
     },
   ];
@@ -106,15 +109,15 @@ export default function DesignServicesSection() {
       }}
       viewport={{ once: false, amount: 0.2 }} 
       key={index} 
-      className="overflow-hidden rounded-lg p-2 "
+      // className="overflow-hidden rounded-lg p-2 "
     >
-      <div className="relative mb-4 h-20 md:h-52 w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
+      <div className="relative mb-4 h-20 md:h-[300px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
         <Image
           src={item.image}
           alt={item.title || `Image ${index + 1}`}
           layout="fill"
           objectFit="contain"
-          className="rounded-lg"
+          // className="rounded-lg"
         />
       </div>
     </motion.div>

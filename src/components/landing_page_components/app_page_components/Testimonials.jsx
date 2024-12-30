@@ -103,8 +103,8 @@ useEffect(() => {
               <div className="relative w-full h-[400px] flex items-center justify-center rounded-lg overflow-hidden mb-4">
                 <Image src={'/white-logo.png'} width={100} height={100} alt="Logo" />
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer">
-                  <p className="text-black font-medium text-[14px] text-center">
+                <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer overflow-auto h-[100%]">
+                  <p className="text-black font-medium text-[12px] text-center h-[100%]">
                     {testimonial.content}
                   </p>
                 </div>

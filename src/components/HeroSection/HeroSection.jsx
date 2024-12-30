@@ -761,7 +761,13 @@ const HeroSection = () => {
 
   return (
     <>
-      <main className="w-full lg:w-full lg:h-[100vh] m-auto relative">
+      <main className="w-full lg:w-full lg:h-[100vh] m-auto relative"
+      // style={{ backgroundImage: "url('/images/home0-banner.jpg')"; background-size: cover}}>
+      style={{
+        backgroundImage: "url('/images/home-banner.jpg')",
+        backgroundSize: "contain",
+      }}>
+
         <div className="flex flex-row relative w-[100%] justify-between ">
           {/* my header component  */}
 

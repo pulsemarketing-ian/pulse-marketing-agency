@@ -5,7 +5,7 @@ import {motion} from 'motion/react';
 
 const BusinessGoals = () => {
   return (
-    <main className='w-full px-6 md:px-0 md:w-[1200px] md:mx-auto py-16' 
+    <main className='w-full px-6 md:px-0 md:w-[1200px] md:mx-auto py-16 mt-[280px] md:mt-0' 
     style={{
         backgroundImage:"url('/images/app_page_images/radial.png')",
         backgroundSize:'contain',
@@ -13,7 +13,7 @@ const BusinessGoals = () => {
     }}>       
       <div className='w-full mx-auto flex items-center justify-center text-center'>
         <Reveal>
-            <h2 className='text-xl md:text-4xl font-bold tracking-wide text-center mb-3'>Developing SEO Strategy And Plan!</h2>
+            <h2 className='text-xl md:text-5xl font-bold tracking-wide text-center mb-3'>Developing SEO Strategy And Plan!</h2>
             <p className='text-center w-[80%] mx-auto'>We work together to understand your business goals and identify the best path for success. We will discuss how a strong online presence can lead you toward greate r things to come, as well as what needs improvement.</p>
         </Reveal>
         </div>     

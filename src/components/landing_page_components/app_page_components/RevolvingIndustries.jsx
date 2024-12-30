@@ -54,17 +54,19 @@ const ChooseCardsSlider = () => {
    >
       <Slider {...settings}>
         {MySliderArr.map((item, index) => (
-          <div key={index} className="flex justify-between w-auto h-auto gap-3 m-4">
+          <div key={index} className="flex justify-between w-auto h-auto gap-3 m-4 min-h-72 relative rounded-2xl">
               <Image
                 src={item.image}
                 alt={`Slide ${index + 1}`}
-                width={250}
-                height={250}
-                className="filter-invert relative"
+                // width={320}
+                // height={320}
+                layout='fill'
+                objectFit='cover'
+                className="filter-invert relative p-2 rounded-2xl"
                 />
-              <div className='absolute bg-custom-gradient rounded-md bottom-[12px] translate-x-[17vw] text-xl py-1 px-2 z-20] hidden md:block'>
+              {/* <div className='absolute bg-custom-gradient rounded-md bottom-[12px] translate-x-[17vw] text-xl py-1 px-2 z-20] hidden md:block'>
                 <FaArrowRight className=' text-[10px]'/>
-                </div>
+                </div> */}
               {/* <div className='absolute bottom-[-20px] z-30'><p>Lorem ipsum dolor sit.</p></div> */}
           </div>
         ))}

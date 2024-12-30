@@ -20,7 +20,6 @@
 //     { image: "/1 (12).png" },
 //   ];
 
-
 //   const settings = {
 //     infinite: true,
 //     slidesToShow: 4,
@@ -51,7 +50,7 @@
 //   useEffect(() => {
 //     ChooseUsSlider()
 //   }, [])
-  
+
 //   return (
 //     <div className="w-full overflow-hidden lg:mt-15 ">
 //       <Slider {...settings}>
@@ -122,7 +121,6 @@
 //   )
 // };
 
-
 // function ChoosePlus() {
 //   const [chooseUs, setChooseUs] = useState([]);
 
@@ -183,9 +181,6 @@
 
 // export default ChoosePlus;
 
-
-
-
 import React from "react";
 import Image from "next/image";
 import { Reveal } from "../../utils/Reveal";
@@ -221,7 +216,7 @@ export const ChooseCardsSlider = () => {
       <Slider {...settings}>
         {MySliderArr.map((item, index) => (
           <div key={index} className="flex justify-between">
-            <div className="flex items-center justify-center w-[93%] md:w-[95%] h-[10vh] lg:h-[20vh] py-8 px-6 bg-custom-gradient rounded-md">
+            <div className="flex h-[10vh] w-[93%] items-center justify-center rounded-md bg-custom-gradient px-6 py-8 md:w-[95%] lg:h-[20vh]">
               <Image
                 src={item.image}
                 alt={`Slide ${index + 1}`}
@@ -239,21 +234,26 @@ export const ChooseCardsSlider = () => {
 
 function ChoosePlus() {
   return (
-    <>
-
-      <main className="w-full lg:w-[75%] mx-auto px-8 ct-padding">
-          <div className="md:flex flex-row justify-between items-center pb-10 md:pb-12">
+    <div
+      style={{
+        backgroundImage: "url('/images/app_page_images/radial.png')",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <main className="ct-padding mx-auto w-full px-8 lg:w-[75%]">
+        <div className="flex-row items-center justify-between pb-10 md:flex md:pb-12">
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
-              <h1 className="poppins-medium text-5xl ct-heading">
-              Why Leaders <br /> Choose Pulse
+              <h1 className="poppins-medium ct-heading text-5xl">
+                Why Leaders <br /> Choose Pulse
               </h1>
             </Reveal>
           </div>
-          <div className="w-[90%] mt-6 md:mt-0 md:w-[35%] poppins-light font-light">
+          <div className="poppins-light mt-6 w-[90%] font-light md:mt-0 md:w-[35%]">
             <Reveal>
               <p>
-              Pulse empowers business leaders to achieve their objectives more
+                Pulse empowers business leaders to achieve their objectives more
                 swiftly and effectively. Our primary focus is to enhance client
                 revenue.
               </p>
@@ -267,16 +267,16 @@ function ChoosePlus() {
       {/* <BrandsSlider /> */}
       <hr className="my-16" />
 
-      <main className="w-full lg:w-[77%] mx-auto px-4  md:px-0">
-        <div className="md:flex flex-row justify-between items-center pb-10 md:pb-12">
+      <main className="mx-auto w-full px-4 md:px-0  lg:w-[77%]">
+        <div className="flex-row items-center justify-between pb-10 md:flex md:pb-12">
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
-              <h1 className="poppins-medium text-5xl ct-heading">
+              <h1 className="poppins-medium ct-heading text-5xl">
                 Lets Build <br /> Something Great!
               </h1>
             </Reveal>
           </div>
-          <div className="w-[90%] mt-6 md:mt-0 md:w-[35%] poppins-light  font-light">
+          <div className="poppins-light mt-6 w-[90%] font-light md:mt-0  md:w-[35%]">
             <Reveal>
               <p>
                 Join us on a journey to create something truly extraordinary.
@@ -286,7 +286,7 @@ function ChoosePlus() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

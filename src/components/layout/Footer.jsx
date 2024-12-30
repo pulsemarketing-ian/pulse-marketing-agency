@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4 items-start md:min-h-[250px] md:w-[20%]">
             <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
-              Welcome to Pulse Marketing Inc, a Vancouver-based marketing firm with years
+              Welcome to Pulse, a Vancouver-based marketing firm with years
               of experience in the field serving 8,000+ clients from various industries.
               We have successfully completed more than 25,000 projects.
             </p>
@@ -37,13 +37,13 @@ const Footer = () => {
             ].map((item, index) => (
               <Link key={index} href={item.link} className="group flex items-center gap-2">
                 <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
-                <span className="relative hover:underline-animation">{item.name}</span>
+                <span className="relative hover:underline-animation text-[18px]">{item.name}</span>
               </Link>
             ))}
           </div>
 
           {/* Services */}
-          <div className="flex flex-col gap-4 md:min-h-[250px]">
+          <div className="flex flex-col gap-[9px] md:min-h-[250px]">
             <h1 className="font-medium text-xl">Services</h1>
             {[
               { name: "Web Development", link: "/web-development" },
@@ -51,10 +51,11 @@ const Footer = () => {
               { name: "SEO", link: "/seo" },
               { name: "Branding", link: "/branding" },
               { name: "Video Photo", link: "/video-photo" },
+              { name: "CRO", link: "/cro" },
             ].map((service, index) => (
               <Link key={index} href={service.link} className="group flex items-center gap-2">
                 <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
-                <span className="relative hover:underline-animation">{service.name}</span>
+                <span className="relative hover:underline-animation text-[18px]">{service.name}</span>
               </Link>
             ))}
           </div>
@@ -65,13 +66,13 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <Link href="tel:18443303141" target="_blank" className="flex items-center">
                 <FaPhoneAlt />
-                <span className="ml-3 text-sm">18443303141</span>
+                <span className="ml-3 text-[18px]">18443303141</span>
               </Link>
             </div>
             <div className="flex items-center gap-2">
               <Link href="mailto:hi@pulsemarketing.io" target="_blank" className="flex items-center">
                 <MdEmail />
-                <span className="ml-3 text-sm">hi@pulsemarketing.io</span>
+                <span className="ml-3 text-[18px]">hi@pulsemarketing.io</span>
               </Link>
             </div>
           </div>
@@ -99,8 +100,8 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="w-full px-8 lg:px-0 lg:w-[88%] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <h3 className="text-md">© 2024 Pulse Marketing Inc. All rights reserved.</h3>
-          <div className="flex gap-6 text-md">
+          <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
+          <div className="flex gap-6 text-[18px]">
             <Link href="/privacy" target="_blank">
               Privacy Policy
             </Link>

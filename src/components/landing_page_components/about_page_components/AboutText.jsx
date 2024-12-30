@@ -13,7 +13,7 @@ const AboutText = () => {
         backgroundImage: "url('/images/services_page_images/circle.png/')",
         backgroundSize: "cover",
       }}
-      className="h-[50vh] md:h-[36rem] transform md:translate-y-[-65%] translate-y-[-50%]"
+      className="h-[50vh] md:h-[38rem] transform md:translate-y-[-65%] translate-y-[-50%]"
     />
     <div
       className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center md:top-0 bg-[#040117] md:bg-transparent"
@@ -56,13 +56,13 @@ const AboutText = () => {
 
         {/* right box  */}
         <div
-          className="md:flex h-full w-full justify-end rounded-2xl md:w-[48%] hidden "
-        >
+          className="md:flex h-full w-full justify-end rounded-2xl md:w-[48%] min-h-[28rem] hidden relative">
           <Image
-            src={"/images/work-details/about-project.png"}
+            src={"/images/about_page_images/abou-banner.jpg"}
             alt="about-project"
-            width={550}
-            height={550}
+            className="rounded-2xl"
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       </div>

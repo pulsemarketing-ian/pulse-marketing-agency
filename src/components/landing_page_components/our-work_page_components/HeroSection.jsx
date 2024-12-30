@@ -1,15 +1,19 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import Navbar from "@/components/landing_page_components/Navbar";
 import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
 import Link from "next/link";
 import "./index.css";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
+import { motion } from "motion/react";
+import { baseURL } from "../../../../utils/useRequest";
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [portfolioContent, setPortfolioContent] = useState([]);
   const imageSectionRef = useRef(null);
 
   const handleTabChange = (index) => {
@@ -23,113 +27,116 @@ const HeroSection = () => {
 
   const industries = [
     {
+      name: "Animated",
+    },
+    {
+      name: "Hospitality",
+    },
+    {
+      name: "Contractors",
+    },
+    {
+      name: "E-Commerce",
+    },
+    {
+      name: "Services",
+    },
+    {
+      name: "Landing Pages",
+    },
+    {
       name: "Real Estate",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (1).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (2).png",
-          link: "https://www.facebook.com/",
-        }
-      ],
     },
     {
-      name: "Government",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (3).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (4).png",
-          link: "https://www.facebook.com/",
-        }
-      ],
+      name: "Dispensaries",
     },
     {
-      name: "Education",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (1).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (2).png",
-          link: "https://www.facebook.com/",
-        }
-      ],
+      name: "TurnKey Sites",
     },
     {
-      name: "Corporate",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (3).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (4).png",
-          link: "https://www.facebook.com/",
-        }
-      ],
-    },
-    {
-      name: "Health",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (1).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (2).png",
-          link: "https://www.facebook.com/",
-        }
-      ],
-    },
-    {
-      name: "Fashion",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (3).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (4).png",
-          link: "https://www.facebook.com/",
-        }
-      ],    
-    },
-    {
-      name: "Ecommerce",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (1).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (2).png",
-          link: "https://www.facebook.com/",
-        }
-      ],    
-    },
-    {
-      name: "Branding Website",
-      images: [
-        {
-          url: "/images/our-work_page_images/img (3).png",
-          link: "https://www.google.com/",
-        },
-        {
-          url: "/images/our-work_page_images/img (4).png",
-          link: "https://www.facebook.com/",
-        }
-      ],    
+      name: "Apps",
     },
   ];
 
-  return (
+  const tabs = [
+    {
+      label: "Animated",
+      endpoint: "component/read?page=674f6c452eb453a1457758e9",
+    },
+    {
+      label: "Hospitality",
+      endpoint: "component/read?page=674f753f54e5bff06e4ba7f8",
+    },
+    {
+      label: "Contractors",
+      endpoint: "component/read?page=674f767b54e5bff06e4ba80e",
+    },
+    {
+      label: "E-Commerce",
+      endpoint: "component/read?page=674f8684f094b86dc391900b",
+    },
+    {
+      label: "Services",
+      endpoint: "component/read?page=674f886ef094b86dc3919021",
+    },
+    {
+      label: "Landing Pages",
+      endpoint: "component/read?page=674f89eef094b86dc3919040",
+    },
+    {
+      label: "Real Estate",
+      endpoint: "component/read?page=674f8ac9f094b86dc3919052",
+    },
+    {
+      label: "Dispensaries",
+      endpoint: "component/read?page=674f8b63f094b86dc3919062",
+    },
+    {
+      label: "TurnKey Sites",
+      endpoint: "component/read?page=674f8bc8f094b86dc391906d",
+    },
+    { label: "Apps", endpoint: "component/read?page=674f8d4af094b86dc3919097" },
+  ];
 
+  const fetchTabContent = useCallback(async (endpoint) => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const response = await fetch(`${baseURL}/${endpoint}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch portfolio content");
+      }
+      const data = await response.json();
+      setPortfolioContent(data?.data?.components);
+    } catch (err) {
+      setError(err.message);
+      console.error("Error fetching portfolio content:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchTabContent(tabs[activeTab].endpoint);
+  }, [activeTab, fetchTabContent]);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-[500px] items-center justify-center">
+        <div className="h-12 w-12 animate-spin rounded-full border-t-2 border-blue-500"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex min-h-[500px] items-center justify-center text-center text-red-500">
+        {error}
+      </div>
+    );
+  }
+
+  return (
     <>
       <main
         style={{
@@ -225,40 +232,40 @@ const HeroSection = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 translate-y-0 transform text-center md:translate-y-0">
+          <div className="z-10 translate-y-0 transform text-center md:translate-y-10">
             <Reveal>
-              <h1 className="text-xl font-bold tracking-wide md:text-4xl">
+              <h1 className="text-xl font-bold tracking-wide md:text-5xl">
                 Our Work Your Inspiration
               </h1>
             </Reveal>
           </div>
 
           <div className="mx-auto mt-6 flex w-full flex-wrap items-center justify-center md:mb-12 md:mt-22 md:w-[90%] lg:w-[1200px]">
-            {industries[activeTab].images.map((image, index) => (
+            {portfolioContent?.slice(0, 2)?.map((image, index) => (
               <div
                 className="flex w-full flex-col justify-center md:w-1/2"
                 key={index}
               >
-                <div className="relative mb-8 h-[200px] w-[95%] transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[400px]">
-                  <Link href={image?.link} target="_blank">
+                <div className="relative mb-8 h-[150px] w-[95%] transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px] rounded-2xl">
+                  <Link href={image?.section} target="_blank">
                     <Image
-                      src={image?.url}
+                      src={image?.pictures[0]}
                       layout="fill"
-                      objectFit="cover"
+                      objectFit="contain"
                       className="rounded-2xl"
                       alt={`Industry Image ${index + 1}`}
                     />
                   </Link>
                 </div>
 
-                <div className="mt-6">
+                <div className="-mt-2 md:-mt-4">
                   <Reveal>
                     <h4 className="text-center text-xl font-semibold tracking-wide">
-                      Project Name
+                      {image?.name.toUpperCase()}
                     </h4>
                   </Reveal>
                   <Reveal>
-                    <div className="flex flex-wrap items-center justify-between gap-4">
+                    <div className="mb-7 flex flex-wrap items-center justify-between gap-4 md:mb-0">
                       <div className="flex flex-wrap gap-4">
                         {["Design", "Development", "SEO"].map((tag, idx) => (
                           <div
@@ -275,13 +282,80 @@ const HeroSection = () => {
                           </div>
                         ))}
                       </div>
-                      <PrimaryBtn text="View Site" onClick={() => {window.open('https://www.google.com/', '_blank')}} />
+                      <PrimaryBtn
+                        text="View Site"
+                        onClick={() => {
+                          window.open(`${image?.section}`, "_blank");
+                        }}
+                      />
                     </div>
                   </Reveal>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </main>
+
+      <main className="mx-auto mb-10 mt-[580px] px-4 md:mb-0 md:mt-0 md:px-0 lg:-mt-54 xl:mt-0 lg:transform lg:-translate-y-24">
+        <div className="mx-auto mt-6 flex w-full flex-col flex-wrap items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]"  
+        style={{
+            backgroundImage: "url('/images/app_page_images/radial.png')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}>
+          {portfolioContent?.slice(2)?.map((image, index) => (
+            <div
+              className="flex w-full flex-wrap flex-col justify-center md:w-1/2 "
+              key={index}
+            >
+              <div className="relative mb-8 h-[200px] w-[95%] transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px]">
+                <Link href={image?.section} target="_blank">
+                  <Image
+                    src={image?.pictures[0]}
+                    layout="fill"
+                    objectFit="contain"
+                    className="rounded-2xl"
+                    alt={`Industry Image ${index + 1}`}
+                  />
+                </Link>
+              </div>
+
+              <div className="-mt-2 md:-mt-4   md:mb-6">
+                <Reveal>
+                  <h4 className="text-center text-xl font-semibold tracking-wide">
+                    {image?.name.toUpperCase()}
+                  </h4>
+                </Reveal>
+                <Reveal>
+                  <div className="mb-7 flex flex-wrap items-center justify-between gap-4 md:mb-0">
+                    <div className="flex flex-wrap gap-4">
+                      {["Design", "Development", "SEO"].map((tag, idx) => (
+                        <div
+                          key={idx}
+                          className="mb-2 flex w-auto items-center gap-1"
+                        >
+                          <Image
+                            src="/images/services_page_images/blue-dot.png"
+                            alt="blue-dot"
+                            width={20}
+                            height={20}
+                          />
+                          <p>{tag}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <PrimaryBtn
+                      text="View Site"
+                      onClick={() => {
+                        window.open(`${image?.section}`, "_blank");
+                      }}
+                    />
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          ))}
         </div>
       </main>
     </>

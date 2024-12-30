@@ -130,7 +130,12 @@ const Projects = () => {
 
   return (
     <>
-      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between ">
+      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between "     
+      style={{
+      backgroundImage: "url('/images/app_page_images/radial.png')",
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat'
+    }}>
         {/* project section left box  */}
         <div className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[40%] flex items-center justify-center ">
           {tabImage === 0 && (

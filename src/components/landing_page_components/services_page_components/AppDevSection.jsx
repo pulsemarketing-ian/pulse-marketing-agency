@@ -94,7 +94,7 @@ const AppDevSection = () => {
         {/* Purple Glow Effects */}
         {/* <div className="absolute top-1/2 left-1/4 w-96 h-[60vh] bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
         <div className="absolute top-1/4 right-1/4 w-96 h-auto bg-pink-600/20 rounded-full filter blur-[100px] -z-10" /> */}
-      </main>
+        </main>
     )
   };
 

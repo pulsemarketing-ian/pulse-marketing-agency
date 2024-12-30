@@ -109,11 +109,6 @@ const Page = () => {
               </p>
             </Reveal>
           </div>
-
-        
-
-        
-
         </div>
         </main>
 
