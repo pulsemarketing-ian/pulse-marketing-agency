@@ -54,7 +54,7 @@ export default function PortfolioSlider() {
                   <img
                     src={item.src}
                     alt={item.link}
-                    className="w-full h-[250px] md:h-[360px] object-cover"
+                    className="w-full md:w-[360px] h-[250px] md:h-[360px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
