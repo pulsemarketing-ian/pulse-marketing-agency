@@ -111,7 +111,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 transition-all ${
+      className={`fixed left-0 right-0 top-0 py-2 z-50 transition-all ${
         isScrolled ? "bg-black/70 shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
@@ -336,15 +336,15 @@ export default function Navbar() {
             <PrimaryBtn text={"Book"} onClick={toggleForm} />
             <a
               href="mailto:hi@pulsemarketing.io"
-              className="rounded-full border p-2 hover:bg-white/10"
+              className="rounded-full border p-3 hover:bg-white/10"
             >
-              <IoIosMail className="h-4 w-4" />
+              <IoIosMail className="h-5 w-5" />
             </a>
             <a
               href="tel:18443303141"
-              className="rounded-full border p-2 hover:bg-white/10"
+              className="rounded-full border p-3 hover:bg-white/10"
             >
-              <IoIosCall className="h-4 w-4" />
+              <IoIosCall className="h-5 w-5" />
             </a>
           </div>
 
