@@ -11,6 +11,20 @@ body {
   overflow-x: hidden;
 }
 
+.swiper-slide{
+  width: 400px !important;
+}
+
+@media screen (max-width: 600px) {
+  .swiper-slide{
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 601px) {  .swiper-slide{
+    width: 400px !important;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

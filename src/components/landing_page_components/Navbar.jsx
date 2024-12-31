@@ -332,7 +332,7 @@ export default function Navbar() {
           </Drawer>
 
           {/* Contact Icons */}
-          <div className="hidden space-x-4 lg:flex">
+          <div className="hidden space-x-4 lg:flex lg:items-center">
             <PrimaryBtn text={"Book"} onClick={toggleForm} />
             <a
               href="mailto:hi@pulsemarketing.io"
