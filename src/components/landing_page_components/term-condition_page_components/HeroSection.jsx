@@ -21,14 +21,15 @@ const HeroSection = () => {
                 width={20}
                 height={20}
                 />
-            <p >The boring legal stuff</p>
+            <p >The legal stuff</p>
             </div>
 
             {/* heading main  */}
             <Reveal>
-                <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center">
-                Terms of Service
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center mb-2">
+                Terms And Conditions
                 </h2>
+                <p>Please read these terms and conditions carefully before using our service.</p>
             </Reveal>
 
             <div className='bg-my-blue-gradient rounded-full p-3 absolute hidden md:bottom-6 right-6'>

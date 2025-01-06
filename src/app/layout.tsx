@@ -51,6 +51,12 @@ export default function RootLayout({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="600" />{" "}
+      <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
+
           <title>Sales-Focused Marketing</title>
     </head>
 

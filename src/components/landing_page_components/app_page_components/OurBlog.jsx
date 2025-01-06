@@ -51,18 +51,18 @@ const OurBlog = () => {
         <div className="flex-col gap-3">
           <Reveal>
             <p>
-              <span className="text-[#CD0DCE] mr-2">•</span> Our Blog
+              <span className="text-[#CD0DCE] mr-2">•</span> Insights 
             </p>
           </Reveal>
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-2">
-              What is New <br /> in Our Blogs
+              What is New <br /> in Insights 
             </h2>
           </Reveal>
         </div>
 
         <Link href="/blog" className='mt-3'>
-        <PrimaryBtn text={'View All Blogs'} />
+        <PrimaryBtn text={'View All Insights '} />
         </Link>
       </div>
 

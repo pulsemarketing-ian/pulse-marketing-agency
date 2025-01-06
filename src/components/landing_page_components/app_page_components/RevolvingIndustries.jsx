@@ -6,13 +6,11 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Reveal } from '@/utils/Reveal';
 
 const MySliderArr = [
+  { image: "/images/app_page_images/four-slide (1).png" },
+  { image: "/images/app_page_images/four-slide (3).png" },
   { image: "/images/app_page_images/four-slide (2).png" },
-  { image: "/images/app_page_images/four-slide (1).png" },
-  { image: "/images/app_page_images/four-slide (3).png" },
-  { image: "/images/app_page_images/four-slide (1).png" },
-  { image: "/images/app_page_images/four-slide (3).png" },
-  { image: "/images/app_page_images/four-slide (1).png" },
-  { image: "/images/app_page_images/four-slide (3).png" },
+  { image: "/images/app_page_images/third-sec-2.png" },
+  { image: "/images/app_page_images/slide3.png" },
 ]
 
 const ChooseCardsSlider = () => {

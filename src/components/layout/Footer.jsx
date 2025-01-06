@@ -33,7 +33,7 @@ const Footer = () => {
               { name: "About", link: "/about-us" },
               { name: "App", link: "/app" },
               { name: "Portfolio", link: "/our-work" },
-              { name: "Blog", link: "/blog" },
+              { name: "Insights", link: "/blog" },
             ].map((item, index) => (
               <Link key={index} href={item.link} className="group flex items-center gap-2">
                 <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
@@ -64,9 +64,9 @@ const Footer = () => {
           <div className="flex flex-col gap-4 md:min-h-[250px]">
             <h1 className="font-medium text-xl">Contact</h1>
             <div className="flex items-center gap-2">
-              <Link href="tel:18443303141" target="_blank" className="flex items-center">
+              <Link href="tel:+1-778-960-7426" target="_blank" className="flex items-center">
                 <FaPhoneAlt />
-                <span className="ml-3 text-[18px]">18443303141</span>
+                <span className="ml-3 text-[18px]">+1-778-960-7426</span>
               </Link>
             </div>
             <div className="flex items-center gap-2">
@@ -87,6 +87,30 @@ const Footer = () => {
               <IoLogoYoutube />
               <FaLinkedin />
             </div>
+            <div className="flex">
+            <Link href={'https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick'} target="_blank">
+              <Image
+                alt="image"
+                className="mr-8"
+                src={"/accrebited-bussiness-logo.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
+            <Link
+              href={
+                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+              }
+              target="_blank"
+            >
+              <Image
+                alt="image"
+                src={"/google-review-logo.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
+        </div>
           </div>
 
         </div>

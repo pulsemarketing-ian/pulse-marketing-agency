@@ -19,7 +19,7 @@ const AppDevelopmentSection = () => {
         </Reveal>
       </div>
 
-      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between">
+      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between lg:mt-10">
         {/* Left Box */}
         <motion.div
           initial={isDesktop ? { x: -300, opacity: 0 } : false}
@@ -33,18 +33,18 @@ const AppDevelopmentSection = () => {
           className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[50%] flex items-center justify-center"
         >
           {tabImage === 0 && (
-            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
-              <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={500} height={500} />
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105 rounded-2xl">
+              <Image src={"/images/app_page_images/third-sec.png"} alt="mob1" width={600} height={600} />
             </div>
           )}
           {tabImage === 1 && (
-            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
-              <Image src={"/images/app_page_images/app-hero.png"} alt="mob2" width={500} height={500} />
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105 rounded-2xl">
+              <Image src={"/images/app_page_images/app-hero.png"} alt="mob2" width={600} height={600} />
             </div>
           )}
           {tabImage === 2 && (
-            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105">
-              <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={500} height={500} />
+            <div className="transform transition-transform duration-700 ease-in-out hover:scale-105 rounded-2xl">
+              <Image src={"/images/app_page_images/third-sec.png"} alt="mob3" width={600} height={600} />
             </div>
           )}
         </motion.div>
@@ -62,11 +62,11 @@ const AppDevelopmentSection = () => {
           className="w-[100%] px-6 md:px-0 md:w-[55%] flex flex-col md:flex-row justify-between relative ct-projects"
         >
           {/* Tab Section */}
-          <div className="w-[100%] md:w-[70%]">
+          <div className="w-[100%] md:w-[100%]">
             <ContentTab tabImage={tabImage} setTabImage={setTabImage} />
           </div>
 
-          <div className="w-full md:w-[30%] md:absolute md:top-0 md:right-6 mt-5 md:mt-0">
+          {/* <div className="w-full md:w-[30%] md:absolute md:top-0 md:right-6 mt-5 md:mt-0">
             {tabImage === 0 && (
               <div>
                 <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob" width={300} height={300} />
@@ -78,7 +78,7 @@ const AppDevelopmentSection = () => {
             {tabImage === 2 && (
               <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob5" width={300} height={300} />
             )}
-          </div>
+          </div> */}
         </motion.div>
       </main>
     </main>

@@ -45,7 +45,7 @@ const AndroidSection = () => {
                   We are the most sought-after destination for iOS development services in Canada. At our native iOS app development company, we use advanced tools and the latest technologies to build highly functional applications for businesses worldwide. From Flutter app development to Swift app development, you name it, and we will deliver quality results. Contact our team of experts to learn more about each technology we use and understand which one will be best suited for your app development process.
                 </p>
               </Reveal>
-              <ul className="space-y-2 text-[16px] text-gray-300">
+              <ul className="space-y-2 text-[17px] text-gray-300">
                 <Reveal>
                   <li className="flex items-center">
                     <span className="text-cyan-500 mr-2">•</span> Android app development consultation

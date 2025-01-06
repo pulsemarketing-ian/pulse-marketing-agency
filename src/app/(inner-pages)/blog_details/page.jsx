@@ -55,7 +55,7 @@ const Page = () => {
                   width={20}
                   height={20}
                 />
-                <p>Blog Details</p>
+                <p>Insights Details</p>
               </div>
 
               {/* Heading main */}
@@ -92,7 +92,7 @@ const Page = () => {
             backgroundSize: "cover",
             // transform: "translateY(-100%)",
           }}
-          className="h-[42vh] md:h-[40rem] transform translate-y-[-50%] md:translate-y-[-60%]  md:mt-[-180px]"
+          className="h-[42vh] md:h-[39rem] transform translate-y-[-50%] md:translate-y-[-60%]  md:mt-[-180px]"
         />
         <div
           className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
@@ -102,10 +102,10 @@ const Page = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 text-center md:-mt-4">
+          <div className="z-10 text-center md:mt-3 md:px-4">
             <Reveal>
-              <p className="mb-2 text-[16px]  tracking-wide md:text-md md:w-[60%] md:mx-auto translate-y-[4vh]">
-                {blogInner?.component?.section}
+              <p className="mb-2 text-[16px]  tracking-wide md:text-md md:w-[60%] md:mx-auto translate-y-[1vh] md:translate-y-0">
+                {blogInner?.component?.section.slice(0, 1000)+"..."}
               </p>
             </Reveal>
           </div>
@@ -113,7 +113,7 @@ const Page = () => {
         </main>
 
           {/* main content  */}
-        <div className='max-w-[1200px] mx-auto -mt-[26%]'>
+        <div className='max-w-[1200px] mx-auto -mt-[20%] md:pb-8'>
               <div
                 dangerouslySetInnerHTML={{ __html: blogInner?.component?.content }}
                 className="content-style px-4 " 

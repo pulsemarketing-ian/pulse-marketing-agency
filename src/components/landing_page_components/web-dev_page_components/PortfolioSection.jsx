@@ -28,9 +28,8 @@ export default function PortfolioSection() {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
-          className="mt-0 min-h-[200px] md:min-h-[180px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
+          className="mt-0 min-h-[200px] md:min-h-[50px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
         >
-          {/* aksdnsdalksmdklsamd */}
           <Slider/>
         </div>
       </div>

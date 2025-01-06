@@ -3,41 +3,24 @@ import { Reveal } from "@/utils/Reveal";
 import React from "react";
 
 const OtherContent = () => {
+  
   const data = [
     {
-      heading: "Privacy Statement",
+      heading: "Service refers to the Website.",
       content:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s, when an unknown printer took a galley of type andscrambled it to make a type specimen book. It has survived not only fivecenturies, but also the leap into electronic typesetting, remainingessentially unchanged.",
+        "Terms and Conditions (also referred as; Terms mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.",
       content2:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.",
     },
     {
-      heading: "Availability",
-      content:
-        " Our team operates Monday to Friday from 9:00 AM to 6:00 PM. Requests outside these hours will be addressed on the next working day.",
-      content2:
-        "Delays: While we strive to meet agreed deadlines, certain factors beyond our control, such as technical issues or third-party delays, may affect availability.",
+      heading: "Website refers to pulse, accessible from pulse.io.",
+      content: "You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.Acknowledgment These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service. Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.",
+      content2:"By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service. You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service. Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.",
     },
     {
-      heading: "Cookies",
-      content:
-        " Our website uses cookies to improve user experience and analyze website traffic. By using our website, you consent to the use of cookies in accordance with our cookie policy.",
-      content2:
-        " You can disable cookies in your browser settings, but doing so may affect website functionality.",
-    },
-    {
-      heading: "Links to this website",
-      content:
-        " Permission: You may link to our website provided it is done in a way that is fair and legal and does not damage our reputation.",
-      content2:
-        "Prohibited Uses: Linking in a manner that suggests endorsement or association without our consent is strictly prohibited.",
-    },
-    {
-      heading: "Notification of changes",
-      content:
-        " Updates We reserve the right to update these terms and conditions at any time. Changes will be posted on this page with a revised date.",
-      content2:
-        "Acceptance of Changes Continued use of our services after changes are made constitutes your acceptance of the updated terms.",
+      heading: "Links to Other Websites",
+      content: "Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.",
+      content2: "We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.",
     },
   ];
 

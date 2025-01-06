@@ -110,8 +110,9 @@ export default function Navbar() {
   }, [showForm]);
 
   return (
+    <>
     <nav
-      className={`fixed left-0 right-0 top-0 py-2 z-50 transition-all ${
+      className={`fixed left-0 right-0 top-0 z-50 py-2 transition-all ${
         isScrolled ? "bg-black/70 shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
@@ -197,7 +198,7 @@ export default function Navbar() {
                         >
                           <h5 className="font-medium">CRO</h5>
                           <p className="text-sm text-gray-300">
-                          Conversion rate optimization
+                            Conversion rate optimization
                           </p>
                         </Link>
                       </div>
@@ -336,38 +337,41 @@ export default function Navbar() {
             <PrimaryBtn text={"Book"} onClick={toggleForm} />
             <a
               href="mailto:hi@pulsemarketing.io"
+              target="_blank"
               className="rounded-full border p-3 hover:bg-white/10"
             >
               <IoIosMail className="h-5 w-5" />
             </a>
             <a
-              href="tel:18443303141"
+              href="tel:+1-778-960-7426"
+              target="_blank"
               className="rounded-full border p-3 hover:bg-white/10"
             >
               <IoIosCall className="h-5 w-5" />
             </a>
           </div>
 
-          {showForm && (
-            <div className="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
-              <div className="relative w-full rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
-                <div
-                  onClick={toggleForm}
-                  className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500  "
-                >
-                  <IoCloseSharp />
-                </div>
-
-                <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
-                <div
-                  className="h-[60vh] overflow-auto"
-                  ref={calendlyContainerRef}
-                ></div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </nav>
+          {showForm && (
+           <div className="fixed z-99 inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
+           <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+             <div
+               onClick={toggleForm}
+               className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
+             >
+               <IoCloseSharp />
+             </div>
+         
+             <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
+             <div
+               className="h-[60vh] overflow-auto"
+               ref={calendlyContainerRef}
+             ></div>
+           </div>
+         </div>  
+          )}
+          </>
   );
 }

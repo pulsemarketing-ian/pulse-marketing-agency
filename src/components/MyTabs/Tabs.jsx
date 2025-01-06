@@ -124,17 +124,17 @@ export default function Tabs() {
             className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[100%]"
           >
             <div className="relative h-[200px] w-full md:mb-4 md:h-[380px]">
-              {/* <Link href={item?.section}> */}
+              <Link href={item?.section} target="_blank">
               <Image
                 src={item?.pictures[0]}
                 layout="fill"
-                objectFit="cover"
-                // className=""
+                objectFit="contain"
                 alt="Project Image"
                 priority
-                className="rounded-2xl"
+                quality={100}
+                className="rounded-2xl cursor-pointer"
               />
-              {/* </Link> */}
+              </Link>
             </div>
             <Reveal>
               <h4 className="text-xl font-semibold capitalize tracking-wide">

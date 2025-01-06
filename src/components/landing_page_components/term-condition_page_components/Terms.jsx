@@ -11,12 +11,12 @@ const Terms = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[36vh] md:h-[62vh]"
+          className="h-[36vh] md:h-[30rem]"
         />
         <div className="absolute top-0 md:top-26 z-10 flex w-full flex-col items-center justify-center">
-          <div className="z-10 mt-8 text-center">
+          <div className="z-10 text-center">
             <Reveal>
-                <h2 className="text-xl md:text-4xl font-bold tracking-wide">Terms & Conditions</h2>
+                <h2 className="text-xl md:text-4xl font-bold tracking-wide">Interpretation</h2>
             </Reveal>
           </div>
 
@@ -29,17 +29,32 @@ const Terms = () => {
             className="mt-4 flex flex-col gap-3 items-center justify-center text-center md:w-[70%] mx-auto px-6 md:px-0"
           >
             <Reveal>
-                <p>Welcome to Pulse Marketing. By accessing and using our services, you agree to abide by the terms and conditions outlined below. Please read these carefully. If you do not agree, kindly refrain from using our services. </p>
+                <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
             </Reveal>
+
+            <div className="z-10 mt-8 text-center flex-col items-center justify-center">
+            {/* <Reveal> */}
+                <h2 className="text-xl md:text-4xl font-bold tracking-wide text-center">Deﬁnitions</h2>
+            {/* </Reveal> */}
 
             <Reveal>
-                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <p className="mt-3">
+                  For the purposes of these Terms and Conditions: Affiliate means an entity that controls, is controlled by or is under common control with a party, where control; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+                  </p>
+            </Reveal>
+            <Reveal>
+                  <p className="mt-3">
+                  Country refers to: British Columbia, Canada Company referred to as either the Company, We, Us or Our; in this Agreements refers to Pulse Marketing Inc., 595 Burrard Street, Vancouver, BC V7X 1L4, Canada.
+                  </p>
+            </Reveal>
+            <Reveal>
+                  <p className="mt-3">
+                  Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+                  </p>
             </Reveal>
 
+          </div>
             
-            <Reveal>
-                <p>You can disable cookies in your browser settings, but doing so may affect website functionality.</p>
-            </Reveal>
           </div>
         </div>
       </main>

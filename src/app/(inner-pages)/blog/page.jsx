@@ -73,7 +73,7 @@ const BlogPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="relative md:pb-[200px]"
+        className="relative md:pb-[150px]"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -89,7 +89,7 @@ const BlogPage = () => {
                 width={20}
                 height={20}
               />
-              <p>Our Blogs</p>
+              <p>Insights</p>
             </div>
 
             {/* Heading main */}
@@ -129,7 +129,7 @@ const BlogPage = () => {
         backgroundSize: "cover",
         // transform: "translateY(-100%)",
       }}
-      className="h-[50vh] md:h-[80vh] transform translate-y-[-43%] md:translate-y-[-50%]"
+      className="h-[50vh] md:h-[37rem] transform translate-y-[-43%] md:translate-y-[-50%]"
     />
     <div
       className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "

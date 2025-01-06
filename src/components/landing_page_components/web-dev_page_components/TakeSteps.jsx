@@ -33,9 +33,10 @@ const TakeSteps = () => {
       <div className="flex flex-wrap justify-between">
         <div className="flex w-full md:w-[28%] items-start justify-center transform transition-transform duration-700 ease-in-out hover:scale-105">
           <Image
-            src={"/images/web-dev_page_images/pulse-logo.png"}
-            width={400}
-            height={400}
+            src={"/images/ICON JUST-01.png"}
+            width={350}
+            height={350}
+            alt="mob1"
           />
         </div>
 

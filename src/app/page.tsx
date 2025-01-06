@@ -6,7 +6,7 @@ import './global.css';
 import CustomCursor from '@/utils/CustomCursor';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import MyForm from '../components/recaptche';
 // export const metadata: Metadata = {
 //   title:
 //     "Next.js E-commerce Dashboard | TailAdmin - Next.js Dashboard Template",
@@ -28,6 +28,7 @@ export default function Home() {
    
       <CustomCursor/>
       <ContentWrapper />
+      <MyForm/>
       {/* {showModal && <WebsiteAuditForm />} */}
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
     </div>
