@@ -79,10 +79,10 @@ export default function Slider() {
                     alt={`Video thumbnail ${index + 1}`}
                     className="w-full md:w-[360px] h-[250px] md:h-[360px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className='bg-blue-500 w-16 h-16 flex rounded-full p-6 items-center justify-center'>
+                  <div className="absolute inset-0  flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <div className='bg-blue-500 w-16 h-16 flex rounded-full p-6 items-center justify-center'>
                     <IoMdPlay className="text-white text-5xl" />
-                  </div>
+                  </div> */}
                   </div>
                 </div>
               </div>

@@ -13,7 +13,7 @@ const   HeroSection = () => {
     <React.Fragment>
         <main 
          style={{
-             backgroundImage: "url('/images/branding_page_images/branding-hero.png')",
+             backgroundImage: "url('/images/video_page_images/banner-video02.jpg')",
              backgroundSize: "cover",
             }}
             className='md:pb-[150px]'

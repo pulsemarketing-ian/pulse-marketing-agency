@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -13,21 +13,21 @@ const Footer = () => {
   return (
     <>
       <main className="w-full pb-12 pt-12 text-white">
-        <div className="w-full px-8 lg:px-0 lg:w-[88%] mx-auto flex flex-wrap justify-between md:justify-none gap-8">
-
+        <div className="md:justify-none mx-auto flex w-full flex-wrap justify-between gap-8 px-8 lg:w-[88%] lg:px-0">
           {/* Logo & About Section */}
-          <div className="flex flex-col gap-4 items-start md:min-h-[250px] md:w-[20%]">
+          <div className="flex flex-col items-start gap-4 md:min-h-[250px] md:w-[20%]">
             <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
-              Welcome to Pulse, a Vancouver-based marketing firm with years
-              of experience in the field serving 8,000+ clients from various industries.
-              We have successfully completed more than 25,000 projects.
+              Welcome to Pulse, a Vancouver-based marketing firm with years of
+              experience in the field serving 8,000+ clients from various
+              industries. We have successfully completed more than 25,000
+              projects.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="flex flex-col gap-4 md:min-h-[250px]">
-            <h1 className="font-medium text-xl">Quick Links</h1>
+            <h1 className="text-xl font-medium">Quick Links</h1>
             {[
               { name: "Home", link: "/" },
               { name: "About", link: "/about-us" },
@@ -35,16 +35,27 @@ const Footer = () => {
               { name: "Portfolio", link: "/our-work" },
               { name: "Insights", link: "/blog" },
             ].map((item, index) => (
-              <Link key={index} href={item.link} className="group flex items-center gap-2">
-                <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
-                <span className="relative hover:underline-animation text-[18px]">{item.name}</span>
+              <Link
+                key={index}
+                href={item.link}
+                className="group flex items-center gap-2"
+              >
+                <Image
+                  src={"/images/services_page_images/blue-dot.png"}
+                  width={10}
+                  height={10}
+                  alt="Dot"
+                />
+                <span className="hover:underline-animation relative text-[18px]">
+                  {item.name}
+                </span>
               </Link>
             ))}
           </div>
 
           {/* Services */}
           <div className="flex flex-col gap-[9px] md:min-h-[250px]">
-            <h1 className="font-medium text-xl">Services</h1>
+            <h1 className="text-xl font-medium">Services</h1>
             {[
               { name: "Web Development", link: "/web-development" },
               { name: "App Development", link: "/app" },
@@ -53,24 +64,43 @@ const Footer = () => {
               { name: "Video Photo", link: "/video-photo" },
               { name: "CRO", link: "/cro" },
             ].map((service, index) => (
-              <Link key={index} href={service.link} className="group flex items-center gap-2">
-                <Image src={'/images/services_page_images/blue-dot.png'} width={10} height={10} alt="Dot" />
-                <span className="relative hover:underline-animation text-[18px]">{service.name}</span>
+              <Link
+                key={index}
+                href={service.link}
+                className="group flex items-center gap-2"
+              >
+                <Image
+                  src={"/images/services_page_images/blue-dot.png"}
+                  width={10}
+                  height={10}
+                  alt="Dot"
+                />
+                <span className="hover:underline-animation relative text-[18px]">
+                  {service.name}
+                </span>
               </Link>
             ))}
           </div>
 
           {/* Contact */}
           <div className="flex flex-col gap-4 md:min-h-[250px]">
-            <h1 className="font-medium text-xl">Contact</h1>
+            <h1 className="text-xl font-medium">Contact</h1>
             <div className="flex items-center gap-2">
-              <Link href="tel:+1-778-960-7426" target="_blank" className="flex items-center">
+              <Link
+                href="tel:+1-778-960-7426"
+                target="_blank"
+                className="flex items-center"
+              >
                 <FaPhoneAlt />
                 <span className="ml-3 text-[18px]">+1-778-960-7426</span>
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <Link href="mailto:hi@pulsemarketing.io" target="_blank" className="flex items-center">
+              <Link
+                href="mailto:hi@pulsemarketing.io"
+                target="_blank"
+                className="flex items-center"
+              >
                 <MdEmail />
                 <span className="ml-3 text-[18px]">hi@pulsemarketing.io</span>
               </Link>
@@ -79,51 +109,77 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="flex flex-col gap-4 md:min-h-[250px]">
-            <h1 className="font-medium text-xl">Follow Us</h1>
-            <div className="flex gap-4 mt-3 items-center text-xl cursor-pointer">
-              <FaXTwitter />
-              <FaFacebookF />
-              <FiInstagram />
-              <IoLogoYoutube />
-              <FaLinkedin />
+            <h1 className="text-xl font-medium">Follow Us</h1>
+            <div className="mt-3 flex cursor-pointer items-center gap-4 text-xl">
+              <Link
+                href={"https://www.facebook.com/pulsemarketing.io/"}
+                target="_blank"
+              >
+                <FaFacebookF />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/pulsemarketing.io/"}
+                target="_blank"
+              >
+                <FiInstagram />
+              </Link>
+              <Link
+                href={
+                  "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DmEhNo-fnGxU&q=EgQ2JQdsGIv78LsGIjAAD00khUysaykEUxpclJMQnl9M_y7VvVqGAJurfAfQjR-Bv5ht3ZuXKEjcuPZq95QyAXJaAUM"
+                }
+                target="_blank"
+              >
+                <IoLogoYoutube />
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/company/pulse-inc/"}
+                target="_blank"
+              >
+                <FaLinkedin />
+              </Link>
             </div>
             <div className="flex">
-            <Link href={'https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick'} target="_blank">
-              <Image
-                alt="image"
-                className="mr-8"
-                src={"/accrebited-bussiness-logo.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-            <Link
-              href={
-                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                src={"/google-review-logo.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-        </div>
+              <Link
+                href={
+                  "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="image"
+                  className="mr-8"
+                  src={"/accrebited-bussiness-logo.png"}
+                  width={125}
+                  height={125}
+                />
+              </Link>
+              <Link
+                href={
+                  "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="image"
+                  src={"/google-review-logo.png"}
+                  width={125}
+                  height={125}
+                />
+              </Link>
+            </div>
           </div>
-
         </div>
 
-          {/* Text Scroller */}
-          <div className="flex items-center W-[100%] justify-center poppins-medium text-[4rem] lg:text-[100px] text-center overflow-hidden whitespace-nowrap text-transparent border-text w-full py-0 lg:py-2">
-         <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!
-          Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!"/>
+        {/* Text Scroller */}
+        <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
+          <TextScroller
+            text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!
+          Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!"
+          />
         </div>
-
 
         {/* Footer Bottom */}
-        <div className="w-full px-8 lg:px-0 lg:w-[88%] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mx-auto flex w-full flex-col items-center justify-between gap-4 px-8 md:flex-row lg:w-[88%] lg:px-0">
           <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
           <div className="flex gap-6 text-[18px]">
             <Link href="/privacy" target="_blank">
@@ -152,7 +208,7 @@ const Footer = () => {
         .hover:underline-animation:hover::after {
           width: 100%;
         }
-         .border-text {
+        .border-text {
           -webkit-text-stroke: 2px #62c9d6;
           text-stroke: 2px black;
         }
