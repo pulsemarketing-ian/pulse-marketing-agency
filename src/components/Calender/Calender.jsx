@@ -188,10 +188,10 @@ const Calender = () => {
 
             <div className="md:flex ">
               <div className="flex items-center md:justify-between  md:border-r-2 pr-6 mr-6">
-                <Link className="flex items-center" href="tel:18443303141" target="_blank">
+                <Link className="flex items-center" href="tel:+1-778-960-7426" target="_blank">
                 <FaPhoneAlt />
                 <Reveal>
-                <h3 className="poppins-light ml-3">18443303141</h3>
+                <h3 className="poppins-light ml-3">+1-778-960-7426</h3>
                 </Reveal>
                 </Link>
               </div>

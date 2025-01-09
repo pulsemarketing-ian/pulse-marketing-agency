@@ -146,8 +146,8 @@ const HeroSection = () => {
         className=" md:pb-[150px]"
       >
         <Navbar />
-        <div className="relative mx-auto flex h-[80vh] max-w-[1200px] flex-row items-center justify-center md:h-[100vh]">
-          <div className="absolute z-20 w-[100%] flex-col px-6 md:px-0">
+        <div className="relative mx-auto flex h-[82vh] max-w-[1200px] flex-row items-center justify-center md:h-[85vh]">
+          <div className="absolute z-20 w-[100%] flex-col px-6 md:px-0 translate-y-7 md:translate-y-13">
             <div className="mb-2 flex w-auto items-center gap-1">
               <Image
                 src="/images/services_page_images/blue-dot.png"
@@ -161,23 +161,33 @@ const HeroSection = () => {
             <div className="flex-col flex-wrap items-center justify-center gap-6 md:flex-row md:justify-start">
               <div>
                 <Reveal>
-                  <h2 className="w-auto text-xl font-bold leading-tight text-white md:text-5xl">
+                  <h2 className="w-auto text-3xl font-bold leading-tight text-white md:text-5xl">
                     Explore All Industries
                   </h2>
                 </Reveal>
               </div>
 
-              <div className="my-8 flex-wrap gap-10 overflow-x-auto md:mb-0 md:flex md:gap-6">
-                {industries.map((industry, index) => (
-                  <h4
+              <div className="-ml-3 flex flex-wrap justify-start gap-0 px-0 lg:w-full lg:px-0 mt-4">
+              {industries.map((industry, index) => (
+                  // <h4
+                  //   key={index}
+                  //   className={`w-auto cursor-pointer text-lg font-medium leading-tight md:text-3xl ${
+                  //     activeTab === index ? "text-white" : "text-[#7C7C7C]"
+                  //   } flex-shrink-0`} // Prevent shrinking on smaller screens
+                  //   onClick={() => handleTabChange(index)}
+                  // >
+                  //   {industry.name}
+                  // </h4>
+
+                  <div
                     key={index}
-                    className={`w-auto cursor-pointer text-lg font-medium leading-tight md:text-3xl ${
-                      activeTab === index ? "text-white" : "text-[#7C7C7C]"
-                    } flex-shrink-0`} // Prevent shrinking on smaller screens
+                    className={`flex w-[49%] cursor-pointer flex-wrap items-center justify-start rounded px-4 py-2 text-center text-[1.2rem] font-medium md:w-auto md:px-4 md:py-0 md:text-[1.6rem] ${
+                      index === activeTab ? "text-white" : "text-gray-500"
+                    }`}
                     onClick={() => handleTabChange(index)}
                   >
                     {industry.name}
-                  </h4>
+                  </div>
                 ))}
               </div>
             </div>
@@ -246,7 +256,7 @@ const HeroSection = () => {
                 className="flex w-full flex-col justify-center md:w-1/2"
                 key={index}
               >
-                <div className="relative mb-8 h-[150px] w-[95%] transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px] rounded-2xl">
+                <div className="relative mb-8 h-[150px] w-[95%] transform rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px]">
                   <Link href={image?.section} target="_blank">
                     <Image
                       src={image?.pictures[0]}
@@ -297,16 +307,18 @@ const HeroSection = () => {
         </div>
       </main>
 
-      <main className="mx-auto mb-10 mt-[580px] px-4 md:mb-0 md:mt-0 md:px-0 lg:-mt-54 xl:mt-0 lg:transform lg:-translate-y-24">
-        <div className="mx-auto mt-6 flex w-full flex-col flex-wrap items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]"  
-        style={{
+      <main className="mx-auto mb-10 mt-[580px] px-4 md:mb-0 md:mt-0 md:px-0 lg:-mt-54 lg:-translate-y-24 lg:transform xl:mt-0">
+        <div
+          className="mx-auto mt-6 flex w-full flex-col flex-wrap items-center justify-between overflow-hidden md:w-[90%] md:flex-row lg:w-[1200px]"
+          style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
-          }}>
+          }}
+        >
           {portfolioContent?.slice(2)?.map((image, index) => (
             <div
-              className="flex w-full flex-wrap flex-col justify-center md:w-1/2 "
+              className="flex w-full flex-col flex-wrap justify-center md:w-1/2 "
               key={index}
             >
               <div className="relative mb-8 h-[200px] w-[95%] transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px]">

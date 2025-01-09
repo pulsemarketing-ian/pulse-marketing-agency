@@ -112,9 +112,7 @@ export default function Navbar() {
   return (
     <>
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 py-2 transition-all ${
-        isScrolled ? "bg-black/70 shadow-md backdrop-blur-sm" : "bg-transparent"
-      }`}
+      className={`fixed left-0 right-0 top-0 z-50 py-2 transition-all bg-black/70 shadow-md backdrop-blur-sm`}
     >
       <div className="mx-auto max-w-[1300px]">
         <div className="flex h-16 items-center justify-between px-4">
@@ -158,7 +156,7 @@ export default function Navbar() {
                         >
                           <h5 className="font-medium">Web Development</h5>
                           <p className="text-sm text-gray-300">
-                            Custom websites and applications
+                          Custom Websites and Applications
                           </p>
                         </Link>
 
@@ -178,7 +176,7 @@ export default function Navbar() {
                         >
                           <h5 className="font-medium">Branding</h5>
                           <p className="text-sm text-gray-300">
-                            Online store solutions
+                          Custom Brand Catalogues
                           </p>
                         </Link>
 
@@ -188,7 +186,7 @@ export default function Navbar() {
                         >
                           <h5 className="font-medium">Video Photo</h5>
                           <p className="text-sm text-gray-300">
-                            Content management systems
+                            Content Management Systems
                           </p>
                         </Link>
 
@@ -198,7 +196,7 @@ export default function Navbar() {
                         >
                           <h5 className="font-medium">CRO</h5>
                           <p className="text-sm text-gray-300">
-                            Conversion rate optimization
+                            Conversion Rate Optimization
                           </p>
                         </Link>
                       </div>
@@ -229,9 +227,9 @@ export default function Navbar() {
 
                       <div className="flex flex-wrap gap-4">
                         <div className="relative h-[160px] w-[400px] rounded-lg">
-                          <Link href={"/app"}>
+                          <Link href={"/our-work"}>
                             <Image
-                              src={"/images/app_page_images/third-sec.png"}
+                              src={"/images/our-work_page_images/our-work.png"}
                               alt="App Development"
                               layout="fill"
                               objectFit="cover"

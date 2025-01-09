@@ -45,8 +45,9 @@ const HeroSection = () => {
                     </div>
 
                     {/* heading main  */}
-                    <h2 className="text-2xl md:text-5xl font-bold leading-tight text-left">
-                    Best App Development <br/> Company
+                    <h2 className="text-3xl md:text-5xl font-bold text-left"
+                      style={{ lineHeight: "1.2" }}>
+                    Innovative App Development <br/> Proudly Canadian
                     </h2>
                 </motion.div>
 

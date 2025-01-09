@@ -7,9 +7,9 @@ import { Reveal } from "../../utils/Reveal";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 import Navbar from "../landing_page_components/Navbar";
+import { AiFillTikTok } from "react-icons/ai";
 
 const HeroLeftContent = ({ toggleForm, showForm }) => {
-
   const calendlyContainerRef = useRef(null);
 
   useEffect(() => {
@@ -38,11 +38,16 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
 
   return (
     <>
-      <main className="w-full mt-16 lg:mt-0 px-5 hre-section">
+      <main className="hre-section mt-16 w-full px-5 lg:mt-0">
         {/* upper logos container*/}
         <div className="flex">
           <Reveal>
-            <Link href={'https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick'} target="_blank">
+            <Link
+              href={
+                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+              }
+              target="_blank"
+            >
               <Image
                 alt="image"
                 className="mr-8"
@@ -71,11 +76,12 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         {/* Content Heading  */}
         <div>
           <Reveal>
-            <h1 className="text-[1.5em] md:text-[60px] lg:text-[60px]  mt-8 poppins-medium leading-[49px] md:leading-[1.3em]">
-              Our Objective:<br /> Increase Your <br /> Revenue.
+            <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
+              Our Objective:
+              <br /> Increase Your <br /> Revenue.
             </h1>
           </Reveal>
-          <div className="w-[90%] border-l-2 my-4 pl-3">
+          <div className="my-4 w-[90%] border-l-2 pl-3">
             <Reveal>
               <p className="poppins-light">
                 Boost your brand with our expert websites, apps, and branding
@@ -88,35 +94,33 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         <Reveal>
           <button
             onClick={toggleForm}
-            className="bg-white hover:bg-my-blue-gradient hover:text-white hover:transition-all ease-in-out poppins-regular text-black py-2 px-4 mt-8 rounded-3xl flex justify-between items-center border-none outline-none contact-btn">
+            className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
+          >
             Book Now
-            <div className="bg-[#6EE3D7] p-[2px] ml-2 h-full rounded-full">
+            <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
               <MdArrowForward />
             </div>
           </button>
         </Reveal>
         <div className="md:hidden">
-      {showForm && (
-        <>
-        <div className="bg-white rounded-lg overflow-x-hidden overflow-y-scroll h-[58%] w-[70%] -translate-y-[80px] absolute bottom-0 right-0">
-          
-          <div className="relative w-full inset-0 flex justify-center items-center">
-          <button
-              onClick={toggleForm}
-              className="absolute z-30 top-2 right-2 text-white text-lg bg-my-blue-gradient"
-            >
-              {/* &times; */}
-              <IoMdClose />
+          {showForm && (
+            <>
+              <div className="absolute bottom-0 right-0 h-[58%] w-[70%] -translate-y-[80px] overflow-x-hidden overflow-y-scroll rounded-lg bg-white">
+                <div className="relative inset-0 flex w-full items-center justify-center">
+                  <button
+                    onClick={toggleForm}
+                    className="absolute right-2 top-2 z-30 bg-my-blue-gradient text-lg text-white"
+                  >
+                    {/* &times; */}
+                    <IoMdClose />
+                  </button>
+                  <div ref={calendlyContainerRef}></div>
+                </div>
+              </div>
+            </>
+          )}
 
-            </button>
-            <div ref={calendlyContainerRef}></div>
-
-          </div>
-        </div>
-              </>
-      )}
-      
-      {/* <div
+          {/* <div
         onClick={toggleForm}
         className="absolute bottom-0 right-0 w-[30%] -translate-y-16"
       >
@@ -124,14 +128,13 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
           <h3 className="poppins-light text-white text-lg">Get in touch</h3>
         </div>
       </div> */}
-    </div>
+        </div>
       </main>
     </>
   );
 };
 
 const HeroRightContent = ({ showForm, toggleForm }) => {
-
   const calendlyContainerRef = useRef(null);
 
   useEffect(() => {
@@ -157,7 +160,7 @@ const HeroRightContent = ({ showForm, toggleForm }) => {
       }
     }
   }, [showForm]);
-  
+
   return (
     <>
       <div className="h-[100vh]">
@@ -278,23 +281,22 @@ const HeroRightContent = ({ showForm, toggleForm }) => {
           </div>
         </div>
 
-     {showForm && (
-  <div className="bg-white rounded-lg overflow-x-hidden overflow-y-scroll h-[70%] w-[30%] -translate-y-20 absolute bottom-0 right-0">
-    <div className="w-full inset-0 flex justify-center items-center relative">
-      <button
-        onClick={toggleForm}
-        className="absolute top-2 right-2 text-white text-lg bg-my-blue-gradient z-20"
-      >
-        {/* &times; */}
-        <IoMdClose />
-      </button>
-      <div ref={calendlyContainerRef}></div>
+        {showForm && (
+          <div className="absolute bottom-0 right-0 h-[70%] w-[30%] -translate-y-20 overflow-x-hidden overflow-y-scroll rounded-lg bg-white">
+            <div className="relative inset-0 flex w-full items-center justify-center">
+              <button
+                onClick={toggleForm}
+                className="absolute right-2 top-2 z-20 bg-my-blue-gradient text-lg text-white"
+              >
+                {/* &times; */}
+                <IoMdClose />
+              </button>
+              <div ref={calendlyContainerRef}></div>
+            </div>
+          </div>
+        )}
 
-    </div>
-  </div>
-)}
-
-      {/* <div
+        {/* <div
         onClick={toggleForm}
         className="absolute bottom-0 right-0 w-[30%] -translate-y-[70%] get-btn"
       >
@@ -316,82 +318,105 @@ const HeroSection = () => {
 
   return (
     <>
-      <main className="w-full lg:w-full lg:h-[100vh] m-auto relative"
-      // style={{ backgroundImage: "url('/images/home0-banner.jpg')"; background-size: cover}}>
-      style={{
-        backgroundImage: "url('/images/home-banner.jpg')",
-        backgroundSize: "contain",
-      }}>
-
-        <div className="flex flex-row relative w-[100%] justify-between ">
+      <main
+        className="relative m-auto w-full lg:h-[100vh] lg:w-full"
+        // style={{ backgroundImage: "url('/images/home0-banner.jpg')"; background-size: cover}}>
+        style={{
+          backgroundImage: "url('/images/home-banner.jpg')",
+          backgroundSize: "contain",
+        }}
+      >
+        <div className="relative flex w-[100%] flex-row justify-between ">
           {/* my header component  */}
 
           {/* <Header /> */}
-          <Navbar/>
+          <Navbar />
 
-          <div className="my-20 lg:my-0 flex flex-row  items-center w-[100%] lg:w-[50%]">
+          <div className="my-20 flex w-[100%] flex-row  items-center lg:my-0 lg:w-[50%]">
             {/* social icon component  */}
-            <div className="w-[8%] flex flex-col gap-1 justify-center translate-x-0 social-logos">
-              <Link 
-              href={"https://www.facebook.com/pulsemarketing.io/"}
-              target="_blank"
+            <div className="social-logos flex w-[8%] translate-x-0 flex-col justify-center gap-1">
+              <Link
+                href={"https://www.facebook.com/pulsemarketing.io/"}
+                target="_blank"
               >
-              <div className="hover:bg-blue-400  hover:duration-100 hover:ease-in-out
-               hover:cursor-pointer rounded-full flex items-center justify-center py-3 px-0">
-                <Image
-                  src={"/Facebook.png"}
-                  alt="facebook"
-                  width={8}
-                  height={8}
+                <div
+                  className="flex  items-center justify-center
+               rounded-full px-0 py-3 hover:cursor-pointer hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                >
+                  <Image
+                    src={"/Facebook.png"}
+                    alt="facebook"
+                    width={8}
+                    height={8}
                   />
-              </div>
-                  </Link>
+                </div>
+              </Link>
 
-            <Link 
-            href={"https://www.instagram.com/pulsemarketing.io"}
-            target="_blank"
-            >
-              <div className="hover:bg-blue-400 hover:duration-100  hover:ease-in-out hover:cursor-pointer 
-               rounded-full flex items-center justify-center py-3">
-                <Image
-                  src={"/Subtract.png"}
-                  alt="subtract"
-                  width={12}
-                  height={12}
+              <Link
+                href={"https://www.instagram.com/pulsemarketing.io"}
+                target="_blank"
+              >
+                <div
+                  className="flex items-center  justify-center rounded-full 
+               py-3 hover:cursor-pointer hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                >
+                  <Image
+                    src={"/Subtract.png"}
+                    alt="subtract"
+                    width={12}
+                    height={12}
                   />
-              </div>  
-            </Link>
+                </div>
+              </Link>
 
-              
-            <Link 
-            href={'https://www.linkedin.com/company/29302818/admin/feed/posts/'}
-            target="_blank"
-            >
-              <div className="hover:bg-blue-400  hover:duration-100 hover:ease-in-out hover:cursor-pointer 
-              rounded-full flex items-center justify-center py-3">
-                <Image
-                  src={"/Linkedin.png"}
-                  alt="linkedin"
-                  width={12}
-                  height={12}
+              <Link
+                href={
+                  "https://www.linkedin.com/company/29302818/admin/dashboard/"
+                }
+                target="_blank"
+              >
+                <div
+                  className="flex  items-center justify-center rounded-full 
+              py-3 hover:cursor-pointer hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                >
+                  <Image
+                    src={"/Linkedin.png"}
+                    alt="linkedin"
+                    width={12}
+                    height={12}
                   />
-              </div>
-                  </Link>
+                </div>
+              </Link>
 
-            <Link 
-            href={'https://www.youtube.com/watch?v=mEhNo-fnGxU'}
-            target="_blank"
-            >
-              <div className="hover:bg-blue-400  hover:duration-100 hover:ease-in-out hover:cursor-pointer
-               rounded-full flex items-center justify-center py-[14px]">
-                <Image
-                  src={"/Youtube.png"}
-                  alt="youtube"
-                  width={12}
-                  height={12}
+              <Link
+                href={"https://www.youtube.com/watch?v=mEhNo-fnGxU"}
+                target="_blank"
+              >
+                <div
+                  className="flex  items-center justify-center rounded-full
+               py-[14px] hover:cursor-pointer hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                >
+                  <Image
+                    src={"/Youtube.png"}
+                    alt="youtube"
+                    width={12}
+                    height={12}
                   />
-              </div>
-                  </Link>
+                </div>
+              </Link>
+
+              <Link
+                href="https://www.tiktok.com/@pulsemarketing.io"
+                target="_blank"
+                className="hover:text-blue-800"
+              >
+                   <div
+                  className="flex text-[20px] items-center justify-center rounded-full
+               py-[14px] hover:cursor-pointer hover:text-white hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                >
+                <AiFillTikTok/>
+                </div>
+              </Link>
             </div>
 
             <div className="md:mt-20">
@@ -399,7 +424,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="w-[50%] md:h-[100vh] overflow-y-hidden hidden lg:block">
+          <div className="hidden w-[50%] overflow-y-hidden md:h-[100vh] lg:block">
             <HeroRightContent showForm={showForm} toggleForm={toggleForm} />
           </div>
         </div>

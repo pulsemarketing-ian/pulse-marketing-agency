@@ -14,9 +14,9 @@ const HeroSection = () => {
             className='md:pb-[150px]'
             >
             <Navbar/>
-            <div className='h-[60vh] md:h-[100vh] w-full flex justify-center items-center flex-col relative'>
+            <div className='h-[60vh] md:h-[76vh] w-full flex justify-center items-center flex-col relative'>
 
-        <div className=' translate-y-0 md:translate-y-[-1rem] flex-col item-center'>
+        <div className=' translate-y-[2rem] md:translate-y-[4rem] flex-col item-center'>
 
                 {/* serive heading  */}
                 <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">

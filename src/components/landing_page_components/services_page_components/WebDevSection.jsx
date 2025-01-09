@@ -27,9 +27,7 @@ const WebDevSection = () => {
           }}
         >
           <div className="z-10 text-center mt-10 md:mt-0 md:translate-y-[-30%] text-lg">
-          <Reveal>
             <p>We are experts in</p>
-            </Reveal>
 
             <Reveal>
               <h1 className="text-2xl md:text-6xl pb-7 font-bold tracking-wide">Development</h1>

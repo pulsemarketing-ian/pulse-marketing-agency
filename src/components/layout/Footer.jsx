@@ -5,9 +5,10 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import TextScroller from "./TextScroller";
 import Link from "next/link";
-import { FaXTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoYoutube } from "react-icons/io5";
+import { AiFillTikTok } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -108,62 +109,72 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex flex-col gap-4 md:min-h-[250px]">
+          <div className="flex flex-col gap-6 md:min-h-[250px]">
             <h1 className="text-xl font-medium">Follow Us</h1>
-            <div className="mt-3 flex cursor-pointer items-center gap-4 text-xl">
+
+            <div className="mt-4 flex flex-wrap gap-6 text-[21px]">
               <Link
-                href={"https://www.facebook.com/pulsemarketing.io/"}
+                href="https://www.facebook.com/pulsemarketing.io/"
                 target="_blank"
+                className="hover:text-blue-600"
               >
                 <FaFacebookF />
               </Link>
               <Link
-                href={"https://www.instagram.com/pulsemarketing.io/"}
+                href="https://www.instagram.com/pulsemarketing.io/"
                 target="_blank"
+                className="hover:text-pink-500"
               >
                 <FiInstagram />
               </Link>
               <Link
-                href={
-                  "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DmEhNo-fnGxU&q=EgQ2JQdsGIv78LsGIjAAD00khUysaykEUxpclJMQnl9M_y7VvVqGAJurfAfQjR-Bv5ht3ZuXKEjcuPZq95QyAXJaAUM"
-                }
+                href="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DmEhNo-fnGxU&q=EgQ2JQdsGIv78LsGIjAAD00khUysaykEUxpclJMQnl9M_y7VvVqGAJurfAfQjR-Bv5ht3ZuXKEjcuPZq95QyAXJaAUM"
                 target="_blank"
+                className="hover:text-red-500"
               >
                 <IoLogoYoutube />
               </Link>
               <Link
-                href={"https://www.linkedin.com/company/pulse-inc/"}
+                href="https://www.linkedin.com/company/29302818/admin/dashboard/"
                 target="_blank"
+                className="hover:text-blue-800"
               >
                 <FaLinkedin />
               </Link>
-            </div>
-            <div className="flex">
               <Link
-                href={
-                  "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
-                }
+                href="https://www.tiktok.com/@pulsemarketing.io"
                 target="_blank"
+                className="hover:text-blue-800"
+              >
+                <AiFillTikTok />
+              </Link>
+            </div>
+
+            <div className="flex flex-col items-start gap-4 ">
+              <Link
+                href="https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+                target="_blank"
+                className="flex items-center"
               >
                 <Image
-                  alt="image"
-                  className="mr-8"
-                  src={"/accrebited-bussiness-logo.png"}
-                  width={125}
-                  height={125}
+                  alt="Accredited Business Logo"
+                  src="/accrebited-bussiness-logo.png"
+                  width={140}
+                  height={140}
+                  className="rounded-md"
                 />
               </Link>
               <Link
-                href={
-                  "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-                }
+                href="https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
                 target="_blank"
+                className="mt-2 flex items-center"
               >
                 <Image
-                  alt="image"
-                  src={"/google-review-logo.png"}
-                  width={125}
-                  height={125}
+                  alt="Google Review Logo"
+                  src="/google-review-logo.png"
+                  width={140}
+                  height={140}
+                  className="rounded-md"
                 />
               </Link>
             </div>
@@ -182,10 +193,10 @@ const Footer = () => {
         <div className="mx-auto flex w-full flex-col items-center justify-between gap-4 px-8 md:flex-row lg:w-[88%] lg:px-0">
           <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
           <div className="flex gap-6 text-[18px]">
-            <Link href="/privacy" target="_blank">
+            <Link href="/privacy">
               Privacy Policy
             </Link>
-            <Link href="/term-condition" target="_blank">
+            <Link href="/term-condition">
               Terms & Conditions
             </Link>
           </div>

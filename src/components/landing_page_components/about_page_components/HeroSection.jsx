@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
 
         <Navbar />
-        <div className="relative flex h-[75vh] w-full flex-col items-center justify-center md:h-[120vh]">
+        <div className="relative flex h-[90vh] w-full flex-col items-center justify-center md:h-[105vh]">
           <div className="z-10 flex flex-col items-center translate-y-[-2rem] md:translate-y-[-4rem]">
             {/* Service heading */}
             <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">

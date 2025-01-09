@@ -10,7 +10,6 @@ import HeroForm from '@/components/landing_page_components/HeroForm';
 const   HeroSection = () => {
 
   return (
-    <React.Fragment>
         <main 
          style={{
              backgroundImage: "url('/images/video_page_images/banner-video02.jpg')",
@@ -87,7 +86,6 @@ const   HeroSection = () => {
 
             </div>
         </main>
-    </React.Fragment>
   )
 }
 

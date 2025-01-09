@@ -83,15 +83,6 @@ export default function Tabs() {
     setActiveTab(index);
   };
 
-  const handlePortfolioClick = (id, section) => {
-    //  localStorage.setItem('portfolioId', id);
-    //  router.push(`www.google.com`, _blank);
-    window.open("https://www.google.com", "_blank");
-
-    //  const currentWebLink = localStorage.setItem('visit-website', section);
-    //  console.log(currentWebLink);
-  };
-
   const renderTabContent = () => {
     if (isLoading) {
       return (
