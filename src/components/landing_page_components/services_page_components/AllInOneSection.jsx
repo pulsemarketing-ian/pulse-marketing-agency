@@ -21,7 +21,7 @@ const AllInOneSection = () => {
         <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
             <Reveal>
             <p className="text-xl mb-2">We are experts in</p>
-            <h1 className="text-2xl md:text-5xl font-bold tracking-wide">All-In-One CRO</h1>
+            <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Conversation Rate <br/>Optimiation</h1>
             </Reveal>
           </div>
           <div 
@@ -42,7 +42,7 @@ const AllInOneSection = () => {
               </Reveal>
               <Reveal>
               <p className="text-gray-300 leading-relaxed">
-              Sending personalized messages with the press of a button! Let Us Get You Any International Mobile Number You Want… Pluse Marketing CRM is an all-in-one sales and marketing platform that automatically grows your business.
+              At Pulse, we specialize in Conversion Rate Optimization (CRO) to help e-commerce businesses maximize their sales and revenue. Our tailored CRO strategies are designed to identify barriers in your customer journey, optimize your website performance, and turn casual visitors into loyal customer.
               </p>          
               </Reveal>
               <Reveal>

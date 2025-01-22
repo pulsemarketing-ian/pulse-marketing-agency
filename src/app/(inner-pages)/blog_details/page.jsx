@@ -113,7 +113,7 @@ const Page = () => {
         </main>
 
           {/* main content  */}
-        <div className='max-w-[1200px] mx-auto -mt-[20%] md:pb-8'>
+        <div className='max-w-[1200px] mx-auto -mt-[20rem] md:pb-8'>
               <div
                 dangerouslySetInnerHTML={{ __html: blogInner?.component?.content }}
                 className="content-style px-4 " 

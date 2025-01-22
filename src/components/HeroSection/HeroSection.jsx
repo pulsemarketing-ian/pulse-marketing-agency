@@ -8,23 +8,25 @@ import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 import Navbar from "../landing_page_components/Navbar";
 import { AiFillTikTok } from "react-icons/ai";
+import { IoCloseSharp } from "react-icons/io5";
+import { Box, Modal } from "@mui/material";
 
 const HeroLeftContent = ({ toggleForm, showForm }) => {
   const calendlyContainerRef = useRef(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (showForm) {
+    if (open) {
       const container = calendlyContainerRef.current;
 
       if (container) {
-        // Clear the container to ensure a fresh Calendly widget is loaded each time
         container.innerHTML = "";
 
         const div = document.createElement("div");
         div.className = "calendly-inline-widget";
         div.dataset.url = "https://calendly.com/ianpslater/20min";
         div.style.minWidth = "150px";
-        div.style.height = "1200px";
+        div.style.height = "800px";
         container.appendChild(div);
 
         const script = document.createElement("script");
@@ -34,106 +36,105 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         container.appendChild(script);
       }
     }
-  }, [showForm]);
+  }, [open]);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <>
-      <main className="hre-section mt-16 w-full px-5 lg:mt-0">
-        {/* upper logos container*/}
-        <div className="flex">
-          <Reveal>
-            <Link
-              href={
-                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                className="mr-8"
-                src={"/accrebited-bussiness-logo.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
-          <Reveal>
-            <Link
-              href={
-                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                src={"/google-review-logo.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
-        </div>
-        {/* Content Heading  */}
-        <div>
-          <Reveal>
-            <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
-              Our Objective:
-              <br /> Increase Your <br /> Revenue.
-            </h1>
-          </Reveal>
-          <div className="my-4 w-[90%] border-l-2 pl-3">
-            <Reveal>
-              <p className="poppins-light">
-                Boost your brand with our expert websites, apps, and branding
-                solutions. Bring your vision to life with Pulse.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-        {/* Contact Us button  */}
+          <main className="hre-section mt-16 w-full px-5 lg:mt-0">
+ 
+      <div className="flex">
         <Reveal>
-          <button
-            onClick={toggleForm}
-            className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
+          <Link
+            href={
+              "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+            }
+            target="_blank"
           >
-            Book Now
-            <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
-              <MdArrowForward />
-            </div>
-          </button>
+            <Image
+              alt="image"
+              className="mr-8"
+              src={"/accrebited-bussiness-logo.png"}
+              width={125}
+              height={125}
+            />
+          </Link>
         </Reveal>
-        <div className="md:hidden">
-          {showForm && (
-            <>
-              <div className="absolute bottom-0 right-0 h-[58%] w-[70%] -translate-y-[80px] overflow-x-hidden overflow-y-scroll rounded-lg bg-white">
-                <div className="relative inset-0 flex w-full items-center justify-center">
-                  <button
-                    onClick={toggleForm}
-                    className="absolute right-2 top-2 z-30 bg-my-blue-gradient text-lg text-white"
-                  >
-                    {/* &times; */}
-                    <IoMdClose />
-                  </button>
-                  <div ref={calendlyContainerRef}></div>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* <div
-        onClick={toggleForm}
-        className="absolute bottom-0 right-0 w-[30%] -translate-y-16"
+        <Reveal>
+          <Link
+            href={
+              "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+            }
+            target="_blank"
+          >
+            <Image
+              alt="image"
+              src={"/google-review-logo.png"}
+              width={125}
+              height={125}
+            />
+          </Link>
+        </Reveal>
+      </div>
+      {/* Content Heading  */}
+      <div>
+        <Reveal>
+          <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
+            Our Objective:
+            <br /> Increase Your <br /> Revenue.
+          </h1>
+        </Reveal>
+        <div className="my-4 w-[90%] border-l-2 pl-3">
+          <Reveal>
+            <p className="poppins-light">
+              Boost your brand with our expert websites, apps, and branding
+              solutions. Bring your vision to life with Pulse.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+      <button
+        onClick={handleOpen}
+        className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
       >
-        <div className="bg-[#50A2D4] px-6 rounded-tl-[40px] py-3 flex items-center justify-end get-mv-btbn">
-          <h3 className="poppins-light text-white text-lg">Get in touch</h3>
+        Book Now
+        <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
+          <MdArrowForward />
         </div>
-      </div> */}
-        </div>
+      </button>
+
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+            borderRadius: "8px",
+            width: "90%",
+            maxWidth: "600px",
+            height: "80%",
+            overflow: "auto",
+          }}
+        >
+          <button
+            onClick={handleClose}
+            className="absolute right-2 top-2 z-30 text-lg text-black"
+          >
+            <IoMdClose />
+          </button>
+          <div ref={calendlyContainerRef}></div>
+        </Box>
+      </Modal>
       </main>
     </>
   );
 };
-
 const HeroRightContent = ({ showForm, toggleForm }) => {
   const calendlyContainerRef = useRef(null);
 
@@ -410,11 +411,11 @@ const HeroSection = () => {
                 target="_blank"
                 className="hover:text-blue-800"
               >
-                   <div
-                  className="flex text-[20px] items-center justify-center rounded-full
-               py-[14px] hover:cursor-pointer hover:text-white hover:bg-blue-400 hover:duration-100 hover:ease-in-out"
+                <div
+                  className="flex items-center justify-center rounded-full py-[14px]
+               text-[20px] hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:duration-100 hover:ease-in-out"
                 >
-                <AiFillTikTok/>
+                  <AiFillTikTok />
                 </div>
               </Link>
             </div>
@@ -425,8 +426,27 @@ const HeroSection = () => {
           </div>
 
           <div className="hidden w-[50%] overflow-y-hidden md:h-[100vh] lg:block">
-            <HeroRightContent showForm={showForm} toggleForm={toggleForm} />
+            <HeroRightContent />
           </div>
+
+          {showForm && (
+            <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50">
+              <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+                <div
+                  onClick={toggleForm}
+                  className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
+                >
+                  <IoCloseSharp />
+                </div>
+
+                <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
+                <div
+                  className="h-[60vh] overflow-auto"
+                  ref={calendlyContainerRef}
+                ></div>
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </>

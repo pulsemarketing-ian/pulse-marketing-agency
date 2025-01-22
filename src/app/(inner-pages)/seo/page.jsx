@@ -7,6 +7,7 @@ import Testimonials from '@/components/landing_page_components/app_page_componen
 import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
 import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Footer from '@/components/layout/Footer';
+import Calender from '@/components/Calender/Calender'
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
             <Testimonials/>
             <FaqSection/>
             <OurBlog/>
+            <Calender/>
             <Footer/>
     </main>  
     )

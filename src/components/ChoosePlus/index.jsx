@@ -96,14 +96,14 @@ function ChoosePlus() {
               </h1>
             </Reveal>
           </div>
-          <div className="poppins-light mt-6 w-[90%] font-light md:mt-0  md:w-[35%]">
+          {/* <div className="poppins-light mt-6 w-[90%] font-light md:mt-0  md:w-[35%]">
             <Reveal>
               <p>
                 Join us on a journey to create something truly extraordinary.
                 Together, we&apos;ll turn your dreams into reality.
               </p>
             </Reveal>
-          </div>
+          </div> */}
         </div>
       </main>
     </div>

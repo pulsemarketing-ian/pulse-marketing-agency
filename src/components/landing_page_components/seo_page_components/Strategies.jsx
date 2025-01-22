@@ -50,7 +50,7 @@ const Strategies = () => {
         </Reveal>
 
         <Image
-          src="/images/seo_page_images/google-anylatics.jpeg.jpg"
+          src="/images/seo_page_images/dynamic-data-visualization-3d.jpg"
           width={300}
           height={300}
           alt="seo-strategies"
@@ -77,7 +77,7 @@ const Strategies = () => {
       >
         <Image
           src={"/images/seo_page_images/strategy.png"}
-          width={500}
+          width={550}
           height={460}
           className="rounded-3xl"
         />

@@ -31,11 +31,11 @@ const menuItems = [
             desc: "Online store solutions",
             path: "/branding",
           },
-          {
-            name: "Video Photo",
-            desc: "Content management systems",
-            path: "/video-photo",
-          },
+          // {
+          //   name: "Video Photo",
+          //   desc: "Content management systems",
+          //   path: "/video-photo",
+          // },
         ],
       },
       // {
@@ -180,7 +180,7 @@ export default function Navbar() {
                           </p>
                         </Link>
 
-                        <Link
+                        {/* <Link
                           href={"/video-photo"}
                           className="mb-2 block rounded-lg py-3 hover:bg-black/20 hover:text-blue-400"
                         >
@@ -188,7 +188,7 @@ export default function Navbar() {
                           <p className="text-sm text-gray-300">
                             Content Management Systems
                           </p>
-                        </Link>
+                        </Link> */}
 
                         <Link
                           href={"/cro"}
@@ -340,13 +340,13 @@ export default function Navbar() {
             >
               <IoIosMail className="h-5 w-5" />
             </a>
-            <a
+            {/* <a
               href="tel:+1-778-960-7426"
               target="_blank"
               className="rounded-full border p-3 hover:bg-white/10"
             >
               <IoIosCall className="h-5 w-5" />
-            </a>
+            </a> */}
           </div>
 
         </div>

@@ -209,7 +209,7 @@ const UpperTextComponent = () => {
               <p className="float-right md:w-[60%]">
                 Elevate your brands success with Pulse - Your trusted partner
                 for cutting-edge digital solutions and unparalleled customer
-                care in the USA.{" "}
+                care in Canada.{" "}
               </p>
             </Reveal>
           </div>
@@ -308,7 +308,7 @@ const Cards = () => {
           </div> */}
           <WebDevService />
 
-          <div className="mt-8 md:mt-[11rem] md:border-b md:border-[#363445]"/>
+          <div className="mt-8 md:mt-[11rem] md:border-b md:border-[#363445]" />
 
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-[50%]">
@@ -317,7 +317,7 @@ const Cards = () => {
             <div className="w-full md:w-[50%]">
               {/* <LogoDesign/> */}
               <main
-                className="relative overflow-hidden  text-white md:translate-y-0 md:pb-[15vh] pt-8 md:pt-0"
+                className="relative overflow-hidden  pt-8 text-white md:translate-y-0 md:pb-[15vh] md:pt-0"
                 style={{
                   backgroundColor: "#040117",
                   backgroundSize: "cover",
@@ -325,9 +325,9 @@ const Cards = () => {
                 }}
               >
                 {/* Main Content Section */}
-                <div className=" md:container md:mx-auto px-4 md:py-2">
+                <div className=" px-4 md:container md:mx-auto md:py-2">
                   <div
-                    className="flex transform flex-col items-center justify-between gap-8 rounded-xl md:p-8 p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
+                    className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8 lg:flex-row"
                     style={{
                       backgroundImage: `url('/images/services_page_images/fourth-section-img.png')`,
                       backgroundSize: "cover",
@@ -374,8 +374,7 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-[4rem] md:border-b md:border-[#363445]"/>
-
+          <div className="mt-8 md:mt-[4rem] md:border-b md:border-[#363445]" />
 
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-[50%]">
@@ -391,7 +390,7 @@ const Cards = () => {
                 {/* Main Content Section */}
                 <div className=" md:container md:mx-auto md:px-4 md:py-0">
                   <div
-                    className=" flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 md:p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
+                    className=" flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8 lg:flex-row"
                     style={{
                       backgroundImage: `url('/images/services_page_images/fifth-section-img.png')`,
                       backgroundSize: "cover",
@@ -406,12 +405,11 @@ const Cards = () => {
                       </Reveal>
                       <Reveal>
                         <p className="leading-relaxed text-gray-300">
-                          Our team of talented graphic designers will work with
-                          you through the whole process to create a stunning
-                          marketing piece that you will love. From logos,
-                          business cards, brochures, to signs and everything in
-                          between we have you covered for all of your design
-                          needs.
+                          Unlock the full potential of your online presence with
+                          Pulse Marketing is expert SEO services. Our dedicated
+                          team crafts personalized strategies to improve your
+                          search engine rankings, drive organic traffic, and
+                          enhance your digital visibility.
                         </p>
                       </Reveal>
                       <Reveal>
@@ -439,7 +437,7 @@ const Cards = () => {
             <div className="w-full md:w-[50%]">
               {/* <LogoDesign/> */}
               <main
-                className="relative overflow-hidden text-white md:translate-y-0 md:pb-[15vh] pt-6 md:pt-0"
+                className="relative overflow-hidden pt-6 text-white md:translate-y-0 md:pb-[15vh] md:pt-0"
                 style={{
                   backgroundColor: "#040117",
                   backgroundSize: "cover",
@@ -449,7 +447,7 @@ const Cards = () => {
                 {/* Main Content Section */}
                 <div className=" md:container md:mx-auto md:px-4 md:py-0">
                   <div
-                    className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 md:p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
+                    className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8 lg:flex-row"
                     style={{
                       backgroundImage: `url('/images/services_page_images/fourth-section-img.png')`,
                       backgroundSize: "cover",
@@ -459,16 +457,17 @@ const Cards = () => {
                     <div className="space-y-6 lg:w-[80%]">
                       <Reveal>
                         <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-                          All-In-One <br /> CRO
+                          Conversion Rate <br /> Optimization CRO
                         </h2>
                       </Reveal>
                       <Reveal>
                         <p className="leading-relaxed text-gray-300">
-                          Sending personalized messages with the press of a
-                          button! Let Us Get You Any International Mobile Number
-                          You Want… Pluse Marketing CRM is an all-in-one sales
-                          and marketing platform that automatically grows your
-                          business. Pluse Marketing grows your business.
+                          At Pulse, we specialize in Conversion Rate
+                          Optimization (CRO) to help e-commerce businesses
+                          maximize their sales and revenue. Our tailored CRO
+                          strategies are designed to identify barriers in your
+                          customer journey, optimize your website performance,
+                          and turn casual visitors into loyal customers.
                         </p>
                       </Reveal>
                       <Reveal>

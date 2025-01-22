@@ -9,6 +9,7 @@ import Testimonials from '@/components/landing_page_components/app_page_componen
 import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog'
 import Footer from '@/components/layout/Footer'
 import FAQSection from '@/components/landing_page_components/app_page_components/FaqSection'
+import Calender from '@/components/Calender/Calender'
 
 const page = () => {
   return (
@@ -22,6 +23,7 @@ const page = () => {
         <Testimonials/>
         <FAQSection/>
         <OurBlog/>
+        <Calender/>
         <Footer/>
     </main>
   )

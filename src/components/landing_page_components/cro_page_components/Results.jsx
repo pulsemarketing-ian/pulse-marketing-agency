@@ -35,11 +35,11 @@ const Results = () => {
               className="space-y-6 lg:w-[40%]"
             >
               <Reveal>
-                <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
+                <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
                 Results You <br/>Can Expect
                 </h2>
               </Reveal>
-              <ul className="space-y-2 text-[16px] text-gray-300">
+              <ul className="space-y-2 text-[21px] text-gray-300">
                 <Reveal>
                   <li className="flex items-center">
                     <span className="text-cyan-500 mr-2">•</span> Increased sales and revenue.

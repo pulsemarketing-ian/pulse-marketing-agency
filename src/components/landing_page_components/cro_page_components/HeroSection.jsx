@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
         <main 
          style={{
-             backgroundImage: "url('/images/cro_page_images/herosection.png')",
+             backgroundImage: "url('/images/cro_page_images/cro-banner-min.jpg')",
              backgroundSize: "cover",
             }}
             className='md:pb-[200px]'

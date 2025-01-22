@@ -57,7 +57,7 @@ const SeoApproach = () => {
                   {/* card heading  */}
                   <Reveal>
                     <div>
-                      <h2 className="text-4xl font-bold tracking-wide">100%</h2>
+                      <h2 className="text-4xl font-bold tracking-wide">+126%</h2>
                       <p>
                         Total Visitors
                         <br />
@@ -79,7 +79,7 @@ const SeoApproach = () => {
                   {/* card heading  */}
                   <Reveal>
                     <div>
-                      <h2 className="text-4xl font-bold tracking-wide">50%</h2>
+                      <h2 className="text-4xl font-bold tracking-wide">+43%</h2>
                       <p>
                         Traffic <br />
                         Increased
@@ -100,7 +100,7 @@ const SeoApproach = () => {
                   {/* card heading  */}
                   <Reveal>
                     <div>
-                      <h2 className="text-4xl font-bold tracking-wide">100%</h2>
+                      <h2 className="text-4xl font-bold tracking-wide">+220%</h2>
                       <p>
                         Leads Per <br />
                         Month

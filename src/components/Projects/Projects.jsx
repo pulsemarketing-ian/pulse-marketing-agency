@@ -167,9 +167,7 @@ const Projects = () => {
                 <div className="w-[90%]">
                   <Reveal>
                     <p className=" poppins-light font-light text-[14px] my-3">
-                      Join us on a journey to create something truly
-                      extraordinary. Together, we&apos;ll turn your dreams into
-                      reality.
+                    Join us on a journey to create something truly extraordinary. Together, we&apos;ll turn your dreams into reality. Partner with us to get the job done right—professionally, efficiently, and with exceptional results.
                     </p>
                   </Reveal>
                 </div>

@@ -1,100 +1,97 @@
-'use client';
+"use client";
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 import Link from "next/link";
 
 const SEOSection = () => {
-    return (
-         <main 
-         className="relative pb-8 text-white overflow-hidden md:translate-y-[-13%]" 
-         style={{
-             backgroundColor: '#040117',
-             backgroundSize:'cover',
-             borderBottom:'4px solid #363445',
-           }}
-        >
-  
-        {/* Main Content Section */}
-        <div className="relative container mx-auto px-4 py-16">
-            
-              <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
-              <Reveal>
-                <p className="text-xl mb-2">We are experts in</p>
-                <h1 className="text-2xl md:text-5xl font-bold tracking-wide pb-2">Search Engine Optimization</h1>
-            </Reveal>
-              </div>
-          <div 
-            className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between transform transition-transform duration-700 ease-in-out hover:scale-105"
-            style={{
+  return (
+    <main
+      className="relative overflow-hidden pb-8 text-white md:translate-y-[-13%]"
+      style={{
+        backgroundColor: "#040117",
+        backgroundSize: "cover",
+        borderBottom: "4px solid #363445",
+      }}
+    >
+      {/* Main Content Section */}
+      <div className="container relative mx-auto px-4 py-16">
+        <div className="z-10 mx-auto flex w-auto flex-col items-center justify-center text-center">
+          <Reveal>
+            <p className="mb-2 text-xl">We are experts in</p>
+            <h1 className="pb-2 text-2xl font-bold tracking-wide md:text-5xl">
+              Search Engine Optimization
+            </h1>
+          </Reveal>
+        </div>
+        <div
+          className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 lg:flex-row"
+          style={{
             backgroundImage: `url('/images/services_page_images/fifth-section-img.png')`,
-            backgroundSize:'cover',
-            marginTop:'15px'
+            backgroundSize: "cover",
+            marginTop: "15px",
             // backdropFilter: 'blur(30px)',
-            }}
-          >
-            {/* Left Column */}
-            <div className="space-y-6 w-full md:w-[40%]">
-              <Reveal>
-                <h2 className="text-2xl md:text-4xl font-medium leading-tight">
-                Developing <br/> SEO Strategy  <br/>And Plan
-                </h2>
-              </Reveal>
-              <Reveal>
-              <p className="text-gray-300 leading-relaxed">
-              Our team of talented graphic designers will work with you through the whole process to create a stunning marketing piece that you will love. From logos, business cards, brochures, to signs and everything in between we have you covered for all of your design needs.              </p>
-              </Reveal>
-              <Reveal>
-                <Link href={"/seo"}>
+          }}
+        >
+          {/* Left Column */}
+          <div className="w-full space-y-6 md:w-[40%]">
+            <Reveal>
+              <h2 className="text-2xl font-medium leading-tight md:text-4xl">
+                Developing <br /> SEO Strategy <br />
+                And Plan
+              </h2>
+            </Reveal>
+            <Reveal>
+              <p className="leading-relaxed text-gray-300">
+                Unlock the full potential of your online presence with Pulse
+                Marketing is expert SEO services. Our dedicated team crafts
+                personalized strategies to improve your search engine rankings,
+                drive organic traffic, and enhance your digital visibility.{" "}
+              </p>
+            </Reveal>
+            <Reveal>
+              <Link href={"/seo"}>
                 <PrimaryBtn text="Learn More" />
               </Link>
-              </Reveal>
-            </div>
-  
-          
-  
-            {/* Right Column */}
-            <div  className="space-y-6 w-full md:w-auto">
-            <Reveal>
-                <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
-                Business Assessment
-                </h3>
-              </Reveal>
-              <ul className="space-y-2 text-gray-300">
-              <Reveal>
-                <li className="flex items-center gap-3">
-                Target Customer
-                </li>
-                </Reveal>
-                <Reveal>
-                <li className="flex items-center gap-3">
-                Competitor Analysis
-                </li>
-                </Reveal>
-              </ul>
-            </div>
+            </Reveal>
           </div>
-       
+
+          {/* Right Column */}
+          <div className="w-full space-y-6 md:w-auto">
+            <Reveal>
+              <h3 className="border-b border-purple-400/30 pb-2 text-xl font-semibold">
+                Business Assessment
+              </h3>
+            </Reveal>
+            <ul className="space-y-2 text-gray-300">
+              <Reveal>
+                <li className="flex items-center gap-3">Target Customer</li>
+              </Reveal>
+              <Reveal>
+                <li className="flex items-center gap-3">Competitor Analysis</li>
+              </Reveal>
+            </ul>
+          </div>
+        </div>
+
         {/* Background Text Overlay */}
         <div
-          className="absolute bottom-[-10%] left-0 w-full text-[10vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+          className="pointer-events-none absolute bottom-[-10%] left-0 w-full select-none overflow-hidden text-center text-[10vw] font-bold"
           style={{
-            WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
-            color: 'transparent'
+            WebkitTextStroke: "1px rgba(255, 255, 255, 0.1)",
+            color: "transparent",
           }}
         >
           SEO
         </div>
-        </div>
-  
-       
-  
-        {/* Purple Glow Effects */}
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full filter blur-[100px] -z-10" />
-      </main>
-    )
-  };
+      </div>
+
+      {/* Purple Glow Effects */}
+      <div className="absolute left-1/4 top-1/2 -z-10 h-96 w-96 rounded-full bg-purple-600/20 blur-[100px] filter" />
+      <div className="absolute right-1/4 top-1/4 -z-10 h-96 w-96 rounded-full bg-pink-600/20 blur-[100px] filter" />
+    </main>
+  );
+};
 
 export default SEOSection;

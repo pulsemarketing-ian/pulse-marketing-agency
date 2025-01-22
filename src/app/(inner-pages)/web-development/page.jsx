@@ -8,6 +8,7 @@ import TakeSteps from '../../../components/landing_page_components/web-dev_page_
 import Testimonials from '@/components/landing_page_components/app_page_components/Testimonials';
 import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
 import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
+import Calender from '@/components/Calender/Calender';
 import Footer from '@/components/layout/Footer';
 
 const page = () => {
@@ -23,6 +24,7 @@ const page = () => {
         <Testimonials/>
         <FaqSection/>
         <OurBlog/>
+        <Calender/>
         <Footer/>
     </main>
   )

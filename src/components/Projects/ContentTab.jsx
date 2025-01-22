@@ -357,7 +357,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
               </div>
               <div className="w-[100%]">
                 <p className="poppins-light font-light text-[14px] my-3">
-                Discover a world of culinary delights with our Food app! Browse thousands of recipes, order delicious meals from top restaurants, and explore local flavors. With user-friendly features and quick delivery options, satisfy your cravings effortlessly. Download now and embark on a mouthwatering journey!
+                Discover a world of culinary delights with Food App! Browse thousands of recipes, order delicious meals from top restaurants, and explore local flavors. With user-friendly features and quick delivery options, satisfying your cravings has never been easier. Download now and start your mouthwatering journey!
                 </p>
               </div>
               
@@ -374,7 +374,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
               </div>
               <div className="w-[100%]">
                 <p className="poppins-light font-light text-[14px] my-3">
-                Manage your finances effortlessly with our Fintech app! Track expenses, budget smartly, and make secure transactions. Enjoy real-time updates, personalized insights, and easy-to-use features designed to help you achieve your financial goals. Download now and take control of your financial future!
+                Manage your finances effortlessly with the Fintech app! Track expenses, budget wisely, and make secure transactions. Enjoy real-time updates, personalized insights, and intuitive features designed to help you achieve your financial goals. Download now and take control of your financial future!
                 </p>
               </div>
             </div>

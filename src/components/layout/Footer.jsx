@@ -62,7 +62,7 @@ const Footer = () => {
               { name: "App Development", link: "/app" },
               { name: "SEO", link: "/seo" },
               { name: "Branding", link: "/branding" },
-              { name: "Video Photo", link: "/video-photo" },
+              // { name: "Video Photo", link: "/video-photo" },
               { name: "CRO", link: "/cro" },
             ].map((service, index) => (
               <Link
@@ -86,7 +86,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="flex flex-col gap-4 md:min-h-[250px]">
             <h1 className="text-xl font-medium">Contact</h1>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <Link
                 href="tel:+1-778-960-7426"
                 target="_blank"
@@ -95,7 +95,7 @@ const Footer = () => {
                 <FaPhoneAlt />
                 <span className="ml-3 text-[18px]">+1-778-960-7426</span>
               </Link>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2">
               <Link
                 href="mailto:hi@pulsemarketing.io"
