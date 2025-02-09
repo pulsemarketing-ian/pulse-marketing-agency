@@ -196,6 +196,8 @@ const UpperTextComponent = () => {
   return (
     <>
       <main>
+      <div className="mt-8 md:my-[5rem] md:border-b md:border-[#363445]" />
+
         <div className="m-auto flex-row items-center justify-between pb-10 md:flex md:pb-12 lg:w-[85%]">
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
@@ -225,87 +227,6 @@ const Cards = () => {
       <main className="card-section m-auto w-full pt-16 lg:w-[85%]">
         <div className="m-auto  w-full px-10">
           <UpperTextComponent />
-
-          {/* <div className="lg:w-[85%] w-full flex flex-wrap justify-between items-center px-8 lg:px-0 mx-auto">
-            <div className="w-[48%] lg:w-[16%] py-12 rounded-2xl relative bg-my-blue-gradient rotate-[-8deg] z-10 hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (1).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text">
-                  Web Design <br />
-                  Development
-                </h3>
-              </div>
-
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                1
-              </h2>
-            </div>
-
-            <div className="w-[48%] lg:w-[16%] translate-y-3 py-12 rounded-2xl relative bg-my-green-gradient rotate-[5deg] hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (6).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text">
-                  Search Engine <br />
-                  Optimization
-                </h3>
-              </div>
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                2
-              </h2>
-            </div>
-
-            <div className="w-[48%] lg:w-[16%]  -translate-y-4 py-12 rounded-2xl relative bg-my-purple-gradient rotate-[-6deg] hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (5).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text">
-                  Photography & <br />
-                  Videography
-                </h3>
-              </div>
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                3
-              </h2>
-            </div>
-
-            <div className="w-[48%] lg:w-[16%] translate-y-3 z-10 py-12 rounded-2xl relative bg-my-blue-gradient rotate-[8deg] hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (4).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text w-[50%] md:w-full">
-                  Online <br/>Reputation <br />
-                  Management
-                </h3>
-              </div>
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                4
-              </h2>
-            </div>
-
-            <div className="w-[48%] lg:w-[16%]  -translate-y-3 py-12 rounded-2xl relative bg-my-green-gradient rotate-[-6deg] hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (3).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text">
-                  Branding <br />
-                  Packages
-                </h3>
-              </div>
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                5
-              </h2>
-            </div>
-
-            <div className="w-[48%] lg:w-[16%] translate-y-4 py-12 rounded-2xl relative bg-my-purple-gradient rotate-[8deg] hover:scale-110 hover:rotate-0 hover:cursor-pointer hover:shadow-glow transform transition-transform duration-300 card-css">
-              <div className="flex flex-col gap-4 justify-center translate-x-6">
-                <Image alt="img-alt" src={"/img (2).png"} width={40} height={40} />
-                <h3 className="poppins-medium card-text">
-                  Mobile App <br />
-                  Development
-                </h3>
-              </div>
-              <h2 className="absolute top-0 right-0 text-8xl poppins-bold opacity-[50%] px-[15px] pt-3">
-                6
-              </h2>
-            </div>
-          </div> */}
           <WebDevService />
 
           <div className="mt-8 md:mt-[11rem] md:border-b md:border-[#363445]" />

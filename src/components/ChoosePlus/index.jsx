@@ -92,7 +92,7 @@ function ChoosePlus() {
           <div className=" w-[80%] md:w-[50%]">
             <Reveal>
               <h1 className="poppins-medium ct-heading text-5xl">
-                Lets Build <br /> Something Great!
+              Sales-Driven <br /> Conversion-Optimized Platforms.
               </h1>
             </Reveal>
           </div>

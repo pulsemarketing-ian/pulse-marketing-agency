@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
+import { FaStar } from "react-icons/fa";
 import Header from "../layout/Header";
 import Image from "next/image";
 import { MdArrowForward } from "react-icons/md";
@@ -10,6 +11,7 @@ import Navbar from "../landing_page_components/Navbar";
 import { AiFillTikTok } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Box, Modal } from "@mui/material";
+import SEORankingWidget from "../landing_page_components/SeoRankingWidget";
 
 const HeroLeftContent = ({ toggleForm, showForm }) => {
   const calendlyContainerRef = useRef(null);
@@ -43,94 +45,110 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
 
   return (
     <>
-          <main className="hre-section mt-16 w-full px-5 lg:mt-0">
- 
-      <div className="flex">
-        <Reveal>
-          <Link
-            href={
-              "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
-            }
-            target="_blank"
-          >
-            <Image
-              alt="image"
-              className="mr-8"
-              src={"/accrebited-bussiness-logo.png"}
-              width={125}
-              height={125}
-            />
-          </Link>
-        </Reveal>
-        <Reveal>
-          <Link
-            href={
-              "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-            }
-            target="_blank"
-          >
-            <Image
-              alt="image"
-              src={"/google-review-logo.png"}
-              width={125}
-              height={125}
-            />
-          </Link>
-        </Reveal>
-      </div>
-      {/* Content Heading  */}
-      <div>
-        <Reveal>
-          <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
-            Our Objective:
-            <br /> Increase Your <br /> Revenue.
-          </h1>
-        </Reveal>
-        <div className="my-4 w-[90%] border-l-2 pl-3">
+      <main className="hre-section mt-16 w-full px-5 lg:mt-0">
+        <div className="flex">
           <Reveal>
-            <p className="poppins-light">
-              Boost your brand with our expert websites, apps, and branding
-              solutions. Bring your vision to life with Pulse.
-            </p>
+            <Link
+              href={
+                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+              }
+              target="_blank"
+            >
+              <Image
+                alt="image"
+                className="mr-8"
+                src={"/accrebited-bussiness-logo2.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
+          </Reveal>
+          <Reveal>
+            <Link
+              href={
+                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+              }
+              target="_blank"
+            >
+              <Image
+                alt="image"
+                src={"/google-review-logo2.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
           </Reveal>
         </div>
-      </div>
-      <button
-        onClick={handleOpen}
-        className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
-      >
-        Book Now
-        <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
-          <MdArrowForward />
+        {/* Content Heading  */}
+        <div>
+          <Reveal>
+            <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
+              Our Objective:
+              <br /> Increase Your <br /> Revenue.
+            </h1>
+          </Reveal>
+          <div className="my-4 w-[90%] border-l-2 pl-3">
+            <Reveal>
+              <p className="poppins-light">
+                Boost your brand with our expert websites, apps, and branding
+                solutions. Bring your vision to life with Pulse.
+              </p>
+            </Reveal>
+          </div>
         </div>
-      </button>
+        <div className="flex w-full flex-wrap items-center justify-between">
+          <div className="flex w-full space-x-4 md:w-auto">
+            <p className="poppins-light flex items-center">
+              Clients rate our team and work
+            </p>
+            <span className="flex items-center pl-4 text-yellow-500">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </span>
+            <span>4.8/5</span>
+            <span className="text-gray-500">based on 86 client reviews</span>
+          </div>
+        </div>
 
-      <Modal open={open} onClose={handleClose}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            bgcolor: "background.paper",
-            boxShadow: 24,
-            p: 4,
-            borderRadius: "8px",
-            width: "90%",
-            maxWidth: "600px",
-            height: "80%",
-            overflow: "auto",
-          }}
+        <button
+          onClick={handleOpen}
+          className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
         >
-          <button
-            onClick={handleClose}
-            className="absolute right-2 top-2 z-30 text-lg text-black"
+          Book Now
+          <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
+            <MdArrowForward />
+          </div>
+        </button>
+
+        <Modal open={open} onClose={handleClose}>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              bgcolor: "background.paper",
+              boxShadow: 24,
+              p: 4,
+              borderRadius: "8px",
+              width: "90%",
+              maxWidth: "600px",
+              height: "80%",
+              overflow: "auto",
+            }}
           >
-            <IoMdClose />
-          </button>
-          <div ref={calendlyContainerRef}></div>
-        </Box>
-      </Modal>
+            <button
+              onClick={handleClose}
+              className="absolute right-2 top-2 z-30 text-lg text-black"
+            >
+              <IoMdClose />
+            </button>
+            <div ref={calendlyContainerRef}></div>
+          </Box>
+        </Modal>
       </main>
     </>
   );
@@ -329,7 +347,6 @@ const HeroSection = () => {
       >
         <div className="relative flex w-[100%] flex-row justify-between ">
           {/* my header component  */}
-
           {/* <Header /> */}
           <Navbar />
 

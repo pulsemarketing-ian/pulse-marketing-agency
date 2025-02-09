@@ -25,8 +25,9 @@ const SeoApproach = () => {
         >
           <div className="z-10  text-center">
             <Reveal>
-              <h1 className="text-xl font-bold tracking-wide md:text-5xl">
-                Our Approach to SEO
+              <p className="pt-20">Let rebuild the SEO with improvements easier to understand and better layout of <br />workflow of process here is some details to start with that:</p>
+              <h1 className="text-xl font-bold tracking-wide md:text-5xl pt-10">
+                Why SEO Matters for Your Business
               </h1>
             </Reveal>
           </div>
@@ -121,19 +122,15 @@ const SeoApproach = () => {
               }}
             >
               <Reveal>
-                <h4 className="text-center text-xl font-bold tracking-wide md:text-3xl">
-                  Train Me Consultation
+                <h4 className=" text-xl font-bold tracking-wide md:text-3xl">
+                  Are you struggling to get your website noticed?
                 </h4>
               </Reveal>
               <Reveal>
                 <p>
-                  Unlock the full potential of your online presence with Pulse
-                  Marketing is expert SEO services. Our dedicated team crafts
-                  personalized strategies to improve your search engine
-                  rankings, drive organic traffic, and enhance your digital
-                  visibility. From advanced keyword research to cutting-edge
-                  optimization techniques, we provide comprehensive solutions
-                  tailored to your business needs. <br/>
+                Do you want more traffic, leads, and sales without spending a fortune on ads? <br />
+Is your website buried deep in search results? <br />
+Wondering why your competitors are outranking you?<br/>
                   <p className="mt-4">
                   Partner with us to stay ahead in the competitive digital
                   landscape and achieve measurable results. Elevate your brand

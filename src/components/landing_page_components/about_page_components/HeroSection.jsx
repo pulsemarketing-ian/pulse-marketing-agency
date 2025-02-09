@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { motion } from "motion/react";
+import SEORankingWidget from "@/components/landing_page_components/SeoRankingWidget";
 
 const HeroSection = () => {
   return (
@@ -17,14 +18,15 @@ const HeroSection = () => {
         }}
         className="relative pb-[150px]"
       >
+        <SEORankingWidget />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
 
         <Navbar />
         <div className="relative flex h-[90vh] w-full flex-col items-center justify-center md:h-[105vh]">
-          <div className="z-10 flex flex-col items-center translate-y-[-2rem] md:translate-y-[-4rem]">
+          <div className="z-10 flex translate-y-[-2rem] flex-col items-center md:translate-y-[-4rem]">
             {/* Service heading */}
-            <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">
+            <div className="-ml-[20px] mb-2 flex items-center justify-center gap-1 md:-ml-[45px]">
               <Image
                 src="/images/services_page_images/blue-dot.png"
                 alt="blue-dot"
@@ -37,19 +39,19 @@ const HeroSection = () => {
             {/* Heading main */}
             <Reveal>
               <h2
-                className="text-3xl font-bold capitalize text-white md:text-5xl pb-2"
+                className="pb-2 text-3xl font-bold capitalize text-white md:text-5xl"
                 style={{ lineHeight: "1.2" }}
               >
-                Empowering Your <br />
-                Digital Presence.
+                Driving Growth <br />
+                Fueling Success.
               </h2>
             </Reveal>
 
             <Reveal>
               <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
-                Transforming visions into digital realities through 3D web
-                development, SEO mastery, multimedia creativity, logo design,
-                online reputation management, and application innovation.
+                We help businesses scale faster through revenue-focused
+                strategies, cutting-edge web development, and data-driven
+                marketing solutions.
               </p>
             </Reveal>
           </div>
@@ -63,9 +65,7 @@ const HeroSection = () => {
             />
           </div> */}
         </div>
-        
       </main>
-
     </>
   );
 };
