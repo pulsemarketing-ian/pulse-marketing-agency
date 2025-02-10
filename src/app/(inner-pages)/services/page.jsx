@@ -17,7 +17,9 @@ const Services = () => {
         <LogoDesgin/>
         <SEOSection/>
         <AllInOneSection/>
+        <div className='mt-12 md:mt-0'>
         <Footer/>
+        </div>
         </main>
   )
 }
