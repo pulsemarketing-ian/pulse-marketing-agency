@@ -228,9 +228,9 @@ export default function Navbar() {
                           </div>
 
                           <div className="relative h-[160px] w-[400px] rounded-lg">
-                            <Link href={"/cro"}>
+                            <Link href={"/services"}>
                               <Image
-                                src={"/images/cro_page_images/herosection.png"}
+                                src={"/images/services_page_images/hero-img.png"}
                                 alt="Branding"
                                 layout="fill"
                                 objectFit="cover"

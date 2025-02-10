@@ -11,11 +11,13 @@ import Footer from "@/components/layout/Footer";
 import FAQSection from "@/components/landing_page_components/app_page_components/FaqSection";
 import Calender from "@/components/Calender/Calender";
 import ConversionCalculator from "@/components/landing_page_components/cro_page_components/ConversionCalculator";
+import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
 const page = () => {
   return (
     <main className="theme_bg_color">
       <HeroSection />
       <SecondSection />
+      <BrandLogoCards/>
       <WhyChooseUs />
       <CROProcess />
       <Expertise />

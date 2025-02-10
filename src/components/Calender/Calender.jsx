@@ -34,7 +34,7 @@ const Calender = () => {
   return (
     <>
       <main
-        className="w-full flex justify-center py-16 px-4 md:px-10"
+        className="w-full flex justify-center md:py-16 px-4 md:px-10"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",

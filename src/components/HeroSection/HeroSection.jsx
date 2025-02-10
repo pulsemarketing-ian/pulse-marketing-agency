@@ -13,12 +13,17 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Box, Modal } from "@mui/material";
 import SEORankingWidget from "../landing_page_components/SeoRankingWidget";
 
-const HeroLeftContent = ({ toggleForm, showForm }) => {
+const HeroLeftContent = () => {
+ 
+  const [showForm, setShowForm] = useState(false);
   const calendlyContainerRef = useRef(null);
-  const [open, setOpen] = useState(false);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
 
   useEffect(() => {
-    if (open) {
+    if (showForm) {
       const container = calendlyContainerRef.current;
 
       if (container) {
@@ -27,8 +32,8 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         const div = document.createElement("div");
         div.className = "calendly-inline-widget";
         div.dataset.url = "https://calendly.com/ianpslater/20min";
-        div.style.minWidth = "150px";
-        div.style.height = "800px";
+        div.style.minWidth = "500px";
+        div.style.height = "1200px";
         container.appendChild(div);
 
         const script = document.createElement("script");
@@ -38,10 +43,7 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
         container.appendChild(script);
       }
     }
-  }, [open]);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  }, [showForm]);
 
   return (
     <>
@@ -96,25 +98,21 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
             </Reveal>
           </div>
         </div>
-        <div className="flex w-full flex-wrap items-center justify-between">
-          <div className="flex w-full space-x-4 md:w-auto">
-            <p className="poppins-light flex items-center">
-              Clients rate our team and work
-            </p>
-            <span className="flex items-center pl-4 text-yellow-500">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-            </span>
-            <span>4.8/5</span>
-            <span className="text-gray-500">based on 86 client reviews</span>
+
+        <div className="flex w-full flex-col md:items-center md:gap-3 md:flex-row text-left">
+          <p> Clients rate our team and work</p>
+          <div className="flex text-yellow-500">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
           </div>
+          <p>4.8/5</p>
+          <p className="text-gray-500">based on 86 client reviews</p>
         </div>
 
         <button
-          onClick={handleOpen}
+          onClick={toggleForm}
           className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
         >
           Book Now
@@ -123,7 +121,7 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
           </div>
         </button>
 
-        <Modal open={open} onClose={handleClose}>
+        {/* <Modal open={open} onClose={handleClose}>
           <Box
             sx={{
               position: "absolute",
@@ -147,12 +145,31 @@ const HeroLeftContent = ({ toggleForm, showForm }) => {
               <IoMdClose />
             </button>
             <div ref={calendlyContainerRef}></div>
-          </Box>
-        </Modal>
+            </Box>
+        </Modal> */}
+          {showForm && (
+                <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50">
+                  <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+                    <div
+                      onClick={toggleForm}
+                      className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
+                    >
+                      <IoCloseSharp />
+                    </div>
+        
+                    <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
+                    <div
+                      className="h-[60vh] overflow-auto"
+                      ref={calendlyContainerRef}
+                    ></div>
+                  </div>
+                </div>
+              )}
       </main>
     </>
   );
 };
+
 const HeroRightContent = ({ showForm, toggleForm }) => {
   const calendlyContainerRef = useRef(null);
 
@@ -342,12 +359,15 @@ const HeroSection = () => {
         // style={{ backgroundImage: "url('/images/home0-banner.jpg')"; background-size: cover}}>
         style={{
           backgroundImage: "url('/images/home-banner.jpg')",
-          backgroundSize: "contain",
+          // backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          objectFit: "cover",
         }}
       >
         <div className="relative flex w-[100%] flex-row justify-between ">
           {/* my header component  */}
           {/* <Header /> */}
+          {/* <SEORankingWidget/> */}
           <Navbar />
 
           <div className="my-20 flex w-[100%] flex-row  items-center lg:my-0 lg:w-[50%]">
