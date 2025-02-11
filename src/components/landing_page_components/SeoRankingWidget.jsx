@@ -68,7 +68,7 @@ const SEORankingWidget = () => {
       {/* <h1 className="text-2xl font-bold mb-4">SEO Ranking Widget</h1> */}
       <div 
         ref={widgetContainerRef} 
-        className="w-full min-h-[400px] relative z-10"
+        className="w-full h-auto relative z-10"
       >
         {!isLoaded && <div className="text-center py-4">Loading widget...</div>}
       </div>
