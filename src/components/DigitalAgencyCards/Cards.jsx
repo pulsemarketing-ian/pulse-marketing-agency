@@ -196,7 +196,7 @@ const UpperTextComponent = () => {
   return (
     <>
       <main>
-      <div className="mt-8 md:my-[5rem] md:border-b md:border-[#363445]" />
+      {/* <div className="mt-8 md:my-[5rem] md:border-b md:border-[#363445]" /> */}
 
         <div className="m-auto flex-row items-center justify-between pb-10 md:flex md:pb-12 lg:w-[85%]">
           <div className=" w-[80%] md:w-[50%]">

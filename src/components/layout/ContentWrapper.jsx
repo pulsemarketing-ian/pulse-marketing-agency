@@ -3,6 +3,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import ChoosePlus from "../ChoosePlus";
 import Tabs from "../MyTabs/Tabs";
 import Projects from "../Projects/Projects";
+import HeroSection2 from "../CroinHome/HeroSection2";
 import Cards from "../DigitalAgencyCards/Cards";
 import Testimonials from "../landing_page_components/app_page_components/Testimonials";
 import Calender from "../Calender/Calender";
@@ -11,15 +12,21 @@ import Footer from "./Footer";
 import SEORankingWidget from "../landing_page_components/SeoRankingWidget";
 import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
+import DownloadBook from "@/components/DownloadBook/DownloadBook";
 const ContentWrapper = () => {
   return (
     <div>
-      {/* <SEORankingWidget /> */}
       <HeroSection />
+      <SEORankingWidget />
       <ChoosePlus />
       <Tabs />
       <BrandLogoCards />
       <Projects />
+      <DownloadBook/>
+      <Link href={'/cro'}>
+      <HeroSection2/>
+      </Link>
       <Cards />
       <Video />
       <Testimonials />
@@ -41,3 +48,11 @@ const ContentWrapper = () => {
 };
 
 export default ContentWrapper;
+
+
+
+
+
+
+
+

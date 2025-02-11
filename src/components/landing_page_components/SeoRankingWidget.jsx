@@ -1,81 +1,79 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 
 const SEORankingWidget = () => {
-  const widgetRef = useRef(null);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const widgetContainerRef = useRef(null);
 
   useEffect(() => {
+    const widgetElement = document.createElement('div');
+    widgetElement.id = 'se-ranking-widget';
+    
+    if (widgetContainerRef.current) {
+      widgetContainerRef.current.appendChild(widgetElement);
+    }
+
+    const loadMainScript = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
+        script.defer = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    };
+
+    const loadWidgetScript = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
+        script.defer = true;
+        script.setAttribute('data-widget-type', 'push');
+        script.setAttribute('data-widget-page-audit-id', '4081655-5743');
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    };
+
     const loadScripts = async () => {
       try {
-        if (!widgetRef.current) return;
-        widgetRef.current.innerHTML = "";
-        setIsLoading(true);
-
-        console.log("Starting to load scripts...");
-
-        // First script (widget manager)
-        const script1 = document.createElement("script");
-        script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
-        script1.defer = true;
-
-        // Second script (actual widget)
-        const script2 = document.createElement("script");
-        script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
-        script2.defer = true;
-        script2.setAttribute("data-widget-type", "push");
-        script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
-
-        // Append first script to <head>
-        document.head.appendChild(script1);
-
-        await new Promise((resolve, reject) => {
-          script1.onload = () => {
-            console.log("Widget manager script loaded successfully");
-            resolve();
-          };
-          script1.onerror = () => reject(new Error("Failed to load widget manager"));
-        });
-
-        // Append second script to widget div
-        widgetRef.current.appendChild(script2);
-
-        await new Promise((resolve, reject) => {
-          script2.onload = () => {
-            console.log("Widget script loaded successfully");
-            resolve();
-          };
-          script2.onerror = () => reject(new Error("Failed to load widget"));
-        });
-
-        console.log("Both scripts loaded successfully");
-        setIsLoading(false);
-      } catch (err) {
-        console.error("Error loading scripts:", err);
-        setError(err instanceof Error ? err.message : String(err));
-        setIsLoading(false);
+        await loadMainScript();
+        await loadWidgetScript();
+        setIsLoaded(true);
+      } catch (error) {
+        console.error('Error loading SE Ranking scripts:', error);
       }
     };
 
     loadScripts();
 
+    // Cleanup function with proper child node check
     return () => {
-      if (widgetRef.current) {
-        widgetRef.current.innerHTML = "";
+      if (widgetContainerRef.current) {
+        widgetContainerRef.current.innerHTML = '';
       }
+      const scripts = document.querySelectorAll('script[src*="seranking.com"]');
+      scripts.forEach(script => {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+      });
     };
   }, []);
 
-  if (error) {
-    return <div className="p-4 text-red-500">Error loading SEO widget: {error}</div>;
-  }
-
-  if (isLoading) {
-    return <div className="p-4">Loading SEO widget...</div>;
-  }
-
-  return <div ref={widgetRef} id="seranking-widget-container" />;
+  return (
+    <div className="relative w-full">
+      <h1 className="text-2xl font-bold mb-4">SEO Ranking Widget</h1>
+      <div 
+        ref={widgetContainerRef} 
+        className="w-full min-h-[400px] relative z-10"
+      >
+        {!isLoaded && <div className="text-center py-4">Loading widget...</div>}
+      </div>
+    </div>
+  );
 };
 
 export default SEORankingWidget;

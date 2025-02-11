@@ -93,7 +93,6 @@ const Page = () => {
               backgroundImage:
                 "url('/images/services_page_images/circle.png/')",
               backgroundSize: "cover",
-              // transform: "translateY(-100%)",
             }}
             className="h-[52vh] translate-y-[-50%] transform md:mt-[-180px] md:h-[39rem]  md:translate-y-[-60%]"
           />
@@ -107,21 +106,22 @@ const Page = () => {
           >
             <div className="z-10 text-center md:mt-6 md:px-4">
               <Reveal>
-             
-                <h2 className="text-2xl font-bold tracking-wide md:text-4xl mb-6">Download Your Free eBook <br/>to Brand Like a Boss</h2>
+                <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
+                  Download Your Free eBook <br />
+                  to Brand Like a Boss
+                </h2>
               </Reveal>
-              <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)}/>
+              <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
               <DownloadModal open={open} handleClose={() => setOpen(false)} />
-
             </div>
           </div>
         </main>
 
         {/* main content  */}
         <div className="mx-auto -mt-[20rem] max-w-[1200px] md:pb-8">
-             <p className="mb-6 md:mb-6 text-[16px]  tracking-wide md:text-md md:w-[60%] md:mx-auto translate-y-[1vh] md:translate-y-0 text-center">
-                {blogInner?.component?.section}
-              </p>
+          <p className="md:text-md mb-6 translate-y-[1vh]  text-center text-[16px] tracking-wide md:mx-auto md:mb-6 md:w-[60%] md:translate-y-0">
+            {blogInner?.component?.section}
+          </p>
           <div
             dangerouslySetInnerHTML={{ __html: blogInner?.component?.content }}
             className="content-style px-4 "
@@ -137,7 +137,11 @@ const Page = () => {
 export default Page;
 
 const DownloadModal = ({ open, handleClose }) => {
-  const [formData, setFormData] = React.useState({ name: "", email: "", phone: "" });
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -152,7 +156,11 @@ const DownloadModal = ({ open, handleClose }) => {
   };
 
   return (
-    <Modal open={open} onClose={handleClose} sx={{ display: "flex", alignItems: "center", justifyContent: "center",}}>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
       <Box
         sx={{
           position: "absolute",
@@ -166,7 +174,9 @@ const DownloadModal = ({ open, handleClose }) => {
           borderRadius: 2,
         }}
       >
-        <h2 className="text-xl font-bold mb-4 text-black-2 text-center">Download Your Free eBook</h2>
+        <h2 className="mb-4 text-center text-xl font-bold text-black-2">
+          Download Your Free eBook
+        </h2>
         <TextField
           fullWidth
           label="Name"
@@ -191,16 +201,10 @@ const DownloadModal = ({ open, handleClose }) => {
           onChange={handleChange}
           margin="normal"
         />
-        <div className="flex justify-center mt-3 gap-3">
-        <PrimaryBtn
-          text={"Cancel"}
-          onClick={handleClose}
-          />
-        <PrimaryBtn
-          text={"Submit Details"}
-          onClick={handleDownload}
-          />
-          </div>
+        <div className="mt-3 flex justify-center gap-3">
+          <PrimaryBtn text={"Cancel"} onClick={handleClose} />
+          <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
+        </div>
       </Box>
     </Modal>
   );

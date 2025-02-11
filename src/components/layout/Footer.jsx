@@ -11,6 +11,7 @@ import TextScroller from "./TextScroller";
 import Tooltip from "@mui/material/Tooltip";
 import { IoMdClose } from "react-icons/io";
 import { Box, Modal } from "@mui/material";
+import { Reveal } from "@/utils/Reveal";
 
 const Footer = () => {
 
@@ -171,6 +172,39 @@ const Footer = () => {
                 <AiFillTikTok />
               </Link>
             </div>
+            <div className="flex-col">
+          <Reveal>
+            <Link
+              href={
+                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+              }
+              target="_blank"
+            >
+              <Image
+                alt="image"
+                className="mr-8 mb-5"
+                src={"/accrebited-bussiness-logo2.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
+          </Reveal>
+          <Reveal>
+            <Link
+              href={
+                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+              }
+              target="_blank"
+            >
+              <Image
+                alt="image"
+                src={"/google-review-logo2.png"}
+                width={125}
+                height={125}
+              />
+            </Link>
+          </Reveal>
+        </div>
           </div>
         </div>
 

@@ -44,7 +44,7 @@ const Strategies = () => {
       <div  className="mt-8 md:mt-0 md:w-[48%] w-full flex justify-center"
       >
         <Image
-          src={"/images/seo_page_images/strategy.png"}
+          src={"/images/seo_page_images/seo-opt.png"}
           width={550}
           height={460}
           className="rounded-3xl"

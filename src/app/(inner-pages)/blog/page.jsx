@@ -79,7 +79,7 @@ const BlogPage = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
         <Navbar />
-        <div className="relative flex h-[75vh] w-full flex-col items-center justify-center md:h-[100vh]">
+        <div className="relative flex h-[85vh] w-full flex-col items-center justify-center md:h-[100vh]">
           <div className="z-10 flex flex-col items-center md:translate-y-[-4rem]">
             {/* Service heading */}
             <div className="mb-2 flex items-center justify-center gap-1">
