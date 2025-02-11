@@ -65,7 +65,7 @@ const SEORankingWidget = () => {
 
   return (
     <div className="relative w-full">
-      <h1 className="text-2xl font-bold mb-4">SEO Ranking Widget</h1>
+      {/* <h1 className="text-2xl font-bold mb-4">SEO Ranking Widget</h1> */}
       <div 
         ref={widgetContainerRef} 
         className="w-full min-h-[400px] relative z-10"
