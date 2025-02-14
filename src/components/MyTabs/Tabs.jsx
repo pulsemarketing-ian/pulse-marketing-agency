@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 import { useState, useEffect, useCallback } from "react";
-import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { baseURL } from "../../../utils/useRequest";

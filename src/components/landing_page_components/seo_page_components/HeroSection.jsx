@@ -5,7 +5,6 @@ import { Reveal } from '@/utils/Reveal'
 import Navbar from '@/components/landing_page_components/Navbar'
 import HeroForm from '@/components/landing_page_components/HeroForm';
 import {motion} from 'motion/react';
-import SEORankingWidget from '@/components/landing_page_components/SeoRankingWidget';
 
 export default function HeroSection() {
   return (
@@ -16,7 +15,6 @@ export default function HeroSection() {
       }}
       className='md:pb-[150px]'
     >
-      <SEORankingWidget/>
       <Navbar />
       <div className='h-[70vh] md:h-[110vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto px-4 md:px-0'>
       {/* hero heading */}

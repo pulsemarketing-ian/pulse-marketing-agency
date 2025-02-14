@@ -99,7 +99,7 @@ const HeroLeftContent = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col md:items-center md:gap-3 md:flex-row text-left">
+        <div className="flex w-full flex-col md:items-center flex-wrap md:gap-3 md:flex-row text-left">
           <p> Clients rate our team and work</p>
           <div className="flex text-yellow-500">
             <FaStar />

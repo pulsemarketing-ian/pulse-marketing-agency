@@ -2,7 +2,6 @@
 import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import React from "react";
-import { motion } from "motion/react";
 
 const Strategies = () => {
   return (
@@ -15,11 +14,11 @@ const Strategies = () => {
       }}
     >
       {/* Image on the left */}
-      <div className="mt-8 flex w-full justify-center md:mt-0 md:w-[48%]">
+      <div className="mt-8 flex w-full justify-center md:mt-0 md:w-[55%]">
         <Image
           src={"/images/seo_page_images/read-rank-fater.png"}
-          width={600}
-          height={500}
+          width={650}
+          height={650}
           className="rounded-xl"
         />
       </div>
