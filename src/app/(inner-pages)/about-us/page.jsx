@@ -6,6 +6,7 @@ import FaqSection from '@/components/landing_page_components/app_page_components
 import Footer from '@/components/layout/Footer';
 import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import BrandLogoCards from '@/components/ChoosePlus/BrandLogoCards';
+
 const AboutUs = () => {
   return (
     <main className="theme_bg_color">

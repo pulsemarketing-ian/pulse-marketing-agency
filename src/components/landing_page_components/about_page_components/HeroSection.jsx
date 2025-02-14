@@ -3,9 +3,6 @@ import React from "react";
 import Navbar from "@/components/landing_page_components/Navbar";
 import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
-import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import { motion } from "motion/react";
-import SEORankingWidget from "@/components/landing_page_components/SeoRankingWidget";
 
 const HeroSection = () => {
   return (
@@ -16,9 +13,8 @@ const HeroSection = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="relative pb-[150px]"
+        className="relative pb-[150px]" 
       >
-        <SEORankingWidget />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
 
