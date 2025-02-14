@@ -17,7 +17,7 @@ import DownloadBook from "@/components/DownloadBook/DownloadBook";
 const ContentWrapper = () => {
   return (
     <div>
-      <SEORankingWidget />
+      <SEORankingWidget />  
       <HeroSection />
       <ChoosePlus />
       <Tabs />
