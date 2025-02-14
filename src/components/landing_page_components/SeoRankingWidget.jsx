@@ -115,7 +115,6 @@ const SEORankingWidget = ({ showForm }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // console.log('ffffffffffffffffffffffffffffffffffffffffffffffffffff')
     if (showForm) {
       const container = containerRef.current;
 

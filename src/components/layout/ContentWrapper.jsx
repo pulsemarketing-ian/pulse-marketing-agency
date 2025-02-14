@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import HeroSection from "../HeroSection/HeroSection";
 import ChoosePlus from "../ChoosePlus";
@@ -15,9 +16,11 @@ import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import DownloadBook from "@/components/DownloadBook/DownloadBook";
 const ContentWrapper = () => {
+  const [showForm, setShowForm] = React.useState(false);
+
   return (
     <div>
-      <SEORankingWidget />  
+      <SEORankingWidget showForm={showForm}/>  
       <HeroSection />
       <ChoosePlus />
       <Tabs />
