@@ -367,7 +367,7 @@ const HeroSection = () => {
         <div className="relative flex w-[100%] flex-row justify-between ">
           {/* my header component  */}
           {/* <Header /> */}
-          {/* <SEORankingWidget/> */}
+          <SEORankingWidget/>
           <Navbar />
 
           <div className="my-20 flex w-[100%] flex-row  items-center lg:my-0 lg:w-[50%]">
