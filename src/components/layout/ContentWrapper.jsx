@@ -9,7 +9,7 @@ import Testimonials from "../landing_page_components/app_page_components/Testimo
 import Calender from "../Calender/Calender";
 import Video from "../TiktokVideo/Video";
 import Footer from "./Footer";
-import SEORankingWidget from "../landing_page_components/SeoRankingWidget";
+import SeorankingWidget from "../landing_page_components/SeoRankingWidget";
 import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const ContentWrapper = () => {
 
   return (
     <div>
-      <SEORankingWidget />  
+      <SeorankingWidget />  
       <HeroSection />
       <ChoosePlus />
       <Tabs />
