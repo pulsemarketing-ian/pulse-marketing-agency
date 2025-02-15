@@ -5,9 +5,25 @@ import ContentWrapper from '@/components/layout/ContentWrapper';
 import './global.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Script from 'next/script';
 
 export default function Home() {
   return (
+    <>
+    <Script
+        src="https://online.seranking.com/frontend-dist/widget-manager/main.js"
+        strategy="afterInteractive" // Load after the page becomes interactive
+        defer
+      />
+
+      {/* Load the second script */}
+      <Script
+        src="https://online.seranking.com/frontend-dist/Widgets/js/main.js"
+        strategy="afterInteractive" // Load after the page becomes interactive
+        defer
+        data-widget-type="push"
+        data-widget-page-audit-id="4081655-5743"
+      />
     <div style={{ background: '#040117' }}>
    
       {/* <CustomCursor/> */}
@@ -16,5 +32,6 @@ export default function Home() {
       {/* {showModal && <WebsiteAuditForm />} */}
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
     </div>
+    </>
   );
 }
