@@ -148,32 +148,54 @@
 
 
 
+// 'use client';
+// import { useEffect } from "react";
+
+// const SEORankingWidget = () => {
+//   useEffect(() => {
+//     // Load first script
+//     const script1 = document.createElement("script");
+//     script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
+//     script1.defer = true;
+//     document.body.appendChild(script1);
+
+//     // Load second script with data attributes
+//     const script2 = document.createElement("script");
+//     script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
+//     script2.defer = true;
+//     script2.setAttribute("data-widget-type", "push");
+//     script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
+//     document.body.appendChild(script2);
+
+//     return () => {
+//       document.body.removeChild(script1);
+//       document.body.removeChild(script2);
+//     };
+//   }, []);
+
+//   return <div id="se-ranking-widget"></div>; // Ensure the widget has a container
+// };
+
+// export default SEORankingWidget;
+
+
 'use client';
-import { useEffect } from "react";
 
-const SEORankingWidget = () => {
-  useEffect(() => {
-    // Load first script
-    const script1 = document.createElement("script");
-    script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
-    script1.defer = true;
-    document.body.appendChild(script1);
+import Script from 'next/script';
 
-    // Load second script with data attributes
-    const script2 = document.createElement("script");
-    script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
-    script2.defer = true;
-    script2.setAttribute("data-widget-type", "push");
-    script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
-    document.body.appendChild(script2);
-
-    return () => {
-      document.body.removeChild(script1);
-      document.body.removeChild(script2);
-    };
-  }, []);
-
-  return <div id="se-ranking-widget"></div>; // Ensure the widget has a container
-};
-
-export default SEORankingWidget;
+export default function SEORankingWidget() {
+  return (
+    <>
+      <Script
+        src="https://online.seranking.com/frontend-dist/widget-manager/main.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://online.seranking.com/frontend-dist/Widgets/js/main.js"
+        strategy="afterInteractive"
+        data-widget-type="push"
+        data-widget-page-audit-id="4081655-5743"
+      />
+    </>
+  );
+}
