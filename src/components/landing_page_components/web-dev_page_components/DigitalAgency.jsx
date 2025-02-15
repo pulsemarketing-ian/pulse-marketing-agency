@@ -32,7 +32,7 @@ export default function DigitalAgency() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ color: "white", py: { xs: 8, md: 4 }, px: 2 }}>
-        <Box sx={{ px: 6 }}>
+        <Box sx={{ px:{xs:2, md:6} }}>
           <div className="flex justify-center mt-3">
             <Reveal>
               <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full mb-2">
@@ -48,21 +48,7 @@ export default function DigitalAgency() {
             sx={{ position:'relative', zIndex: 99, mt: { xs: 0, md: 4 } }}   
           >
             <Grid item xs={12} lg={5}>
-              <motion.div
-                initial={{
-                  x: -300,
-                  opacity: 0,
-                }}
-                whileInView={{
-                  x: 0,
-                  opacity: 1,
-                }}
-                transition={{
-                  delay: 0.5,
-                  duration: 0.5,
-                  ease: "easeInOut",
-                }}
-                viewport={{ once: false, amount: 0.2 }}
+              <div
               >
                 <Box
                   sx={{
@@ -84,7 +70,7 @@ export default function DigitalAgency() {
                     objectFit="cover"
                   />
                 </Box>
-              </motion.div>
+              </div>
             </Grid>
 
             <Grid item xs={12} lg={7}>

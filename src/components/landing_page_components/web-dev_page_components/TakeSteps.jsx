@@ -31,7 +31,7 @@ const TakeSteps = () => {
       }}
     >
       <div className="flex flex-wrap justify-between">
-        <div className="flex w-full md:w-[28%] items-start justify-center transform transition-transform duration-700 ease-in-out hover:scale-105">
+        <div className="flex w-full md:w-[28%] items-start justify-center transform transition-transform duration-700 ease-in-out hover:scale-105 mb-12 md:mb-0">
           <Image
             src={"/images/ICON JUST-01.png"}
             width={350}

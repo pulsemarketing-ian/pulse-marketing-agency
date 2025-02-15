@@ -13,9 +13,7 @@ const WebDevService = () => {
         {/* Content Section */}
         <div className="translate-y-[-15%] md:translate-y-0 absolute md:top-0 z-10 flex w-full flex-col items-center justify-center"
           style={{
-            // backgroundColor: '#040117',
             backgroundSize: 'cover',
-            // borderBottom: '4px solid #363445',
           }}
         >
 
@@ -49,7 +47,7 @@ const WebDevService = () => {
               </div>
 
               {/* Right Column */}
-              <div className="space-y-6w-full md::w-[30%]">
+              <div className="space-y-6 w-full md:w-[30%]">
                 <Reveal>
                 <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
                   Tailored Solutions

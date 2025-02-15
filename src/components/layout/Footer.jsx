@@ -210,7 +210,7 @@ const Footer = () => {
 
         {/* Text Scroller */}
         <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
-          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
+          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
         </div>
 
         {/* Footer Bottom */}

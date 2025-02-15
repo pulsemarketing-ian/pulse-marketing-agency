@@ -108,38 +108,72 @@
 //   )
 // };
 
+// 'use client';
+// import { useEffect, useRef } from 'react';
+
+// const SEORankingWidget = () => {
+//   const containerRef = useRef(null);
+
+//   useEffect(() => {
+//     // if (showForm) {
+//       const container = containerRef.current;
+
+//       if (container) {
+        
+//         container.innerHTML = "";
+
+        
+//         const script1 = document.createElement("script");
+//         script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
+//         script1.defer = true;
+//         container.appendChild(script1);
+
+        
+//         const script2 = document.createElement("script");
+//         script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
+//         script2.defer = true;
+//         script2.setAttribute("data-widget-type", "push");
+//         script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
+//         container.appendChild(script2);
+//       }
+//     }, []);
+
+//   return <div ref={containerRef}></div>;
+// };
+
+// export default SEORankingWidget;
+
+
+
+
+
+
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect } from "react";
 
-const SEORankingWidget = ({ showForm }) => {
-  const containerRef = useRef(null);
-
+const SEORankingWidget = () => {
   useEffect(() => {
-    if (showForm) {
-      const container = containerRef.current;
+    // Load first script
+    const script1 = document.createElement("script");
+    script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
+    script1.defer = true;
+    document.body.appendChild(script1);
 
-      if (container) {
-        
-        container.innerHTML = "";
+    // Load second script with data attributes
+    const script2 = document.createElement("script");
+    script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
+    script2.defer = true;
+    script2.setAttribute("data-widget-type", "push");
+    script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
+    document.body.appendChild(script2);
 
-        
-        const script1 = document.createElement("script");
-        script1.src = "https://online.seranking.com/frontend-dist/widget-manager/main.js";
-        script1.defer = true;
-        container.appendChild(script1);
+    return () => {
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
+    };
+  }, []);
 
-        
-        const script2 = document.createElement("script");
-        script2.src = "https://online.seranking.com/frontend-dist/Widgets/js/main.js";
-        script2.defer = true;
-        script2.setAttribute("data-widget-type", "push");
-        script2.setAttribute("data-widget-page-audit-id", "4081655-5743");
-        container.appendChild(script2);
-      }
-    }
-  }, [showForm]);
-
-  return <div ref={containerRef}></div>;
+  return <div id="se-ranking-widget"></div>; // Ensure the widget has a container
 };
 
 export default SEORankingWidget;

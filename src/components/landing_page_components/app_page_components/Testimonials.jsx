@@ -176,7 +176,7 @@ const Testimonials = () => {
           <span className="mr-2 text-cyan-500">•</span>Client Testimonials &
           Reviews
         </p>
-        <h2 className="text-2xl font-semibold leading-tight md:text-4xl">
+        <h2 className="mt-2 text-2xl font-semibold leading-tight md:text-4xl">
           What Our Happy <br /> Clients Say About Us
         </h2>
       </div>

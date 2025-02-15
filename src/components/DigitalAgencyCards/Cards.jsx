@@ -232,7 +232,7 @@ const Cards = () => {
           <div className="mt-8 md:mt-[11rem] md:border-b md:border-[#363445]" />
 
           <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-[50%]">
+            <div className="w-full md:w-[50%] mt-6 md:mt-0">
               <AppDevSection />
             </div>
             <div className="w-full md:w-[50%]">

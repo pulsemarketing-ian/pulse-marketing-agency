@@ -1,4 +1,3 @@
-'use client';
 import React from "react";
 import HeroSection from "../HeroSection/HeroSection";
 import ChoosePlus from "../ChoosePlus";
@@ -16,11 +15,10 @@ import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import DownloadBook from "@/components/DownloadBook/DownloadBook";
 const ContentWrapper = () => {
-  const [showForm, setShowForm] = React.useState(false);
 
   return (
     <div>
-      <SEORankingWidget showForm={showForm}/>  
+      <SEORankingWidget />  
       <HeroSection />
       <ChoosePlus />
       <Tabs />
@@ -30,7 +28,7 @@ const ContentWrapper = () => {
       <Link href={'/cro'}>
       <HeroSection2/>
       </Link>
-      <Cards />
+      <Cards /> 
       <Video />
       <Testimonials />
       <Calender />

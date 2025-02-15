@@ -43,7 +43,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="text-white py-12 flex flex-col lg:flex-row lg:justify-between w-full px-6 md:px-0 md:w-[1200px] md:mx-auto gap-4">
+    <div className="text-white pt-6 pb-18 flex flex-col lg:flex-row lg:justify-between w-full px-6 md:px-0 md:w-[1200px] md:mx-auto gap-4">
       {/* Left Column */}
       <motion.div
         initial={isDesktop ? { x: -300, opacity: 0 } : {}}

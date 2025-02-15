@@ -169,16 +169,6 @@ const HeroSection = () => {
 
               <div className="-ml-3 flex flex-wrap justify-start gap-0 px-0 lg:w-full lg:px-0 mt-4">
               {industries.map((industry, index) => (
-                  // <h4
-                  //   key={index}
-                  //   className={`w-auto cursor-pointer text-lg font-medium leading-tight md:text-3xl ${
-                  //     activeTab === index ? "text-white" : "text-[#7C7C7C]"
-                  //   } flex-shrink-0`} // Prevent shrinking on smaller screens
-                  //   onClick={() => handleTabChange(index)}
-                  // >
-                  //   {industry.name}
-                  // </h4>
-
                   <div
                     key={index}
                     className={`flex w-[49%] cursor-pointer flex-wrap items-center justify-start rounded px-4 py-2 text-center text-[1.2rem] font-medium md:w-auto md:px-4 md:py-0 md:text-[1.6rem] ${
@@ -256,7 +246,7 @@ const HeroSection = () => {
                 className="flex w-full flex-col justify-center md:w-1/2"
                 key={index}
               >
-                <div className="relative mb-8 h-[150px] w-[95%] transform rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px]">
+                <div className="relative mb-8 h-[200px] w-[95%] transform rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[350px]">
                   <Link href={image?.section} target="_blank">
                     <Image
                       src={image?.pictures[0]}

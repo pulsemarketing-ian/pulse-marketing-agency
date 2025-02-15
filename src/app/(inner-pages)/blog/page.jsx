@@ -191,7 +191,7 @@ const BlogPage = () => {
       </div>
 
       {/* pagination  */}
-      <div className="flex justify-center -mt-20 mb-10">
+      <div className="flex justify-center -mt-[22rem] md:-mt-[12%] mb-20">
         <CustomPagination
           count={Math.ceil(blogComponent.length / blogsPerPage)} // Total pages
           page={currentPage}

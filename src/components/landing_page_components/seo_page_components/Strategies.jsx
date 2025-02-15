@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const Strategies = () => {
   return (
     <main
-      className="mx-auto flex w-full flex-wrap justify-center items-center px-4 py-10 md:w-[1200px] md:px-0"
+      className="mx-auto flex w-full flex-col-reverse md:flex-row flex-wrap justify-center items-center px-4 py-10 md:w-[1200px] md:px-0"
       style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
         backgroundSize: "contain",
@@ -18,13 +18,13 @@ const Strategies = () => {
         className="flex flex-col gap-4 md:w-[48%] text-left"
       >
         <Reveal>
-          <h2 className="mb-3 text-xl font-bold tracking-wide md:text-4xl">
+          <h2 className="mt-5 md:mt-0 md:mb-3 text-xl font-bold tracking-wide md:text-4xl">
             Why Choose Pulse <br /> For SEO?
           </h2>
         </Reveal>
 
         <Reveal>
-          <ul className="text-lg">
+          <ul className="text-md md:text-lg">
             <li className="mb-2">
               <span className="text-blue-500 text-center text-3xl">. </span>Proven Strategies Backed by Data
             </li>

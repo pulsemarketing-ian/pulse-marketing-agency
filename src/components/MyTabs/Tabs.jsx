@@ -163,7 +163,7 @@ export default function Tabs() {
 
   return (
     <main
-      className="m-auto w-full pb-14 lg:w-full"
+      className="m-auto w-full md:pb-14 lg:w-full"
       style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
         backgroundSize: "contain",

@@ -33,7 +33,7 @@ const Strategies = () => {
 
         <Reveal>
           <p className="pl-2">Get Your Free SEO Audit Today!</p> <br />
-          <ul className="text-lg">
+          <ul className="text-md md:text-lg">
             <li className="mb-2">
               <span className="text-center text-3xl text-blue-500">. </span>Find
               Out What is Holding Your Website Back

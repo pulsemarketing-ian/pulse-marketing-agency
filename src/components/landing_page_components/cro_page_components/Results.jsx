@@ -32,14 +32,14 @@ const Results = () => {
                   : {}
               }
               viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
-              className="space-y-6 lg:w-[40%]"
+              className="space-y-6 lg:w-[40%] lg:mx-auto text-center flex flex-col justify-center items-center"
             >
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
-                Results You <br/>Can Expect
+                Results You Can Expect
                 </h2>
               </Reveal>
-              <ul className="space-y-2 text-[21px] text-gray-300">
+              <ul className="space-y-2 text-md md:text-[26px] text-gray-300">
                 <Reveal>
                   <li className="flex items-center">
                     <span className="text-cyan-500 mr-2">•</span> Increased sales and revenue.
@@ -69,7 +69,7 @@ const Results = () => {
             </motion.div>
 
             {/* Right Column */}
-            <motion.div
+            {/* <motion.div
               initial={isDesktop ? { scale: 0.1, opacity: 0 } : false}
               whileInView={isDesktop ? { scale: 1, opacity: 1 } : false}
               transition={
@@ -86,7 +86,7 @@ const Results = () => {
                 width={1500}
                 height={1500}
               />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 

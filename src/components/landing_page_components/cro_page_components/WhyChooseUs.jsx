@@ -37,8 +37,8 @@ export default function WhyChooseUs() {
     }}>    
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ color: "white", py: { xs: 0, md: 4 }, px: 2, mt: { xs: -6, md: 0 } }}>
-        <Box sx={{ px: 6 }}>
-          <div className="flex justify-center mt-3">
+      <Box sx={{ px: { xs: 2, md: 6 } }}>
+      <div className="flex justify-center mt-18 md:mt-3">
             <Reveal>
               <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full mb-2">
               Why Choose Pulse for CRO?
@@ -54,21 +54,7 @@ export default function WhyChooseUs() {
 
           >
             <Grid item xs={12} lg={5}>
-              <motion.div
-                initial={{
-                  x: -300,
-                  opacity: 0,
-                }}
-                whileInView={{
-                  x: 0,
-                  opacity: 1,
-                }}
-                transition={{
-                  delay: 0.5,
-                  duration: 0.5,
-                  ease: "easeInOut",
-                }}
-                viewport={{ once: false, amount: 0.2 }}
+              <div
               >
                 <Box
                   sx={{
@@ -90,7 +76,7 @@ export default function WhyChooseUs() {
                     objectFit="cover"
                   />
                 </Box>
-              </motion.div>
+              </div>
             </Grid>
 
             <Grid item xs={12} lg={7} sx={{pl:{xs:0,md:4}}}>
@@ -144,7 +130,7 @@ export default function WhyChooseUs() {
           </Grid>
         </Box>
       </Box>
-    </ThemeProvider>
+    </ThemeProvider>  
     </main>
   );
 }

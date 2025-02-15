@@ -113,7 +113,6 @@
 //     </Box>
 //   );
 
-
 //   return (
 //     <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 12 }}>
 //       {" "}
@@ -262,9 +261,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 import { useState, useEffect } from "react";
 import {
@@ -311,12 +307,16 @@ export default function ConversionCalculator() {
 
     const currentConversionRate = (monthlyOrders / monthlyVisitors) * 100;
     const currentAnnualRevenue = monthlyOrders * averageOrderValue * 12;
-    const orderConversionRate = currentConversionRate * (1 + desiredIncrease / 100);
-    const newMonthlyOrders = Math.round((orderConversionRate / 100) * monthlyVisitors);
+    const orderConversionRate =
+      currentConversionRate * (1 + desiredIncrease / 100);
+    const newMonthlyOrders = Math.round(
+      (orderConversionRate / 100) * monthlyVisitors,
+    );
     const futureAnnualRevenue = newMonthlyOrders * averageOrderValue * 12;
     const revenueIncrease = futureAnnualRevenue - currentAnnualRevenue;
     const totalInvestment = monthsOfInvestment * 6250;
-    const roi = totalInvestment > 0 ? Math.round(revenueIncrease / totalInvestment) : 0;
+    const roi =
+      totalInvestment > 0 ? Math.round(revenueIncrease / totalInvestment) : 0;
 
     setResults({
       currentConversionRate: Number(currentConversionRate.toFixed(1)),
@@ -375,11 +375,19 @@ export default function ConversionCalculator() {
     </Box>
   );
 
-  
   const ResultCard = ({ value, label, sx = {} }) => (
     <Paper
       elevation={1}
-      sx={{ p: 2, bgcolor: "#040117", color: "white", ...sx }}
+      sx={{
+        p: 2,
+        bgcolor: "#040117",
+        color: "white",
+        minHeight: { xs: 150, md: "auto" },
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        ...sx,
+      }}
     >
       <Typography variant="h5" sx={{ fontWeight: "bold" }}>
         {value}
@@ -391,14 +399,17 @@ export default function ConversionCalculator() {
   );
 
   return (
-    <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 12 }}>
-      <div className="mb-8 flex text-center items-center justify-center">
+    <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
+      <div className="mb-8 flex items-center justify-center text-center">
         <Reveal>
-          <h2 className="text-center mb-2 text-2xl md:text-5xl font-bold tracking-wide">
+          <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
             Calculate The Value of CRO
           </h2>
           <p>Reach your revenue goals with CRO.</p>
-          <p className="mb-8">Find out the ROI from conversion rate optimization with this calculator</p>
+          <p className="mb-8">
+            Find out the ROI from conversion rate optimization with this
+            calculator
+          </p>
         </Reveal>
       </div>
 
@@ -406,7 +417,9 @@ export default function ConversionCalculator() {
         <Grid item xs={12} md={6}>
           <Card sx={{ bgcolor: "transparent", color: "white" }}>
             <CardContent>
-              <Typography variant="h5" sx={{ mb: 3 }}>Current Site Metrics</Typography>
+              <Typography variant="h5" sx={{ mb: 3 }}>
+                Current Site Metrics
+              </Typography>
               <InputField
                 label="Number of Monthly Visitors"
                 id="monthlyVisitors"
@@ -449,40 +462,82 @@ export default function ConversionCalculator() {
         <Grid item xs={12} md={6}>
           <Card sx={{ bgcolor: "#1c192c" }}>
             <CardContent>
-              <Typography variant="h5" sx={{ mb: 3, color: "white" }}>Results</Typography>
+              <Typography variant="h5" sx={{ mb: 3, color: "white" }}>
+                Results
+              </Typography>
 
               <Box sx={{ mb: 4 }}>
-                <Typography variant="subtitle2" color="warning.main" sx={{ mb: 2 }}>Current Metrics</Typography>
+                <Typography
+                  variant="subtitle2"
+                  color="warning.main"
+                  sx={{ mb: 2 }}
+                >
+                  Current Metrics
+                </Typography>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
-                    <ResultCard value={`${results.currentConversionRate}%`} label="Current Conversion Rate" />
+                    <ResultCard
+                      value={`${results.currentConversionRate}%`}
+                      label="Current Conversion Rate"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <ResultCard value={formatCurrency(results.currentAnnualRevenue)} label="Current Annual Revenue" />
+                    <ResultCard
+                      value={formatCurrency(results.currentAnnualRevenue)}
+                      label="Current Annual Revenue"
+                    />
                   </Grid>
                 </Grid>
               </Box>
 
               <Box sx={{ mb: 4 }}>
-                <Typography variant="subtitle2" color="warning.main" sx={{ mb: 2 }}>Growth Metrics</Typography>
+                <Typography
+                  variant="subtitle2"
+                  color="warning.main"
+                  sx={{ mb: 2 }}
+                >
+                  Growth Metrics
+                </Typography>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
-                    <ResultCard value={`${results.orderConversionRate}%`} label="Order Conversion Rate" />
+                    <ResultCard
+                      value={`${results.orderConversionRate}%`}
+                      label="Order Conversion Rate"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <ResultCard value={results.monthlyOrders} label="Monthly Orders" />
+                    <ResultCard
+                      value={results.monthlyOrders}
+                      label="Monthly Orders"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <ResultCard value={formatCurrency(results.futureAnnualRevenue)} label="Future Annual Revenue" />
+                    <ResultCard
+                      value={formatCurrency(results.futureAnnualRevenue)}
+                      label="Future Annual Revenue"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <ResultCard value={formatCurrency(results.monthlyInvestment)} label="Monthly Investment" />
+                    <ResultCard
+                      value={formatCurrency(results.monthlyInvestment)}
+                      label="Monthly Investment"
+                    />
                   </Grid>
                 </Grid>
               </Box>
 
-              <Paper elevation={1} sx={{ p: 2, bgcolor: "warning.main", color: "warning.contrastText", textAlign: "center" }}>
-                <Typography variant="h4" sx={{ fontWeight: "bold" }}>{results.roi}X</Typography>
+              <Paper
+                elevation={1}
+                sx={{
+                  p: 2,
+                  bgcolor: "warning.main",
+                  color: "warning.contrastText",
+                  textAlign: "center",
+                }}
+              >
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  {results.roi}X
+                </Typography>
                 <Typography>Return on Investment</Typography>
               </Paper>
             </CardContent>

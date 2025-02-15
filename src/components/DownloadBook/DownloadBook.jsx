@@ -9,7 +9,7 @@ const DownloadBook = () => {
   return (
     <>
       <div
-        className="flex w-full flex-col-reverse gap-5 md:flex-row items-center  pb-12 pt-20 md:justify-between md:px-40"
+        className="flex w-full flex-col-reverse items-center gap-5 pb-12  pt-20 md:flex-row md:justify-between md:px-40 px-5"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
@@ -18,7 +18,7 @@ const DownloadBook = () => {
       >
         <div className="z-10 md:mt-6 md:px-4">
           <Reveal>
-            <h2 className="mb-6 text-3xl font-bold tracking-wide md:text-4xl">
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
               Download Your Free eBook <br />
               to Brand Like a Boss
             </h2>
