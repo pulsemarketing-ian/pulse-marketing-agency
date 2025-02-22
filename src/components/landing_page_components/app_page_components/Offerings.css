@@ -1,0 +1,102 @@
+.offerings {
+  padding: 0 80px;
+  row-gap: 60px;
+}
+.offerings .offering-cards {
+  grid-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  max-width: 1370px;
+  width: 100%;
+}
+.offerings .offering-cards .offeringCard {
+  align-items: center;
+  background: #1c192c;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 18px;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  max-width: 327px;
+  min-height: 300px;
+  overflow: hidden;
+  padding: 0 30px;
+  position: relative;
+  row-gap: 15px;
+  width: 100%;
+}
+.offerings .offering-cards .offeringCard img {
+  max-height: 108px;
+  max-width: 108px;
+  object-fit: cover;
+  position: relative;
+  transition: all 0.8s linear;
+  z-index: 2;
+}
+.offerings .offering-cards .offeringCard h3 {
+  color: white;
+  /* font-family: CabinetGrotesk-Variable; */
+  font-size: 27.841px;
+  font-style: medium;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.8s linear;
+  z-index: 2;
+}
+.offerings .offering-cards .offeringCard .circle-anim {
+  background: linear-gradient(90deg, #50a2d4, #6ee3d7);
+  background: var(--gradient, linear-gradient(to right, #50a2d4, #6ee3d7));
+  border-radius: 50%;
+  height: 100%;
+  left: 50%;
+  max-height: 196px;
+  max-width: 196px;
+  position: absolute;
+  right: 50%;
+  top: 88%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  transition: all 0.8s linear;
+  width: 100%;
+  z-index: 1;
+}
+.offerings .offering-cards .offeringCard:focus .circle-anim,
+.offerings .offering-cards .offeringCard:hover .circle-anim {
+  background: linear-gradient(90deg, #50a2d4, #6ee3d7);
+  background: var(--gradient, linear-gradient(to right, #50a2d4, #6ee3d7));
+  -webkit-transform: scale(5);
+  transform: scale(5);
+  transition: all 0.8s linear;
+}
+.offerings .offering-cards .offeringCard:focus img,
+.offerings .offering-cards .offeringCard img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  transition: all 0.8s linear;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .offerings .offering-cards{
+        display: block;
+    }
+
+    .offerings .offering-cards .offeringCard{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .offerings{
+        padding: 0;
+    }
+
+}
