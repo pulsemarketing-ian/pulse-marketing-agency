@@ -19,7 +19,7 @@ const WebDevSection = () => {
         />
         
         {/* Content Section */}
-        <div className="translate-y-[-15%] md:translate-y-0 absolute md:top-15 z-10 flex w-full flex-col items-center justify-center"
+        <div className="translate-y-[-15%] md:translate-y-0 absolute md:top-15 z-10 flex w-full flex-col items-center justify-center "
           style={{
             // backgroundColor: '#040117',
             backgroundSize: 'cover',
@@ -89,7 +89,7 @@ const WebDevSection = () => {
         
             {/* Background Text Overlay */}
             <div
-              className="hidden md:block absolute pb-6 bottom-[-10%] left-0 w-full text-[8vw] text-center font-bold pointer-events-none select-none overflow-hidden"
+              className="hidden md:block absolute pb-20 bottom-[-10%] left-0 w-full text-[8vw] text-center font-bold pointer-events-none select-none overflow-hidden"
               style={{
                 WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
                 color: 'transparent'

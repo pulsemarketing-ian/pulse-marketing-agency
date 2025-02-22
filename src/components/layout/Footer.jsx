@@ -48,11 +48,12 @@ const Footer = () => {
 
   return (
     <>
-      <main className="relative w-full pb-12 text-white md:pt-12">
+      <main className="relative w-full pb-12 text-white md:pt-12 mt-4 sm:mt-20">
+
         <div className="md:justify-none mx-auto flex w-full flex-wrap justify-between gap-8 px-8 lg:w-[88%] lg:px-0">
           {/* Logo & About Section */}
-          <div className="flex flex-col items-start gap-4 md:min-h-[250px] md:w-[20%]">
-            <img className="h-8 w-auto" src="/white-logo.png" alt="Logo" />
+          <div className="flex flex-col items-start gap-4 md:min-h-[250px] md:w-[20%] mt-10 sm:mt-40">
+            <img className="h-8 w-auto " src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
               Welcome to Pulse, a Vancouver-based marketing firm with years of
               experience in the field serving 8,000+ clients from various
@@ -209,7 +210,7 @@ const Footer = () => {
         </div>
 
         {/* Text Scroller */}
-        <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
+        <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px] mb-10 mt-10">
           <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
         </div>
 

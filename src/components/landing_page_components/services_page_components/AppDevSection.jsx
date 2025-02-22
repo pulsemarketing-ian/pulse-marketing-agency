@@ -8,7 +8,7 @@ import Link from "next/link";
 const AppDevSection = () => {
     return (
          <main 
-         className="relative pb-6 md:pb-[15vh] text-white overflow-hidden md:translate-y-[-30%]" 
+         className="relative pb-6 md:pb-[15vh] text-white overflow-hidden md:translate-y-[-30%] pt-5" 
          style={{
              backgroundColor: '#040117',
              backgroundSize:'cover',
@@ -28,9 +28,10 @@ const AppDevSection = () => {
             {/* Left Column */}
             <div className="space-y-6 lg:w-[40%]">
               <Reveal>
-                <h2 className="text-2xl md:text-4xl font-medium leading-tight">
-                  Application <br/>Development
-                </h2>
+              <h2 className="text-2xl md:text-4xl font-medium leading-tight mt-36 sm:mt-40">
+  Application <br /> Development
+</h2>
+
               </Reveal>
               <Reveal>
                 <p className="text-gray-300 leading-relaxed">
@@ -48,31 +49,33 @@ const AppDevSection = () => {
             <div className="space-y-6 lg:w-auto"
             >
             <Reveal>
-              <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
-                Our Services
-              </h3>
-              </Reveal>
-              <ul className="space-y-2 text-gray-300">
-              <Reveal>
-                <li className="flex items-center gap-3">
-                  Flutter App Development
-                </li>
-                </Reveal>
-                <Reveal>
-                <li className="flex items-center gap-3">
-                  React Native Development
-                </li>
-                </Reveal>
-                <Reveal>
-                <li className="flex items-center gap-3">
-                  Native App Development
-                </li>
-                </Reveal>
-                <Reveal>
-                <li className="flex items-center gap-3">
-                  Maintenance Code Review
-                </li>
-                </Reveal>
+  <h3 className="text-xl font-semibold pb-2 border-b border-purple-400/30">
+    Our Services
+  </h3>
+</Reveal>
+<ul className="space-y-2 text-gray-300 sm:space-y-3">
+  <Reveal>
+    <li className="flex items-center gap-3 sm:gap-5">
+      Flutter App Development
+    </li>
+  </Reveal>
+  <Reveal>
+    <li className="flex items-center gap-3 sm:gap-5">
+      React Native Development
+    </li>
+  </Reveal>
+  <Reveal>
+    <li className="flex items-center gap-3 sm:gap-5">
+      Native App Development
+    </li>
+  </Reveal>
+  <Reveal>
+    <li className="flex items-center gap-3 sm:gap-5">
+      Maintenance Code Review
+    </li>
+  </Reveal>
+
+
               </ul>
             </div>
           </div>

@@ -9,7 +9,7 @@ const DownloadBook = () => {
   return (
     <>
       <div
-        className="flex w-full flex-col-reverse items-center gap-5 pb-12  pt-20 md:flex-row md:justify-between md:px-40 px-5"
+        className="flex w-full flex-col-reverse items-center gap-5 pb-20  pt-20 md:flex-row md:justify-between md:px-40 px-5"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",

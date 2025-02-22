@@ -29,7 +29,7 @@ const Terms = () => {
             className="mt-4 flex flex-col gap-3 items-center justify-center text-center md:w-[70%] mx-auto px-6 md:px-0"
           >
             <Reveal>
-                <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                <p className="pl-15 pr-15">The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
             </Reveal>
 
             <div className="z-10 mt-8 text-center flex-col items-center justify-center">

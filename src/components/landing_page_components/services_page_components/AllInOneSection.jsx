@@ -20,7 +20,8 @@ const AllInOneSection = () => {
             
         <div className="text-center z-10 mx-auto w-auto flex flex-col items-center justify-center">
             <Reveal>
-            <p className="text-xl mb-2">We are experts in</p>
+            <p className="text-xl mb-2 sm:mt-20 mt-10">We are experts in</p>
+
             <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Conversation Rate <br/>Optimiation</h1>
             </Reveal>
           </div>

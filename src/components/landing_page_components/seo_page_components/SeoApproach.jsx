@@ -36,7 +36,7 @@ const SeoApproach = () => {
           <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mt-10 md:flex  md:w-[1200px] md:justify-between md:px-0 lg:flex-row">
             {/* left box  */}
             <div className=" flex w-full md:w-[55%] md:flex-col">
-              <div className="relative mb-16 h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[360px]">
+              <div className=" relative mb-25 h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[360px]">
                 <Image
                   layout="fill"
                   objectFit="cover"
@@ -45,8 +45,8 @@ const SeoApproach = () => {
                 />
               </div>
 
-              <div className="cards-seo mt-8 hidden gap-3 md:mt-12 md:flex">
-                <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2 pr-3">
+              <div className="cards-seo mt-8 hidden gap-3 md:mt-12 md:flex ">
+                <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2 pr-3 ">
                   <div>
                     <Image
                       width={30}
@@ -68,10 +68,10 @@ const SeoApproach = () => {
                   </Reveal>
                 </div>
 
-                <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2 pr-3">
+                <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2  pr-10">
                   <div>
                     <Image
-                      width={20}
+                      width={25}
                       height={20}
                       src={"/images/seo_page_images/50.png"}
                     />

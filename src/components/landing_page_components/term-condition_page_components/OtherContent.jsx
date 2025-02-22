@@ -44,7 +44,7 @@ const OtherContent = () => {
             <p>{item.content}</p>
           </Reveal>
           <Reveal>
-            <p>{item.content2}</p>
+            <p className="mb-20">{item.content2}</p>
           </Reveal>
         </div>
       ))}

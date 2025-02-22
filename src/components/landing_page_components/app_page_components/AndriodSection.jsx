@@ -1,107 +1,114 @@
-'use client';
-import { Reveal } from '@/utils/Reveal';
-import Image from 'next/image';
-import React from 'react';
-import { motion } from 'framer-motion';
-
-const AndroidSection = () => {
-  const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 768;
-
+"use client";
+import { Box, Modal, TextField } from "@mui/material";
+import React from "react";
+import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
+import { Reveal } from "@/utils/Reveal";
+import Image from "next/image";
+const DownloadBook = () => {
+  const [open, setOpen] = React.useState(false);
   return (
     <>
-      <main
-        className="relative pb-6 text-white overflow-hidden"
+      <div
+        className="flex w-full flex-col-reverse items-center gap-5 pb-20  pt-20 md:flex-row md:justify-between md:px-40 px-5"
         style={{
-          backgroundColor: '#040117',
-          backgroundSize: 'cover',
-          borderBottom: '4px solid #363445',
           backgroundImage: "url('/images/app_page_images/radial.png')",
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Main Content Section */}
-        <div className="relative container mx-auto px-4 py-6">
-          <div className="rounded-xl p-8 flex flex-col lg:flex-row gap-8 items-center justify-between">
-            {/* Left Column */}
-            <motion.div
-              initial={isDesktop ? { x: -300, opacity: 0 } : false}
-              whileInView={isDesktop ? { x: 0, opacity: 1 } : false}
-              transition={
-                isDesktop
-                  ? { delay: 0.5, duration: 0.5, ease: 'easeInOut' }
-                  : {}
-              }
-              viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
-              className="space-y-6 lg:w-[40%]"
-            >
-              <Reveal>
-                <h2 className="text-2xl md:text-4xl font-medium leading-tight">
-                  Android App <br /> Development
-                </h2>
-              </Reveal>
-              <Reveal>
-                <p className="text-gray-300 leading-relaxed">
-                  We are the most sought-after destination for iOS development services in Canada. At our native iOS app development company, we use advanced tools and the latest technologies to build highly functional applications for businesses worldwide. From Flutter app development to Swift app development, you name it, and we will deliver quality results. Contact our team of experts to learn more about each technology we use and understand which one will be best suited for your app development process.
-                </p>
-              </Reveal>
-              <ul className="space-y-2 text-[17px] text-gray-300">
-                <Reveal>
-                  <li className="flex items-center">
-                    <span className="text-cyan-500 mr-2">•</span> Android app development consultation
-                  </li>
-                </Reveal>
-                <Reveal>
-                  <li className="flex items-center">
-                    <span className="text-cyan-500 mr-2">•</span> Android app UI/UX design
-                  </li>
-                </Reveal>
-                <Reveal>
-                  <li className="flex items-center">
-                    <span className="text-cyan-500 mr-2">•</span> Custom Android app development
-                  </li>
-                </Reveal>
-                <Reveal>
-                  <li className="flex items-center">
-                    <span className="text-cyan-500 mr-2">•</span> Android software testing
-                  </li>
-                </Reveal>
-                <Reveal>
-                  <li className="flex items-center">
-                    <span className="text-cyan-500 mr-2">•</span> Play store optimization & API integration
-                  </li>
-                </Reveal>
-              </ul>
-            </motion.div>
-
-            {/* Right Column */}
-            <motion.div
-              initial={isDesktop ? { scale: 0.1, opacity: 0 } : false}
-              whileInView={isDesktop ? { scale: 1, opacity: 1 } : false}
-              transition={
-                isDesktop
-                  ? { delay: 0.3, duration: 0.5, ease: 'easeInOut' }
-                  : {}
-              }
-              viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
-              className="space-y-6 lg:w-[40%] transform transition-transform duration-700 ease-in-out hover:scale-105"
-            >
-              <Image
-                src={'/images/app_page_images/fifth-sec.png'}
-                alt={'image'}
-                width={850}
-                height={850}
-              />
-            </motion.div>
-          </div>
+        <div className="z-10 md:mt-6 md:px-4">
+          <Reveal>
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
+              Download Your Free eBook <br />
+              to Brand Like a Boss
+            </h2>
+          </Reveal>
+          <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
+          <DownloadModal open={open} handleClose={() => setOpen(false)} />
         </div>
 
-        {/* Purple Glow Effects */}
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-[100px] -z-10" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full filter blur-[100px] -z-10" />
-      </main>
+        <Image
+          src={"/images/brand like a boss book mokcup.png"}
+          width={400}
+          height={400}
+        />
+      </div>
     </>
   );
 };
 
-export default AndroidSection;
+export default DownloadBook;
+
+const DownloadModal = ({ open, handleClose }) => {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/images/book-img.pdf";
+    link.download = "/images/book-img.pdf";
+    link.click();
+    handleClose();
+  };
+
+  return (
+    <Modal
+      open={open}
+      onClose={handleClose}
+      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: 400,
+          bgcolor: "background.paper",
+          boxShadow: 24,
+          p: 4,
+          borderRadius: 2,
+        }}
+      >
+        <h2 className="mb-4 text-center text-xl font-bold text-black-2">
+          Download Your Free eBook
+        </h2>
+        <TextField
+          fullWidth
+          label="Name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <TextField
+          fullWidth
+          label="Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <TextField
+          fullWidth
+          label="Phone Number"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <div className="mt-3 flex justify-center gap-3">
+          <PrimaryBtn text={"Cancel"} onClick={handleClose} />
+          <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
+        </div>
+      </Box>
+    </Modal>
+  );
+};

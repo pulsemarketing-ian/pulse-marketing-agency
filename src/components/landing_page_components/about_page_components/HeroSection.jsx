@@ -1,69 +1,114 @@
 "use client";
+import { Box, Modal, TextField } from "@mui/material";
 import React from "react";
-import Navbar from "@/components/landing_page_components/Navbar";
-import Image from "next/image";
+import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
-
-const HeroSection = () => {
+import Image from "next/image";
+const DownloadBook = () => {
+  const [open, setOpen] = React.useState(false);
   return (
     <>
-      <main
+      <div
+        className="flex w-full flex-col-reverse items-center gap-5 pb-20  pt-20 md:flex-row md:justify-between md:px-40 px-5"
         style={{
-          backgroundImage: "url('/images/about_page_images/banner-about.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: "url('/images/app_page_images/radial.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
         }}
-        className="relative pb-[150px]" 
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
-
-        <Navbar />
-        <div className="relative flex h-[90vh] w-full flex-col items-center justify-center md:h-[105vh]">
-          <div className="z-10 flex translate-y-[-2rem] flex-col items-center md:translate-y-[-4rem]">
-            {/* Service heading */}
-            <div className="-ml-[20px] mb-2 flex items-center justify-center gap-1 md:-ml-[45px]">
-              <Image
-                src="/images/services_page_images/blue-dot.png"
-                alt="blue-dot"
-                width={20}
-                height={20}
-              />
-              <p>About us</p>
-            </div>
-
-            {/* Heading main */}
-            <Reveal>
-              <h2
-                className="pb-2 text-3xl font-bold capitalize text-white md:text-5xl"
-                style={{ lineHeight: "1.2" }}
-              >
-                Driving Growth <br />
-                Fueling Success.
-              </h2>
-            </Reveal>
-
-            <Reveal>
-              <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
-                We help businesses scale faster through revenue-focused
-                strategies, cutting-edge web development, and data-driven
-                marketing solutions.
-              </p>
-            </Reveal>
-          </div>
-
-          {/* <div className="absolute bottom-[4.5rem] md:bottom-6 right-6 z-10 rounded-full bg-my-blue-gradient p-3">
-            <Image
-              src={"/images/services_page_images/inbox.png"}
-              alt="inbox"
-              width={15}
-              height={15}
-            />
-          </div> */}
+        <div className="z-10 md:mt-6 md:px-4">
+          <Reveal>
+            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
+              Download Your Free eBook <br />
+              to Brand Like a Boss
+            </h2>
+          </Reveal>
+          <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
+          <DownloadModal open={open} handleClose={() => setOpen(false)} />
         </div>
-      </main>
+
+        <Image
+          src={"/images/brand like a boss book mokcup.png"}
+          width={400}
+          height={400}
+        />
+      </div>
     </>
   );
 };
 
-export default HeroSection;
+export default DownloadBook;
+
+const DownloadModal = ({ open, handleClose }) => {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/images/book-img.pdf";
+    link.download = "/images/book-img.pdf";
+    link.click();
+    handleClose();
+  };
+
+  return (
+    <Modal
+      open={open}
+      onClose={handleClose}
+      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: 400,
+          bgcolor: "background.paper",
+          boxShadow: 24,
+          p: 4,
+          borderRadius: 2,
+        }}
+      >
+        <h2 className="mb-4 text-center text-xl font-bold text-black-2">
+          Download Your Free eBook
+        </h2>
+        <TextField
+          fullWidth
+          label="Name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <TextField
+          fullWidth
+          label="Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <TextField
+          fullWidth
+          label="Phone Number"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          margin="normal"
+        />
+        <div className="mt-3 flex justify-center gap-3">
+          <PrimaryBtn text={"Cancel"} onClick={handleClose} />
+          <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
+        </div>
+      </Box>
+    </Modal>
+  );
+};
