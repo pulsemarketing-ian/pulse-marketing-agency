@@ -119,7 +119,7 @@ const Page = () => {
 
         {/* main content  */}
         <div className="mx-auto -mt-[20rem] max-w-[1200px] md:pb-8">
-          <p className="md:text-md mb-6 translate-y-[1vh]  text-center text-[16px] tracking-wide md:mx-auto md:mb-6 md:w-[60%] md:translate-y-0">
+          <p className="md:text-md mb-6 translate-y-[1vh]  text-center text-[16px] tracking-wide md:mx-auto md:mb-6 lg:mb-18 md:w-[60%] md:translate-y-0">
             {blogInner?.component?.section}
           </p>
           <div

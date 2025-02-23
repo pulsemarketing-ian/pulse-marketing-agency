@@ -27,7 +27,7 @@ const page = () => {
       <FAQSection />
       <OurBlog />
       <Calender />
-      <div className='-mt-52 md:mt-0'>
+      <div className='-mt-64 md:mt-0'>
       <Footer />
       </div>
     </main>

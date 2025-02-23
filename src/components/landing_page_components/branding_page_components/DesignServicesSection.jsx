@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Tab, Tabs } from "@mui/material";
 import Image from "next/image";
 import { Reveal } from "@/utils/Reveal";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 
 export default function DesignServicesSection() {
   const [activeTab, setActiveTab] = useState(0);
@@ -57,10 +57,9 @@ export default function DesignServicesSection() {
     <section className=" px-0 py-16 text-white md:mx-auto md:w-[1200px] md:px-0 ">
       <div className="mb-8 px-6 text-start md:px-0">
         <Reveal>
-        <h2 className="text-2xl font-medium leading-tight md:text-4xl md:w-[70%] lg:w-[60%]">
-          Custom design services tailored to 
-          your unique brand identity.
-        </h2>
+          <h2 className="text-2xl font-medium leading-tight md:w-[70%] md:text-4xl lg:w-[60%]">
+            Custom design services tailored to your unique brand identity.
+          </h2>
         </Reveal>
       </div>
 
@@ -85,45 +84,43 @@ export default function DesignServicesSection() {
 
       {/* Tab Content */}
       <div
-  className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8"
-  style={{
-    backgroundImage: "url('/images/app_page_images/radial.png')",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  }}
->
-  {tabContent[activeTab].items.map((item, index) => (
-    <motion.div 
-      initial={{
-        y: 300,
-        opacity: 0,
-      }}
-      whileInView={{
-        y: 0,
-        opacity: 1,
-      }}
-      transition={{
-        delay: 0.5,
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
-      viewport={{ once: false, amount: 0.2 }} 
-      key={index} 
-      // className="overflow-hidden rounded-lg p-2 "
-    >
-      <div className="relative mb-4 h-20 md:h-[300px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105">
-        <Image
-          src={item.image}
-          alt={item.title || `Image ${index + 1}`}
-          layout="fill"
-          objectFit="contain"
-          // className="rounded-lg"
-        />
+        className="container mx-auto grid grid-cols-2 gap-6 md:grid-cols-4"
+        style={{
+          backgroundImage: "url('/images/app_page_images/radial.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {tabContent[activeTab].items.map((item, index) => (
+          <motion.div
+            initial={{
+              y: 300,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: false, amount: 0.2 }}
+            key={index}
+            // className="overflow-hidden rounded-lg p-2 "
+          >
+            <div className="relative mb-4 h-32 w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:h-[300px]">
+              <Image
+                src={item.image}
+                alt={item.title || `Image ${index + 1}`}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </motion.div>
-  ))}
-</div>
-
     </section>
   );
 }

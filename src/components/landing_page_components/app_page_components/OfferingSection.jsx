@@ -7,7 +7,7 @@ const Offerings = () => {
     <div className="offerings translate-y-[11%] md:-translate-y-5 md:py-5">
       <div className="top flex flex-col gap-6">
         <h1 className="text-2xl md:text-5xl font-bold tracking-wide text-center w-full">Pulse Marketing Offerings</h1>
-        <p className="poppins-light font-light text-[14px] text-center w-full md:w-[70%] md:mx-auto px-4 md:px-0">
+        <p className="poppins-light font-light text-[11px] md:text-[14px] text-center w-full md:w-[70%] md:mx-auto px-4 md:px-0">
           We are the most sought-after destination for iOS development services
           in Canada. At our native iOS app development company, we use advanced
           tools and the latest technologies to build highly functional

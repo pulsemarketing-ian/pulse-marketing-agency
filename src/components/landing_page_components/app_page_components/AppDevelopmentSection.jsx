@@ -65,20 +65,6 @@ const AppDevelopmentSection = () => {
           <div className="w-[100%] md:w-[100%]">
             <ContentTab tabImage={tabImage} setTabImage={setTabImage} />
           </div>
-
-          {/* <div className="w-full md:w-[30%] md:absolute md:top-0 md:right-6 mt-5 md:mt-0">
-            {tabImage === 0 && (
-              <div>
-                <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob" width={300} height={300} />
-              </div>
-            )}
-            {tabImage === 1 && (
-              <Image className="rounded-2xl" src={"/images/app_page_images/third-sec.png"} alt="mob4" width={300} height={300} />
-            )}
-            {tabImage === 2 && (
-              <Image className="rounded-2xl" src={"/images/app_page_images/third-sec-2.png"} alt="mob5" width={300} height={300} />
-            )}
-          </div> */}
         </motion.div>
       </main>
     </main>

@@ -61,7 +61,7 @@ const TechStack = () => {
               ease: "easeInOut",
             }}
             viewport={{ once: false, amount: 0.2 }}
-            className="flex-grow basis-[calc(33.333%-10px)] md:basis-0"
+            className="flex-grow basis-[calc(33.333%-10px)] md:basis-0 lg:mt-12"
           >
             <Image
               key={index}

@@ -32,11 +32,11 @@ export const ChooseCardsSlider = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden lg:mt-15 ">
+    <div className="w-full overflow-hidden lg:mt-15 lg:mb-26">
       <Slider {...settings}>
         {MySliderArr.map((item, index) => (
           <div key={index} className="flex justify-between">
-            <div className="flex h-[10vh] w-[93%] items-center justify-center rounded-md bg-custom-gradient px-6 py-8 md:w-[95%] lg:h-[20vh]">
+            <div className="flex h-[10vh] w-[93%] items-center justify-center rounded-md bg-custom-gradient px-6 py-8 md:w-[95%] lg:h-[20vh] mb-1 md:mb-0">
               <Image
                 src={item.image}
                 alt={`Slide ${index + 1}`}
@@ -63,7 +63,7 @@ function ChoosePlus() {
     >
       <main className="ct-padding mx-auto w-full px-8 lg:w-[75%]">
         <div className="flex-row items-center justify-between pb-10 md:flex md:pb-12">
-          <div className=" w-[80%] md:w-[50%]">
+          <div className=" w-[80%] md:w-[50%] mt-10 md:mt-0">
             <Reveal>
               <h1 className="poppins-medium ct-heading text-5xl">
                 Why Leaders <br /> Choose Pulse

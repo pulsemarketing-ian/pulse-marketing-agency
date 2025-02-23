@@ -26,7 +26,7 @@ const WebDevSection = () => {
             borderBottom: '4px solid #363445',
           }}
         >
-          <div className="z-10 text-center mt-10 md:mt-0 md:translate-y-[-30%] text-lg">
+          <div className="z-10 text-center mt-10 md:mt-0 md:translate-y-[-30%] text-lg lg:mt-8">
             <p>We are experts in</p>
 
             <Reveal>

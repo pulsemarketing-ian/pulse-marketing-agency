@@ -23,7 +23,7 @@ const AboutText = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="z-10 text-center md:-mt-4">
+      <div className="z-10 text-center md:-mt-4 lg:mt-2">
         <Reveal>
           <h1 className="mb-2 text-xl font-bold tracking-wide md:text-5xl">
             Unity in Diversity <br />
@@ -33,7 +33,7 @@ const AboutText = () => {
       </div>
 
       {/* inner content  */}
-      <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row mb-4 md:mb-0">
+      <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto md:flex  md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row mb-4 md:mb-0 ">
         {/* left box  */}
         <div
           className="min-h-[27rem] w-full rounded-2xl bg-[#120E28] p-10 md:w-[48%] "

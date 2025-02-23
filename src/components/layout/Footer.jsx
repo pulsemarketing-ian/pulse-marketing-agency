@@ -49,7 +49,7 @@ const Footer = () => {
       <main className="relative mt-4 w-full pb-12 text-white sm:mt-20 md:pt-12">
         <div className="md:justify-none mx-auto flex w-full flex-wrap justify-between gap-8 px-8 lg:w-[88%] lg:px-0">
           {/* Logo & About Section */}
-          <div className="mt-10 flex flex-col items-start gap-4 sm:mt-40 md:min-h-[250px] md:w-[20%]">
+          <div className="mt-10 flex flex-col items-start gap-4 sm:mt-40 md:mt-0 md:min-h-[250px] md:w-[20%]">
             <img className="h-8 w-auto " src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
               Welcome to Pulse, a Vancouver-based marketing firm with years of
@@ -207,11 +207,11 @@ const Footer = () => {
         </div>
 
         {/* Text Scroller */}
-        <div className="W-[100%] poppins-medium border-text mb-10 mt-10 flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
-          {/* <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
-          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
-        </div> */}
+        {/* <div className="W-[100%] poppins-medium border-text mb-10 mt-10 flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]"> */}
+          <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
+          <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
         </div>
+        {/* </div> */}
         {/* Footer Bottom */}
         <div className="mx-auto flex w-full flex-col items-center justify-between gap-4 px-8 md:flex-row lg:w-[88%] lg:px-0">
           <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
@@ -221,33 +221,34 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* WhatsApp Business Icon */}
-        <Tooltip
-          title="Need help? Chat with us"
-          arrow
-          sx={{
-            fontSize: "1.2rem", // Tooltip text size
-            "& .MuiTooltip-tooltip": {
-              fontSize: "1.2rem", // Tooltip font size
-              padding: "10px 15px", // Increase padding
-            },
-          }}
-        >
-          <Link
-            href="https://wa.me/17789607426"
-            target="_blank"
-            className="fixed bottom-20 right-6 flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg transition duration-300 hover:bg-green-600"
-          >
-            <AiOutlineWhatsApp className="text-3xl" />
-          </Link>
-        </Tooltip>
+       {/* WhatsApp Business Icon */}
+<Tooltip
+  title="Need help? Chat with us"
+  arrow
+  sx={{
+    fontSize: "1.2rem",
+    "& .MuiTooltip-tooltip": {
+      fontSize: "1.2rem",
+      padding: "10px 15px",
+    },
+  }}
+>
+  <Link
+    href="https://wa.me/17789607426"
+    target="_blank"
+    className="fixed bottom-20 right-6 flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg transition duration-300 hover:bg-green-600 z-[9999]"
+  >
+    <AiOutlineWhatsApp className="text-3xl" />
+  </Link>
+</Tooltip>
 
-        <button
-          onClick={toggleForm}
-          className="poppins-regular contact-btn fixed bottom-5 right-6 mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
-        >
-          Book Now
-        </button>
+<button
+  onClick={toggleForm}
+  className="poppins-regular contact-btn fixed bottom-5 right-6 mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all z-[9999]"
+>
+  Book Now
+</button>
+
 
         {showForm && (
           <div className="fixed inset-0 z-99 flex items-center justify-center overflow-x-hidden bg-gray-500 bg-opacity-50">

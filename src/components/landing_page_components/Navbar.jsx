@@ -99,9 +99,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* <nav
-        className={`fixed left-0 right-0 top-0 z-50 bg-black/70 py-2 shadow-md backdrop-blur-sm transition-all`}
-      > */}
       <nav
         id="main-navbar"
         className={`fixed left-0 right-0 top-0 z-50 bg-black/70 py-2 shadow-md backdrop-blur-sm transition-all`}
@@ -251,7 +248,6 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Drawer (Mobile menu) */}
             <Drawer
               anchor="right"
               open={openDrawer}
@@ -271,27 +267,27 @@ export default function Navbar() {
                 <div className="mt-6 space-y-6">
                   {menuItems.map((item, index) => (
                     <div key={item.label}>
-                      <Link href={item.path}>
-                        <div
-                          className={`block cursor-pointer rounded-lg bg-gray-800/70 p-3 text-lg font-medium tracking-wide transition duration-200 hover:bg-blue-600/70 ${
-                            item.categories
-                              ? "flex items-center justify-between"
-                              : ""
-                          }`}
-                          onClick={() =>
-                            item.categories
-                              ? handleSubmenuToggle(index)
-                              : toggleDrawer(false)
-                          }
-                        >
-                          {item.label}
-                          {item.categories && (
-                            <span className="ml-2">
-                              {openSubmenu === index ? "-" : "+"}
-                            </span>
-                          )}
-                        </div>
-                      </Link>
+                      <div
+                        className={`block cursor-pointer rounded-lg bg-gray-800/70 p-3 text-lg font-medium tracking-wide transition duration-200 hover:bg-blue-600/70 ${
+                          item.categories
+                            ? "flex items-center justify-between"
+                            : ""
+                        }`}
+                        onClick={() =>
+                          item.categories
+                            ? handleSubmenuToggle(index)
+                            : toggleDrawer(false)
+                        }
+                      >
+                        <Link href={item.path}>
+                          <span>{item.label}</span>
+                        </Link>
+                        {item.categories && (
+                          <span className="ml-2">
+                            {openSubmenu === index ? "-" : "+"}
+                          </span>
+                        )}
+                      </div>
 
                       {/* Subcategories dropdown */}
                       {item.categories && openSubmenu === index && (
@@ -307,12 +303,12 @@ export default function Navbar() {
                                     key={subItem.name}
                                     href={subItem.path}
                                     onClick={() => toggleDrawer(false)}
-                                    className="block px-2 text-sm text-white transition  duration-200 hover:rounded-md hover:bg-blue-700 hover:text-white"
+                                    className="block px-2 text-sm text-white transition duration-200 hover:rounded-md hover:bg-blue-700 hover:text-white"
                                   >
                                     <p className="font-medium">
                                       {subItem.name}
                                     </p>
-                                    <h5 className="text-gray-400 ">
+                                    <h5 className="text-gray-400">
                                       {subItem.desc}
                                     </h5>
                                   </Link>

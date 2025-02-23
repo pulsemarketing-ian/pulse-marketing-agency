@@ -16,9 +16,9 @@ const AppDevSection = () => {
       }}
     >
       {/* Main Content Section */}
-      <div className=" container mx-auto px-4 py-16">
+      <div className=" container mx-auto px-4 pb-5 pt-14 md:py-16">
         <div
-          className="mt-[10rem] flex transform flex-col items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
+          className="mt-[10rem] flex transform flex-col md:items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
           style={{
             backgroundImage: `url('/images/services_page_images/third-section-img.png')`,
             backgroundSize: "cover",
@@ -27,7 +27,7 @@ const AppDevSection = () => {
           {/* Left Column */}
           <div className="space-y-6 lg:w-[40%]">
             <Reveal>
-              <h2 className="mt-36 text-2xl font-medium leading-tight sm:mt-40 md:text-4xl">
+              <h2 className="mt-20 text-2xl font-medium leading-tight sm:mt-32 md:text-4xl">
                 Application <br /> Development
               </h2>
             </Reveal>

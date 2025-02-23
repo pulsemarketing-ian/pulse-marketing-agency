@@ -10,7 +10,7 @@ const Video = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center' }} className="pt-0 pb-20">
+    <div style={{ textAlign: 'center' }} className="pt-0 pb-10 md:pb-20">
       <h1 className="poppins-medium ct-heading text-[1.5rem] md:text-5xl pb-10">
         TikTok Videos
       </h1>

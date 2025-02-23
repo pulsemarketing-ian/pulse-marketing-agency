@@ -11,9 +11,9 @@ const Terms = () => {
             backgroundSize: "cover",
             transform: "translateY(-50%)",
           }}
-          className="h-[36vh] md:h-[30rem]"
+          className="h-[36vh] md:h-[30rem] xl:h-[32rem] md:-mt-[150px] lg:-mt-[100px]"
         />
-        <div className="absolute top-0 md:top-26 z-10 flex w-full flex-col items-center justify-center">
+        <div className="absolute top-0 md:top-26 z-10 flex w-full flex-col items-center justify-center xl:py-20">
           <div className="z-10 text-center">
             <Reveal>
                 <h2 className="text-xl md:text-4xl font-bold tracking-wide">Interpretation</h2>

@@ -32,7 +32,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
   return (
     <Box
       sx={{
-        width: "70%",
+        width:{xs:"100%",sm:"100%",md:"70%"},
         typography: "body1",
         transform: { xs: "none", sm: "none", md: "translateX(100px)" },
         fontFamily: " Poppins, sans-serif",

@@ -23,7 +23,7 @@ const SeoApproach = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10  text-center">
+          <div className="z-10 px-4 md:px-0 -mt-[65px] md:mt-0 text-center">
             <Reveal>
               <p className="pt-20">Let rebuild the SEO with improvements easier to understand and better layout of <br />workflow of process here is some details to start with that:</p>
               <h1 className="text-xl font-bold tracking-wide md:text-5xl pt-10">

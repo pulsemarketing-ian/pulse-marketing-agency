@@ -92,51 +92,51 @@ import Image from "next/image";
 export default function PortfolioSlider() {
   const images = [
     {
-      src: "/images/app_page_images/img (1).webp",
+      src: "/images/web-dev_page_images/mine-images (7).jpg",
       link: "https://studio9p.com/en/",
     },
     {
-      src: "/images/app_page_images/img (2).webp",
+      src: "/images/web-dev_page_images/mine-images (2).jpg",
       link: "https://www.clouarchitects.com/",
     },
     {
-      src: "/images/app_page_images/img (3).webp",
+      src: "/images/web-dev_page_images/mine-images (5).jpg",
       link: "https://rumblestudios.tv/",
     },
     {
-      src: "/images/app_page_images/img (4).webp",
+      src: "/images/web-dev_page_images/mine-images (3).jpg",
       link: "https://www.oneupstudio.it/",
     },
     {
-      src: "/images/app_page_images/img (5).webp",
+      src: "/images/web-dev_page_images/mine-images (4).jpg",
       link: "https://petertarka.com/",
     },
     {
-      src: "/images/app_page_images/img (6).webp",
+      src: "/images/web-dev_page_images/mine-images (6).jpg",
       link: "https://www.steelwavellc.com/",
     },
     {
-      src: "/images/app_page_images/img (1).webp",
+      src: "/images/web-dev_page_images/mine-images (7).jpg",
       link: "https://studio9p.com/en/",
     },
     {
-      src: "/images/app_page_images/img (2).webp",
+      src: "/images/web-dev_page_images/mine-images (2).jpg",
       link: "https://www.clouarchitects.com/",
     },
     {
-      src: "/images/app_page_images/img (3).webp",
+      src: "/images/web-dev_page_images/mine-images (5).jpg",
       link: "https://rumblestudios.tv/",
     },
     {
-      src: "/images/app_page_images/img (4).webp",
+      src: "/images/web-dev_page_images/mine-images (3).jpg",
       link: "https://www.oneupstudio.it/",
     },
     {
-      src: "/images/app_page_images/img (5).webp",
+      src: "/images/web-dev_page_images/mine-images (4).jpg",
       link: "https://petertarka.com/",
     },
     {
-      src: "/images/app_page_images/img (6).webp",
+      src: "/images/web-dev_page_images/mine-images (6).jpg",
       link: "https://www.steelwavellc.com/",
     },
   ];
