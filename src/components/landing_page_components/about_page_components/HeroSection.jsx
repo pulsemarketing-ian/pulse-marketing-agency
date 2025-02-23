@@ -1,15 +1,18 @@
 "use client";
 import { Box, Modal, TextField } from "@mui/material";
 import React from "react";
-import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
+import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
+import Navbar from "../Navbar";
+
 const DownloadBook = () => {
   const [open, setOpen] = React.useState(false);
+
   return (
     <>
       <div
-        className="flex w-full flex-col-reverse items-center gap-5 pb-20  pt-20 md:flex-row md:justify-between md:px-40 px-5"
+        className="flex w-full flex-col-reverse items-center gap-5 pb-20 pt-20 md:flex-row md:justify-between md:px-40 px-5"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
@@ -31,13 +34,12 @@ const DownloadBook = () => {
           src={"/images/brand like a boss book mokcup.png"}
           width={400}
           height={400}
+          alt="Brand Like a Boss eBook"
         />
       </div>
     </>
   );
 };
-
-export default DownloadBook;
 
 const DownloadModal = ({ open, handleClose }) => {
   const [formData, setFormData] = React.useState({
@@ -53,8 +55,10 @@ const DownloadModal = ({ open, handleClose }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/images/book-img.pdf";
-    link.download = "/images/book-img.pdf";
+    link.download = "book-img.pdf";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
     handleClose();
   };
 
@@ -112,3 +116,55 @@ const DownloadModal = ({ open, handleClose }) => {
     </Modal>
   );
 };
+
+const HeroSection = () => {
+  return (
+    <>
+      <main
+        style={{
+          backgroundImage: "url('/images/about_page_images/banner-about.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="relative pb-[150px]"
+      >
+        <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div>
+
+        <Navbar />
+        <div className="relative flex h-[90vh] w-full flex-col items-center justify-center md:h-[105vh]">
+          <div className="z-10 flex translate-y-[-2rem] flex-col items-center md:translate-y-[-4rem]">
+            <div className="-ml-[20px] mb-2 flex items-center justify-center gap-1 md:-ml-[45px]">
+              <Image
+                src="/images/services_page_images/blue-dot.png"
+                alt="blue-dot"
+                width={20}
+                height={20}
+              />
+              <p>About us</p>
+            </div>
+
+            <Reveal>
+              <h2
+                className="pb-2 text-3xl font-bold capitalize text-white md:text-5xl"
+                style={{ lineHeight: "1.2" }}
+              >
+                Driving Growth <br />
+                Fueling Success.
+              </h2>
+            </Reveal>
+
+            <Reveal>
+              <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
+                We help businesses scale faster through revenue-focused
+                strategies, cutting-edge web development, and data-driven
+                marketing solutions.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+};
+
+export default HeroSection;

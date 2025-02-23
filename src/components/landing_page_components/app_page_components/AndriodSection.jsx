@@ -1,7 +1,7 @@
 "use client";
 import { Box, Modal, TextField } from "@mui/material";
 import React from "react";
-import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
+import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
 import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 const DownloadBook = () => {

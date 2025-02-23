@@ -14,45 +14,42 @@ import { Box, Modal } from "@mui/material";
 import { Reveal } from "@/utils/Reveal";
 
 const Footer = () => {
+  const [showForm, setShowForm] = useState(false);
+  const calendlyContainerRef = useRef(null);
 
-   const [showForm, setShowForm] = useState(false);
-    const calendlyContainerRef = useRef(null);
-  
-    const toggleForm = () => {
-      setShowForm(!showForm);
-    };
-  
-    useEffect(() => {
-      if (showForm) {
-        const container = calendlyContainerRef.current;
-  
-        if (container) {
-          container.innerHTML = "";
-  
-          const div = document.createElement("div");
-          div.className = "calendly-inline-widget";
-          div.dataset.url = "https://calendly.com/ianpslater/20min";
-          div.style.minWidth = "500px";
-          div.style.height = "1200px";
-          container.appendChild(div);
-  
-          const script = document.createElement("script");
-          script.type = "text/javascript";
-          script.src = "https://assets.calendly.com/assets/external/widget.js";
-          script.async = true;
-          container.appendChild(script);
-        }
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+  useEffect(() => {
+    if (showForm) {
+      const container = calendlyContainerRef.current;
+
+      if (container) {
+        container.innerHTML = "";
+
+        const div = document.createElement("div");
+        div.className = "calendly-inline-widget";
+        div.dataset.url = "https://calendly.com/ianpslater/20min";
+        div.style.minWidth = "500px";
+        div.style.height = "1200px";
+        container.appendChild(div);
+
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        container.appendChild(script);
       }
-    }, [showForm]);
-
+    }
+  }, [showForm]);
 
   return (
     <>
-      <main className="relative w-full pb-12 text-white md:pt-12 mt-4 sm:mt-20">
-
+      <main className="relative mt-4 w-full pb-12 text-white sm:mt-20 md:pt-12">
         <div className="md:justify-none mx-auto flex w-full flex-wrap justify-between gap-8 px-8 lg:w-[88%] lg:px-0">
           {/* Logo & About Section */}
-          <div className="flex flex-col items-start gap-4 md:min-h-[250px] md:w-[20%] mt-10 sm:mt-40">
+          <div className="mt-10 flex flex-col items-start gap-4 sm:mt-40 md:min-h-[250px] md:w-[20%]">
             <img className="h-8 w-auto " src="/white-logo.png" alt="Logo" />
             <p className="text-sm leading-relaxed">
               Welcome to Pulse, a Vancouver-based marketing firm with years of
@@ -174,46 +171,47 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex-col">
-          <Reveal>
-            <Link
-              href={
-                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                className="mr-8 mb-5"
-                src={"/accrebited-bussiness-logo2.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
-          <Reveal>
-            <Link
-              href={
-                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                src={"/google-review-logo2.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
-        </div>
+              <Reveal>
+                <Link
+                  href={
+                    "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="image"
+                    className="mb-5 mr-8"
+                    src={"/accrebited-bussiness-logo2.png"}
+                    width={125}
+                    height={125}
+                  />
+                </Link>
+              </Reveal>
+              <Reveal>
+                <Link
+                  href={
+                    "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="image"
+                    src={"/google-review-logo2.png"}
+                    width={125}
+                    height={125}
+                  />
+                </Link>
+              </Reveal>
+            </div>
           </div>
         </div>
 
         {/* Text Scroller */}
-        <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px] mb-10 mt-10">
+        <div className="W-[100%] poppins-medium border-text mb-10 mt-10 flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
+          {/* <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
           <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
+        </div> */}
         </div>
-
         {/* Footer Bottom */}
         <div className="mx-auto flex w-full flex-col items-center justify-between gap-4 px-8 md:flex-row lg:w-[88%] lg:px-0">
           <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
@@ -245,30 +243,30 @@ const Footer = () => {
         </Tooltip>
 
         <button
-        onClick={toggleForm}
-        className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all fixed bottom-5 right-6"
-      >
-        Book Now
-      </button>
+          onClick={toggleForm}
+          className="poppins-regular contact-btn fixed bottom-5 right-6 mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
+        >
+          Book Now
+        </button>
 
-      {showForm && (
-                     <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50 overflow-x-hidden">
-                       <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
-                         <div
-                           onClick={toggleForm}
-                           className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
-                         >
-                           <IoCloseSharp />
-                         </div>
-             
-                         <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
-                         <div
-                           className="h-[60vh] overflow-auto"
-                           ref={calendlyContainerRef}
-                         ></div>
-                       </div>
-                     </div>
-                   )}
+        {showForm && (
+          <div className="fixed inset-0 z-99 flex items-center justify-center overflow-x-hidden bg-gray-500 bg-opacity-50">
+            <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+              <div
+                onClick={toggleForm}
+                className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
+              >
+                <IoCloseSharp />
+              </div>
+
+              <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
+              <div
+                className="h-[60vh] overflow-auto"
+                ref={calendlyContainerRef}
+              ></div>
+            </div>
+          </div>
+        )}
       </main>
 
       {/* Styles for hover underline animation */}

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import HeroSection from '../../../components/landing_page_components/about_page_components/HeroSection';
 import AboutText from '../../../components/landing_page_components/about_page_components/AboutText';

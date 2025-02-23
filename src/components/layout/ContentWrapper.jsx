@@ -18,7 +18,7 @@ const ContentWrapper = () => {
 
   return (
     <div>
-      <SeorankingWidget />  
+      {/* <SeorankingWidget />   */}
       <HeroSection />
       <ChoosePlus />
       <Tabs />

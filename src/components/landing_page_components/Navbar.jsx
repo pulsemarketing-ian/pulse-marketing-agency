@@ -99,7 +99,11 @@ export default function Navbar() {
 
   return (
     <>
+      {/* <nav
+        className={`fixed left-0 right-0 top-0 z-50 bg-black/70 py-2 shadow-md backdrop-blur-sm transition-all`}
+      > */}
       <nav
+        id="main-navbar"
         className={`fixed left-0 right-0 top-0 z-50 bg-black/70 py-2 shadow-md backdrop-blur-sm transition-all`}
       >
         <div className="mx-auto max-w-[1300px]">
@@ -230,7 +234,9 @@ export default function Navbar() {
                           <div className="relative h-[160px] w-[400px] rounded-lg">
                             <Link href={"/services"}>
                               <Image
-                                src={"/images/services_page_images/hero-img.png"}
+                                src={
+                                  "/images/services_page_images/hero-img.png"
+                                }
                                 alt="Branding"
                                 layout="fill"
                                 objectFit="cover"
