@@ -125,6 +125,9 @@ const HeroSection = () => {
           backgroundImage: "url('/images/about_page_images/banner-about.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+
         }}
         className="relative pb-[150px]"
       >

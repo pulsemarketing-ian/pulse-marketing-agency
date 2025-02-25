@@ -13,8 +13,10 @@ const HeroSection = () => {
          style={{
              backgroundImage: "url('/images/cro_page_images/cro-banner-min (1).jpg')",
              backgroundSize: "cover",
+             backgroundAttachment: "fixed",
+             backgroundPosition: "center",
             }}
-            className='md:pb-[200px]'
+            className='md:pb-[50px] 2xl:pb-0'
             >
             <Navbar/>
             <div className='h-[75vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[60px]'>

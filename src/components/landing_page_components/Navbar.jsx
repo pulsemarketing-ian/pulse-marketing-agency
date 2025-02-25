@@ -76,26 +76,48 @@ export default function Navbar() {
 
   useEffect(() => {
     if (showForm) {
-      const container = calendlyContainerRef.current;
+      const container = calendlyContainerRef.current
 
       if (container) {
-        container.innerHTML = "";
+        container.innerHTML = ""
 
-        const div = document.createElement("div");
-        div.className = "calendly-inline-widget";
-        div.dataset.url = "https://calendly.com/ianpslater/20min";
-        div.style.minWidth = "500px";
-        div.style.height = "1200px";
-        container.appendChild(div);
+        const div = document.createElement("div")
+        div.className = "calendly-inline-widget"
+        div.dataset.url = "https://calendly.com/ianpslater/20min"
 
-        const script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = "https://assets.calendly.com/assets/external/widget.js";
-        script.async = true;
-        container.appendChild(script);
+        // Responsive sizing based on screen width
+        if (window.innerWidth < 640) {
+          div.style.minWidth = "500px" // Keep original size but allow scrolling on mobile
+        } else {
+          div.style.minWidth = "100%" // Use container width on larger screens
+        }
+
+        div.style.height = "1200px"
+        container.appendChild(div)
+
+        const script = document.createElement("script")
+        script.type = "text/javascript"
+        script.src = "https://assets.calendly.com/assets/external/widget.js"
+        script.async = true
+        container.appendChild(script)
+
+        // Add resize listener to adjust widget size when window is resized
+        const handleResize = () => {
+          if (window.innerWidth < 640) {
+            div.style.minWidth = "500px"
+          } else {
+            div.style.minWidth = "100%"
+          }
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
       }
     }
-  }, [showForm]);
+  }, [showForm])
 
   return (
     <>
@@ -346,8 +368,8 @@ export default function Navbar() {
         </div>
       </nav>
       {showForm && (
-        <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50">
-          <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gray-500 bg-opacity-50">
+          <div className="relative h-[70vh] w-full max-w-2xl rounded-lg bg-white p-6 md:w-[85%] lg:w-[65%]">
             <div
               onClick={toggleForm}
               className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
@@ -357,7 +379,7 @@ export default function Navbar() {
 
             <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
             <div
-              className="h-[60vh] overflow-auto"
+              className="h-[60vh] overflow-y-auto sm:overflow-x-hidden overflow-x-auto"
               ref={calendlyContainerRef}
             ></div>
           </div>

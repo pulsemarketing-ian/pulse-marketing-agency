@@ -12,6 +12,9 @@ export default function HeroSection() {
       style={{
         backgroundImage: "url('/images/seo_page_images/seo-hero.png')",
         backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+
       }}
       className='md:pb-[150px]'
     >

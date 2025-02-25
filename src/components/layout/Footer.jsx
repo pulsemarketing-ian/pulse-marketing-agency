@@ -208,7 +208,7 @@ const Footer = () => {
 
         {/* Text Scroller */}
         {/* <div className="W-[100%] poppins-medium border-text mb-10 mt-10 flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]"> */}
-          <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
+        <div className="W-[100%] poppins-medium border-text flex w-full items-center justify-center overflow-hidden whitespace-nowrap py-0 text-center text-[4rem] text-transparent lg:py-2 lg:text-[100px]">
           <TextScroller text="Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!  Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights! Innovate. Create. Succeed: Your Journey Begins Here! Drive Your Business to New Heights!" />
         </div>
         {/* </div> */}
@@ -221,38 +221,37 @@ const Footer = () => {
           </div>
         </div>
 
-       {/* WhatsApp Business Icon */}
-<Tooltip
-  title="Need help? Chat with us"
-  arrow
-  sx={{
-    fontSize: "1.2rem",
-    "& .MuiTooltip-tooltip": {
-      fontSize: "1.2rem",
-      padding: "10px 15px",
-    },
-  }}
->
-  <Link
-    href="https://wa.me/17789607426"
-    target="_blank"
-    className="fixed bottom-20 right-6 flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg transition duration-300 hover:bg-green-600 z-[9999]"
-  >
-    <AiOutlineWhatsApp className="text-3xl" />
-  </Link>
-</Tooltip>
+        {/* WhatsApp Business Icon */}
+        <Tooltip
+          title="Need help? Chat with us"
+          arrow
+          sx={{
+            fontSize: "1.2rem",
+            "& .MuiTooltip-tooltip": {
+              fontSize: "1.2rem",
+              padding: "10px 15px",
+            },
+          }}
+        >
+          <Link
+            href="https://wa.me/17789607426"
+            target="_blank"
+            className="fixed bottom-20 right-6 z-[9999] flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg transition duration-300 hover:bg-green-600"
+          >
+            <AiOutlineWhatsApp className="text-3xl" />
+          </Link>
+        </Tooltip>
 
-<button
-  onClick={toggleForm}
-  className="poppins-regular contact-btn fixed bottom-5 right-6 mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all z-[9999]"
->
-  Book Now
-</button>
-
+        <button
+          onClick={toggleForm}
+          className="poppins-regular contact-btn fixed bottom-5 right-6 z-[9999] mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
+        >
+          Book Now
+        </button>
 
         {showForm && (
-          <div className="fixed inset-0 z-99 flex items-center justify-center overflow-x-hidden bg-gray-500 bg-opacity-50">
-            <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gray-500 bg-opacity-50">
+            <div className="relative h-[70vh] w-full max-w-2xl rounded-lg bg-white p-6 md:w-[85%] lg:w-[65%]">
               <div
                 onClick={toggleForm}
                 className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
@@ -262,7 +261,7 @@ const Footer = () => {
 
               <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
               <div
-                className="h-[60vh] overflow-auto"
+                className="h-[60vh] overflow-x-auto overflow-y-auto sm:overflow-x-hidden"
                 ref={calendlyContainerRef}
               ></div>
             </div>

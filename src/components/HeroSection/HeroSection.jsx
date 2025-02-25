@@ -14,7 +14,6 @@ import { Box, Modal } from "@mui/material";
 import SEORankingWidget from "../landing_page_components/SeoRankingWidget";
 
 const HeroLeftContent = () => {
- 
   const [showForm, setShowForm] = useState(false);
   const calendlyContainerRef = useRef(null);
 
@@ -99,7 +98,7 @@ const HeroLeftContent = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col md:items-center flex-wrap md:gap-3 md:flex-row text-left">
+        <div className="flex w-full flex-col flex-wrap text-left md:flex-row md:items-center md:gap-3">
           <p> Clients rate our team and work</p>
           <div className="flex text-yellow-500">
             <FaStar />
@@ -121,50 +120,24 @@ const HeroLeftContent = () => {
           </div>
         </button>
 
-        {/* <Modal open={open} onClose={handleClose}>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              bgcolor: "background.paper",
-              boxShadow: 24,
-              p: 4,
-              borderRadius: "8px",
-              width: "90%",
-              maxWidth: "600px",
-              height: "80%",
-              overflow: "auto",
-            }}
-          >
-            <button
-              onClick={handleClose}
-              className="absolute right-2 top-2 z-30 text-lg text-black"
-            >
-              <IoMdClose />
-            </button>
-            <div ref={calendlyContainerRef}></div>
-            </Box>
-        </Modal> */}
-          {showForm && (
-                <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50">
-                  <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
-                    <div
-                      onClick={toggleForm}
-                      className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
-                    >
-                      <IoCloseSharp />
-                    </div>
-        
-                    <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
-                    <div
-                      className="h-[60vh] overflow-auto"
-                      ref={calendlyContainerRef}
-                    ></div>
-                  </div>
-                </div>
-              )}
+        {showForm && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gray-500 bg-opacity-50">
+            <div className="relative h-[70vh] w-full max-w-2xl rounded-lg bg-white p-6 md:w-[85%] lg:w-[65%]">
+              <div
+                onClick={toggleForm}
+                className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
+              >
+                <IoCloseSharp />
+              </div>
+
+              <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
+              <div
+                className="h-[60vh] overflow-x-auto overflow-y-auto sm:overflow-x-hidden"
+                ref={calendlyContainerRef}
+              ></div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
@@ -467,8 +440,8 @@ const HeroSection = () => {
           </div>
 
           {showForm && (
-            <div className="fixed inset-0 z-99 flex items-center justify-center bg-gray-500 bg-opacity-50">
-              <div className="relative w-full max-w-lg rounded-lg bg-white p-4 md:w-[80%] lg:w-[60%]">
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gray-500 bg-opacity-50">
+              <div className="relative h-[70vh] w-full max-w-2xl rounded-lg bg-white p-6 md:w-[85%] lg:w-[65%]">
                 <div
                   onClick={toggleForm}
                   className="absolute right-3 top-2 cursor-pointer px-2 text-2xl font-bold text-blue-500"
@@ -478,7 +451,7 @@ const HeroSection = () => {
 
                 <h2 className="mb-4 text-xl">Schedule Your Meeting</h2>
                 <div
-                  className="h-[60vh] overflow-auto"
+                  className="h-[60vh] overflow-y-auto overflow-x-hidden"
                   ref={calendlyContainerRef}
                 ></div>
               </div>

@@ -142,6 +142,9 @@ const HeroSection = () => {
         style={{
           backgroundImage: "url('/images/our-work_page_images/our-work.png')",
           backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+
         }}
         className=" md:pb-[150px]"
       >

@@ -72,6 +72,9 @@ const BlogPage = () => {
           backgroundImage: "url('/images/blog_page_images/blog.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+
         }}
         className="relative md:pb-[150px]"
       >
@@ -174,12 +177,12 @@ const BlogPage = () => {
             >
               <Reveal>
                 <h2 className="text-xl font-bold line-clamp-2">
-                  {item?.name?.split(' ').slice(0, 4).join(' ')}...
+                  {item?.name}
                 </h2>
               </Reveal>
               <Reveal>
-                <p className="line-clamp-3 text-gray-400">
-                  {item?.section?.split(' ').slice(0, 20).join(' ')}...
+                <p className="text-gray-400">
+                  {item?.section?.slice(0, 220) + '.'}
                 </p>
               </Reveal>
               <div>

@@ -101,7 +101,7 @@ export default function Tabs() {
 
     return (
       <div
-        className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
@@ -111,54 +111,61 @@ export default function Tabs() {
         {tabContent.map((item, index) => (
           <div
             key={index}
-            className="animate-left mb-8 flex w-full flex-col gap-3 md:mb-0 md:w-[100%]"
+            className="animate-left flex w-full flex-col gap-5 md:gap-6"
           >
-            <div className="relative h-[200px] w-full md:mb-4 md:h-[380px]">
+            {/* Image Section */}
+            <div className="relative h-[200px] md:h-[380px] xl:h-[280px] 2xl:h-[380px] w-full md:w-[90%]  rounded-2xl">
               <Link href={item?.section} target="_blank">
-              <Image
-                src={item?.pictures[0]}
-                layout="fill"
-                objectFit="contain"
-                alt="Project Image"
-                priority
-                quality={100}
-                className="rounded-2xl cursor-pointer"
-              />
+                <Image
+                  src={item?.pictures[0]}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Project Image"
+                  priority
+                  quality={100}
+                  className="rounded-2xl cursor-pointer"
+                />
               </Link>
             </div>
-            <Reveal>
-              <h4 className="text-xl font-semibold capitalize tracking-wide">
-                {item?.name.toUpperCase()}
-              </h4>
-            </Reveal>
-            <Reveal>
-              <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
-                <div className="flex flex-wrap gap-4">
-                  {["Design", "Development", "SEO"].map((tag, index) => (
-                    <div
-                      key={index}
-                      className="mb-2 flex w-auto items-center gap-1"
-                    >
-                      <Image
-                        src="/images/services_page_images/blue-dot.png"
-                        alt="blue-dot"
-                        width={20}
-                        height={20}
-                      />
-                      <p>{tag}</p>
-                    </div>
-                  ))}
+    
+            {/* Content Section */}
+            <div className="md:px-6 xl:px-0 2xl:px-0 rounded-xl">
+              <Reveal>
+                <h4 className="text-xl font-semibold capitalize tracking-wide">
+                  {item?.name.toUpperCase()}
+                </h4>
+              </Reveal>
+    
+              <Reveal>
+                <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
+                  {/* Tags Section */}
+                  <div className="flex flex-wrap gap-3">
+                    {["Design", "Development", "SEO"].map((tag, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <Image
+                          src="/images/services_page_images/blue-dot.png"
+                          alt="blue-dot"
+                          width={16}
+                          height={16}
+                        />
+                        <p className="text-sm font-medium">{tag}</p>
+                      </div>
+                    ))}
+                  </div>
+    
+                  {/* Button */}
+                  <PrimaryBtn
+                    text="View Site"
+                    onClick={() => window.open(item?.section, "_blank")}
+                  />
                 </div>
-                <PrimaryBtn
-                  text={"View Site"}
-                  onClick={() => window.open(item?.section, "_blank")}
-                />
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
           </div>
         ))}
       </div>
     );
+    
   };
 
   return (

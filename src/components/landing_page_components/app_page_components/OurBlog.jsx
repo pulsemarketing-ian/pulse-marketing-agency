@@ -86,12 +86,12 @@ const OurBlog = () => {
             <div className="flex flex-col gap-3 mt-3">
               <Reveal>
                 <h2 className="text-xl font-semibold mt-2">
-                  {item?.name?.split(' ').slice(0, 4).join(' ')}...
+                  {item?.name}
                 </h2>
               </Reveal>
               <Reveal>
                 <p>
-                  {item?.section?.split(' ').slice(0, 20).join(' ')}...
+                  {item?.section}
                 </p>
               </Reveal>
             </div>
