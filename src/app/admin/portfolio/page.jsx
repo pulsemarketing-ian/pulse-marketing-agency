@@ -125,8 +125,7 @@ const Portfolio = () => {
       name: form.get("name"),
       id: editCompProfileId,
       content: form.get("content"),
-      section:form.get("section")
-
+      section: form.get("section"),
     };
 
     try {
@@ -136,7 +135,7 @@ const Portfolio = () => {
       alert("Updated Successfully");
     } catch (error) {
       console.log(error);
-      alert('Error updating component, Something went wrong!');
+      alert("Error updating component, Something went wrong!");
     }
   };
 
@@ -161,16 +160,17 @@ const Portfolio = () => {
     }
   }, [selectedPage]);
 
-  const hasRequiredPages = (pages) => 
-    pages.some(page => page.name.startsWith("Portfolio")) &&
-    pages.some(page => page.name.startsWith("testimonials")) &&
-    pages.some(page => page.name.startsWith("Blog"));
-  
+  const hasRequiredPages = (pages) =>
+    pages.some((page) => page.name.startsWith("Portfolio")) &&
+    pages.some((page) => page.name.startsWith("testimonials")) &&
+    pages.some((page) => page.name.startsWith("Blog"));
+
   const filteredPages = hasRequiredPages(pages)
-    ? pages.filter((page) => 
-        page.name.startsWith("Portfolio") || 
-        page.name.startsWith("testimonials") || 
-        page.name.startsWith("Blog")
+    ? pages.filter(
+        (page) =>
+          page.name.startsWith("Portfolio") ||
+          page.name.startsWith("testimonials") ||
+          page.name.startsWith("Blog"),
       )
     : [];
 
@@ -189,20 +189,22 @@ const Portfolio = () => {
                 Select Portfolio Category:
               </label>
               <select
-    className="mt-1 w-full rounded border p-2"
-    onChange={(e) => setSelectedPage(e.target.value)}
-    value={selectedPage}
-  >
-    {filteredPages.length > 0 ? (
-      filteredPages.map((page) => (
-        <option key={page._id} value={page._id}>
-          {page.name}
-        </option>
-      ))
-    ) : (
-      <option disabled>Portfolio, Testimonials, or Blog is missing</option>
-    )}
-  </select>
+                className="mt-1 w-full rounded border p-2"
+                onChange={(e) => setSelectedPage(e.target.value)}
+                value={selectedPage}
+              >
+                {filteredPages.length > 0 ? (
+                  filteredPages.map((page) => (
+                    <option key={page._id} value={page._id}>
+                      {page.name}
+                    </option>
+                  ))
+                ) : (
+                  <option disabled>
+                    Portfolio, Testimonials, or Blog is missing
+                  </option>
+                )}
+              </select>
             </div>
 
             {/* Project Name */}
@@ -247,7 +249,7 @@ const Portfolio = () => {
             <div>
               <label className="text-gray-700">Content:</label>
               <textarea
-              name="content"
+                name="content"
                 className="mt-1 w-full rounded border p-2"
                 placeholder="Enter content..."
                 value={content}
