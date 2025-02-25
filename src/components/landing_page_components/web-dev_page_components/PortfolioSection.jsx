@@ -6,7 +6,7 @@ import "./slider.css";
 import Slider from './Slider'
 export default function PortfolioSection() {
   return (
-    <main className="relative w-full pb-15 md:pb-0 -mt-[100px]">
+    <main className="relative w-full pb-15 md:pb-0 -mt-[100px] xl:-mt-[80px] 2xl:-mt-[220px]">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
