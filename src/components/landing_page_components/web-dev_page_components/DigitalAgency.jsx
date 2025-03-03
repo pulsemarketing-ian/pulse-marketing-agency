@@ -12,7 +12,7 @@ import {
 import { MdArrowDropDown } from "react-icons/md";
 import Image from "next/image";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
 
 const darkTheme = createTheme({
@@ -34,11 +34,9 @@ export default function DigitalAgency() {
       <Box sx={{ color: "white", py: { xs: 8, md: 4 }, px: 2 }}>
         <Box sx={{ px:{xs:2, md:6} }}>
           <div className="flex justify-center mt-3">
-            <Reveal>
               <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full mb-2">
                 A Full Service <br /> Creative Digital Agency
               </h2>
-            </Reveal>
           </div>
 
           <Grid

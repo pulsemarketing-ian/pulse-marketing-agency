@@ -2,14 +2,14 @@
 import { Box, Modal, TextField } from "@mui/material";
 import React from "react";
 import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 const DownloadBook = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <>
       <div
-        className="flex w-full flex-col-reverse items-center gap-5 pb-12  pt-20 md:flex-row md:justify-between md:px-40 px-5 md:py-24 lg:mt-10"
+        className="flex w-full flex-col-reverse items-center gap-5 px-5  pb-12 pt-20 md:flex-row md:justify-between md:px-40 md:py-24 lg:mt-10"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
@@ -17,12 +17,11 @@ const DownloadBook = () => {
         }}
       >
         <div className="z-10 md:mt-6 md:px-4">
-          <Reveal>
-            <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
-              Download Your Free eBook <br />
-              to Brand Like a Boss
-            </h2>
-          </Reveal>
+          <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
+            Download Your Free eBook <br />
+            to Brand Like a Boss
+          </h2>
+
           <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
           <DownloadModal open={open} handleClose={() => setOpen(false)} />
         </div>

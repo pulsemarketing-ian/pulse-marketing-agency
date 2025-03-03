@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Tab, Tabs } from "@mui/material";
 import Image from "next/image";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
 
 export default function DesignServicesSection() {
@@ -56,11 +56,9 @@ export default function DesignServicesSection() {
   return (
     <section className=" px-0 py-16 text-white md:mx-auto md:w-[1200px] md:px-0 ">
       <div className="mb-8 px-6 text-start md:px-0">
-        <Reveal>
-          <h2 className="text-2xl font-medium leading-tight md:w-[70%] md:text-4xl lg:w-[60%]">
-            Custom design services tailored to your unique brand identity.
-          </h2>
-        </Reveal>
+        <h2 className="text-2xl font-medium leading-tight md:w-[70%] md:text-4xl lg:w-[60%]">
+          Custom design services tailored to your unique brand identity.
+        </h2>
       </div>
 
       {/* Tabs */}

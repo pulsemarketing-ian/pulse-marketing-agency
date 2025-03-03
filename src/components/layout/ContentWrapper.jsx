@@ -30,7 +30,7 @@ const ContentWrapper = () => {
       </Link>
       <Cards /> 
       <Video />
-      <Testimonials />
+      <Testimonials/>
       <Calender />
       <div className="flex bg-black-2 w-full flex-col md:flex-row md:items-center md:justify-center text-center gap-3 py-4 md:py-2 mb-3 mt-[2rem] md:mt-0">
         <p> Clients rate our team and work</p>

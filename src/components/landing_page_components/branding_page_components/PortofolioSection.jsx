@@ -1,5 +1,5 @@
-'use client'
-import { Reveal } from "@/utils/Reveal";
+"use client";
+// import { Reveal } from "@/utils/Reveal";
 import React from "react";
 import Slider from "./Slider";
 
@@ -37,7 +37,7 @@ export default function PortfolioSection() {
     infinite: true,
     speed: 500,
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -72,7 +72,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <main className="relative w-full m:mt-[-100px]">
+    <main className="m:mt-[-100px] relative w-full">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
@@ -81,25 +81,24 @@ export default function PortfolioSection() {
         }}
         className="h-[38vh] md:h-[38rem]"
       />
-      <div className="absolute -top-20 md:top-12 z-10 flex w-full flex-col items-center justify-center ">
+      <div className="absolute -top-20 z-10 flex w-full flex-col items-center justify-center md:top-12 ">
         <div className="z-10 mt-8 text-center">
-          <Reveal>
-            <h1 className="text-2xl md:text-5xl font-bold tracking-wide mt-12 md:mt-0">Our Portfolio</h1>
-          </Reveal>
+          <h1 className="mt-12 text-2xl font-bold tracking-wide md:mt-0 md:text-5xl">
+            Our Portfolio
+          </h1>
         </div>
 
         <div
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
-            backgroundSize: 'contain',
-            backgroundRepeat:'no-repeat'
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
           }}
-          className="mt-3 min-h-[200px] md:min-h-[180px] w-full md:w-full md:mx-auto md:translate-y-10 md:py-6"
+          className="mt-3 min-h-[200px] w-full md:mx-auto md:min-h-[180px] md:w-full md:translate-y-10 md:py-6"
         >
-
-          <Slider/>
+          <Slider />
         </div>
       </div>
     </main>
   );
-};
+}

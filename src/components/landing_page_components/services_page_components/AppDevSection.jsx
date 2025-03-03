@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
 import Link from "next/link";
 
 const AppDevSection = () => {
   return (
     <main
-      className="relative overflow-hidden pb-6 pt-5 text-white md:translate-y-[-30%] md:pb-[15vh]"
+      className="relative overflow-hidden pb-6 md:pt-5 pt-2 text-white md:translate-y-[-30%] md:pb-[15vh]"
       style={{
         backgroundColor: "#040117",
         backgroundSize: "cover",
@@ -18,7 +18,7 @@ const AppDevSection = () => {
       {/* Main Content Section */}
       <div className=" container mx-auto px-4 pb-5 pt-14 md:py-16">
         <div
-          className="mt-[10rem] flex transform flex-col md:items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 lg:flex-row"
+          className="mt-[10rem] flex transform flex-col justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:items-center lg:flex-row"
           style={{
             backgroundImage: `url('/images/services_page_images/third-section-img.png')`,
             backgroundSize: "cover",
@@ -26,55 +26,45 @@ const AppDevSection = () => {
         >
           {/* Left Column */}
           <div className="space-y-6 lg:w-[40%]">
-            <Reveal>
-              <h2 className="mt-20 text-2xl font-medium leading-tight sm:mt-32 md:text-4xl">
-                Application <br /> Development
-              </h2>
-            </Reveal>
-            <Reveal>
-              <p className="leading-relaxed text-gray-300">
-                Welcome to the hub of digital innovation, where ideas evolve
-                into functional intuitive applications that redefine user
-                experiences. Our application development services are centered
-                around creating robust, scalable solutions while delivering
-                solutions that exceed expectations.
-              </p>
-            </Reveal>
-            <Reveal>
-              <Link href={"/app"}>
-                <PrimaryBtn text="Learn More" />
-              </Link>
-            </Reveal>
+            <h2 className="mt-20 text-2xl font-medium leading-tight sm:mt-32 md:text-4xl">
+              Application <br /> Development
+            </h2>
+
+            <p className="leading-relaxed text-gray-300">
+              Welcome to the hub of digital innovation, where ideas evolve into
+              functional intuitive applications that redefine user experiences.
+              Our application development services are centered around creating
+              robust, scalable solutions while delivering solutions that exceed
+              expectations.
+            </p>
+
+            <Link href={"/app"}>
+              <PrimaryBtn text="Learn More" />
+            </Link>
           </div>
 
           {/* Right Column */}
           <div className="space-y-6 lg:w-auto">
-            <Reveal>
-              <h3 className="border-b border-purple-400/30 pb-2 text-xl font-semibold">
-                Our Services
-              </h3>
-            </Reveal>
+            <h3 className="border-b border-purple-400/30 pb-2 text-xl font-semibold">
+              Our Services
+            </h3>
+
             <ul className="space-y-2 text-gray-300 sm:space-y-3">
-              <Reveal>
-                <li className="flex items-center gap-3 sm:gap-5">
-                  Flutter App Development
-                </li>
-              </Reveal>
-              <Reveal>
-                <li className="flex items-center gap-3 sm:gap-5">
-                  React Native Development
-                </li>
-              </Reveal>
-              <Reveal>
-                <li className="flex items-center gap-3 sm:gap-5">
-                  Native App Development
-                </li>
-              </Reveal>
-              <Reveal>
-                <li className="flex items-center gap-3 sm:gap-5">
-                  Maintenance Code Review
-                </li>
-              </Reveal>
+              <li className="flex items-center gap-3 sm:gap-5">
+                Flutter App Development
+              </li>
+
+              <li className="flex items-center gap-3 sm:gap-5">
+                React Native Development
+              </li>
+
+              <li className="flex items-center gap-3 sm:gap-5">
+                Native App Development
+              </li>
+
+              <li className="flex items-center gap-3 sm:gap-5">
+                Maintenance Code Review
+              </li>
             </ul>
           </div>
         </div>

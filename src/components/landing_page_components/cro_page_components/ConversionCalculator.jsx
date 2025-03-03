@@ -12,7 +12,7 @@ import {
   Box,
 } from "@mui/material";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 
 export default function ConversionCalculator() {
   const [metrics, setMetrics] = useState({
@@ -102,7 +102,7 @@ export default function ConversionCalculator() {
         inputProps={{
           inputMode: "numeric",
           autoComplete: "off",
-          spellCheck: "false"
+          spellCheck: "false",
         }}
         sx={{
           py: 0.6,
@@ -143,16 +143,14 @@ export default function ConversionCalculator() {
   return (
     <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
       <div className="mb-8 flex items-center justify-center text-center">
-        <Reveal>
-          <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
-            Calculate The Value of CRO
-          </h2>
-          <p>Reach your revenue goals with CRO.</p>
-          <p className="mb-8">
-            Find out the ROI from conversion rate optimization with this
-            calculator
-          </p>
-        </Reveal>
+        <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
+          Calculate The Value of CRO
+        </h2>
+        <p>Reach your revenue goals with CRO.</p>
+        <p className="mb-8">
+          Find out the ROI from conversion rate optimization with this
+          calculator
+        </p>
       </div>
 
       <Grid container spacing={4}>
@@ -209,11 +207,7 @@ export default function ConversionCalculator() {
               </Typography>
 
               <Box sx={{ mb: 4 }}>
-                <Typography
-                  variant="subtitle2"
-                  color="#087bb9"
-                  sx={{ mb: 2 }}
-                >
+                <Typography variant="subtitle2" color="#087bb9" sx={{ mb: 2 }}>
                   Current Metrics
                 </Typography>
                 <Grid container spacing={2}>
@@ -233,11 +227,7 @@ export default function ConversionCalculator() {
               </Box>
 
               <Box sx={{ mb: 4 }}>
-                <Typography
-                  variant="subtitle2"
-                  color="#087bb9"
-                  sx={{ mb: 2 }}
-                >
+                <Typography variant="subtitle2" color="#087bb9" sx={{ mb: 2 }}>
                   Growth Metrics
                 </Typography>
                 <Grid container spacing={2}>
@@ -272,7 +262,8 @@ export default function ConversionCalculator() {
                 elevation={1}
                 sx={{
                   p: 2,
-                  background: "linear-gradient(90deg, #50A2D4 0%, #0077B6 100%)",
+                  background:
+                    "linear-gradient(90deg, #50A2D4 0%, #0077B6 100%)",
                   color: "warning.contrastText",
                   textAlign: "center",
                 }}

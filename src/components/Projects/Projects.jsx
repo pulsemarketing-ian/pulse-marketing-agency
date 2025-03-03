@@ -10,7 +10,7 @@
 //   const [tabImageIndex, setTabImageIndex] = React.useState(0);
 //   const [projectContent, setProjectContent] = React.useState([]);
 //   const [projectImages, setProjectImages] = React.useState([]);
-  
+
 //   const GetProjectContent = async () => {
 //     try {
 //       const res = await FireApi("component/read/?section=project-content", "GET");
@@ -69,23 +69,23 @@
 //             <main className="w-full m-auto">
 //               <div className="justify-between items-center py-8 md:py-20">
 //                 <div className="w-[100%] justify-center items-center">
-//                   <Reveal>
+//
 //                     {projectContent.map((item, index) => (
 //                       <h1 key={index} className="poppins-medium text-4xl">
 //                         {item.header}
 //                       </h1>
 //                     ))}
-//                   </Reveal>
+//
 //                 </div>
 
 //                 <div className="w-[90%]">
-//                   <Reveal>
+//
 //                     {projectContent.map((item, index) => (
 //                       <p key={index} className="poppins-light font-light text-[14px] my-3">
 //                         {item.content}
 //                       </p>
 //                     ))}
-//                   </Reveal>
+//
 //                 </div>
 //               </div>
 //             </main>
@@ -116,28 +116,27 @@
 
 // export default Projects;
 
-
-
-
-'use client';
+"use client";
 import Image from "next/image";
 import React from "react";
 import ContentTab from "./ContentTab";
-import { Reveal } from "../../utils/Reveal";
+// import { Reveal } from "../../utils/Reveal";
 
 const Projects = () => {
   const [tabImage, setTabImage] = React.useState(0);
 
   return (
     <>
-      <main className="w-full flex-col-reverse md:flex md:flex-row lg:flex justify-between "     
-      style={{
-      backgroundImage: "url('/images/app_page_images/radial.png')",
-      backgroundSize: 'contain',
-      backgroundRepeat: 'no-repeat'
-    }}>
+      <main
+        className="w-full flex-col-reverse justify-between md:flex md:flex-row lg:flex "
+        style={{
+          backgroundImage: "url('/images/app_page_images/radial.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         {/* project section left box  */}
-        <div className="w-[90%] rounded-md p-5 md:p-0 mx-auto md:mx-0 md:w-[40%] flex items-center justify-center ">
+        <div className="mx-auto flex w-[90%] items-center justify-center rounded-md p-5 md:mx-0 md:w-[40%] md:p-0 ">
           {tabImage === 0 && (
             <Image src={"/mob-app01.png"} alt="mob1" width={200} height={200} />
           )}
@@ -150,26 +149,23 @@ const Projects = () => {
         </div>
 
         {/* project section right box */}
-        <div className="w-[100%] px-6 md:px-0 md:w-[56%] flex flex-row justify-between relative ct-projects">
+        <div className="ct-projects relative flex w-[100%] flex-row justify-between px-6 md:w-[56%] md:px-0">
           {/* tab box for project  */}
           <div className="w-[100%] md:w-[70%]">
             {/* top heading */}
-            <main className=" w-full m-auto">
-              <div className=" justify-between items-center py-8 md:py-20">
-                <div className="w-[100%] justify-center items-center">
-                  <Reveal>
-                    <h1 className="poppins-medium text-4xl">
-                      Some of our <br /> favorite projects
-                    </h1>
-                  </Reveal>
+            <main className=" m-auto w-full">
+              <div className=" items-center justify-between py-8 md:py-20">
+                <div className="w-[100%] items-center justify-center">
+                  <h1 className="poppins-medium text-4xl">
+                    Driving Business Growth <br /> Through Impactful Projects
+                  </h1>
                 </div>
 
                 <div className="w-[90%]">
-                  <Reveal>
-                    <p className=" poppins-light font-light text-[14px] my-3">
-                    Join us on a journey to create something truly extraordinary. Together, we&apos;ll turn your dreams into reality. Partner with us to get the job done right—professionally, efficiently, and with exceptional results.
-                    </p>
-                  </Reveal>
+                  <p className=" poppins-light my-3 text-[14px] font-light">
+                  Partner with Us to Boost Sales, 
+                  Maximize Efficiency, and Achieve Exceptional Results
+                  </p>
                 </div>
               </div>
             </main>
@@ -177,18 +173,31 @@ const Projects = () => {
             <ContentTab tabImage={tabImage} setTabImage={setTabImage} />
           </div>
 
-          <div className="w-[28%] absolute bottom-0 right-0">
+          <div className="absolute bottom-0 right-0 w-[28%]">
             {tabImage === 0 && (
-              <Image src={"/mob-app-mock01.png"} alt="mob" width={300} height={300} />
+              <Image
+                src={"/mob-app-mock01.png"}
+                alt="mob"
+                width={300}
+                height={300}
+              />
             )}
             {tabImage === 1 && (
-              <Image src={"/mob-app-mock03.png"} alt="mob4" width={300} height={300} />
+              <Image
+                src={"/mob-app-mock03.png"}
+                alt="mob4"
+                width={300}
+                height={300}
+              />
             )}
             {tabImage === 2 && (
-              <Image src={"/mob-app-mock02.png"} alt="mob5" width={300} height={300} />
+              <Image
+                src={"/mob-app-mock02.png"}
+                alt="mob5"
+                width={300}
+                height={300}
+              />
             )}
-
-            
           </div>
         </div>
       </main>

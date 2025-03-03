@@ -36,7 +36,7 @@ const HeroSection = () => {
                     duration: 0.5,
                     ease: "easeInOut",
                   }}
-                  viewport={{ once: false, amount: 0.2 }} className="w-full px-6 md:px-0 md:w-[45%] flex-col">
+                  viewport={{ once: false, amount: 0.2 }} className="w-full md:mt-0 mt-6 px-6 md:px-0 md:w-[45%] flex-col">
                     <div className='flex items-center gap-1 mb-2 w-auto'>
                         <Image
                         src="/images/services_page_images/blue-dot.png"

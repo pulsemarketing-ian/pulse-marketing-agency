@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
@@ -7,7 +7,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoMdArrowBack } from "react-icons/io";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 
 export default function ContentTab({ tabImage, setTabImage }) {
   const [value, setValue] = React.useState("1");
@@ -18,13 +18,13 @@ export default function ContentTab({ tabImage, setTabImage }) {
   };
 
   const handleNext = () => {
-    const newValue = (Number(value) % 3 ) + 1;
+    const newValue = (Number(value) % 3) + 1;
     setValue(String(newValue));
     setTabImage(newValue - 1);
   };
 
   const handlePrevious = () => {
-    const newValue = (Number(value) - 2 + 3 ) % 3 + 1;
+    const newValue = ((Number(value) - 2 + 3) % 3) + 1;
     setValue(String(newValue));
     setTabImage(newValue - 1);
   };
@@ -32,7 +32,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
   return (
     <Box
       sx={{
-        width:{xs:"100%",sm:"100%",md:"70%"},
+        width: { xs: "100%", sm: "100%", md: "70%" },
         typography: "body1",
         transform: { xs: "none", sm: "none", md: "translateX(100px)" },
         fontFamily: " Poppins, sans-serif",
@@ -41,25 +41,30 @@ export default function ContentTab({ tabImage, setTabImage }) {
       <TabContext value={value}>
         <TabPanel value="1">
           <main className="w-full">
-            <div className="justify-between items-center">
-              <div className="w-[100%] justify-center items-center">
-              <Reveal>
-                <h3 className="text-[#68D7D6] poppins-medium text-[20px]">01</h3>
-                </Reveal>
-                <Reveal>
-                <h1 className="poppins-medium text-4xl">Application Development</h1>
-                </Reveal>
+            <div className="items-center justify-between">
+              <div className="w-[100%] items-center justify-center">
+                <h3 className="poppins-medium text-[20px] text-[#68D7D6]">
+                  01
+                </h3>
+
+                <h1 className="poppins-medium text-4xl">
+                  Application Development
+                </h1>
               </div>
               <div className="w-[100%]">
-              <Reveal>
-                  <p className=" font-light text-[12px] my-3">
-                  Welcome to the hub of digital innovation, where ideas evolve into functional, intuitive applications that redefine user experiences. Our application development services are driven by a passion for innovation and a commitment to delivering solutions that exceed expectations.
-                  </p>
-                </Reveal>
-                <Reveal>
-                  <p className="font-light text-[12px] mt-3">
-                  iOS App Development for start-up MVP to reinventing your existing app with a fresh look we are end-to-end iPhone and Android experts.                </p>
-                </Reveal>
+                <p className=" my-3 text-[12px] font-light">
+                  Welcome to the hub of digital innovation, where ideas evolve
+                  into functional, intuitive applications that redefine user
+                  experiences. Our application development services are driven
+                  by a passion for innovation and a commitment to delivering
+                  solutions that exceed expectations.
+                </p>
+
+                <p className="mt-3 text-[12px] font-light">
+                  iOS App Development for start-up MVP to reinventing your
+                  existing app with a fresh look we are end-to-end iPhone and
+                  Android experts.{" "}
+                </p>
               </div>
             </div>
           </main>
@@ -67,31 +72,46 @@ export default function ContentTab({ tabImage, setTabImage }) {
 
         <TabPanel value="2">
           <main className="w-full">
-            <div className="justify-between items-center">
-              <div className="w-[100%] justify-center items-center">
-                <h3 className="text-[#68D7D6] poppins-medium text-[20px]">02</h3>
-                <h1 className="poppins-medium text-4xl">iOS App <br/>Development</h1>
+            <div className="items-center justify-between">
+              <div className="w-[100%] items-center justify-center">
+                <h3 className="poppins-medium text-[20px] text-[#68D7D6]">
+                  02
+                </h3>
+                <h1 className="poppins-medium text-4xl">
+                  iOS App <br />
+                  Development
+                </h1>
               </div>
               <div className="w-[100%]">
-                <p className="poppins-light font-light text-[14px] my-3">
-                Discover a world of culinary delights with our Food app! Browse thousands of recipes, order delicious meals from top restaurants, and explore local flavors. With user-friendly features and quick delivery options, satisfy your cravings effortlessly. Download now and embark on a mouthwatering journey!
+                <p className="poppins-light my-3 text-[14px] font-light">
+                  Discover a world of culinary delights with our Food app!
+                  Browse thousands of recipes, order delicious meals from top
+                  restaurants, and explore local flavors. With user-friendly
+                  features and quick delivery options, satisfy your cravings
+                  effortlessly. Download now and embark on a mouthwatering
+                  journey!
                 </p>
               </div>
-              
             </div>
           </main>
         </TabPanel>
 
         <TabPanel value="3">
           <main className="w-full">
-            <div className="justify-between items-center">
-              <div className="w-[100%] justify-center items-center">
-                <h3 className="text-[#68D7D6] poppins-medium text-[20px]">03</h3>
+            <div className="items-center justify-between">
+              <div className="w-[100%] items-center justify-center">
+                <h3 className="poppins-medium text-[20px] text-[#68D7D6]">
+                  03
+                </h3>
                 <h1 className="poppins-medium text-4xl">Fintech App</h1>
               </div>
               <div className="w-[100%]">
-                <p className="poppins-light font-light text-[14px] my-3">
-                Manage your finances effortlessly with our Fintech app! Track expenses, budget smartly, and make secure transactions. Enjoy real-time updates, personalized insights, and easy-to-use features designed to help you achieve your financial goals. Download now and take control of your financial future!
+                <p className="poppins-light my-3 text-[14px] font-light">
+                  Manage your finances effortlessly with our Fintech app! Track
+                  expenses, budget smartly, and make secure transactions. Enjoy
+                  real-time updates, personalized insights, and easy-to-use
+                  features designed to help you achieve your financial goals.
+                  Download now and take control of your financial future!
                 </p>
               </div>
             </div>
@@ -149,7 +169,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
               label={
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <IoMdArrowBack style={{ marginRight: 8 }} />
-                  <span className="text-[12px] poppins-light">Previous</span>
+                  <span className="poppins-light text-[12px]">Previous</span>
                 </Box>
               }
               onClick={handlePrevious}
@@ -165,7 +185,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
             <Tab
               label={
                 <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <span className="text-[12px] poppins-light">Next</span>
+                  <span className="poppins-light text-[12px]">Next</span>
                   <IoMdArrowForward style={{ marginLeft: 8 }} />
                 </Box>
               }
@@ -176,7 +196,7 @@ export default function ContentTab({ tabImage, setTabImage }) {
                 "&.Mui-selected": {
                   color: "#ffffff",
                   fontFamily: "Poppins",
-                  fontSize: "12px"
+                  fontSize: "12px",
                 },
               }}
             />

@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from '@/components/landing_page_components/Navbar'
 import Image from 'next/image'
-import { Reveal } from '@/utils/Reveal'
+// import { Reveal } from '@/utils/Reveal'
 const HeroSection = () => {
   return (
         <main 
@@ -25,12 +25,12 @@ const HeroSection = () => {
             </div>
 
             {/* heading main  */}
-            <Reveal>
+            
                 <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center mb-2">
                 Terms And Conditions
                 </h2>
                 <p>Please read these terms and conditions carefully before using our service.</p>
-            </Reveal>
+            
 
             <div className='bg-my-blue-gradient rounded-full p-3 absolute hidden md:bottom-6 right-6'>
                 <Image

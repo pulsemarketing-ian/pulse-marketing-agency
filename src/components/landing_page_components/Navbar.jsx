@@ -137,7 +137,7 @@ export default function Navbar() {
             </div>
 
             {/* Menu for large screens */}
-            <div className="hidden space-x-8 lg:flex">
+            <div className="hidden space-x-8 p-6 lg:flex">
               {menuItems.map((item) => (
                 <div
                   key={item.label}
@@ -147,7 +147,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.path}
-                    className="flex items-center space-x-1 hover:text-blue-400"
+                    className="flex items-center pb-6 pt-6 space-x-1 hover:text-blue-400"
                   >
                     <span className="text-[18px]">{item.label}</span>
                     {item.categories && <MdArrowDropDown className="h-5 w-5" />}
@@ -155,7 +155,7 @@ export default function Navbar() {
 
                   {/* Dropdown for mega menu */}
                   {item.categories && activeMenu === item.label && (
-                    <div className="left-[-50%] z-50 w-screen -translate-x-[42%] transform bg-opacity-10 bg-gradient-to-r from-[#040117] to-black px-6 py-10 text-white shadow-2xl md:absolute">
+                    <div className="left-[-50%] z-50 w-screen -translate-x-[42%] translate-y-[-1px] transform bg-opacity-10 bg-gradient-to-r from-[#040117] to-black px-6 py-10 text-white shadow-2xl md:absolute">
                       <div className="mx-auto grid max-w-[1210px] grid-cols-3 gap-8 pl-6">
                         <div>
                           <h4 className="mb-4 text-lg font-semibold">

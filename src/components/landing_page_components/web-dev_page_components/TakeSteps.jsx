@@ -1,11 +1,10 @@
-'use client'
-import { Reveal } from "@/utils/Reveal";
+"use client";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 
 const TakeSteps = () => {
-
   const [isDesktop, setIsDesktop] = useState(false);
 
   // Check screen size
@@ -20,7 +19,6 @@ const TakeSteps = () => {
     return () => window.removeEventListener("resize", updateMedia);
   }, []);
 
-
   return (
     <main
       className="mx-14 py-16"
@@ -31,7 +29,7 @@ const TakeSteps = () => {
       }}
     >
       <div className="flex flex-wrap justify-between">
-        <div className="flex w-full md:w-[28%] items-start justify-center transform transition-transform duration-700 ease-in-out hover:scale-105 mb-12 md:mb-0">
+        <div className="mb-12 flex w-full transform items-start justify-center transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:w-[28%]">
           <Image
             src={"/images/ICON JUST-01.png"}
             width={350}
@@ -41,22 +39,18 @@ const TakeSteps = () => {
         </div>
 
         <div className="w-full md:w-[60%]">
-          <Reveal>
-          <h2 className="text-left text-2xl md:text-4xl font-bold tracking-wide">
+          <h2 className="text-left text-2xl font-bold tracking-wide md:text-4xl">
             The Steps We Take
           </h2>
-          </Reveal>
-          <Reveal>
-          <p className="text-left text-[15px]">
-          Our streamlined development process ensures smooth execution from start to finish.
-          </p>
-          </Reveal>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-left text-[15px]">
+            Our streamlined development process ensures smooth execution from
+            start to finish.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
             {/* card one  */}
-            <div 
-                         className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105"
-            >
+            <div className="border-1 flex min-h-[50px] w-full transform flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transition-transform duration-700 ease-in-out hover:scale-105 md:w-[48%]">
               <h3 className="text-xl font-bold tracking-wide">
                 Planning & Strategy
               </h3>
@@ -102,10 +96,9 @@ const TakeSteps = () => {
               </p>
             </div>
 
-            {/* card otwo  */}
-            <div 
-  className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
-                <h3 className="text-xl font-bold tracking-wide">
+            {/* card two  */}
+            <div className="border-1 flex min-h-[50px] w-full transform flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transition-transform duration-700 ease-in-out hover:scale-105 md:w-[48%]">
+              <h3 className="text-xl font-bold tracking-wide">
                 Development Stage
               </h3>
               <p className="text-sm">
@@ -151,7 +144,7 @@ const TakeSteps = () => {
             </div>
 
             {/* card three  */}
-            <div className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+            <div className="border-1 flex min-h-[50px] w-full transform flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transition-transform duration-700 ease-in-out hover:scale-105 md:w-[48%]">
               <h3 className="text-xl font-bold tracking-wide">
                 Quality Assurance
               </h3>
@@ -198,7 +191,7 @@ const TakeSteps = () => {
             </div>
 
             {/* card one  */}
-            <div className="border-1 flex min-h-[50px] w-full md:w-[48%] flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transform transition-transform duration-700 ease-in-out hover:scale-105" >
+            <div className="border-1 flex min-h-[50px] w-full transform flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md transition-transform duration-700 ease-in-out hover:scale-105 md:w-[48%]">
               <h3 className="text-xl font-bold tracking-wide">Deployment</h3>
               <p className="text-sm">
                 <div className="flex flex-col ">

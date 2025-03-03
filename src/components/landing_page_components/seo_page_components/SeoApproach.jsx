@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import React from "react";
 
@@ -23,13 +23,15 @@ const SeoApproach = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 px-4 md:px-0 -mt-[65px] md:mt-0 text-center">
-            <Reveal>
-              <p className="pt-20">Let rebuild the SEO with improvements easier to understand and better layout of <br />workflow of process here is some details to start with that:</p>
-              <h1 className="text-xl font-bold tracking-wide md:text-5xl pt-10">
-                Why SEO Matters for Your Business
-              </h1>
-            </Reveal>
+          <div className="z-10 -mt-[65px] px-4 text-center md:mt-0 md:px-0">
+            <p className="pt-20">
+              Let rebuild the SEO with improvements easier to understand and
+              better layout of <br />
+              workflow of process here is some details to start with that:
+            </p>
+            <h1 className="pt-10 text-xl font-bold tracking-wide md:text-5xl">
+              Why SEO Matters for Your Business
+            </h1>
           </div>
 
           {/* inner content  */}
@@ -45,7 +47,7 @@ const SeoApproach = () => {
                 />
               </div>
 
-              <div className="cards-seo mt-8 hidden gap-3 md:mt-12 md:flex ">
+              <div className="cards-seo mt-8 hidden gap-3 md:mt-18 md:flex ">
                 <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2 pr-3 ">
                   <div>
                     <Image
@@ -56,16 +58,15 @@ const SeoApproach = () => {
                   </div>
 
                   {/* card heading  */}
-                  <Reveal>
-                    <div>
-                      <h2 className="text-4xl font-bold tracking-wide">+126%</h2>
-                      <p>
-                        Total Visitors
-                        <br />
-                        Per Month
-                      </p>
-                    </div>
-                  </Reveal>
+
+                  <div>
+                    <h2 className="text-4xl font-bold tracking-wide">+126%</h2>
+                    <p>
+                      Total Visitors
+                      <br />
+                      Per Month
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2  pr-10">
@@ -78,15 +79,14 @@ const SeoApproach = () => {
                   </div>
 
                   {/* card heading  */}
-                  <Reveal>
-                    <div>
-                      <h2 className="text-4xl font-bold tracking-wide">+43%</h2>
-                      <p>
-                        Traffic <br />
-                        Increased
-                      </p>
-                    </div>
-                  </Reveal>
+
+                  <div>
+                    <h2 className="text-4xl font-bold tracking-wide">+43%</h2>
+                    <p>
+                      Traffic <br />
+                      Increased
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex w-[33%] items-center justify-around gap-2 pr-3">
@@ -99,45 +99,43 @@ const SeoApproach = () => {
                   </div>
 
                   {/* card heading  */}
-                  <Reveal>
-                    <div>
-                      <h2 className="text-4xl font-bold tracking-wide">+220%</h2>
-                      <p>
-                        Leads Per <br />
-                        Month
-                      </p>
-                    </div>
-                  </Reveal>
+
+                  <div>
+                    <h2 className="text-4xl font-bold tracking-wide">+220%</h2>
+                    <p>
+                      Leads Per <br />
+                      Month
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* right box  */}
             <div
-              className="md: flex w-full flex-col gap-4 md:w-[40%] md:mt-8"
+              className="md: flex w-full flex-col gap-4 md:mt-8 md:w-[40%]"
               style={{
                 backgroundImage: "url('/images/app_page_images/radial.png)",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <Reveal>
-                <h4 className=" text-xl font-bold tracking-wide md:text-3xl">
-                  Are you struggling to get your website noticed?
-                </h4>
-              </Reveal>
-              <Reveal>
-                <p>
-                Do you want more traffic, leads, and sales without spending a fortune on ads? <br />
-Is your website buried deep in search results? <br />
-Wondering why your competitors are outranking you?<br/>
-                  <p className="mt-4">
+              <h4 className=" text-xl font-bold tracking-wide md:text-3xl">
+                Are you struggling to get your website noticed?
+              </h4>
+
+              <p>
+                Do you want more traffic, leads, and sales without spending a
+                fortune on ads? <br />
+                Is your website buried deep in search results? <br />
+                Wondering why your competitors are outranking you?
+                <br />
+                <p className="mt-4">
                   Partner with us to stay ahead in the competitive digital
                   landscape and achieve measurable results. Elevate your brand
                   today with Pulse Marketing! .
-                  </p>
                 </p>
-              </Reveal>
+              </p>
             </div>
           </div>
         </div>

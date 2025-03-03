@@ -2,9 +2,9 @@
 import React from "react";
 import Navbar from "@/components/landing_page_components/Navbar";
 import Image from "next/image";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
@@ -15,24 +15,25 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className=" md:mx-auto  flex md:w-[1200px] flex-col-reverse md:flex-row items-center justify-between h-[60vh] md:h-[100vh] pt-[10vh] md:pt-0">
+      <div className=" flex  h-[60vh] flex-col-reverse items-center justify-between pt-[10vh] md:mx-auto md:h-[100vh] md:w-[1200px] md:flex-row md:pt-0">
         {/* hero heading  */}
-        <motion.div 
-         initial={{
-          x: -300,
-          opacity:0
-      }}
-      whileInView={{
-          x: 0,
-          opacity:1
-      }}
-      transition={{
-          delay: 0.5,
-          duration: 0.5,
-          ease: "easeInOut",
-      }}
-      viewport={{ once: false, amount: 0.2 }}
-       className="w-full md:w-[50%] flex-col px-6 md:px-0 translate-y-[-2rem] md:translate-y-0">
+        <motion.div
+          initial={{
+            x: -300,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full translate-y-[-2rem] flex-col px-6 md:w-[50%] md:translate-y-0 md:px-0"
+        >
           <div className="mb-2 flex w-auto items-center gap-1">
             <Image
               src="/images/services_page_images/blue-dot.png"
@@ -45,41 +46,38 @@ const HeroSection = () => {
 
           {/* heading main  */}
           <div className="flex flex-wrap items-center gap-6 ">
-            <Reveal>
-              <h2 className=" w-auto text-xl font-bold leading-tight text-white md:text-5xl">
-                Codos Foundation
-              </h2>
-            </Reveal>
+            <h2 className=" w-auto text-xl font-bold leading-tight text-white md:text-5xl">
+              Codos Foundation
+            </h2>
 
-            <Reveal>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry is standard dummy
-                text ever since the 1500s, when an unknown printer took
-              </p>
-            </Reveal>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry is standard dummy text
+              ever since the 1500s, when an unknown printer took
+            </p>
 
             <PrimaryBtn text={"Visit Website"} />
           </div>
         </motion.div>
 
         {/* right images  */}
-        <motion.div 
-         initial={{
-          scale: 0,
-          opacity:0
-      }}
-      whileInView={{
-          scale: 1,
-          opacity:1
-      }}
-      transition={{
-          delay: 0.5,
-          duration: 0.5,
-          ease: "easeInOut",
-      }}
-      viewport={{ once: false, amount: 0.2 }}
-       className="w-full md:w-[50%] md:translate-y-10 flex-col px-6 md:px-0">
+        <motion.div
+          initial={{
+            scale: 0,
+            opacity: 0,
+          }}
+          whileInView={{
+            scale: 1,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full flex-col px-6 md:w-[50%] md:translate-y-10 md:px-0"
+        >
           <Image
             src={"/images/work-details/hero-img.png"}
             width={700}

@@ -2,20 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-import { Reveal } from "../../utils/Reveal";
+// import { Reveal } from "../../utils/Reveal";
 
 const UpperTextTestimonials = () => {
   return (
     <>
       <main>
-        <div className="lg:w-[90%] w-[90%] md:flex flex-row justify-between items-center pb-10 md:pb-12 m-auto">
-          <div className=" w-[80%] md:w-[100%] text-center">
-            <Reveal>
-              <h1 className="poppins-medium text-5xl ct-heading">
-                {/* Our clients are our biggest */}
-                Our clients are our biggest advocates.
-              </h1>
-            </Reveal>
+        <div className="m-auto w-[90%] flex-row items-center justify-between pb-10 md:flex md:pb-12 lg:w-[90%]">
+          <div className=" w-[80%] text-center md:w-[100%]">
+            <h1 className="poppins-medium ct-heading text-5xl">
+              {/* Our clients are our biggest */}
+              Our clients are our biggest advocates.
+            </h1>
           </div>
         </div>
       </main>
@@ -62,10 +60,10 @@ const Testimonial = () => {
 
   return (
     <>
-      <main className="w-full lg:w-[75%] m-auto py-20 md:pt-0 md:px-10 testimonial">
+      <main className="testimonial m-auto w-full py-20 md:px-10 md:pt-0 lg:w-[75%]">
         <UpperTextTestimonials />
-        <div className="slider-container w-[80%] lg:w-[75%] py-0 pt-5  md:pt-10 m-auto  shadow-lg   rounded-3xl ">
-          <Slider {...settings}> 
+        <div className="slider-container m-auto w-[80%] rounded-3xl py-0  pt-5 shadow-lg  md:pt-10   lg:w-[75%] ">
+          <Slider {...settings}>
             {/* testimonial one */}
             <div className="text-center">
               {/* <h3 className=''>1</h3> */}
@@ -80,7 +78,7 @@ const Testimonial = () => {
               </div>
 
               <h2 className="poppins-medium pt-4 text-[18px]">Stuart Holmes</h2>
-              <span className="text-[#50A2D4] poppins-light text-[13px]">
+              <span className="poppins-light text-[13px] text-[#50A2D4]">
                 CEO, Green Collar Brigade
               </span>
               <div className="flex justify-center py-3">
@@ -93,7 +91,7 @@ const Testimonial = () => {
                 />
               </div>
 
-              <div className="text-center poppins-light text-[13px] w-[80%] m-auto">
+              <div className="poppins-light m-auto w-[80%] text-center text-[13px]">
                 <p>
                   Pulse, thank you for your outstanding work. My vision is now a
                   tangible reality. Five stars are an understatement for the
@@ -118,7 +116,7 @@ const Testimonial = () => {
               <h2 className="poppins-medium pt-4 text-[18px]">
                 Joshua Mclennon
               </h2>
-              <span className="text-[#50A2D4] poppins-light text-[13px]">
+              <span className="poppins-light text-[13px] text-[#50A2D4]">
                 Owner, Drear Cleaning Services
               </span>
               <div className="flex justify-center py-3">
@@ -130,7 +128,7 @@ const Testimonial = () => {
                 />
               </div>
 
-              <div className="text-center poppins-light text-[13px] w-[80%] m-auto">
+              <div className="poppins-light m-auto w-[80%] text-center text-[13px]">
                 <p>
                   Very good agency to work with, Pulse got my logo to me very
                   quickly which is what I needed and delivered a good product.
@@ -156,7 +154,7 @@ const Testimonial = () => {
               <h2 className="poppins-medium pt-4 text-[18px]">
                 Robert Jenkins
               </h2>
-              <span className="text-[#50A2D4] poppins-light text-[13px]">
+              <span className="poppins-light text-[13px] text-[#50A2D4]">
                 CEO, Asap security
               </span>
               <div className="flex justify-center py-3">
@@ -168,7 +166,7 @@ const Testimonial = () => {
                 />
               </div>
 
-              <div className="text-center poppins-light text-[13px] w-[80%] m-auto">
+              <div className="poppins-light m-auto w-[80%] text-center text-[13px]">
                 <p>
                   Pulse was one of the best I have worked with on Upwork in 10
                   years. Very knowledgeable and has great communication. They

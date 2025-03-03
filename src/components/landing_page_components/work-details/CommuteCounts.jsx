@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import { motion } from "motion/react";
 
@@ -28,19 +28,15 @@ const CommuteCounts = () => {
 
         {/* heading main  */}
         <div className="flex flex-wrap items-center gap-6 ">
-          <Reveal>
-            <h2 className=" w-auto text-xl font-bold leading-tight text-white md:text-5xl">
-              Every commute counts.
-            </h2>
-          </Reveal>
+          <h2 className=" w-auto text-xl font-bold leading-tight text-white md:text-5xl">
+            Every commute counts.
+          </h2>
 
-          <Reveal>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry is standard dummy text
-              ever since the 1500s, when an unknown printer took
-            </p>
-          </Reveal>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry is standard dummy text
+            ever since the 1500s, when an unknown printer took
+          </p>
         </div>
       </div>
 

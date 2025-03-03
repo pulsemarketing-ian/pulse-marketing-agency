@@ -1,8 +1,8 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import React from "react";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 
 const InnerPages = () => {
   const Images = [
@@ -20,11 +20,9 @@ const InnerPages = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Reveal>
-        <h2 className="mt-3 text-2xl font-bold leading-tight md:text-4xl">
-          Inner Pages
-        </h2>
-      </Reveal>
+      <h2 className="mt-3 text-2xl font-bold leading-tight md:text-4xl">
+        Inner Pages
+      </h2>
 
       <div className="mt-8 flex flex-wrap justify-between gap-3 md:gap-0">
         <motion.div

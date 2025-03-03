@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
 import Link from "next/link";
 
@@ -18,12 +18,10 @@ const SEOSection = () => {
       {/* Main Content Section */}
       <div className="container relative mx-auto px-4 py-16">
         <div className="z-10 mx-auto flex w-auto flex-col items-center justify-center text-center">
-          <Reveal>
-            <p className="mb-2 text-xl">We are experts in</p>
-            <h1 className="pb-2 text-2xl font-bold tracking-wide md:text-5xl">
-              Search Engine Optimization
-            </h1>
-          </Reveal>
+          <p className="mb-2 text-xl">We are experts in</p>
+          <h1 className="pb-2 text-2xl font-bold tracking-wide md:text-5xl">
+            Search Engine Optimization
+          </h1>
         </div>
         <div
           className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 lg:flex-row"
@@ -36,41 +34,33 @@ const SEOSection = () => {
         >
           {/* Left Column */}
           <div className="w-full space-y-6 md:w-[40%]">
-            <Reveal>
-              <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-                Developing <br /> SEO Strategy <br />
-                And Plan
-              </h2>
-            </Reveal>
-            <Reveal>
-              <p className="leading-relaxed text-gray-300">
-                Unlock the full potential of your online presence with Pulse
-                Marketing is expert SEO services. Our dedicated team crafts
-                personalized strategies to improve your search engine rankings,
-                drive organic traffic, and enhance your digital visibility.{" "}
-              </p>
-            </Reveal>
-            <Reveal>
-              <Link href={"/seo"}>
-                <PrimaryBtn text="Learn More" />
-              </Link>
-            </Reveal>
+            <h2 className="text-2xl font-medium leading-tight md:text-4xl">
+              Developing <br /> SEO Strategy <br />
+              And Plan
+            </h2>
+
+            <p className="leading-relaxed text-gray-300">
+              Unlock the full potential of your online presence with Pulse
+              Marketing is expert SEO services. Our dedicated team crafts
+              personalized strategies to improve your search engine rankings,
+              drive organic traffic, and enhance your digital visibility.{" "}
+            </p>
+
+            <Link href={"/seo"}>
+              <PrimaryBtn text="Learn More" />
+            </Link>
           </div>
 
           {/* Right Column */}
           <div className="w-full space-y-6 md:w-auto">
-            <Reveal>
-              <h3 className="border-b border-purple-400/30 pb-2 text-xl font-semibold">
-                Business Assessment
-              </h3>
-            </Reveal>
+            <h3 className="border-b border-purple-400/30 pb-2 text-xl font-semibold">
+              Business Assessment
+            </h3>
+
             <ul className="space-y-2 text-gray-300">
-              <Reveal>
-                <li className="flex items-center gap-3">Target Customer</li>
-              </Reveal>
-              <Reveal>
-                <li className="flex items-center gap-3">Competitor Analysis</li>
-              </Reveal>
+              <li className="flex items-center gap-3">Target Customer</li>
+
+              <li className="flex items-center gap-3">Competitor Analysis</li>
             </ul>
           </div>
         </div>

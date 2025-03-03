@@ -33,22 +33,22 @@
 //      <main>
 //         <div className="m-auto flex-row items-center justify-between pb-10 md:flex md:pb-12 lg:w-[85%]">
 //           <div className="w-[80%] md:w-[50%]">
-//             <Reveal>
+//
 //               {agencyDetails?.map((item) => (
 //                 <h1 key={item._id} className="poppins-medium ct-heading text-5xl">
 //                   {item?.header}
 //                 </h1>
 //               ))}
-//             </Reveal>
+//
 //           </div>
 //           <div className="poppins-light mt-6 w-[90%] font-light md:mt-0 md:w-[50%]">
-//             <Reveal>
+//
 //               {agencyDetails?.map((item) => (
 //                 <p key={item._id} className="float-right md:w-[60%]">
 //                   {item?.content}
 //                 </p>
 //               ))}
-//             </Reveal>
+//
 //           </div>
 //         </div>
 //       </main>
@@ -183,7 +183,7 @@
 
 // export default Cards;
 
-import { Reveal } from "../../utils/Reveal";
+// import { Reveal } from "../../utils/Reveal";
 import Image from "next/image";
 import React from "react";
 import WebDevService from "../DigitalAgencyCards/WebDevService";
@@ -196,24 +196,20 @@ const UpperTextComponent = () => {
   return (
     <>
       <main>
-      {/* <div className="mt-8 md:my-[5rem] md:border-b md:border-[#363445]" /> */}
+        {/* <div className="mt-8 md:my-[5rem] md:border-b md:border-[#363445]" /> */}
 
         <div className="m-auto flex-row items-center justify-between pb-10 md:flex md:pb-12 lg:w-[85%]">
           <div className=" w-[80%] md:w-[50%]">
-            <Reveal>
-              <h1 className="poppins-medium ct-heading text-5xl">
-                We are a full-service <br /> digital agency.
-              </h1>
-            </Reveal>
+            <h1 className="poppins-medium ct-heading text-5xl">
+              We are a full-service <br /> digital agency.
+            </h1>
           </div>
           <div className="poppins-light mt-6 w-[90%] font-light md:mt-0 md:w-[50%]">
-            <Reveal>
-              <p className="float-right md:w-[60%]">
-                Elevate your brands success with Pulse - Your trusted partner
-                for cutting-edge digital solutions and unparalleled customer
-                care in Canada.{" "}
-              </p>
-            </Reveal>
+            <p className="float-right md:w-[60%]">
+              Elevate your brands success with Pulse - Your trusted partner for
+              cutting-edge digital solutions and unparalleled customer care in
+              Canada.{" "}
+            </p>
           </div>
         </div>
       </main>
@@ -225,14 +221,14 @@ const Cards = () => {
   return (
     <>
       <main className="card-section m-auto w-full pt-16 lg:w-[85%]">
-        <div className="m-auto  w-full px-10">
+        <div className="m-auto w-full px-10">
           <UpperTextComponent />
           <WebDevService />
 
           <div className="mt-8 md:mt-[11rem] md:border-b md:border-[#363445]" />
 
           <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-[50%] mt-6 md:mt-0">
+            <div className="mt-6 w-full md:mt-0 md:w-[50%]">
               <AppDevSection />
             </div>
             <div className="w-full md:w-[50%]">
@@ -256,26 +252,21 @@ const Cards = () => {
                   >
                     {/* Left Column */}
                     <div className="space-y-6 lg:w-[80%]">
-                      <Reveal>
-                        <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-                          Digital <br /> Branding
-                        </h2>
-                      </Reveal>
-                      <Reveal>
-                        <p className="leading-relaxed text-gray-300">
-                          Our team of talented graphic designers will work with
-                          you through the whole process to create a stunning
-                          marketing piece that you will love. From logos,
-                          business cards, brochures, to signs and everything in
-                          between we have you covered for all of your design
-                          needs.
-                        </p>
-                      </Reveal>
-                      <Reveal>
-                        <Link href={"/branding"}>
-                          <PrimaryBtn text="Learn More" />
-                        </Link>
-                      </Reveal>
+                      <h2 className="text-2xl font-medium leading-tight md:text-4xl">
+                        Digital <br /> Branding
+                      </h2>
+
+                      <p className="leading-relaxed text-gray-300">
+                        Our team of talented graphic designers will work with
+                        you through the whole process to create a stunning
+                        marketing piece that you will love. From logos, business
+                        cards, brochures, to signs and everything in between we
+                        have you covered for all of your design needs.
+                      </p>
+
+                      <Link href={"/branding"}>
+                        <PrimaryBtn text="Learn More" />
+                      </Link>
                     </div>
                   </div>
 
@@ -319,25 +310,21 @@ const Cards = () => {
                   >
                     {/* Left Column */}
                     <div className="space-y-6 lg:w-[80%]">
-                      <Reveal>
-                        <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-                          Search Engine <br /> Optimization
-                        </h2>
-                      </Reveal>
-                      <Reveal>
-                        <p className="leading-relaxed text-gray-300">
-                          Unlock the full potential of your online presence with
-                          Pulse Marketing is expert SEO services. Our dedicated
-                          team crafts personalized strategies to improve your
-                          search engine rankings, drive organic traffic, and
-                          enhance your digital visibility.
-                        </p>
-                      </Reveal>
-                      <Reveal>
-                        <Link href={"/seo"}>
-                          <PrimaryBtn text="Learn More" />
-                        </Link>
-                      </Reveal>
+                      <h2 className="text-2xl font-medium leading-tight md:text-4xl">
+                        Search Engine <br /> Optimization
+                      </h2>
+
+                      <p className="leading-relaxed text-gray-300">
+                        Unlock the full potential of your online presence with
+                        Pulse Marketing is expert SEO services. Our dedicated
+                        team crafts personalized strategies to improve your
+                        search engine rankings, drive organic traffic, and
+                        enhance your digital visibility.
+                      </p>
+
+                      <Link href={"/seo"}>
+                        <PrimaryBtn text="Learn More" />
+                      </Link>
                     </div>
                   </div>
 
@@ -376,26 +363,22 @@ const Cards = () => {
                   >
                     {/* Left Column */}
                     <div className="space-y-6 lg:w-[80%]">
-                      <Reveal>
-                        <h2 className="text-2xl font-medium leading-tight md:text-4xl">
-                          Conversion Rate <br /> Optimization CRO
-                        </h2>
-                      </Reveal>
-                      <Reveal>
-                        <p className="leading-relaxed text-gray-300">
-                          At Pulse, we specialize in Conversion Rate
-                          Optimization (CRO) to help e-commerce businesses
-                          maximize their sales and revenue. Our tailored CRO
-                          strategies are designed to identify barriers in your
-                          customer journey, optimize your website performance,
-                          and turn casual visitors into loyal customers.
-                        </p>
-                      </Reveal>
-                      <Reveal>
-                        <Link href={"/cro"}>
-                          <PrimaryBtn text="Learn More" />
-                        </Link>
-                      </Reveal>
+                      <h2 className="text-2xl font-medium leading-tight md:text-4xl">
+                        Conversion Rate <br /> Optimization CRO
+                      </h2>
+
+                      <p className="leading-relaxed text-gray-300">
+                        At Pulse, we specialize in Conversion Rate Optimization
+                        (CRO) to help e-commerce businesses maximize their sales
+                        and revenue. Our tailored CRO strategies are designed to
+                        identify barriers in your customer journey, optimize
+                        your website performance, and turn casual visitors into
+                        loyal customers.
+                      </p>
+
+                      <Link href={"/cro"}>
+                        <PrimaryBtn text="Learn More" />
+                      </Link>
                     </div>
                   </div>
 

@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import Header from "../layout/Header";
 import Image from "next/image";
 import { MdArrowForward } from "react-icons/md";
-import { Reveal } from "../../utils/Reveal";
+// import { Reveal } from "../../utils/Reveal";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 import Navbar from "../landing_page_components/Navbar";
@@ -48,53 +48,47 @@ const HeroLeftContent = () => {
     <>
       <main className="hre-section mt-16 w-full px-5 lg:mt-0">
         <div className="flex">
-          <Reveal>
-            <Link
-              href={
-                "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                className="mr-8"
-                src={"/accrebited-bussiness-logo2.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
-          <Reveal>
-            <Link
-              href={
-                "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
-              }
-              target="_blank"
-            >
-              <Image
-                alt="image"
-                src={"/google-review-logo2.png"}
-                width={125}
-                height={125}
-              />
-            </Link>
-          </Reveal>
+          <Link
+            href={
+              "https://www.bbb.org/ca/bc/vancouver/profile/digital-marketing/pulse-marketing-inc-0037-2428735/#sealclick"
+            }
+            target="_blank"
+          >
+            <Image
+              alt="image"
+              className="mr-8"
+              src={"/accrebited-bussiness-logo2.png"}
+              width={125}
+              height={125}
+            />
+          </Link>
+
+          <Link
+            href={
+              "https://www.google.com/search?sca_esv=09379ecd0b6efd91&sca_upv=1&q=Pulse+Marketing+Inc.&ludocid=8690602816288484550&lsig=AB86z5VS1uhD8C0TEf_4MQU5HsGp&kgs=dd8e1417abb4f44a&shndl=30&shem=lnole,lsde,lsp&source=sh/x/loc/act/m1/1"
+            }
+            target="_blank"
+          >
+            <Image
+              alt="image"
+              src={"/google-review-logo2.png"}
+              width={125}
+              height={125}
+            />
+          </Link>
         </div>
         {/* Content Heading  */}
         <div>
-          <Reveal>
-            <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
-              Our Objective:
-              <br /> Increase Your <br /> Revenue.
-            </h1>
-          </Reveal>
+          <h1 className="poppins-medium mt-8 text-[1.5em]  leading-[49px] md:text-[60px] md:leading-[1.3em] lg:text-[60px]">
+            Our Objective:
+            <br /> Increase Your <br /> Revenue.
+          </h1>
+
           <div className="my-4 w-[90%] border-l-2 pl-3">
-            <Reveal>
-              <p className="poppins-light">
-                Boost your brand with our expert websites, apps, and branding
-                solutions. Bring your vision to life with Pulse.
-              </p>
-            </Reveal>
+            <p className="poppins-light">
+              Boost your brand with our expert websites, apps, and branding
+              solutions. Bring your vision to life with Pulse.
+            </p>
           </div>
         </div>
 

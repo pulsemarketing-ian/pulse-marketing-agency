@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -19,12 +19,12 @@ const TechStack = () => {
   return (
     <main className="px-14 py-10">
       <div className="flex w-full flex-col items-center justify-center">
-        <Reveal>
+        
           <h2 className="text-center text-2xl font-bold tracking-wide md:pb-3 md:text-5xl">
             Web Development <br /> Technology Stack
           </h2>
-        </Reveal>
-        <Reveal>
+        
+        
           <p className="my-4 text-center text-[16px]">
             At Pulse, we specialize in building cutting-edge web solutions
             tailored to your business needs. Our technology stack empowers your
@@ -33,7 +33,7 @@ const TechStack = () => {
             From modern frameworks to robust backend systems, we bring
             innovation to every project, ensuring a seamless online presence.
           </p>
-        </Reveal>
+        
       </div>
 
       <div

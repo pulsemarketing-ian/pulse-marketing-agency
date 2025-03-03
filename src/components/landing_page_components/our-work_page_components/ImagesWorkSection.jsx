@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import PrimaryBtn from "../PrimaryBtns/PrimaryBtn";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import { motion } from "motion/react";
 import Link from "next/link";
 
@@ -39,37 +39,33 @@ const ImagesWorkSection = () => {
               />
             </Link>
           </div>
-          <Reveal>
-            <h4 className="text-xl font-semibold tracking-wide">
-              Project Name
-            </h4>
-          </Reveal>
-          <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-4">
-                {["Design", "Development", "SEO"].map((tag, index) => (
-                  <div
-                    key={index}
-                    className="mb-2 flex w-auto items-center gap-1"
-                  >
-                    <Image
-                      src="/images/services_page_images/blue-dot.png"
-                      alt="blue-dot"
-                      width={20}
-                      height={20}
-                    />
-                    <p>{tag}</p>
-                  </div>
-                ))}
-              </div>
-              <PrimaryBtn
-                text="View Site"
-                onClick={() => {
-                  window.open("https://www.google.com/", "_blank");
-                }}
-              />
+
+          <h4 className="text-xl font-semibold tracking-wide">Project Name</h4>
+
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-4">
+              {["Design", "Development", "SEO"].map((tag, index) => (
+                <div
+                  key={index}
+                  className="mb-2 flex w-auto items-center gap-1"
+                >
+                  <Image
+                    src="/images/services_page_images/blue-dot.png"
+                    alt="blue-dot"
+                    width={20}
+                    height={20}
+                  />
+                  <p>{tag}</p>
+                </div>
+              ))}
             </div>
-          </Reveal>
+            <PrimaryBtn
+              text="View Site"
+              onClick={() => {
+                window.open("https://www.google.com/", "_blank");
+              }}
+            />
+          </div>
         </motion.div>
 
         {/* Right Box */}
@@ -101,36 +97,32 @@ const ImagesWorkSection = () => {
               />
             </Link>
           </div>
-          <Reveal>
-            <h4 className="text-xl font-semibold tracking-wide">
-              Project Name
-            </h4>
-          </Reveal>
+
+          <h4 className="text-xl font-semibold tracking-wide">Project Name</h4>
+
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <Reveal>
-              <div className="flex flex-wrap gap-4">
-                {["Design", "Development", "SEO"].map((tag, index) => (
-                  <div
-                    key={index}
-                    className="mb-2 flex w-auto items-center gap-1"
-                  >
-                    <Image
-                      src="/images/services_page_images/blue-dot.png"
-                      alt="blue-dot"
-                      width={20}
-                      height={20}
-                    />
-                    <p>{tag}</p>
-                  </div>
-                ))}
-                <PrimaryBtn
-                  text="View Site"
-                  onClick={() => {
-                    window.open("https://www.google.com/", "_blank");
-                  }}
-                />
-              </div>
-            </Reveal>
+            <div className="flex flex-wrap gap-4">
+              {["Design", "Development", "SEO"].map((tag, index) => (
+                <div
+                  key={index}
+                  className="mb-2 flex w-auto items-center gap-1"
+                >
+                  <Image
+                    src="/images/services_page_images/blue-dot.png"
+                    alt="blue-dot"
+                    width={20}
+                    height={20}
+                  />
+                  <p>{tag}</p>
+                </div>
+              ))}
+              <PrimaryBtn
+                text="View Site"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
+              />
+            </div>
           </div>
         </motion.div>
       </div>
@@ -165,37 +157,33 @@ const ImagesWorkSection = () => {
               />
             </Link>
           </div>
-          <Reveal>
-            <h4 className="text-xl font-semibold tracking-wide">
-              Project Name
-            </h4>
-          </Reveal>
-          <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-4">
-                {["Design", "Development", "SEO"].map((tag, index) => (
-                  <div
-                    key={index}
-                    className="mb-2 flex w-auto items-center gap-1"
-                  >
-                    <Image
-                      src="/images/services_page_images/blue-dot.png"
-                      alt="blue-dot"
-                      width={20}
-                      height={20}
-                    />
-                    <p>{tag}</p>
-                  </div>
-                ))}
-              </div>
-              <PrimaryBtn
-                text="View Site"
-                onClick={() => {
-                  window.open("https://www.google.com/", "_blank");
-                }}
-              />
+
+          <h4 className="text-xl font-semibold tracking-wide">Project Name</h4>
+
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-4">
+              {["Design", "Development", "SEO"].map((tag, index) => (
+                <div
+                  key={index}
+                  className="mb-2 flex w-auto items-center gap-1"
+                >
+                  <Image
+                    src="/images/services_page_images/blue-dot.png"
+                    alt="blue-dot"
+                    width={20}
+                    height={20}
+                  />
+                  <p>{tag}</p>
+                </div>
+              ))}
             </div>
-          </Reveal>
+            <PrimaryBtn
+              text="View Site"
+              onClick={() => {
+                window.open("https://www.google.com/", "_blank");
+              }}
+            />
+          </div>
         </motion.div>
 
         {/* Right Box */}
@@ -227,38 +215,33 @@ const ImagesWorkSection = () => {
               />
             </Link>
           </div>
-          <Reveal>
-            <h4 className="text-xl font-semibold tracking-wide">
-              Project Name
-            </h4>
-          </Reveal>
 
-          <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-4">
-                {["Design", "Development", "SEO"].map((tag, index) => (
-                  <div
-                    key={index}
-                    className="mb-2 flex w-auto items-center gap-1"
-                  >
-                    <Image
-                      src="/images/services_page_images/blue-dot.png"
-                      alt="blue-dot"
-                      width={20}
-                      height={20}
-                    />
-                    <p>{tag}</p>
-                  </div>
-                ))}
-                <PrimaryBtn
-                  text="View Site"
-                  onClick={() => {
-                    window.open("https://www.google.com/", "_blank");
-                  }}
-                />
-              </div>
+          <h4 className="text-xl font-semibold tracking-wide">Project Name</h4>
+
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-4">
+              {["Design", "Development", "SEO"].map((tag, index) => (
+                <div
+                  key={index}
+                  className="mb-2 flex w-auto items-center gap-1"
+                >
+                  <Image
+                    src="/images/services_page_images/blue-dot.png"
+                    alt="blue-dot"
+                    width={20}
+                    height={20}
+                  />
+                  <p>{tag}</p>
+                </div>
+              ))}
+              <PrimaryBtn
+                text="View Site"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
+              />
             </div>
-          </Reveal>
+          </div>
         </motion.div>
       </div>
     </main>

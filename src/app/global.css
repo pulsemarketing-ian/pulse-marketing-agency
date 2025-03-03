@@ -250,7 +250,8 @@ p {
 .contact-btn {
   padding: 13px 18px;
   margin-top: 14px;
-  font-size: 16px;
+  margin-bottom: 100px;
+  font-size: 18px;
 }
 
 .contact-btn .rounded-full {

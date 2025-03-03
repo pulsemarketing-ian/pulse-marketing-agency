@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { baseURL } from "../../../utils/useRequest";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
 import { useRouter } from "next/navigation";
 
@@ -101,7 +101,7 @@ export default function Tabs() {
 
     return (
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"
+        className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-2"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
@@ -114,7 +114,7 @@ export default function Tabs() {
             className="animate-left flex w-full flex-col gap-5 md:gap-6"
           >
             {/* Image Section */}
-            <div className="relative h-[200px] md:h-[380px] xl:h-[280px] 2xl:h-[380px] w-full md:w-[90%]  rounded-2xl">
+            <div className="relative h-[200px] w-full rounded-2xl md:h-[380px] md:w-[90%] xl:h-[280px]  2xl:h-[380px]">
               <Link href={item?.section} target="_blank">
                 <Image
                   src={item?.pictures[0]}
@@ -123,49 +123,44 @@ export default function Tabs() {
                   alt="Project Image"
                   priority
                   quality={100}
-                  className="rounded-2xl cursor-pointer"
+                  className="cursor-pointer rounded-2xl"
                 />
               </Link>
             </div>
-    
+
             {/* Content Section */}
-            <div className="md:px-6 xl:px-0 2xl:px-0 rounded-xl">
-              <Reveal>
-                <h4 className="text-xl font-semibold capitalize tracking-wide">
-                  {item?.name.toUpperCase()}
-                </h4>
-              </Reveal>
-    
-              <Reveal>
-                <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
-                  {/* Tags Section */}
-                  <div className="flex flex-wrap gap-3">
-                    {["Design", "Development", "SEO"].map((tag, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <Image
-                          src="/images/services_page_images/blue-dot.png"
-                          alt="blue-dot"
-                          width={16}
-                          height={16}
-                        />
-                        <p className="text-sm font-medium">{tag}</p>
-                      </div>
-                    ))}
-                  </div>
-    
-                  {/* Button */}
-                  <PrimaryBtn
-                    text="View Site"
-                    onClick={() => window.open(item?.section, "_blank")}
-                  />
+            <div className="rounded-xl md:px-6 xl:px-0 2xl:px-0">
+              <h4 className="text-xl font-semibold capitalize tracking-wide">
+                {item?.name.toUpperCase()}
+              </h4>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
+                {/* Tags Section */}
+                <div className="flex flex-wrap gap-3">
+                  {["Design", "Development", "SEO"].map((tag, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Image
+                        src="/images/services_page_images/blue-dot.png"
+                        alt="blue-dot"
+                        width={16}
+                        height={16}
+                      />
+                      <p className="text-sm font-medium">{tag}</p>
+                    </div>
+                  ))}
                 </div>
-              </Reveal>
+
+                {/* Button */}
+                <PrimaryBtn
+                  text="View Site"
+                  onClick={() => window.open(item?.section, "_blank")}
+                />
+              </div>
             </div>
           </div>
         ))}
       </div>
     );
-    
   };
 
   return (
@@ -182,7 +177,7 @@ export default function Tabs() {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`flex w-[45%] cursor-pointer flex-wrap items-center justify-start rounded px-4 py-4 text-center text-[1.2rem] md:text-[1.6rem] font-medium md:w-auto md:px-4 md:py-0 ${
+              className={`flex w-[45%] cursor-pointer flex-wrap items-center justify-start rounded px-4 py-4 text-center text-[1.2rem] font-medium md:w-auto md:px-4 md:py-0 md:text-[1.6rem] ${
                 index === activeTab ? "text-white" : "text-gray-500"
               }`}
               onClick={() => handleTabChange(index)}

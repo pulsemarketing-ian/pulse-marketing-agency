@@ -1,28 +1,25 @@
-'use client';
-import React from 'react'
-import Navbar from '@/components/landing_page_components/Navbar'
-import Image from 'next/image'
-import { Reveal } from '@/utils/Reveal'
+"use client";
+import React from "react";
+import Navbar from "@/components/landing_page_components/Navbar";
+import Image from "next/image";
+// import { Reveal } from '@/utils/Reveal'
 const HeroSection = () => {
   return (
     <React.Fragment>
-        <main 
-         style={{
-             backgroundImage: "url('/images/services_page_images/hero-img.png')",
-             backgroundSize: "cover",
-             backgroundAttachment: "fixed",
-             backgroundPosition: "center",
-
-            }}
-            className='md:pb-[150px]'
-            >
-            <Navbar/>
-            <div className='h-[60vh] md:h-[76vh] w-full flex justify-center items-center flex-col relative'>
-
-        <div className=' translate-y-[2rem] md:translate-y-[4rem] flex-col item-center'>
-
-                {/* serive heading  */}
-                <div className="mb-2 flex items-center justify-center gap-1 -ml-[20px] md:-ml-[45px]">
+      <main
+        style={{
+          backgroundImage: "url('/images/services_page_images/hero-img.png')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+        }}
+        className="md:pb-[150px]"
+      >
+        <Navbar />
+        <div className="relative flex h-[60vh] w-full flex-col items-center justify-center md:h-[76vh]">
+          <div className=" item-center translate-y-[2rem] flex-col md:translate-y-[4rem]">
+            {/* serive heading  */}
+            <div className="-ml-[20px] mb-2 flex items-center justify-center gap-1 md:-ml-[45px]">
               <Image
                 src="/images/services_page_images/blue-dot.png"
                 alt="blue-dot"
@@ -33,15 +30,17 @@ const HeroSection = () => {
             </div>
 
             {/* heading main  */}
-            <Reveal>
-                <h2 className="text-3xl md:text-5xl font-bold text-center"
-                    style={{ lineHeight: '1.2' }}>
-                We Create Digital <br/>Products That Grow <br/> Ambitious Brands.
-                </h2>
-            </Reveal>
-            </div>
 
-            {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
+            <h2
+              className="text-center text-3xl font-bold md:text-5xl"
+              style={{ lineHeight: "1.2" }}
+            >
+              We Create Digital <br />
+              Products That Grow <br /> Ambitious Brands.
+            </h2>
+          </div>
+
+          {/* <div className='bg-my-blue-gradient rounded-full p-3 absolute bottom-6 right-6'>
                 <Image
                 src={'/images/services_page_images/inbox.png'}
                 alt="inbox"
@@ -49,17 +48,10 @@ const HeroSection = () => {
                 height={15}
                 />
             </div> */}
-
-            </div>
-        </main>
+        </div>
+      </main>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default HeroSection
-
-
-
-
-
-
+export default HeroSection;

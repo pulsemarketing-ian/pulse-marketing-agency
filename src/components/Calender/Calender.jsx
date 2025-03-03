@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Reveal } from "../../utils/Reveal";
+// import { Reveal } from "../../utils/Reveal";
 import Link from "next/link";
 
 const Calender = () => {
@@ -34,29 +34,25 @@ const Calender = () => {
   return (
     <>
       <main
-        className="w-full flex justify-center md:py-16 px-4 md:px-10"
+        className="flex w-full justify-center px-4 md:px-10 md:py-16"
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="w-full lg:w-[75%] flex flex-col lg:flex-row justify-between items-center">
+        <div className="flex w-full flex-col items-center justify-between lg:w-[75%] lg:flex-row">
           {/* Left Side Content */}
-          <div className="w-full text-center lg:text-left px-8 lg:px-0 lg:w-[50%] mb-14 lg:mb-0">
-            <Reveal>
-              <h2 className="poppins-medium text-[1.5rem] md:text-5xl hero-text">
-                Got A Project <br /> Or Partnership In <br /> Mind?
-              </h2>
-            </Reveal>
+          <div className="mb-14 w-full px-8 text-center lg:mb-0 lg:w-[50%] lg:px-0 lg:text-left">
+            <h2 className="poppins-medium hero-text text-[1.5rem] md:text-5xl">
+              Got A Project <br /> Or Partnership In <br /> Mind?
+            </h2>
 
-            <div className="poppins-light text-[16px] w-full md:w-[80%] py-4">
-              <Reveal>
-                <p>
-                  Boost your brand with our expert websites, apps, and branding
-                  solutions. Bring your vision to life with Pulse.
-                </p>
-              </Reveal>
+            <div className="poppins-light w-full py-4 text-[16px] md:w-[80%]">
+              <p>
+                Boost your brand with our expert websites, apps, and branding
+                solutions. Bring your vision to life with Pulse.
+              </p>
             </div>
 
             <div className="flex justify-center md:justify-start">
@@ -67,9 +63,8 @@ const Calender = () => {
                   target="_blank"
                 >
                   <MdEmail className="text-xl" />
-                  <Reveal>
-                    <h3 className="poppins-light ml-3">hi@pulsemarketing.io</h3>
-                  </Reveal>
+
+                  <h3 className="poppins-light ml-3">hi@pulsemarketing.io</h3>
                 </Link>
               </div>
             </div>
@@ -77,7 +72,7 @@ const Calender = () => {
 
           {/* Calendly Inline Widget */}
           <div
-            className="w-full md:w-[90%] lg:w-[50%] flex justify-center"
+            className="flex w-full justify-center md:w-[90%] lg:w-[50%]"
             ref={calendlyContainerRef}
           ></div>
         </div>

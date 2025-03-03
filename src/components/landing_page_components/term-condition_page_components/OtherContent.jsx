@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import React from "react";
 
 const OtherContent = () => {
@@ -25,7 +25,7 @@ const OtherContent = () => {
   ];
 
   return (
-    <main className="pb-8 md:pb-0">
+    <main className="pb-8 mt-18 md:pb-0">
       {data.map((item, index) => (
         <div
           key={index._id}
@@ -34,18 +34,16 @@ const OtherContent = () => {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
-          className="mx-auto flex md:w-[70%] px-6 md:px-0 flex-col items-center justify-center gap-3 text-center pt-16"
+          className="mx-auto flex md:w-[65%] px-6 md:px-0 flex-col items-center justify-center gap-3 text-center pt-16"
         >
           {" "}
-          <Reveal>
+          
              <h2 className=" text-xl md:text-4xl font-bold tracking-wide">{item.heading}</h2>
-          </Reveal>
-          <Reveal>
+         
             <p>{item.content}</p>
-          </Reveal>
-          <Reveal>
-            <p className="mb-20">{item.content2}</p>
-          </Reveal>
+         
+            <p className="mb-0">{item.content2}</p>
+          
         </div>
       ))}
     </main>

@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -14,9 +14,9 @@ const Services = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Reveal>
+      
         <h2 className="text-left text-4xl font-bold tracking-wide">Services</h2>
-      </Reveal>
+      
 
       <div className="mt-8 flex flex-col flex-wrap items-center justify-between gap-4 md:flex-row">
         {[

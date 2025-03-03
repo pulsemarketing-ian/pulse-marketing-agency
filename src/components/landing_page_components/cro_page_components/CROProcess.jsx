@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from "@/utils/Reveal";
+// import { Reveal } from "@/utils/Reveal";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -15,12 +15,10 @@ const CROProcess = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="mt-3 flex justify-center items-center">
-        <Reveal>
-          <h2 className="text-center text-4xl font-bold tracking-wide">
-            Our CRO Process
-          </h2>
-        </Reveal>
+      <div className="mt-3 flex items-center justify-center">
+        <h2 className="text-center text-4xl font-bold tracking-wide">
+          Our CRO Process
+        </h2>
       </div>
 
       <div className="mt-8 grid w-full gap-4 md:grid-cols-3">
