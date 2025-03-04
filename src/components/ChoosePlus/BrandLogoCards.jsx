@@ -49,8 +49,8 @@ const BrandLogoCards = () => {
                  <Image
                   src={item.image}
                   alt={index}
-                  width={250}
-                  height={200}
+                  width={200}
+                  height={0}
                   className="filter-invert"
                 />
             </div>

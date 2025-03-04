@@ -82,11 +82,11 @@ export default function PortfolioSection() {
         className="h-[38vh] md:h-[38rem]"
       />
       <div className="absolute -top-20 z-10 flex w-full flex-col items-center justify-center md:top-12 ">
-        <div className="z-10 mt-8 text-center">
+        {/* <div className="z-10 mt-8 text-center">
           <h1 className="mt-12 text-2xl font-bold tracking-wide md:mt-0 md:text-5xl">
             Our Portfolio
           </h1>
-        </div>
+        </div> */}
 
         <div
           style={{

@@ -18,7 +18,7 @@ const Calender = () => {
       div.className = "calendly-inline-widget";
       div.dataset.url = "https://calendly.com/ianpslater/20min"; // Replace with your Calendly link
       div.style.minWidth = "100%"; // Ensure it fits within mobile screens
-      div.style.height = "1200px";
+      div.style.height = "600px";
       div.style.display = "flex";
       div.style.justifyContent = "center";
       container.appendChild(div);
@@ -41,20 +41,22 @@ const Calender = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex w-full flex-col items-center justify-between lg:w-[75%] lg:flex-row">
+        <div className="flex w-full flex-col items-center justify-between lg:w-[100%] lg:flex-col">
           {/* Left Side Content */}
-          <div className="mb-14 w-full px-8 text-center lg:mb-0 lg:w-[50%] lg:px-0 lg:text-left">
-            <h2 className="poppins-medium hero-text text-[1.5rem] md:text-5xl">
-              Got A Project <br /> Or Partnership In <br /> Mind?
+          {/* <div className="mb-14 w-full px-8 text-center lg:mb-0 lg:w-[50%] lg:px-0 lg:text-left">
+          </div> */}
+          <div className="w-full px-6 py-12 text-center text-white md:mx-auto md:w-[1200px] lg:w-full md:px-0 lg:px-30">
+          <h2 className="poppins-medium hero-text text-[1.5rem] md:text-5xl">
+              Got A Project Or Partnership <br/> In Mind?
             </h2>
 
-            <div className="poppins-light w-full py-4 text-[16px] md:w-[80%]">
+            {/* <div className="poppins-light w-full py-4 text-[16px] md:w-[80%]">
               <p>
                 Boost your brand with our expert websites, apps, and branding
                 solutions. Bring your vision to life with Pulse.
               </p>
-            </div>
-
+            </div> */}
+{/* 
             <div className="flex justify-center md:justify-start">
               <div className="flex items-center">
                 <Link
@@ -67,12 +69,12 @@ const Calender = () => {
                   <h3 className="poppins-light ml-3">hi@pulsemarketing.io</h3>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Calendly Inline Widget */}
           <div
-            className="flex w-full justify-center md:w-[90%] lg:w-[50%]"
+            className="flex w-full justify-center md:w-[90%] lg:w-[100%]"
             ref={calendlyContainerRef}
           ></div>
         </div>

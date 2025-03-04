@@ -62,7 +62,7 @@ export default function PortfolioSection() {
       />
       <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center">
         <div className="z-10 md:mt-8 text-center">
-          <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1>
+          {/* <h1 className="text-2xl md:text-5xl font-bold tracking-wide">Our Portfolio</h1> */}
         </div>
 
         {/* app portfolio images */}

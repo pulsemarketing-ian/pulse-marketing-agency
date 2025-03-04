@@ -8,9 +8,9 @@ const HeroSection = () => {
           "url('/images/cro_page_images/cro-banner-min (1).jpg')",
         backgroundSize: "cover",
       }}
-      className="flex h-[80vh] items-center justify-center text-center md:h-[100vh] md:pb-[200px]"
+      className="flex h-[80vh] flex-col items-center justify-center text-center md:h-[70vh]"
     >
-      <div className="md:mt-20">
+      <div className="">
         <p>CRO Services</p>
 
         <h2 className="text-4xl font-bold leading-tight md:text-5xl">

@@ -44,9 +44,11 @@ const LogoDesgin = () => {
               needs.{" "}
             </p>
 
-            <Link href={"/branding"}>
+            <div>
+            <Link href={"/app"}>
               <PrimaryBtn text="Learn More" />
             </Link>
+            </div>
           </div>
 
           <div className="w-full space-y-6 md:w-auto">

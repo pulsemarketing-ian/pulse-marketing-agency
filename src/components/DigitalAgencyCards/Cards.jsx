@@ -263,10 +263,11 @@ const Cards = () => {
                         cards, brochures, to signs and everything in between we
                         have you covered for all of your design needs.
                       </p>
-
+                      <div>
                       <Link href={"/branding"}>
                         <PrimaryBtn text="Learn More" />
                       </Link>
+                      </div>
                     </div>
                   </div>
 
@@ -321,10 +322,11 @@ const Cards = () => {
                         search engine rankings, drive organic traffic, and
                         enhance your digital visibility.
                       </p>
-
+                      <div>
                       <Link href={"/seo"}>
                         <PrimaryBtn text="Learn More" />
                       </Link>
+                      </div>
                     </div>
                   </div>
 
@@ -375,10 +377,11 @@ const Cards = () => {
                         your website performance, and turn casual visitors into
                         loyal customers.
                       </p>
-
+                      <div>
                       <Link href={"/cro"}>
                         <PrimaryBtn text="Learn More" />
                       </Link>
+                      </div>
                     </div>
                   </div>
 

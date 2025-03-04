@@ -10,7 +10,9 @@ body {
   /* background: #040015; */
   overflow-x: hidden;
 }
-
+button.jsx-e19adc4f2dd88018.poppins-regular.contact-btn.fixed.bottom-5.right-6.z-\[9999\].mt-8.flex.items-center.justify-between.rounded-3xl.border-none.bg-white.px-4.py-2.text-black.outline-none.ease-in-out.hover\:bg-my-blue-gradient.hover\:text-white.hover\:transition-all {
+  bottom: -80px !important;
+}
 .swiper-slide {
   width: 400px !important;
 }
@@ -963,4 +965,10 @@ button:hover {
 .animate-scroll {
   display: flex;
   animation: scroll 20s linear infinite; /* Speed slow ki */
+}
+@media screen and (max-width: 600px) {
+  .contact-btn {
+      padding: 7px 20px;
+      margin: 0;
+  }
 }

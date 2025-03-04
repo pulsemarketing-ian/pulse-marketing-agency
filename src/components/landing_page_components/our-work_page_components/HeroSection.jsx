@@ -233,9 +233,9 @@ const HeroSection = () => {
           }}
         >
           <div className="z-10 translate-y-0 sm:p-0 p-4 transform text-center md:translate-y-10">
-            <h1 className="text-lg font-bold tracking-wide md:text-5xl">
+            {/* <h1 className="text-lg font-bold tracking-wide md:text-5xl">
               Our Work Your Inspiration
-            </h1>
+            </h1> */}
           </div>
 
           <div className="mx-auto mt-6 flex w-full flex-wrap items-center justify-center md:mb-12 md:mt-22 md:w-[90%] lg:w-[1200px]">

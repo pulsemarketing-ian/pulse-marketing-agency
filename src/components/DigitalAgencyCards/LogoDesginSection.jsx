@@ -37,10 +37,11 @@ const LogoDesign = () => {
               robust, scalable solutions while delivering solutions that exceed
               expectations.
             </p>
-
+            <div className="mt-3">
             <Link href={"/app"}>
               <PrimaryBtn text="Learn More" />
             </Link>
+            </div>
           </div>
         </div>
 

@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Image from "next/image";
 import { FireApi } from "../../../../utils/useRequest";
+import "./testimonials.css"
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = React.useState([]);
@@ -48,7 +49,7 @@ const Testimonials = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="mb-10 text-start md:mx-24 lg:mx-4">
+      <div className="mb-10 w-[100%] text-start md:mx-24 lg:mx-0">
         <p className="text-sm font-light uppercase text-cyan-500">
           <span className="mr-2 text-cyan-500">•</span>Client Testimonials &
           Reviews
@@ -58,12 +59,12 @@ const Testimonials = () => {
         </h2>
       </div>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-6">
+      <div className="mt-10 w-[100%] flex flex-wrap justify-start gap-6">
         {/* <Slider {...settings}> */}
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex w-full transform cursor-pointer flex-col items-center rounded-lg border border-gray-300 p-4 shadow-md transition-transform hover:scale-105 hover:bg-[#1c192c] sm:w-80 md:w-80"
+            className="testi flex w-full transform cursor-pointer flex-col items-center rounded-lg border border-gray-300 p-4 shadow-md transition-transform hover:scale-105 hover:bg-[#1c192c] sm:w-80 md:w-70 lg:w-70 xl:w-[31.35%]"
           >
             <div className="mb-4 flex w-full justify-between">
               <div className="flex min-w-0 items-center">
@@ -91,12 +92,12 @@ const Testimonials = () => {
                 />
               </a>
             </div>
-            <div className="mb-4 flex justify-center">
+            <div className="mb-4 flex w-full">
               {[...Array(testimonial.stars)].map((_, i) => (
                 <FaStar key={i} className="text-yellow-500" />
               ))}
             </div>
-            <p className=" text-gray-300">
+            <p className="test-text text-xs leading-snug text-gray-300">
               {testimonial.text.slice(0, 200) + "..."}
             </p>
           </div>

@@ -92,7 +92,7 @@ const HeroLeftContent = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col flex-wrap text-left md:flex-row md:items-center md:gap-3">
+        <div className="flex w-full flex-col flex-wrap gap-2 text-left md:flex-row md:items-center md:gap-3">
           <p> Clients rate our team and work</p>
           <div className="flex text-yellow-500">
             <FaStar />
@@ -322,7 +322,7 @@ const HeroSection = () => {
   return (
     <>
       <main
-        className="relative m-auto w-full lg:h-[100vh] lg:w-full"
+        className="relative m-auto w-full py-[0px] md:py-[60px] lg:w-full"
         // style={{ backgroundImage: "url('/images/home0-banner.jpg')"; background-size: cover}}>
         style={{
           backgroundImage: "url('/images/home-banner.jpg')",

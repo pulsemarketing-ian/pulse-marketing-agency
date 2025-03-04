@@ -15,12 +15,12 @@ const SecondSection = () => {
         className="h-[42vh] translate-y-[-63%] transform md:h-[34rem] md:translate-y-[-65%]"
       />
       <div className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center bg-[#040117] md:top-5 md:bg-transparent">
-        <div className="z-10 text-center md:-mt-2">
+        {/* <div className="z-10 text-center md:-mt-2">
           <h1 className="mb-3 text-xl font-bold tracking-wide md:text-4xl xl:pt-10">
             Boost Your E-Commerce Sales <br />
             With Precision CRO
           </h1>
-        </div>
+        </div> */}
 
         {/* inner content  */}
         <div className="mb-4 mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row">

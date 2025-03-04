@@ -22,12 +22,12 @@ const AboutText = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="z-10 text-center md:-mt-4 lg:mt-2">
+        {/* <div className="z-10 text-center md:-mt-4 lg:mt-2">
           <h1 className="mb-2 text-xl font-bold tracking-wide md:text-5xl">
             Unity in Diversity <br />
             Strength in Teamwork
           </h1>
-        </div>
+        </div> */}
 
         {/* inner content  */}
         <div className="mb-4 mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row ">

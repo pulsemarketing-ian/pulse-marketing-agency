@@ -136,7 +136,7 @@ export default function Tabs() {
 
               <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
                 {/* Tags Section */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap md:p-0 p-3 gap-3">
                   {["Design", "Development", "SEO"].map((tag, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <Image

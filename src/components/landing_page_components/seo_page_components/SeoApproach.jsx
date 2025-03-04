@@ -24,11 +24,11 @@ const SeoApproach = () => {
           }}
         >
           <div className="z-10 -mt-[65px] px-4 text-center md:mt-0 md:px-0">
-            <p className="pt-20">
+            {/* <p className="pt-20">
               Let rebuild the SEO with improvements easier to understand and
               better layout of <br />
               workflow of process here is some details to start with that:
-            </p>
+            </p> */}
             <h1 className="pt-10 text-xl font-bold tracking-wide md:text-5xl">
               Why SEO Matters for Your Business
             </h1>

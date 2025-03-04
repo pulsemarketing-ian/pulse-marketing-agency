@@ -45,10 +45,11 @@ const SEOSection = () => {
               personalized strategies to improve your search engine rankings,
               drive organic traffic, and enhance your digital visibility.{" "}
             </p>
-
-            <Link href={"/seo"}>
+            <div>
+            <Link href={"/app"}>
               <PrimaryBtn text="Learn More" />
             </Link>
+            </div>
           </div>
 
           {/* Right Column */}

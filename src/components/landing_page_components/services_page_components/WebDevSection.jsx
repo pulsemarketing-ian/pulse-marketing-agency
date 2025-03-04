@@ -59,9 +59,11 @@ const WebDevSection = () => {
                 bespoke online experiences.
               </p>
 
-              <Link href={"/web-development"}>
-                <PrimaryBtn text="Learn More" />
-              </Link>
+              <div>
+            <Link href={"/app"}>
+              <PrimaryBtn text="Learn More" />
+            </Link>
+            </div>
             </div>
 
             {/* Right Column */}

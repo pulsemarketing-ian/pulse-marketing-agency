@@ -37,10 +37,11 @@ const AppDevSection = () => {
               robust, scalable solutions while delivering solutions that exceed
               expectations.
             </p>
-
+            <div>
             <Link href={"/app"}>
               <PrimaryBtn text="Learn More" />
             </Link>
+            </div>
           </div>
 
           {/* Right Column */}
