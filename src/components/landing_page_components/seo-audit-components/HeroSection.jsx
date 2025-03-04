@@ -42,21 +42,20 @@ export default function HeroSection() {
       <Navbar />
       <div className="md:h-[700px] h-[850px] w-[100%] justify-center items-center flex flex-row">
         {/* Hero Heading */}
-        <div className="md:h-[550px] h-[600px] flex items-center flex-col md:flex-row md:justify-between w-[89%]">
-        <motion.div
-          initial={{ x: -380, opacity: 0 }}
+        <div className="md:h-[550px] h-[600px] flex items-center flex-col md:flex-row md:justify-between w-[90%]">
+        {/* <motion.div
+          initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.2 }}
-        >
+        > */}
           <h2 className="text-3xl md:ml-16 font-bold leading-tight text-white md:text-7xl">
             SEO Audit
           </h2>
-        </motion.div>
+        {/* </motion.div> */}
 
         {/* Hero Form */}
         <div
-          className="z-20 w-full max-w-md text-white md:w-[40%]">
+          className="md:w-[450px] w-full md:mr-0 mr-8 text-white">
           {/* External Widget Form */}
           <div id="se-widget-container" className="md:mt-7 mt-5"></div>
           </div>

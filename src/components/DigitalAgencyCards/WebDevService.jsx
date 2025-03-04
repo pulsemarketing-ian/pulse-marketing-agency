@@ -18,7 +18,7 @@ const WebDevService = () => {
         }}
       >
         {/* Main Content Section */}
-        <div className="container relative md:mx-auto md:px-4 md:py-16">
+        <div className="container relative md:pt-0 pt-9 md:mx-auto md:px-4 md:py-16">
           {/* Background Image with Hover Effect */}
           <div
             className=" flex transform flex-col items-center justify-between gap-8 p-2 md:mt-0 mt-5 transition-transform duration-700 ease-in-out hover:scale-105 md:p-8 lg:flex-row"

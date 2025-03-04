@@ -15,7 +15,7 @@ const AppDevSection = () => {
       }}
     >
       {/* Main Content Section */}
-      <div className=" pt-8 md:container md:mx-auto md:px-4 md:py-2 md:pt-0">
+      <div className=" pt-18 md:container md:mx-auto md:px-4 md:py-2 md:pt-0">
         <div
           className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8  lg:flex-row"
           style={{
