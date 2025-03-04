@@ -139,7 +139,7 @@ const BlogPage = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 text-center md:mt-16">
+          <div className="z-10 md:mb-0 mb-10 text-center md:mt-16">
             <h1 className="md:mb-2 mb-5 text-xl font-bold tracking-wide md:text-5xl">
               Your Weekly Dose of <br />
               Knowledge and Creativity
