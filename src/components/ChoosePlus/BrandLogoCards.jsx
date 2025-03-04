@@ -4,16 +4,16 @@ import Slider from "react-slick";
 
 const BrandLogoCards = () => {
   const MySliderArr = [
-    { image: "/images/Tiktok-logo.webp" },
-    { image: "/images/shopify-logo.webp" },
-    { image: "/images/google-partner-logo.webp" },
-    { image: "/images/cdpa-logo.webp" },
-    { image: "/images/meta-logo.webp" },
-    { image: "/images/Tiktok-logo.webp" },
-    { image: "/images/shopify-logo.webp" },
-    { image: "/images/google-partner-logo.webp" },
-    { image: "/images/cdpa-logo.webp" },
-    { image: "/images/meta-logo.webp" },
+    { image: "/images/tiktok.png" },
+    { image: "/images/shopify-partners.png" },
+    { image: "/images/google-partner.png" },
+    { image: "/images/canada-logo.png" },
+    { image: "/images/meta-logo.png" },
+    { image: "/images/tiktok.png" },
+    { image: "/images/shopify-partners.png" },
+    { image: "/images/google-partner.png" },
+    { image: "/images/canada-logo.png" },
+    { image: "/images/meta-logo.png" },
   ];
 
   const settings = {
@@ -49,8 +49,8 @@ const BrandLogoCards = () => {
                  <Image
                   src={item.image}
                   alt={index}
-                  width={400}
-                  height={400}
+                  width={250}
+                  height={200}
                   className="filter-invert"
                 />
             </div>
