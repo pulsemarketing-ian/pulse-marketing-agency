@@ -10,6 +10,12 @@ body {
   /* background: #040015; */
   overflow-x: hidden;
 }
+#cancel-btn{
+  font-size:10px !important;
+}
+#submit-btn{
+  font-size: 10px !important;
+}
 
 .swiper-slide {
   width: 400px !important;

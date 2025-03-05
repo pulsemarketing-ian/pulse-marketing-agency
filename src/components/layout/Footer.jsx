@@ -68,6 +68,7 @@ const Footer = () => {
               { name: "App", link: "/app" },
               { name: "Portfolio", link: "/our-work" },
               { name: "Insights", link: "/blog" },
+              { name: "CRO Calculator", link: "/cro/#cal" },
             ].map((item, index) => (
               <Link
                 key={index}

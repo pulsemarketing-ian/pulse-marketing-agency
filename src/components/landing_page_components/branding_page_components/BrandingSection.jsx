@@ -67,7 +67,7 @@ export default function BrandingSection() {
             once: false,
             amount: 0.2,
           }}
-          className="flex hidden w-full justify-center md:block md:w-1/2"
+          className="flex sm:hidden w-full justify-center md:block md:w-1/2"
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "cover",

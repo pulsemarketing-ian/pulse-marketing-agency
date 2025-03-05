@@ -134,7 +134,7 @@ export default function Tabs() {
                 {item?.name.toUpperCase()}
               </h4>
 
-              <div className="flex flex-wrap items-center justify-between gap-4 md:mb-5">
+              <div className="flex flex-wrap items-center justify-between gap-4 md:mb-1">
                 {/* Tags Section */}
                 <div className="flex flex-wrap md:p-0 p-3 gap-3">
                   {["Design", "Development", "SEO"].map((tag, index) => (

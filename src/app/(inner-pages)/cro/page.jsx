@@ -16,13 +16,13 @@ const page = () => {
   return (
     <main className="theme_bg_color">
       <HeroSection />
+      <ConversionCalculator />
       <SecondSection />
       <BrandLogoCards/>
       <WhyChooseUs />
       <CROProcess />
       <Expertise />
       <Results />
-      <ConversionCalculator />
       <Testimonials />
       <FAQSection />
       <OurBlog />

@@ -16,22 +16,22 @@ export default function DesignServicesSection() {
     {
       title: "Logo Design",
       items: [
-        { image: "/images/branding_page_images/logo portfolio-01.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-02.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-03.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-04.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-05.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-06.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-07.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-08.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-09.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-10.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-11.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-12.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-13.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-14.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-15.jpg" },
-        { image: "/images/branding_page_images/logo portfolio-16.jpg" },
+        { image: "/logs/AirOTours-logo-final-vector-file-03.svg" },
+        { image: "/logs/artist-logo.svg" },
+        { image: "/logs/Christine-.svg" },
+        { image: "/logs/E-H-Contracting-01.svg" },
+        { image: "/logs/Jordan-Rentals-06.svg" },
+        { image: "/logs/logo-1.svg" },
+        { image: "/logs/logo01.svg" },
+        { image: "/logs/plane-logo.svg" },
+        { image: "/logs/Season-.svg" },
+        // { image: "/images/branding_page_images/logo portfolio-10.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-11.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-12.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-13.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-14.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-15.jpg" },
+        // { image: "/images/branding_page_images/logo portfolio-16.jpg" },
       ],
     },
     {
@@ -56,8 +56,8 @@ export default function DesignServicesSection() {
   return (
     <section className=" px-0 py-16 text-white md:mx-auto md:w-[1200px] md:px-0 ">
       <div className="mb-8 px-6 text-start md:px-0">
-        <h2 className="text-2xl font-medium leading-tight md:w-[70%] md:text-4xl lg:w-[60%]">
-          Custom design services tailored to your unique brand identity.
+        <h2 className="text-2xl font-medium leading-tight md:w-[80%] md:text-4xl lg:w-[80%]">
+          Custom Design Services Tailored To Your Unique <br/> Brand Identity.
         </h2>
       </div>
 

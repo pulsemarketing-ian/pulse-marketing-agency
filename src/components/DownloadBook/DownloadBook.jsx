@@ -4,6 +4,7 @@ import React from "react";
 import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
 // import { Reveal } from "@/utils/Reveal";
 import Image from "next/image";
+
 const DownloadBook = () => {
   const [open, setOpen] = React.useState(false);
   return (
@@ -103,9 +104,9 @@ const DownloadModal = ({ open, handleClose }) => {
           onChange={handleChange}
           margin="normal"
         />
-        <div className="mt-3 flex justify-center gap-3">
+        <div className="w-full flex justify-between p-4">
           <PrimaryBtn text={"Cancel"} onClick={handleClose} />
-          <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
+          <PrimaryBtn text={"Submit"} onClick={handleDownload} />
         </div>
       </Box>
     </Modal>

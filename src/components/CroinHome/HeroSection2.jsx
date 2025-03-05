@@ -8,6 +8,7 @@ const HeroSection = () => {
       style={{
         backgroundImage:
           "url('/images/cro_page_images/cro-banner-min (1).jpg')",
+          backgroundAttachment:"fixed",
         backgroundSize: "cover",
       }}
       className="flex h-[80vh] flex-col items-center justify-center text-center md:h-[70vh]"
@@ -21,7 +22,7 @@ const HeroSection = () => {
       </div>
       <div className="mt-4">
         <Link href={"/cro"}>
-        <PrimaryBtn text="Learn More" />
+        <PrimaryBtn text="Calculate My CRO" />
         </Link>
       </div>
     </main>

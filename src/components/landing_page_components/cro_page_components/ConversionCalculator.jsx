@@ -142,14 +142,14 @@ export default function ConversionCalculator() {
 
   return (
     <>
-    {/* <div
+     <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
           backgroundSize: "cover",
         }}
-        className="h-[42vh] translate-y-[-63%] transform md:h-[34rem] md:translate-y-[-65%]"
-      /> */}
-    <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
+        className="h-[43vh] translate-y-[-48%] transform md:h-[34rem] md:translate-y-[-75%]"
+      />
+    <Container id="cal" className="relative bottom-[520px] md:bottom-150 mt-10" maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
       <div className="mb-8 flex flex-col items-center justify-center text-center">
         <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
           Calculate The Value of CRO

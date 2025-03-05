@@ -6,14 +6,7 @@ import { motion } from "motion";
 
 const SecondSection = () => {
   return (
-    <main className="relative w-full pb-0 md:mt-[50px] md:pb-0 lg:mb-22">
-      <div
-        style={{
-          backgroundImage: "url('/images/services_page_images/circle.png/')",
-          backgroundSize: "cover",
-        }}
-        className="h-[42vh] translate-y-[-63%] transform md:h-[34rem] md:translate-y-[-65%]"
-      />
+    <main className="relative bottom-[540px] md:bottom-150 w-full pb-0 md:mt-[0px] md:pb-0 lg:mb-22">
       <div className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center bg-[#040117] md:top-5 md:bg-transparent">
         {/* <div className="z-10 text-center md:-mt-2">
           <h1 className="mb-3 text-xl font-bold tracking-wide md:text-4xl xl:pt-10">
@@ -23,7 +16,7 @@ const SecondSection = () => {
         </div> */}
 
         {/* inner content  */}
-        <div className="mb-4 mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row">
+        <div className="mb-4 mt-6 md:mt-40 flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row">
           {/* left box  */}
           <div className="h-[100%] w-full rounded-2xl md:w-[60%] ">
             <Image
@@ -35,7 +28,7 @@ const SecondSection = () => {
 
           {/* right box  */}
           <div
-            className="hidden h-full w-full justify-end rounded-2xl md:flex md:w-[40%] md:flex-col "
+            className="h-full w-full justify-end rounded-2xl md:flex md:w-[40%] md:flex-col "
             style={{
               backgroundImage: "url('/images/app_page_images/radial.png')",
               backgroundSize: "contain",

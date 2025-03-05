@@ -84,9 +84,9 @@ function ChoosePlus() {
 
       <main className="mx-auto w-full px-4 md:px-0  lg:w-[77%]">
         <div className="flex-row items-center justify-between pb-10 md:flex md:pb-12">
-          <div className=" w-[80%] md:mt-0 mt-8 md:ml-0 ml-4 md:w-[50%]">
+          <div className=" w-[80%] md:mt-0 mt-8 md:-ml-1 ml-4 md:w-[70%]">
             <h1 className="poppins-medium ct-heading text-5xl">
-              Sales-Driven <br /> Conversion-Optimized Platforms.
+              Sales-Driven Conversion Optimized Platforms.
             </h1>
           </div>
           {/* <div className="poppins-light mt-6 w-[90%] font-light md:mt-0  md:w-[35%]">
