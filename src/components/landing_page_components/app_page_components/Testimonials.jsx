@@ -64,7 +64,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="testi flex w-full transform cursor-pointer flex-col items-center rounded-lg border border-gray-300 p-4 shadow-md transition-transform hover:scale-105 hover:bg-[#1c192c] sm:w-80 md:w-70 lg:w-70 xl:w-[31.35%]"
+            className="testi flex w-full transform cursor-pointer flex-col items-center rounded-lg border border-gray-300 p-4 shadow-md transition-transform hover:scale-105 hover:bg-[#1c192c] sm:w-80 md:w-80 lg:w-80 xl:w-[31.35%]"
           >
             <div className="mb-4 flex w-full justify-between">
               <div className="flex min-w-0 items-center">
