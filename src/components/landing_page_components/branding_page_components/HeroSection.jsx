@@ -77,7 +77,7 @@ const HeroSection = () => {
               ease: "easeInOut",
             }}
             viewport={{ once: false, amount: 0.2 }}
-            className="border-1 absolute right-0 z-20 w-full max-w-md rounded-3xl border-white bg-black bg-opacity-30 p-6 text-white shadow-xl backdrop-blur-md md:mt-10 md:w-[40%] md:px-8 md:py-3"
+            className="border-1 absolute top-20 right-0 z-20 w-full max-w-md rounded-3xl border-white bg-black bg-opacity-30 p-6 text-white shadow-xl backdrop-blur-md md:mt-10 md:w-[40%] md:px-8 md:py-3"
           >
             <HeroForm />
           </motion.div>

@@ -30,7 +30,7 @@ const Results = () => {
               isDesktop ? { delay: 0.5, duration: 0.5, ease: "easeInOut" } : {}
             }
             viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
-            className="flex flex-col items-center justify-center space-y-6 text-center lg:mx-auto lg:w-[40%]"
+            className="flex flex-col items-center justify-center space-y-6 text-center lg:mx-auto lg:w-[50%]"
           >
             <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
               Results You Can Expect
@@ -47,7 +47,7 @@ const Results = () => {
                 order value.
               </li>
 
-              <li className="flex items-center">
+              <li className="flex items-center text-left">
                 <span className="mr-2 text-cyan-500">•</span> Improved customer
                 satisfaction and retention.
               </li>

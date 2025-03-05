@@ -101,7 +101,7 @@ export default function PortfolioSlider() {
   ];
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden py-16">
+    <div className="w-full min-h-screen md:mt-0 mt-28 relative overflow-hidden py-16">
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"

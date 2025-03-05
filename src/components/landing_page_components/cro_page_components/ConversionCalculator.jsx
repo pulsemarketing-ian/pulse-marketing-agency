@@ -141,12 +141,20 @@ export default function ConversionCalculator() {
   );
 
   return (
+    <>
+    {/* <div
+        style={{
+          backgroundImage: "url('/images/services_page_images/circle.png/')",
+          backgroundSize: "cover",
+        }}
+        className="h-[42vh] translate-y-[-63%] transform md:h-[34rem] md:translate-y-[-65%]"
+      /> */}
     <Container maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
-      <div className="mb-8 flex items-center justify-center text-center">
+      <div className="mb-8 flex flex-col items-center justify-center text-center">
         <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
           Calculate The Value of CRO
         </h2>
-        <p>Reach your revenue goals with CRO.</p>
+        {/* <p>Reach your revenue goals with CRO.</p> */}
         <p className="mb-8">
           Find out the ROI from conversion rate optimization with this
           calculator
@@ -278,5 +286,6 @@ export default function ConversionCalculator() {
         </Grid>
       </Grid>
     </Container>
+    </>
   );
 }

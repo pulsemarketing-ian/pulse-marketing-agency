@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import PrimaryBtn from "../landing_page_components/PrimaryBtns/PrimaryBtn";
 
 const HeroSection = () => {
   return (
@@ -16,6 +18,11 @@ const HeroSection = () => {
         <h2 className="text-4xl font-bold leading-tight md:text-5xl">
           Conversion Rate <br /> Optimization
         </h2>
+      </div>
+      <div className="mt-4">
+        <Link href={"/cro"}>
+        <PrimaryBtn text="Learn More" />
+        </Link>
       </div>
     </main>
   );

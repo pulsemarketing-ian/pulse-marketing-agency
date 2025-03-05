@@ -7,7 +7,7 @@ import HeroSection2 from "../CroinHome/HeroSection2";
 import Cards from "../DigitalAgencyCards/Cards";
 import Testimonials from "../landing_page_components/app_page_components/Testimonials";
 import Calender from "../Calender/Calender";
-import Video from "../TiktokVideo/Video";
+// import Video from "../TiktokVideo/Video";
 import Footer from "./Footer";
 import SeorankingWidget from "../landing_page_components/SeoRankingWidget";
 import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
@@ -25,11 +25,9 @@ const ContentWrapper = () => {
       <BrandLogoCards />
       <Projects />
       <DownloadBook/>
-      <Link href={'/cro'}>
       <HeroSection2/>
-      </Link>
       <Cards /> 
-      <Video />
+      {/* <Video /> */}
       <Testimonials/>
       <Calender />
       <div className="flex bg-black-2 w-full flex-col md:flex-row md:items-center md:justify-center text-center gap-3 py-4 md:py-2 mb-3 mt-[2rem] md:mt-0">

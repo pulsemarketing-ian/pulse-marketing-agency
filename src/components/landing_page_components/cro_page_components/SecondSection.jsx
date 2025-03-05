@@ -6,7 +6,7 @@ import { motion } from "motion";
 
 const SecondSection = () => {
   return (
-    <main className="relative w-full pb-0 md:-mt-[50px] md:pb-0 lg:mb-22">
+    <main className="relative w-full pb-0 md:mt-[50px] md:pb-0 lg:mb-22">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
