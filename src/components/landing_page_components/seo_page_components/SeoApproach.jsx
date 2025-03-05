@@ -29,13 +29,13 @@ const SeoApproach = () => {
               better layout of <br />
               workflow of process here is some details to start with that:
             </p> */}
-            <h1 className="pt-10 text-xl font-bold tracking-wide md:text-5xl">
+            <h1 className="pt-14 text-xl font-bold tracking-wide md:text-5xl">
               Why SEO Matters for Your Business
             </h1>
           </div>
 
           {/* inner content  */}
-          <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mt-10 md:flex  md:w-[1200px] md:justify-between md:px-0 lg:flex-row">
+          <div className="mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mt-16 md:flex  md:w-[1200px] md:justify-between md:px-0 lg:flex-row">
             {/* left box  */}
             <div className=" flex w-full md:w-[55%] md:flex-col">
               <div className=" relative mb-25 h-[200px] w-full transform transition-transform duration-700 ease-in-out hover:scale-105 md:mb-0 md:h-[360px]">
@@ -47,7 +47,7 @@ const SeoApproach = () => {
                 />
               </div>
 
-              <div className="cards-seo mt-8 hidden gap-3 md:mt-18 md:flex ">
+              <div className="cards-seo mt-8 hidden gap-3 md:mt-28 md:flex ">
                 <div className="flex w-[33%] items-center justify-around gap-2 border-r border-gray-2 pr-3 ">
                   <div>
                     <Image
