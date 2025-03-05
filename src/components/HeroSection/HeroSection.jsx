@@ -106,7 +106,7 @@ const HeroLeftContent = () => {
 
         <button
           onClick={toggleForm}
-          className="poppins-regular contact-btn mt-8 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
+          className="poppins-regular contact-btn md:mb-0 mb-10 md:mt-[24px] mt-10 flex items-center justify-between rounded-3xl border-none bg-white px-4 py-2 text-black outline-none ease-in-out hover:bg-my-blue-gradient hover:text-white hover:transition-all"
         >
           Book Now
           <div className="ml-2 h-full rounded-full bg-[#6EE3D7] p-[2px]">
