@@ -103,10 +103,10 @@ export default function PortfolioSlider() {
       src: "/images/web-dev_page_images/mine-images (5).jpg",
       link: "https://rumblestudios.tv/",
     },
-    {
-      src: "/images/web-dev_page_images/mine-images (3).jpg",
-      link: "https://www.oneupstudio.it/",
-    },
+    // {
+    //   src: "/images/web-dev_page_images/mine-images (3).jpg",
+    //   link: "https://www.oneupstudio.it/",
+    // },
     {
       src: "/images/web-dev_page_images/mine-images (4).jpg",
       link: "https://petertarka.com/",
