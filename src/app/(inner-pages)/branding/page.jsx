@@ -15,12 +15,14 @@ const Branding = () => {
             <HeroSection/>
             <PortfolioSection/>
             <BrandingSection/>
+            <div className='md:mt-0 -mt-72'>
             <DesignServicesSection/>
+            </div>
             <Testimonials/>
             <FaqSection/>
             <OurBlog/>
             <Calender/>
-            <div className='-mt-64 md:mt-0'>
+            <div>
             <Footer/>
             </div>
         </main>

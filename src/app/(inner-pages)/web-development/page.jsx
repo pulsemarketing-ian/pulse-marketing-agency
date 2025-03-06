@@ -17,7 +17,9 @@ const page = () => {
     <main className="theme_bg_color">
         <HeroSection/>
         <PorfolioSection/>
+        <div className='md:mt-0 -mt-20 '>
         <DigitalAgency/>
+        </div>
         <TechStack/>
         <Services/>
         <TakeSteps/>
