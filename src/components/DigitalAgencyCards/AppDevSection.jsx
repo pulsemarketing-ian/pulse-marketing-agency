@@ -15,7 +15,7 @@ const AppDevSection = () => {
       }}
     >
       {/* Main Content Section */}
-      <div className=" pt-18 md:container md:mx-auto md:px-4 md:py-2 md:pt-0">
+      <div className=" pt-18 md:mt-0 mt-28 md:container md:mx-auto md:px-4 md:py-2 md:pt-0">
         <div
           className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8  lg:flex-row"
           style={{
@@ -24,7 +24,7 @@ const AppDevSection = () => {
           }}
         >
           {/* Left Column */}
-          <div className="space-y-6 lg:w-[80%]">
+          <div className="space-y-6  lg:w-[80%]">
             <h2 className="text-2xl font-medium leading-tight md:text-4xl">
               Application <br />
               Development

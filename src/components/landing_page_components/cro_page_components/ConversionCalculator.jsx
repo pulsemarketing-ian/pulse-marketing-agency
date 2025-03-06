@@ -149,7 +149,7 @@ export default function ConversionCalculator() {
         }}
         className="h-[43vh] translate-y-[-48%] transform md:h-[500px] md:translate-y-[-75%]"
       />
-    <Container id="cal" className="relative bottom-[440px] md:bottom-[500px] mt-10" maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
+    <Container id="cal" className="relative bottom-[420px] md:bottom-[500px] mt-10" maxWidth="lg" sx={{ bgcolor: "transparent", py: 6 }}>
       <div className="md:mb-8 mb-3 flex flex-col items-center justify-center text-center">
         <h2 className="mb-2 text-center text-2xl font-bold tracking-wide md:text-5xl">
           Calculate The Value of CRO

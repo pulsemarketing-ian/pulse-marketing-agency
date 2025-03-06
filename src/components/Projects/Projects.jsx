@@ -128,7 +128,7 @@ const Projects = () => {
   return (
     <>
       <main
-        className="w-full flex-col-reverse justify-between md:flex md:flex-row lg:flex "
+        className="w-full flex-col-reverse md:mt-0 mt-8 justify-between md:flex md:flex-row lg:flex "
         style={{
           backgroundImage: "url('/images/app_page_images/radial.png')",
           backgroundSize: "contain",

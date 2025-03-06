@@ -251,7 +251,7 @@ const Cards = () => {
                     }}
                   >
                     {/* Left Column */}
-                    <div className="space-y-6 lg:w-[80%]">
+                    <div className="space-y-6 md:mt-0 mt-8 lg:w-[80%]">
                       <h2 className="text-2xl font-medium leading-tight md:text-4xl">
                         Digital <br /> Branding
                       </h2>
@@ -310,7 +310,7 @@ const Cards = () => {
                     }}
                   >
                     {/* Left Column */}
-                    <div className="space-y-6 lg:w-[80%]">
+                    <div className="space-y-6 md:mt-0 mt-8 lg:w-[80%]">
                       <h2 className="text-2xl font-medium leading-tight md:text-4xl">
                         Search Engine <br /> Optimization
                       </h2>
@@ -364,7 +364,7 @@ const Cards = () => {
                     }}
                   >
                     {/* Left Column */}
-                    <div className="space-y-6 lg:w-[80%]">
+                    <div className="space-y-6 md:mt-0 mt-8 lg:w-[80%]">
                       <h2 className="text-2xl font-medium leading-tight md:text-4xl">
                         Conversion Rate <br /> Optimization CRO
                       </h2>
