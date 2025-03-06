@@ -6,14 +6,14 @@ import "./slider.css";
 import Slider from './Slider'
 export default function PortfolioSection() {
   return (
-    <main className="relative w-full pb-15 md:pb-0 -mt-[100px] xl:-mt-[80px] 2xl:-mt-[220px]">
+    <main className="relative w-full pb-32 md:pb-0 -mt-[100px] xl:-mt-[80px] 2xl:-mt-[220px]">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
           backgroundSize: "cover",
           transform: "translateY(-50%)",
         }}
-        className="h-[40vh] md:h-[37rem]"
+        className="h-[50vh] md:h-[42rem]"
       />
       <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center ">
         {/* <div className="z-10 mt-8 text-center">

@@ -35,8 +35,10 @@ const page = () => {
         <Testimonials/>
         <FaqSection/>
         <OurBlog/>
+        <div className='md:mt-0 -mt-12'>
         <Calender/>
-        <div className='-mt-59 md:mt-0'>
+        </div>
+        <div>
         <Footer/>
         </div>
     </main>
