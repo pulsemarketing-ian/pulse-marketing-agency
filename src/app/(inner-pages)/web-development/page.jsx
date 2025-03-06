@@ -10,6 +10,7 @@ import FaqSection from '@/components/landing_page_components/app_page_components
 import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Calender from '@/components/Calender/Calender';
 import Footer from '@/components/layout/Footer';
+import Tabs from "../../../components/MyTabs/Tabs";
 
 const page = () => {
  
@@ -23,6 +24,14 @@ const page = () => {
         <TechStack/>
         <Services/>
         <TakeSteps/>
+        <div>
+          <div className="w-[80%] md:mt-0 md:mb-9 mb-4 mt-0 md:ml-36 ml-8 md:w-[60%]">
+            <h1 className="poppins-medium ct-heading text-5xl">
+              Sales-Driven Conversion Optimized Platforms.
+            </h1>
+          </div>
+          <Tabs />
+        </div>
         <Testimonials/>
         <FaqSection/>
         <OurBlog/>

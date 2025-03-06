@@ -21,8 +21,8 @@ const BrandLogoCards = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 2000,
+    speed: 2000,
+    autoplaySpeed: 0,
     cssEase: "linear",
     responsive: [
       {
