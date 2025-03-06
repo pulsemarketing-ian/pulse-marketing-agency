@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const BusinessGoals = () => {
   return (
     <main
-      className="mt-[280px] w-full px-6 py-16 md:mx-auto md:mt-0 md:w-[1200px] md:px-0"
+      className="mt-[100px] w-full px-6 py-16 md:mx-auto md:mt-0 md:w-[1200px] md:px-0"
       style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
         backgroundSize: "contain",

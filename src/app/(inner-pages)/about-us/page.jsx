@@ -14,10 +14,12 @@ const AboutUs = () => {
         <HeroSection/>
         <AboutText/>
         <BrandLogoCards/>
-        <div className='mt-75 md:mt-0'>
+        <div className='mt-60 md:mt-0'>
         <Testimonial/>
         </div>
+        <div className='md:mt-0 mt-8'> 
         <OurBlog/>
+        </div>
         <FaqSection/>
         <Footer/>
     </main>

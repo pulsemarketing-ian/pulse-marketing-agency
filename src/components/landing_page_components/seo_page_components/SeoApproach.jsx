@@ -133,7 +133,7 @@ const SeoApproach = () => {
                 <p className="mt-4">
                   Partner with us to stay ahead in the competitive digital
                   landscape and achieve measurable results. Elevate your brand
-                  today with Pulse Marketing! .
+                  today with Pulse Marketing!
                 </p>
               </p>
             </div>

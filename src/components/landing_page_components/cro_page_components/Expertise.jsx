@@ -85,7 +85,7 @@ const Expertise = () => {
     
 
   return (
-    <main className="mx-10 relative bottom-[500px] md:bottom-[480px] py-12 md:mx-14"
+    <main className="mx-10 relative bottom-[450px] md:bottom-[480px] py-12 md:mx-14"
     style={{
       backgroundImage: "url('/images/app_page_images/radial.png')",
       backgroundSize: "contain",
