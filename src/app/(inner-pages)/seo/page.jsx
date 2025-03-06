@@ -26,7 +26,7 @@ const page = () => {
             <FaqSection/>
             <OurBlog/>
             <Calender/>
-            <div className='-mt-64 md:mt-0'>
+            <div>
             <Footer/>
             </div>
     </main>  
