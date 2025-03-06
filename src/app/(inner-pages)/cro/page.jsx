@@ -17,11 +17,11 @@ const page = () => {
     <main className="theme_bg_color">
       <HeroSection />
       <ConversionCalculator />
+      <Expertise />
       <SecondSection />
       <BrandLogoCards/>
       <WhyChooseUs />
       <CROProcess />
-      <Expertise />
       <Results />
       <Testimonials />
       <FAQSection />

@@ -85,7 +85,7 @@ const Expertise = () => {
     
 
   return (
-    <main className="mx-10 py-12 md:mx-14"
+    <main className="mx-10 relative bottom-[500px] md:bottom-[480px] py-12 md:mx-14"
     style={{
       backgroundImage: "url('/images/app_page_images/radial.png')",
       backgroundSize: "contain",
@@ -93,13 +93,13 @@ const Expertise = () => {
     }}>
 
     {/* top headin section  */}
-    <div className='flex flex-col md:flex-row md:justify-between items-center gap-4'>
+    <div className='flex flex-col md:ml-5 ml-0 md:flex-row md:justify-between items-center gap-4'>
         <h2 className="text-left text-4xl font-bold tracking-wide">
         Expertise in <br/>Leading Platforms
         </h2>
 
         <div>
-            <span className='text-[#6BDED6]'>We are experts in optimizing the top e-commerce platforms, including:</span>
+            {/* <span className='text-[#6BDED6]'>We are experts in optimizing the top e-commerce platforms, including:</span> */}
             <p className='lg:w-[85%]'>No matter your platform, our CRO strategies are designed to deliver results that drive revenue and delight your customers.</p>
         </div>
     </div>

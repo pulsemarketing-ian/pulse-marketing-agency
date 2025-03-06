@@ -164,7 +164,7 @@ const Projects = () => {
                 <div className="w-[90%]">
                   <p className=" poppins-light my-3 text-[14px] font-light">
                   Partner with Us to Boost Sales, 
-                  Maximize Efficiency, and Achieve Exceptional Results
+                  Maximize Efficiency, and Achieve Exceptional Results.
                   </p>
                 </div>
               </div>

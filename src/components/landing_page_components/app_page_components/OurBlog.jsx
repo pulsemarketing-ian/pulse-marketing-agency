@@ -45,7 +45,7 @@ const OurBlog = () => {
   const currentBlogs = blogComponent.slice(indexOfFirstBlog, indexOfLastBlog);
 
   return (
-    <main className="mx-auto max-w-[1200px] px-6 py-6 md:px-0">
+    <main className="mx-auto max-w-[1200px] md:mt-0 -mt-16 px-6 py-6 md:px-0">
       {/* Top Heading */}
       <div className="flex flex-col items-baseline justify-between gap-5 md:gap-0 lg:flex-row">
         <div className="flex-col gap-3">

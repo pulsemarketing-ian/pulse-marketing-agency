@@ -97,7 +97,7 @@ const Footer = () => {
               { name: "SEO", link: "/seo" },
               { name: "Branding", link: "/branding" },
               { name: "CRO", link: "/cro" },
-              {name: "SEO-Audit", link: "/seo-audit"}
+              {name: "SEO Audit", link: "/seo-audit"}
             ].map((service, index) => (
               <Link
                 key={index}

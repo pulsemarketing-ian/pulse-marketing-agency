@@ -31,6 +31,7 @@ export default function WhyChooseUs() {
 
   return (
     <main
+    className="md:mt-0 mt-32"
       style={{
         backgroundImage: "url('/images/app_page_images/radial.png')",
         backgroundSize: "contain",

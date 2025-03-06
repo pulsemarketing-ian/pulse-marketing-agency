@@ -30,7 +30,7 @@ const AboutText = () => {
         </div> */}
 
         {/* inner content  */}
-        <div className="mb-4 mt-6 flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row ">
+        <div className="mb-4 mt-6 md:mt-[104px] flex-col overflow-hidden px-6 md:mx-auto  md:mb-0 md:flex md:w-[1200px] md:items-center md:justify-between md:px-0 lg:flex-row ">
           {/* left box  */}
           <div className="min-h-[27rem] w-full rounded-2xl bg-[#120E28] p-10 md:w-[48%] ">
             <h2 className="mb-3 text-2xl font-bold">Why We Rock</h2>

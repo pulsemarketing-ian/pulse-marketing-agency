@@ -41,7 +41,7 @@ const BrandLogoCards = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden md:mt-5 md:mb-5">
+    <div className="w-full overflow-hidden mt-20 md:mt-5 md:mb-5">
       <Slider {...settings}>
         {MySliderArr.map((item, index) => (
           <div key={index} className="flex justify-center">

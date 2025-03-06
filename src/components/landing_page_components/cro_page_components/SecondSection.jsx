@@ -6,7 +6,7 @@ import { motion } from "motion";
 
 const SecondSection = () => {
   return (
-    <main className="relative bottom-[540px] md:bottom-150 w-full pb-0 md:mt-[0px] md:pb-0 lg:mb-22">
+    <main className="relative bottom-[520px] md:bottom-150 w-full pb-0 md:mt-[0px] md:pb-0 lg:mb-22">
       <div className="absolute -top-5 z-10 flex w-full flex-col items-center justify-center bg-[#040117] md:top-5 md:bg-transparent">
         {/* <div className="z-10 text-center md:-mt-2">
           <h1 className="mb-3 text-xl font-bold tracking-wide md:text-4xl xl:pt-10">
