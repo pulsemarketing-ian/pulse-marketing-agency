@@ -18,7 +18,7 @@ const page = () => {
     <main className="theme_bg_color">
         <HeroSection/>
         <PorfolioSection/>
-        <div className='md:mt-0 -mt-20 '>
+        <div className='md:-mt-30 -mt-46 '>
         <DigitalAgency/>
         </div>
         <TechStack/>

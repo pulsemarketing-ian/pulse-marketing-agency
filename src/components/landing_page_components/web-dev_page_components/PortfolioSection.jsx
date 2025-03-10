@@ -11,9 +11,9 @@ export default function PortfolioSection() {
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",
           backgroundSize: "cover",
-          transform: "translateY(-50%)",
+          // transform: "translateY(-50%)",
         }}
-        className="h-[50vh] md:h-[42rem]"
+        className="h-[50vh] md:translate-y-[-65%] translate-y-[-50%] md:h-[42rem]"
       />
       <div className="absolute top-0 md:top-12 z-10 flex w-full flex-col items-center justify-center ">
         {/* <div className="z-10 mt-8 text-center">

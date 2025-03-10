@@ -34,7 +34,7 @@ export default function DigitalAgency() {
       <Box sx={{ color: "white", py: { xs: 8, md: 4 }, px: 2 }}>
         <Box sx={{ px:{xs:2, md:6} }}>
           <div className="flex justify-center mt-3">
-              <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center w-full mb-2">
+              <h2 className="text-2xl md:text-5xl font-bold tracking-wide text-center w-full mb-2">
                 A Full Service <br /> Creative Digital Agency
               </h2>
           </div>
