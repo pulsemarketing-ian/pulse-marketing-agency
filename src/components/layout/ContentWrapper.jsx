@@ -14,6 +14,8 @@ import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import DownloadBook from "@/components/DownloadBook/DownloadBook";
+import PowerSignatureSection from "../landing_page_components/app_page_components/PowerSignatureSection";
+
 const ContentWrapper = () => {
 
   return (
