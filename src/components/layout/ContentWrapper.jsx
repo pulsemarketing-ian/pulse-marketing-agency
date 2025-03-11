@@ -14,6 +14,8 @@ import BrandLogoCards from "@/components/ChoosePlus/BrandLogoCards";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import DownloadBook from "@/components/DownloadBook/DownloadBook";
+import PowerSignatureSection from "../landing_page_components/app_page_components/PowerSignatureSection";
+
 const ContentWrapper = () => {
 
   return (
@@ -28,6 +30,7 @@ const ContentWrapper = () => {
       <HeroSection2/>
       <Cards /> 
       {/* <Video /> */}
+      <PowerSignatureSection/>
       <Testimonials/>
       <Calender />
       <div className="flex bg-black-2 w-full flex-col md:flex-row md:items-center md:justify-center text-center gap-3 py-4 md:py-2 mb-3 mt-[2rem] md:mt-0">
