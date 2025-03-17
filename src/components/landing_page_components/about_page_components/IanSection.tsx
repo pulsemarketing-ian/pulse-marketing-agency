@@ -65,8 +65,8 @@ export default function IanSection(){
                 <div className="bg-gray-500 md:h-[670px] h-[22%] w-full md:w-[40%]">
                     <Image 
                     src={"/images/about_page_images/ian-slater.jpg"} 
-                    height={0} width={0} alt="ian slater"
-                    className="w-[100%] h-[100%]"></Image>
+                    height={0} width={670} alt="ian slater"
+                    className=""></Image>
                 </div>
             </div>
         </main>
