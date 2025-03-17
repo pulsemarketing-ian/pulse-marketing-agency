@@ -17,14 +17,17 @@ const DownloadBook = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="z-10 md:mt-6 md:px-4">
+        <div className="z-10 md:mt-0 md:mb-12 md:px-4">
           <h2 className="mb-6 text-2xl font-bold tracking-wide md:text-4xl">
             Download Your Free eBook <br />
             to Brand Like a Boss
           </h2>
+          <p className="text-white md:text-normal text-xs">Learn the Psychology of Iconic Brands.</p>
 
+          <div className="pt-5">
           <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
           <DownloadModal open={open} handleClose={() => setOpen(false)} />
+          </div>
         </div>
 
         <Image

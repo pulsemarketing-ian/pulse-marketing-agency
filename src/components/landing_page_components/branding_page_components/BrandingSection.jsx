@@ -5,10 +5,18 @@ import { motion } from "framer-motion";
 
 export default function BrandingSection() {
   return (
-    <section className="px-6 pb-16 text-white md:mx-auto md:w-[1200px] md:px-0 md:py-16 md:pb-0 md:pt-[-20px]">
-      <div className="mx-auto flex flex-col items-center gap-8 md:container md:flex-row">
+    <section
+  
+     className="px-6 pb-16 text-white md:mx-auto md:w-[1200px] md:px-0 md:py-16 md:pb-0 md:pt-[-80px]">
+      <div
+        style={{
+          backgroundImage: "url('/images/branding_page_images/section_image.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+       className="mx-auto flex flex-col items-center gap-8 md:container md:flex-row">
         {/* Text Content */}
-        <motion.div
+        <motion.div 
           initial={{
             x: -300,
             opacity: 0,
@@ -49,7 +57,7 @@ export default function BrandingSection() {
         </motion.div>
 
         {/* Image Content */}
-        <motion.div
+        {/* <motion.div
           initial={{
             x: 300,
             opacity: 0,
@@ -76,14 +84,14 @@ export default function BrandingSection() {
         >
           <div className="relative h-80 w-full transform overflow-hidden rounded-lg shadow-lg transition-transform duration-700 ease-in-out hover:scale-105 md:h-96">
             <Image
-              src={"/images/branding_page_images/branding.png"}
+              src={"/images/branding_page_images/01.jpg"}
               alt="Logo Design & Branding"
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -16,15 +16,23 @@ export default function DesignServicesSection() {
     {
       title: "Logo Design",
       items: [
-        { image: "/logs/AirOTours-logo-final-vector-file-03.svg" },
-        { image: "/logs/artist-logo.svg" },
-        { image: "/logs/Christine-.svg" },
-        { image: "/logs/E-H-Contracting-01.svg" },
-        { image: "/logs/Jordan-Rentals-06.svg" },
-        { image: "/logs/logo-1.svg" },
-        { image: "/logs/logo01.svg" },
-        { image: "/logs/plane-logo.svg" },
-        { image: "/logs/Season-.svg" },
+        { image: "/images/branding_page_images/newlogoes/06.jpg" },
+        { image: "/images/branding_page_images/newlogoes/07.jpg" },
+        { image: "/images/branding_page_images/newlogoes/09.jpg" },
+        { image: "/images/branding_page_images/newlogoes/08.jpg" },
+        { image: "/images/branding_page_images/newlogoes/03.jpg" },
+        { image: "/images/branding_page_images/newlogoes/05.jpg" },
+        { image: "/images/branding_page_images/newlogoes/01.jpg" },
+        { image: "/images/branding_page_images/newlogoes/02.jpg" },
+        { image: "/images/branding_page_images/newlogoes/04.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-01.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-02.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-03.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-04.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-05.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-06.jpg" },
+        { image: "/images/branding_page_images/logo portfolio-07.jpg" },
+
         // { image: "/images/branding_page_images/logo portfolio-10.jpg" },
         // { image: "/images/branding_page_images/logo portfolio-11.jpg" },
         // { image: "/images/branding_page_images/logo portfolio-12.jpg" },
@@ -100,7 +108,7 @@ export default function DesignServicesSection() {
               opacity: 1,
             }}
             transition={{
-              delay: 0.5,
+              // delay: 0.5,
               duration: 0.5,
               ease: "easeInOut",
             }}

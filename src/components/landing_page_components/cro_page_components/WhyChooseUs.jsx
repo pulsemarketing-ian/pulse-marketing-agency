@@ -54,13 +54,14 @@ export default function WhyChooseUs() {
               </h2>
             </div>
 
-            <Grid
+            <Grid 
+            className="md:flex md:justify-center"
               container
               spacing={2}
-              alignItems="flex-start"
+              alignItems="flex-end"
               sx={{ mt: { xs: 0, md: 4 } }}
             >
-              <Grid item xs={12} lg={5}>
+              {/* <Grid item xs={12} lg={5}>
                 <div>
                   <Box
                     sx={{
@@ -83,33 +84,33 @@ export default function WhyChooseUs() {
                     />
                   </Box>
                 </div>
-              </Grid>
+              </Grid> */}
 
               <Grid item xs={12} lg={7} sx={{ pl: { xs: 0, md: 4 } }}>
                 {[
                   {
                     panel: "panel1",
-                    title: "Proven Expertise in Shopify and Beyond",
+                    title: "Proven Expertise in Shopify and E-commerce Expertise",
                     content:
-                      "We are seasoned pros at optimizing Shopify stores, as well as platforms like WooCommerce, Magento, and BigCommerce.",
+                      "We have extensive experience optimizing Shopify stores and other leading e-commerce platforms like WooCommerce, Magento, and BigCommerce. Our team understands the unique challenges of each platform and applies tailored strategies to maximize conversions.",
                   },
                   {
                     panel: "panel2",
-                    title: "Data-Driven Decisions",
+                    title: "Data-Driven Optimization",
                     content:
-                      "Pulse empowers businesses to make data-driven decisions by leveraging advanced analytics and user behavior insights. Our approach ensures optimized conversion rates, improved user experiences, and measurable growth. Partner with Pulse to unlock your full potential through tailored CRO strategies.",
+                      "Our CRO strategies are backed by in-depth analytics and user behavior insights. We identify patterns, test variations, and implement data-driven improvements that enhance user experience, increase engagement, and drive measurable growth.",
                   },
                   {
                     panel: "panel3",
-                    title: "Customized Strategies",
+                    title: "Customized Strategies for Maximum Impact",
                     content:
-                      "Pulse crafts tailored CRO solutions to meet your unique business goals. Our personalized strategies focus on maximizing conversions, enhancing user engagement, and driving sustainable growth for your brand.",
+                      "No two businesses are the same, and neither are our strategies. We develop tailored CRO solutions aligned with your business goals, ensuring a seamless and personalized approach that maximizes conversions and long-term success.",
                   },
                   {
                     panel: "panel4",
-                    title: "Full-Service Approach",
+                    title: "End-to-End CRO Solutions",
                     content:
-                      "Pulse offers end-to-end CRO solutions, including data analysis, strategy development, implementation, and continuous optimization. Our comprehensive approach ensures seamless execution and measurable results for your business.",
+                      "From data analysis and strategy development to implementation and continuous optimization, we handle the entire CRO process. Our full-service approach ensures that every aspect of your website is optimized for higher conversions, better user engagement, and sustainable growth.",
                   },
                 ].map(({ panel, title, content }) => (
                   <Accordion
@@ -127,7 +128,7 @@ export default function WhyChooseUs() {
                         <IoArrowDownOutline
                           style={{
                             color: "white",
-                            backgroundColor: "grey",
+                            backgroundColor: "#0a91bc",
                             borderRadius: "50%",
                             padding: "5px",
                             fontSize: "23px",
@@ -144,6 +145,9 @@ export default function WhyChooseUs() {
                 ))}
               </Grid>
             </Grid>
+            <div className="mt-18 flex justify-center md:mt-5">
+                <h2 className="md:text-md text-sm ">Want to unlock your site's full revenue potential? <strong>Let’s optimize your conversions today.</strong></h2>
+            </div>
           </Box>
         </Box>
       </ThemeProvider>

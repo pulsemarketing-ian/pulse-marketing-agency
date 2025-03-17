@@ -5,22 +5,23 @@ import BrandingSection from '@/components/landing_page_components/branding_page_
 import DesignServicesSection from '@/components/landing_page_components/branding_page_components/DesignServicesSection';
 import Testimonials from '@/components/landing_page_components/app_page_components/Testimonials';
 import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
-import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
+// import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Footer from '@/components/layout/Footer';
 import Calender from '@/components/Calender/Calender';
-
+import BrandingProcess from '@/components/landing_page_components/branding_page_components/BrandingProcess'
 const Branding = () => {
   return (
         <main className="theme_bg_color">
             <HeroSection/>
             <PortfolioSection/>
             <BrandingSection/>
-            <div className='md:mt-0 -mt-72'>
+            <div className='md:mt-0 mt-10'>
             <DesignServicesSection/>
             </div>
+            <BrandingProcess/>
             <Testimonials/>
             <FaqSection/>
-            <OurBlog/>
+            {/* <OurBlog/> */}
             <Calender/>
             <div>
             <Footer/>

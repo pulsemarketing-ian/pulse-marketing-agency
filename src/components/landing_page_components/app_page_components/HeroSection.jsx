@@ -17,7 +17,7 @@ const HeroSection = () => {
              backgroundPosition: "center",
 
             }}
-            className='md:pb-[150px]'
+            className='ct-banner md:pb-[150px]'
             >
             <Navbar/>
             <div className='h-[60vh] md:h-[100vh]  flex justify-between items-center flex-row relative w-[1200px] mx-auto md:pt-[60px]'>

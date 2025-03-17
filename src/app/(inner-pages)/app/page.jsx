@@ -6,7 +6,7 @@ import RevolvingIndustries from '@/components/landing_page_components/app_page_c
 import AndriodSection from '@/components/landing_page_components/app_page_components/AndriodSection';
 import Testimonials from '@/components/landing_page_components/app_page_components/Testimonials';
 import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
-import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
+// import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Footer from '@/components/layout/Footer';
 import Offerings from '../../../components/landing_page_components/app_page_components/OfferingSection';
 import IosFriendly from '../../../components/landing_page_components/app_page_components/IosFriendly';
@@ -20,10 +20,10 @@ const App = () => {
             <IosFriendly/>
             <AppDevelopmentSection/>
             <RevolvingIndustries/>
-            <AndriodSection/>
+            {/* <AndriodSection/> */}
             <Testimonials/>
             <FaqSection/>
-            <OurBlog/>
+            {/* <OurBlog/> */}
             <Footer/>
         </main>
   )

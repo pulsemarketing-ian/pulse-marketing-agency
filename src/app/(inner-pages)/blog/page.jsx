@@ -97,16 +97,13 @@ const BlogPage = () => {
               className="text-center text-3xl font-bold capitalize text-white md:text-5xl"
               style={{ lineHeight: "1.2" }}
             >
-              Explore The World <br />
-              Of Creativity.
+              Insights That <br/> Drive Growth
             </h2>
 
             <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
-              Step into a world of meaningful stories and transformative ideas.
-              This blog uncovers 7 key aspects of life, work, and creativity,
-              offering you the tools and motivation to succeed. Whether you are
-              here to learn, reflect, or find new inspiration, each post is
-              designed to spark your curiosity and empower you to grow.
+            Expert strategies and creative insights to help businesses thrive in Canada.
+             Based in Vancouver, BC,
+             we share actionable tips to boost sales, build brands, and scale success.
             </p>
           </div>
 
@@ -165,7 +162,7 @@ const BlogPage = () => {
               />
             </div>
             <div
-              className="mt-3 flex flex-col justify-between gap-3"
+              className="flex flex-col justify-between gap-3"
               style={{
                 minHeight: "200px",
               }}

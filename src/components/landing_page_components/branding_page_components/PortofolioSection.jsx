@@ -72,7 +72,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <main className="m:mt-[-100px] relative w-full">
+    <main className="md:mt-[-100px] relative w-full">
       <div
         style={{
           backgroundImage: "url('/images/services_page_images/circle.png/')",

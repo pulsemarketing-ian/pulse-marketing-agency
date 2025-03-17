@@ -21,7 +21,7 @@ const Results = () => {
     >
       {/* Main Content Section */}
       <div className="relative mx-auto px-8 py-0">
-        <div className="flex flex-col items-center justify-between gap-8 rounded-xl p-8 lg:flex-row">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-xl p-8 lg:flex-row">
           {/* Left Column */}
           <motion.div
             initial={isDesktop ? { x: -300, opacity: 0 } : false}
@@ -30,35 +30,51 @@ const Results = () => {
               isDesktop ? { delay: 0.5, duration: 0.5, ease: "easeInOut" } : {}
             }
             viewport={isDesktop ? { once: false, amount: 0.2 } : {}}
-            className="flex flex-col items-center justify-center space-y-6 text-center lg:mx-auto lg:w-[50%]"
+            className="flex flex-col items-start justify-center space-y-6"
           >
             <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
               Results You Can Expect
             </h2>
 
             <ul className="text-md space-y-2 text-gray-300 md:text-[26px]">
-              <li className="flex items-center">
+              <li className="ct-r-li ">
                 <span className="mr-2 text-cyan-500">•</span> Increased sales
                 and revenue.
               </li>
 
-              <li className="flex items-center">
-                <span className="mr-2 text-cyan-500">•</span> Higher average
+              <li className="ct-r-li">
+                <span
+                style={{
+                  backgroundImage:"url('/images/cro_page_images/icons/icon02.png')"
+                }}
+                 className="mr-2 text-cyan-500">•</span> Higher average
                 order value.
               </li>
 
-              <li className="flex items-center text-left">
-                <span className="mr-2 text-cyan-500">•</span> Improved customer
+              <li className="ct-r-li">
+                <span
+                  style={{
+                    backgroundImage:"url('/images/cro_page_images/icons/icon03.png')"
+                  }}
+                 className="mr-2 text-cyan-500">•</span> Improved customer
                 satisfaction and retention.
               </li>
 
-              <li className="flex items-center">
-                <span className="mr-2 text-cyan-500">•</span> Lower cart
+              <li className="ct-r-li">
+                <span
+                  style={{
+                    backgroundImage:"url('/images/cro_page_images/icons/icon04.png')"
+                  }}
+                 className="mr-2 text-cyan-500">•</span> Lower cart
                 abandonment rates.
               </li>
 
-              <li className="flex items-center">
-                <span className="mr-2 text-cyan-500">•</span> Scalable results
+              <li className="ct-r-li">
+                <span
+                  style={{
+                    backgroundImage:"url('/images/cro_page_images/icons/icon05.png')"
+                  }}
+                 className="mr-2 text-cyan-500">•</span> Scalable results
                 for long-term growth.
               </li>
             </ul>

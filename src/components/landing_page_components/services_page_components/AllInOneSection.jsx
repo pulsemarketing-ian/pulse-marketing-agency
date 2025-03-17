@@ -17,7 +17,7 @@ const AllInOneSection = () => {
       {/* Main Content Section */}
       <div className="container relative mx-auto px-4 py-16">
         <div className="z-10 mx-auto flex w-auto flex-col items-center justify-center text-center">
-          <p className="mb-2 mt-10 text-xl sm:mt-20">We are experts in</p>
+          {/* <p className="mb-2 mt-10 text-xl sm:mt-20">We are experts in</p> */}
 
           <h1 className="text-2xl font-bold tracking-wide md:text-5xl">
             Conversation Rate <br />
@@ -27,7 +27,7 @@ const AllInOneSection = () => {
         <div
           className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-8 transition-transform duration-700 ease-in-out hover:scale-105 lg:flex-row"
           style={{
-            backgroundImage: `url('/images/services_page_images/sixsection-img.png')`,
+            backgroundImage: `url('/images/services_page_images/cro-section.png')`,
             backgroundSize: "cover",
             marginTop: "15px",
             // backdropFilter: 'blur(30px)',

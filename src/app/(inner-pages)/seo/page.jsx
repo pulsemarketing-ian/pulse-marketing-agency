@@ -7,8 +7,8 @@ import SeoProcess from '../../../components/landing_page_components/seo_page_com
 import Results from '../../../components/landing_page_components/seo_page_components/Results'
 import Rank from '../../../components/landing_page_components/seo_page_components/Rank'
 import Testimonials from '@/components/landing_page_components/app_page_components/Testimonials';
-import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
-import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
+import FAQSection from '@/components/landing_page_components/seo_page_components/SeoFaq';
+// import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Footer from '@/components/layout/Footer';
 import Calender from '@/components/Calender/Calender'
 
@@ -21,10 +21,12 @@ const page = () => {
             <SeoProcess/>
             <Results/>
             <Strategies/>
+            <div className='md:mt-0 mt-3'>
             <Rank/>
+            </div>
             <Testimonials/>
-            <FaqSection/>
-            <OurBlog/>
+            <FAQSection/>
+            {/* <OurBlog/> */}
             <Calender/>
             <div>
             <Footer/>

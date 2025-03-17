@@ -213,7 +213,7 @@ const Footer = () => {
         {/* </div> */}
         {/* Footer Bottom */}
         <div className="mx-auto flex w-full flex-col items-center justify-between gap-4 px-8 md:flex-row lg:w-[88%] lg:px-0">
-          <h3 className="text-[18px]">© 2024 Pulse. All rights reserved.</h3>
+          <h3 className="text-[18px]">© 2025 Pulse. All Rights Reserved.</h3>
           <div className="flex gap-6 text-[18px]">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/term-condition">Terms & Conditions</Link>

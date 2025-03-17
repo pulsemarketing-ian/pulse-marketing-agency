@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const WebDevSection = () => {
   return (
-    <main className="relative w-full pb-[30rem] md:pb-0 ">
+    <main className="relative w-full pb-[30rem] md:pb-18 ">
       {/* Background Image */}
       <div
         style={{
@@ -24,11 +24,11 @@ const WebDevSection = () => {
         style={{
           // backgroundColor: '#040117',
           backgroundSize: "cover",
-          // borderBottom: "4px solid #363445",
+         borderBottom: "4px solid #363445",
         }}
       >
         <div className="z-10 mt-14 text-center text-lg md:mt-0 md:translate-y-[-30%] lg:mt-8">
-          <p>We are experts in</p>
+          {/* <p>We are experts in</p> */}
 
           <h1 className="pb-7 text-2xl font-bold tracking-wide md:text-6xl">
             Development

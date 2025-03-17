@@ -200,15 +200,15 @@ const UpperTextComponent = () => {
 
         <div className="m-auto flex-row items-center justify-between pb-20 md:flex md:pb-12 lg:w-[85%]">
           <div className=" w-[80%] md:w-[50%]">
-            <h1 className="poppins-medium ct-heading text-5xl">
-              We are a full-service <br /> digital agency.
+            <h1 className="poppins-medium ct-heading text-6xl">
+            Results-Driven Digital <br className="md:hidden"/> Solutions for <br className="md:hidden"/> Business Growth.
             </h1>
           </div>
           <div className="poppins-light mt-6 w-[90%] font-light md:mt-0 md:w-[50%]">
             <p className="float-right md:w-[60%]">
-              Elevate your brands success with Pulse - Your trusted partner for
-              cutting-edge digital solutions and unparalleled customer care in
-              Canada.{" "}
+             Maximize revenue and customer engagement with Pulse
+             your expert partner in high-impact digital strategies that drive sales,
+             conversions, and long-term success.{" "}
             </p>
           </div>
         </div>
@@ -359,7 +359,7 @@ const Cards = () => {
                   <div
                     className="flex transform flex-col items-center justify-between gap-8 rounded-xl p-3 transition-transform duration-700 ease-in-out hover:scale-105 md:mt-0 md:translate-y-22 md:p-8 lg:flex-row"
                     style={{
-                      backgroundImage: `url('/images/services_page_images/fourth-section-img.png')`,
+                      backgroundImage: `url('/images/services_page_images/cro-section.png')`,
                       backgroundSize: "cover",
                     }}
                   >

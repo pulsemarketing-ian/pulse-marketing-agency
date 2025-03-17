@@ -121,7 +121,7 @@ const HeroSection = () => {
     <>
       <main
         style={{
-          backgroundImage: "url('/images/about_page_images/banner-about.jpg')",
+          backgroundImage: "url('/about-banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -141,7 +141,7 @@ const HeroSection = () => {
                 width={20}
                 height={20}
               />
-              <p>About us</p>
+              <h2>About us</h2>
             </div>
 
             <h2
@@ -152,7 +152,7 @@ const HeroSection = () => {
               Fueling Success.
             </h2>
 
-            <p className="mx-auto mt-2 w-[80%] text-center text-gray-200 md:w-[45%]">
+            <p className="mx-auto mt-2 w-[80%] font-medium text-center text-gray-200 md:w-[60%]">
               We help businesses scale faster through revenue-focused
               strategies, cutting-edge web development, and data-driven
               marketing solutions.

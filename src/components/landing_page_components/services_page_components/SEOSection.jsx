@@ -18,7 +18,7 @@ const SEOSection = () => {
       {/* Main Content Section */}
       <div className="container relative mx-auto px-4 py-16">
         <div className="z-10 mx-auto flex w-auto flex-col items-center justify-center text-center">
-          <p className="mb-2 text-xl">We are experts in</p>
+          {/* <p className="mb-2 text-xl">We are experts in</p> */}
           <h1 className="pb-2 text-2xl font-bold tracking-wide md:text-5xl">
             Search Engine Optimization
           </h1>

@@ -13,6 +13,20 @@
   padding: 10px 40px;
   font-size: 17px;
   font-weight: bold;
+  border: 3px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.fancy-btn2 {
+  position: relative;
+  background: #040117;
+  color: white;
+  padding: 10px 40px;
+  font-size: 17px;
+  font-weight: bold;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -21,6 +35,16 @@
 }
 
 .fancy-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 200%;
+  z-index: -1;
+}
+.fancy-btn2::before {
   content: '';
   background: conic-gradient(transparent 270deg, white, transparent);
   position: absolute;
@@ -34,6 +58,14 @@
 }
 
 .fancy-btn::after {
+  content: '';
+  background: #040117;
+  position: absolute;
+  inset: 2px;
+  border-radius: 50px;
+  z-index: -1;
+}
+.fancy-btn2::after {
   content: '';
   background: #040117;
   position: absolute;

@@ -256,7 +256,7 @@ const HeroSection = () => {
                   </Link>
                 </div>
 
-                <div className="-mt-2 md:-mt-4">
+                <div className="-mt-2 md:mt-2">
                   <h4 className="text-center text-xl font-semibold tracking-wide">
                     {image?.name.toUpperCase()}
                   </h4>
@@ -318,7 +318,7 @@ const HeroSection = () => {
                 </Link>
               </div>
 
-              <div className="-mt-2 md:-mt-4   md:mb-6">
+              <div className="-mt-2 md:mt-2 md:mb-6">
                 <h4 className="text-center text-xl font-semibold tracking-wide">
                   {image?.name.toUpperCase()}
                 </h4>

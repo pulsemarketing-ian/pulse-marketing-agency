@@ -6,8 +6,8 @@ import TechStack from '../../../components/landing_page_components/web-dev_page_
 import Services from '../../../components/landing_page_components/web-dev_page_components/Services'
 import TakeSteps from '../../../components/landing_page_components/web-dev_page_components/TakeSteps'
 import Testimonials from '@/components/landing_page_components/app_page_components/Testimonials';
-import FaqSection from '@/components/landing_page_components/app_page_components/FaqSection';
-import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
+import FAQSection from '../../../components/landing_page_components/web-dev_page_components/WebFaq';
+// import OurBlog from '@/components/landing_page_components/app_page_components/OurBlog';
 import Calender from '@/components/Calender/Calender';
 import Footer from '@/components/layout/Footer';
 import Tabs from "../../../components/MyTabs/Tabs";
@@ -18,9 +18,9 @@ const page = () => {
     <main className="theme_bg_color">
         <HeroSection/>
         <PorfolioSection/>
-        <div className='md:-mt-30 -mt-46 '>
+        {/* <div className='md:-mt-30 -mt-46 '>
         <DigitalAgency/>
-        </div>
+        </div> */}
         <TechStack/>
         <Services/>
         <TakeSteps/>
@@ -33,8 +33,8 @@ const page = () => {
           <Tabs />
         </div>
         <Testimonials/>
-        <FaqSection/>
-        <OurBlog/>
+        <FAQSection />
+        {/* <OurBlog/> */}
         <div className='md:mt-0 -mt-12'>
         <Calender/>
         </div>

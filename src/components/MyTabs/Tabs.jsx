@@ -114,7 +114,7 @@ export default function Tabs() {
             className="animate-left flex w-full flex-col gap-5 md:gap-6"
           >
             {/* Image Section */}
-            <div className="relative h-[200px] w-full rounded-2xl md:h-[380px] md:w-[90%] xl:h-[280px]  2xl:h-[380px]">
+            <div className="relative h-[200px] w-full rounded-2xl md:h-[380px] md:w-[100%] xl:h-[280px] xl:w-[100%] 2xl:h-[380px]">
               <Link href={item?.section} target="_blank">
                 <Image
                   src={item?.pictures[0]}
@@ -151,10 +151,12 @@ export default function Tabs() {
                 </div>
 
                 {/* Button */}
+                <div className="md:mr-0 mr-12">
                 <PrimaryBtn
                   text="View Site"
                   onClick={() => window.open(item?.section, "_blank")}
                 />
+                </div>
               </div>
             </div>
           </div>

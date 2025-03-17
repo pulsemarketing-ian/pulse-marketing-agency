@@ -71,7 +71,7 @@ const Testimonials = () => {
                 {/* <img src={testimonial.logo} alt="Logo" className="w-12 h-12 rounded-full mr-4" /> */}
                 <div className="flex flex-col overflow-hidden">
                   <h3 className="text-xl font-semibold">
-                    {testimonial.name.slice(0, 20) + "..."}
+                    {testimonial.name}
                   </h3>
                   <span className="text-[14px] text-gray-500">
                     {testimonial.date}

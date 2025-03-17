@@ -67,9 +67,9 @@ const BusinessGoals = () => {
         {/* <div className='h-8'></div> */}
 
         {/* Second row */}
-        <div className="mt-3 flex w-full flex-wrap justify-between gap-6">
+        <div className="md:mt-5 mt-3 flex w-full flex-wrap justify-between gap-6 md:gap-3">
           {/* card four */}
-          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[32%]">
+          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[23%]">
             <h4>04</h4>
             <h3 className="text-xl font-bold tracking-wide">
               Content Strategy
@@ -81,7 +81,7 @@ const BusinessGoals = () => {
           </div>
 
           {/* card five */}
-          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[32%]">
+          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[23%]">
             <h4>05</h4>
             <h3 className="text-xl font-bold tracking-wide">
               On-Page Optimization
@@ -93,7 +93,7 @@ const BusinessGoals = () => {
           </div>
 
           {/* card six */}
-          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[32%]">
+          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[23%]">
             <h4>06</h4>
             <h3 className="text-xl font-bold tracking-wide">
               Performance Tracking
@@ -103,14 +103,8 @@ const BusinessGoals = () => {
               continuous improvement.
             </p>
           </div>
-        </div>
 
-        {/* Space between rows */}
-        {/* <div className='h-8'></div> */}
-
-        {/* Third row (Single Centered Card) */}
-        <div className="mt-3 flex w-full justify-center">
-          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[32%]">
+          <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[23%]">
             <h4>07</h4>
             <h3 className="text-xl font-bold tracking-wide">
               SEO Consultation
@@ -121,6 +115,23 @@ const BusinessGoals = () => {
             </p>
           </div>
         </div>
+
+        {/* Space between rows */}
+        {/* <div className='h-8'></div> */}
+
+        {/* Third row (Single Centered Card) */}
+        {/* <div className="mt-3 flex w-full justify-center"> */}
+          {/* <div className="border-1 flex min-h-[50px] w-full flex-col gap-3 rounded-2xl border bg-white bg-opacity-10 p-5 backdrop-blur-md md:min-h-[240px] md:w-[28%]">
+            <h4>07</h4>
+            <h3 className="text-xl font-bold tracking-wide">
+              SEO Consultation
+            </h3>
+            <p className="text-sm">
+              Get expert SEO consultation to develop a roadmap for your business
+              success online.
+            </p>
+          </div> */}
+        {/* </div> */}
       </div>
     </main>
   );

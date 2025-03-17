@@ -18,7 +18,7 @@ const LogoDesgin = () => {
       {/* Main Content Section */}
       <div className="container relative mx-auto mt-8 px-4 pb-6  pt-14 md:mt-0 md:pb-16 md:pt-0">
         <div className="z-10 mx-auto flex w-auto flex-col items-center justify-center text-center">
-          <p className="mb-2 text-xl">We are experts in</p>
+          {/* <p className="mb-2 text-xl">We are experts in</p> */}
           <h1 className="pb-6 text-2xl font-bold tracking-wide md:text-5xl">
             Logo Design & Branding
           </h1>

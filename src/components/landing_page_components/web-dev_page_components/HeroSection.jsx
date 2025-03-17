@@ -16,7 +16,7 @@ const HeroSection = () => {
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
       }}
-      className="pb-[370px]"
+      className="ct-banner pb-[370px]"
     >
       <Navbar />
       <div className="relative mx-auto flex h-[70vh] w-[1200px] flex-row items-center justify-between md:h-[100vh] md:pt-[50px]">

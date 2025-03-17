@@ -95,7 +95,7 @@ const Page = () => {
             }}
             className="h-[52vh] translate-y-[-50%] transform md:mt-[-180px] md:h-[39rem]  md:translate-y-[-60%]"
           />
-          <div
+          {/* <div
             className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-12 "
             style={{
               backgroundImage: "url('/images/app_page_images/radial.png')",
@@ -112,12 +112,12 @@ const Page = () => {
               <PrimaryBtn text={"Download Now"} onClick={() => setOpen(true)} />
               <DownloadModal open={open} handleClose={() => setOpen(false)} />
             </div>
-          </div>
+          </div> */}
         </main>
 
         {/* main content  */}
         <div className="mx-auto -mt-[20rem] max-w-[1200px] md:pb-8">
-          <p className="md:text-md mb-6 translate-y-[1vh]  text-center text-[16px] tracking-wide md:mx-auto md:mb-6 md:w-[60%] md:translate-y-0 lg:mb-18">
+          <p className="md:text-md mb-6 translate-y-[1vh]  text-center text-[16px] tracking-wide md:mx-auto md:mb-6 md:w-[60%] md:-translate-y-12 lg:mb-18">
             {blogInner?.component?.section}
           </p>
           <div
@@ -134,76 +134,76 @@ const Page = () => {
 
 export default Page;
 
-const DownloadModal = ({ open, handleClose }) => {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
+// const DownloadModal = ({ open, handleClose }) => {
+//   const [formData, setFormData] = React.useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/images/book-img.pdf";
-    link.download = "/images/book-img.pdf";
-    link.click();
-    handleClose();
-  };
+//   const handleDownload = () => {
+//     const link = document.createElement("a");
+//     link.href = "/images/book-img.pdf";
+//     link.download = "/images/book-img.pdf";
+//     link.click();
+//     handleClose();
+//   };
 
-  return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-    >
-      <Box
-        sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: 400,
-          bgcolor: "background.paper",
-          boxShadow: 24,
-          p: 4,
-          borderRadius: 2,
-        }}
-      >
-        <h2 className="mb-4 text-center text-xl font-bold text-black-2">
-          Download Your Free eBook
-        </h2>
-        <TextField
-          fullWidth
-          label="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          margin="normal"
-        />
-        <TextField
-          fullWidth
-          label="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          margin="normal"
-        />
-        <TextField
-          fullWidth
-          label="Phone Number"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          margin="normal"
-        />
-        <div className="mt-3 flex justify-center gap-3">
-          <PrimaryBtn text={"Cancel"} onClick={handleClose} />
-          <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
-        </div>
-      </Box>
-    </Modal>
-  );
-};
+//   return (
+//     <Modal
+//       open={open}
+//       onClose={handleClose}
+//       sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+//     >
+//       <Box
+//         sx={{
+//           position: "absolute",
+//           top: "50%",
+//           left: "50%",
+//           transform: "translate(-50%, -50%)",
+//           width: 400,
+//           bgcolor: "background.paper",
+//           boxShadow: 24,
+//           p: 4,
+//           borderRadius: 2,
+//         }}
+//       >
+//         <h2 className="mb-4 text-center text-xl font-bold text-black-2">
+//           Download Your Free eBook
+//         </h2>
+//         <TextField
+//           fullWidth
+//           label="Name"
+//           name="name"
+//           value={formData.name}
+//           onChange={handleChange}
+//           margin="normal"
+//         />
+//         <TextField
+//           fullWidth
+//           label="Email"
+//           name="email"
+//           value={formData.email}
+//           onChange={handleChange}
+//           margin="normal"
+//         />
+//         <TextField
+//           fullWidth
+//           label="Phone Number"
+//           name="phone"
+//           value={formData.phone}
+//           onChange={handleChange}
+//           margin="normal"
+//         />
+//         <div className="mt-3 flex justify-center gap-3">
+//           <PrimaryBtn text={"Cancel"} onClick={handleClose} />
+//           <PrimaryBtn text={"Submit Details"} onClick={handleDownload} />
+//         </div>
+//       </Box>
+//     </Modal>
+//   );
+// };

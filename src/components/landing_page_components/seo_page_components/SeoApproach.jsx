@@ -6,7 +6,7 @@ import React from "react";
 const SeoApproach = () => {
   return (
     <React.Fragment>
-      <main className="relative w-full pb-32 md:-mt-[100px] md:pb-0">
+      <main className="relative w-full z-20 pb-32 md:-mt-[100px] md:pb-0">
         <div
           style={{
             backgroundImage: "url('/images/services_page_images/circle.png/')",
@@ -16,14 +16,14 @@ const SeoApproach = () => {
           className="h-[50vh] md:h-[42rem]"
         />
         <div
-          className="absolute top-0 z-10 flex w-full flex-col items-center justify-center md:top-15 "
+          className="absolute top-0 z-20 flex w-full flex-col items-center justify-center md:top-15 "
           style={{
             backgroundImage: "url('/images/app_page_images/radial.png')",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="z-10 -mt-[65px] px-4 text-center md:mt-0 md:px-0">
+          <div className="z-20 -mt-[65px] px-4 text-center md:mt-0 md:px-0">
             {/* <p className="pt-20">
               Let rebuild the SEO with improvements easier to understand and
               better layout of <br />

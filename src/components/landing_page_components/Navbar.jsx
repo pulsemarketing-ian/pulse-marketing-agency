@@ -2,9 +2,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { IoIosMail, IoIosCall } from "react-icons/io";
-import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropDown,MdArrowForward } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import PrimaryBtn from "./PrimaryBtns/PrimaryBtn";
+import PrimaryBtn2 from "./PrimaryBtns/PrimaryBtn2";
 import { Drawer } from "@mui/material";
 import { IoClose } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
@@ -347,8 +347,8 @@ export default function Navbar() {
             </Drawer>
 
             {/* Contact Icons */}
-            <div className="hidden space-x-4 lg:flex lg:items-center">
-              <PrimaryBtn text={"Book"} onClick={toggleForm} />
+            <div className="hidden space-x-4 lg:flex lg:justify-between lg:items-center">
+              <PrimaryBtn2 text={"Book"} onClick={toggleForm}/>  
               <a
                 href="mailto:hi@pulsemarketing.io"
                 target="_blank"

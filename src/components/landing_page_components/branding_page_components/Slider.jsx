@@ -86,18 +86,18 @@ import 'swiper/css/autoplay';
 
 export default function PortfolioSlider() {
   const images = [
-    { src: '/images/branding_page_images/businesscard portfolio-01.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-02.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-03.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-04.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-05.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-06.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-07.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-08.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-09.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-10.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-11.jpg'},
-    { src: '/images/branding_page_images/businesscard portfolio-12.jpg'},
+    { src: '/images/branding_page_images/businesscard portfolio-01.jpg', text: "Card Design 01"},
+    { src: '/images/branding_page_images/businesscard portfolio-02.jpg', text: "Card Design 02" },
+    { src: '/images/branding_page_images/businesscard portfolio-03.jpg', text: "Card Design 03" },
+    { src: '/images/branding_page_images/businesscard portfolio-04.jpg', text: "Card Design 04" },
+    { src: '/images/branding_page_images/businesscard portfolio-05.jpg', text: "Card Design 05" },
+    { src: '/images/branding_page_images/businesscard portfolio-06.jpg', text: "Card Design 06" },
+    { src: '/images/branding_page_images/businesscard portfolio-07.jpg', text: "Card Design 07" },
+    { src: '/images/branding_page_images/businesscard portfolio-08.jpg', text: "Card Design 08" },
+    { src: '/images/branding_page_images/businesscard portfolio-09.jpg', text: "Card Design 09" },
+    { src: '/images/branding_page_images/businesscard portfolio-10.jpg', text: "Card Design 10" },
+    { src: '/images/branding_page_images/businesscard portfolio-11.jpg', text: "Card Design 11" },
+    { src: '/images/branding_page_images/businesscard portfolio-12.jpg', text: "Card Design 12" },
   ];
 
   return (
@@ -127,13 +127,16 @@ export default function PortfolioSlider() {
           <SwiperSlide key={index} className="w-[280px] md:w-[370px] mx-5">
             <div className="relative group">
               <a rel="noopener noreferrer">
-                <div className="relative overflow-hidden rounded-xl transition-all duration-300 transform group-hover:scale-[1.02]">
+                <div className="relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 transform group-hover:scale-[1.02]">
                   <img
                     src={item.src}
                     alt={item.src}
                     className="w-full md:w-[360px] h-[250px] md:h-[360px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className='relative text-center w-full pt-4'>
+                    <h2 className="md:text-2xl text-lg font-semibold">{item.text}</h2>
                 </div>
               </a>
             </div>

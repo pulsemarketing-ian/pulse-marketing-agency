@@ -15,7 +15,7 @@ export default function HeroSection() {
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
       }}
-      className="md:pb-[150px]"
+      className="ct-banner md:pb-[150px]"
     >
       <Navbar />
       <div className="relative mx-auto  flex h-[70vh] w-[1200px] flex-row items-center justify-between px-4 md:h-[110vh] md:px-0">
