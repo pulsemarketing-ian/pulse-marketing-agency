@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import "./global.css";
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,3 +75,5 @@ Revenue." />
     </html>
   );
 }
+
+
