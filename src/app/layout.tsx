@@ -31,13 +31,14 @@ export default function RootLayout({
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Pulse • Vancouver, BC" />
         <meta property="og:description" content="Our Objective: Increase Your Revenue." />
-        <meta property="og:image" content="/og-image-hy.PNG" />
-        <meta property="og:image:alt" content="Sales-Focused Marketing" />
+        <meta property="og:image" content="https://pulsemarketing.io/og-image-hy.PNG" />
+        <meta property="og:image:alt" content="Pulse • Vancouver, BC" />
         <meta property="og:image:type" content="image/PNG" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pulsemarketing.io" />
+
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:title" content="Pulse • Vancouver, BC" />
