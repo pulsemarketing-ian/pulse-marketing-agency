@@ -15,49 +15,55 @@ export default function RootLayout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
 
-
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
   return (
     <html lang="en" className="scroll-smooth" style={{ overflowX: "hidden" }}>
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        // crossOrigin="true"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      <meta property="og:image" content="/final-op-img.png" />
-      <meta property="og:image:alt" content="Sales-Focused Marketing" />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="600" />{" "}
-    
-        <meta property="og:image" content="/final-op-img.png" />
-        <meta property="og:image:alt" content="Sales-Focused Marketing" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="600" />{" "}
+      <head>
+        <title>Pulse • Vancouver, BC</title>
 
-          <title>Sales-Focused Marketing</title>
-    </head>
+        {/* Basic Meta */}
+        <meta name="description" content="Our Objective: Increase Your Revenue." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Pulse • Vancouver, BC" />
+        <meta property="og:description" content="Our Objective: Increase Your Revenue." />
+        <meta property="og:image" content="/og-image-hy.PNG" />
+        <meta property="og:image:alt" content="Sales-Focused Marketing" />
+        <meta property="og:image:type" content="image/PNG" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pulsemarketing.io" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="Pulse • Vancouver, BC" />
+        <meta name="twitter:description" content="Our Objective: Increase Your
+Revenue." />
+        <meta name="twitter:image" content="og-image-hy.PNG" />
+
+        {/* Fonts and Styles */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+      </head>
 
       <body suppressHydrationWarning={true}>
         <div className="dark:bg-boxdark-2 dark:text-bodydark">

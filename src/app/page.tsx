@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Script
         src="https://online.seranking.com/frontend-dist/widget-manager/main.js"
-        strategy="afterInteractive" // Load after the page becomes interactive
+        strategy="afterInteractive" 
         defer
       />
 
