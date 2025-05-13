@@ -341,7 +341,7 @@ const HeroSection = () => {
             {/* social icon component  */}
             <div className="social-logos flex w-[8%] translate-x-0 flex-col justify-center gap-1">
               <Link
-                href={"https://www.facebook.com/pulsemarketing.io/"}
+                href={"https://www.facebook.com/share/15tKgzAGc8/?mibextid=wwXIfr"}
                 target="_blank"
               >
                 <div
@@ -376,7 +376,7 @@ const HeroSection = () => {
 
               <Link
                 href={
-                  "https://www.linkedin.com/company/29302818/admin/dashboard/"
+                  "https://www.linkedin.com/company/pulse-inc/"
                 }
                 target="_blank"
               >
@@ -394,7 +394,7 @@ const HeroSection = () => {
               </Link>
 
               <Link
-                href={"https://www.youtube.com/watch?v=mEhNo-fnGxU"}
+                href={"https://youtube.com/@pulsemarketinginc?si=dSVTlmbIx-Kqzbcv"}
                 target="_blank"
               >
                 <div

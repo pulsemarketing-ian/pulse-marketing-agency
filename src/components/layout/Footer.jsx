@@ -152,14 +152,14 @@ const Footer = () => {
                 <FiInstagram />
               </Link>
               <Link
-                href="https://www.youtube.com/"
+                href="https://youtube.com/@pulsemarketinginc?si=dSVTlmbIx-Kqzbcv"
                 target="_blank"
                 className="hover:text-red-500"
               >
                 <IoLogoYoutube />
               </Link>
               <Link
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/pulse-inc/"
                 target="_blank"
                 className="hover:text-blue-800"
               >
